@@ -10,7 +10,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T09:00:16Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "16.00.16",
+    "body": ""
   },
   {
     "repo": "Artha",
@@ -23,7 +25,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T08:55:17Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "15.55.17",
+    "body": ""
   },
   {
     "repo": "Artha",
@@ -36,7 +40,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T07:13:28Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "14.13.28",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -49,7 +55,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T05:07:32Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "12.07.32",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -62,7 +70,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T05:02:40Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "12.02.40",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -75,7 +85,9 @@
     "scope": "auth",
     "author": "optimize-avo",
     "mergedAt": "2026-04-09T03:44:08Z",
-    "mergedAtFormatted": "9 April 2026"
+    "mergedAtDate": "9 April 2026",
+    "mergedAtTime": "10.44.08",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -88,7 +100,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-08T11:01:43Z",
-    "mergedAtFormatted": "8 April 2026"
+    "mergedAtDate": "8 April 2026",
+    "mergedAtTime": "18.01.43",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -101,7 +115,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-08T10:58:32Z",
-    "mergedAtFormatted": "8 April 2026"
+    "mergedAtDate": "8 April 2026",
+    "mergedAtTime": "17.58.32",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -114,7 +130,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-08T09:27:10Z",
-    "mergedAtFormatted": "8 April 2026"
+    "mergedAtDate": "8 April 2026",
+    "mergedAtTime": "16.27.10",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -127,7 +145,9 @@
     "scope": null,
     "author": "ikhsan-sr",
     "mergedAt": "2026-04-08T09:26:14Z",
-    "mergedAtFormatted": "8 April 2026"
+    "mergedAtDate": "8 April 2026",
+    "mergedAtTime": "16.26.14",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -140,7 +160,9 @@
     "scope": null,
     "author": "ikhsan-sr",
     "mergedAt": "2026-04-08T09:24:57Z",
-    "mergedAtFormatted": "8 April 2026"
+    "mergedAtDate": "8 April 2026",
+    "mergedAtTime": "16.24.57",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -153,7 +175,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-07T10:48:59Z",
-    "mergedAtFormatted": "7 April 2026"
+    "mergedAtDate": "7 April 2026",
+    "mergedAtTime": "17.48.59",
+    "body": ""
   },
   {
     "repo": "Artha",
@@ -166,7 +190,9 @@
     "scope": null,
     "author": "optimize-avo",
     "mergedAt": "2026-04-02T03:55:31Z",
-    "mergedAtFormatted": "2 April 2026"
+    "mergedAtDate": "2 April 2026",
+    "mergedAtTime": "10.55.31",
+    "body": "evidence bisa lihati [di sini](https://jam.dev/c/e67595f3-ec94-497c-b3d3-b65f315ca97f) \r\n\r\nfixed by: Muhammad Rayhan Ferdinand"
   },
   {
     "repo": "Shastra",
@@ -179,7 +205,9 @@
     "scope": null,
     "author": "rayhan-avo",
     "mergedAt": "2026-04-01T05:43:50Z",
-    "mergedAtFormatted": "1 April 2026"
+    "mergedAtDate": "1 April 2026",
+    "mergedAtTime": "12.43.50",
+    "body": "Before\r\n<img width=\"639\" height=\"381\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b96a7708-4232-43f1-9b10-78b11ac584c9\" />\r\n\r\nAfter\r\n<img width=\"1607\" height=\"362\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8dcc9f2c-9046-4f64-b0d0-3e3488f76b0a\" />\r\n\r\nada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data production"
   },
   {
     "repo": "Shastra",
@@ -192,7 +220,9 @@
     "scope": null,
     "author": "rayhan-avo",
     "mergedAt": "2026-03-31T04:15:33Z",
-    "mergedAtFormatted": "31 Maret 2026"
+    "mergedAtDate": "31 Maret 2026",
+    "mergedAtTime": "11.15.33",
+    "body": "Adjust DP Reality Check on AS Reality Check Page"
   },
   {
     "repo": "Astra",
@@ -205,7 +235,9 @@
     "scope": null,
     "author": "davidsurosegoro",
     "mergedAt": "2026-03-26T09:35:02Z",
-    "mergedAtFormatted": "26 Maret 2026"
+    "mergedAtDate": "26 Maret 2026",
+    "mergedAtTime": "16.35.02",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -218,7 +250,9 @@
     "scope": null,
     "author": "davidsurosegoro",
     "mergedAt": "2026-03-26T09:12:59Z",
-    "mergedAtFormatted": "26 Maret 2026"
+    "mergedAtDate": "26 Maret 2026",
+    "mergedAtTime": "16.12.59",
+    "body": "Peek domains store their score in `asg` field, not `latestAs`. extractAs() now falls back to `d.asg` so peek domain scores render correctly on the Insights page (same as DomainsPage)."
   },
   {
     "repo": "Astra",
@@ -231,7 +265,9 @@
     "scope": null,
     "author": "davidsurosegoro",
     "mergedAt": "2026-03-26T08:13:38Z",
-    "mergedAtFormatted": "26 Maret 2026"
+    "mergedAtDate": "26 Maret 2026",
+    "mergedAtTime": "15.13.38",
+    "body": ""
   },
   {
     "repo": "Astra",
@@ -244,7 +280,9 @@
     "scope": null,
     "author": "davidsurosegoro",
     "mergedAt": "2026-03-26T06:48:16Z",
-    "mergedAtFormatted": "26 Maret 2026"
+    "mergedAtDate": "26 Maret 2026",
+    "mergedAtTime": "13.48.16",
+    "body": "Google OAuth was redirecting to localhost:3001 (Sutra) instead of localhost:5175 (Astra) after login because callbackURL was a relative path. Fixed to use window.location.origin + from, matching magic link."
   },
   {
     "repo": "Sutra",
@@ -257,7 +295,9 @@
     "scope": null,
     "author": "adsvisory",
     "mergedAt": "2026-03-20T08:41:10Z",
-    "mergedAtFormatted": "20 Maret 2026"
+    "mergedAtDate": "20 Maret 2026",
+    "mergedAtTime": "15.41.10",
+    "body": "## Summary\n- **Discovery routes:** Focus discovery trigger, latest result, apply selected focuses, prompt CRUD (create/update/toggle/delete)\n- **Focus routes:** Full focus CRUD proxy, PB status/trigger/rebuild, focus count enforcement by tier\n- **VS Config routes:** Platform listing, snapshot CRUD, probe analytics, fVS history, autorun toggle, platform override, resolved config\n- **Domain routes:** Domain list/detail/search proxy, Quick Peek signal endpoint with usage tracking\n- **Account:** Avatar upload/clear with data URI + URL support\n- **Infra:** Quick Peek usage repo + migration, pipeline detail migration, tier config additions, auth hardening, language passthrough on discovery\n\n## Known issues from review (to fix post-merge or in follow-up)\n- [ ] `x-dev-tier` header override active in production — should be dev-only\n- [ ] Unvalidated type assertions on some request bodies (discovery prompts, account avatar) — add Zod schemas\n- [ ] Quick Peek missing domain access check — allows scanning unowned domains\n- [ ] Avatar endpoint missing audit logging and inconsistent response envelope\n- [ ] Empty catch blocks in focus count checks (focuses.ts)\n- [ ] Query params on vs-config routes not validated\n\n## Test plan\n- [ ] Discovery: trigger run, poll latest, apply focuses\n- [ ] Focus CRUD: create, update, delete, list — respect tier limits\n- [ ] VS: list platforms, trigger measurement, poll snapshot, view analytics\n- [ ] Quick Peek: signal scan, monthly usage counter increments\n- [ ] Avatar: upload data URI, upload URL, clear — verify DB update\n- [ ] Auth: all routes require valid session, tier checks enforced\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
   },
   {
     "repo": "Astra",
@@ -270,7 +310,9 @@
     "scope": null,
     "author": "adsvisory",
     "mergedAt": "2026-03-20T08:35:28Z",
-    "mergedAtFormatted": "20 Maret 2026"
+    "mergedAtDate": "20 Maret 2026",
+    "mergedAtTime": "15.35.28",
+    "body": ""
   },
   {
     "repo": "Sutra",
@@ -283,6 +325,8 @@
     "scope": null,
     "author": "adsvisory",
     "mergedAt": "2026-03-20T08:11:19Z",
-    "mergedAtFormatted": "20 Maret 2026"
+    "mergedAtDate": "20 Maret 2026",
+    "mergedAtTime": "15.11.19",
+    "body": "This release ships a new API contract for the Karsa Insights Hub and introduces significant client-facing features for Verisimilitude Score (VS), Discovery, and Quick Peek functionality.\n\n### Summary of Changes\n\n*   **Introduces Insights Hub API Contract:** Documents the new unified API for Authority Score (AS) industry benchmarks, combining measured and estimated domain data. This contract lays the foundation for future analytics and VS endpoints.\n*   **Implements Verisimilitude Score (VS) Features:** Adds comprehensive client routes for configuring and accessing VS data, including AI platform management, historical snapshot viewing, detailed probe analytics, and platform override settings for fine-grained control.\n*   **Adds Discovery and Focus Management:** Introduces new client endpoints to enable content discovery, manage strategic content 'focuses', trigger discovery runs, apply recommended focuses, and generate/manage prompt briefs and individual prompts.\n*   **Integrates Quick Peek Functionality:** Provides a new client endpoint (`/api/client/domains/quick-peek`) to retrieve Authority Signal scores for any domain, complete with a 7-day cache and monthly usage quotas enforced per tier.\n*   **Enhances User Account Management:** Enables clients to update their primary domain and user profile pictures, including validation for image inputs.\n*   **Hardens Authentication:** Corrects email verification and magic link URLs to prevent hostname misconfiguration behind proxies and refines cookie handling for better compatibility with modern deployment environments.\n*   **Updates Tier Configuration:** Adds new feature flags (`pipeline_detail`) and usage limits (`quick_peek_monthly`) to the tiering system, allowing granular control over access to the new functionalities.\n*   **Enables Client Domain Removal:** Allows clients to remove domains from their organization through a new endpoint, ensuring proper access revocation and cache invalidation.\n\nRelates to Creating-VS"
   }
 ]

@@ -41,7 +41,8 @@
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1;
+      line-height: 1.15;
+      padding-bottom: 0.05em;
     }
 
     .header-left h1 span {
@@ -139,7 +140,35 @@
       transition: background 0.1s;
     }
 
-    tbody tr:hover { background: var(--surface); }
+    tbody tr.data-row { cursor: pointer; }
+    tbody tr.data-row:hover { background: var(--surface); }
+
+    .detail-row td { padding: 0; border-bottom: none; }
+    .detail-cell {
+      background: #0a0d13;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px !important;
+    }
+    .detail-body {
+      font-size: 0.82rem;
+      color: var(--text);
+      white-space: pre-wrap;
+      font-family: 'DM Mono', monospace;
+      line-height: 1.6;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .td-pr { white-space: nowrap; }
+    .expand-chevron {
+      margin-left: 6px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: inline-block;
+      transition: transform 0.2s;
+      user-select: none;
+    }
+    .expand-chevron.open { transform: rotate(180deg); }
 
     td {
       padding: 12px 12px;
@@ -151,6 +180,14 @@
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       white-space: nowrap;
+    }
+
+    .td-time {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.6;
+      margin-top: 2px;
     }
 
     .repo-badge {
@@ -213,13 +250,13 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>9 April 2026 pukul 16.46 WIB
+    Diperbarui otomatis<br>9 April 2026 pukul 17.12 WIB
   </div>
 </header>
 
 <div class="filters">
   <span class="filters-label">filter:</span>
-  <button class="filter-btn active" data-repo="avq-artha" style="--c:#aaa" onclick="toggleFilter(this)">Artha</button><button class="filter-btn active" data-repo="avq-astra" style="--c:#aaa" onclick="toggleFilter(this)">Astra</button><button class="filter-btn active" data-repo="avq-shastra" style="--c:#aaa" onclick="toggleFilter(this)">Shastra</button><button class="filter-btn active" data-repo="avq-sutra" style="--c:#aaa" onclick="toggleFilter(this)">Sutra</button>
+  <button class="filter-btn active" data-repo="avq-artha" style="--c:#4F8EF7" onclick="toggleFilter(this)">Artha</button><button class="filter-btn active" data-repo="avq-astra" style="--c:#F7934F" onclick="toggleFilter(this)">Astra</button><button class="filter-btn active" data-repo="avq-shastra" style="--c:#7C4FF7" onclick="toggleFilter(this)">Shastra</button><button class="filter-btn active" data-repo="avq-sutra" style="--c:#4FF7A0" onclick="toggleFilter(this)">Sutra</button>
 </div>
 
 <div class="content">
@@ -237,103 +274,265 @@
             </tr>
           </thead>
           <tbody>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-17')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">16.00.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Release</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/17" target="_blank">#17</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/17" target="_blank" onclick="event.stopPropagation()">#17</a>
+            <span class="expand-chevron" id="chev-avq-astra-17">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-17">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-6')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">15.55.17</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Fix calling env (#5)</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/6" target="_blank">#6</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/6" target="_blank" onclick="event.stopPropagation()">#6</a>
+            <span class="expand-chevron" id="chev-avq-artha-6">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+        <tr class="detail-row hidden" id="detail-avq-artha-6">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-4')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">14.13.28</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Fix calling env</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/4" target="_blank">#4</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/4" target="_blank" onclick="event.stopPropagation()">#4</a>
+            <span class="expand-chevron" id="chev-avq-artha-4">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-artha-4">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-14')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">12.07.32</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/14" target="_blank">#14</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/14" target="_blank" onclick="event.stopPropagation()">#14</a>
+            <span class="expand-chevron" id="chev-avq-astra-14">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-14">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-13')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">12.02.40</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/13" target="_blank">#13</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/13" target="_blank" onclick="event.stopPropagation()">#13</a>
+            <span class="expand-chevron" id="chev-avq-astra-13">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">9 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-13">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-12')">
+          <td class="td-date">
+            <div>9 April 2026</div>
+            <div class="td-time">10.44.08</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title"><span class="scope">auth</span>Ignore vercel json from each server</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/12" target="_blank">#12</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/12" target="_blank" onclick="event.stopPropagation()">#12</a>
+            <span class="expand-chevron" id="chev-avq-astra-12">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">8 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-12">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-11')">
+          <td class="td-date">
+            <div>8 April 2026</div>
+            <div class="td-time">18.01.43</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/11" target="_blank">#11</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/11" target="_blank" onclick="event.stopPropagation()">#11</a>
+            <span class="expand-chevron" id="chev-avq-astra-11">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">8 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-11">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-10')">
+          <td class="td-date">
+            <div>8 April 2026</div>
+            <div class="td-time">17.58.32</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/10" target="_blank">#10</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/10" target="_blank" onclick="event.stopPropagation()">#10</a>
+            <span class="expand-chevron" id="chev-avq-astra-10">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">8 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-10">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-9')">
+          <td class="td-date">
+            <div>8 April 2026</div>
+            <div class="td-time">16.27.10</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/9" target="_blank">#9</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/9" target="_blank" onclick="event.stopPropagation()">#9</a>
+            <span class="expand-chevron" id="chev-avq-astra-9">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">8 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-9">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-8')">
+          <td class="td-date">
+            <div>8 April 2026</div>
+            <div class="td-time">16.26.14</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Fix hardcode vite config</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/8" target="_blank">#8</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/8" target="_blank" onclick="event.stopPropagation()">#8</a>
+            <span class="expand-chevron" id="chev-avq-astra-8">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">8 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-8">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-7')">
+          <td class="td-date">
+            <div>8 April 2026</div>
+            <div class="td-time">16.24.57</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Fix hardcode vite config</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/7" target="_blank">#7</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/7" target="_blank" onclick="event.stopPropagation()">#7</a>
+            <span class="expand-chevron" id="chev-avq-astra-7">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">7 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-7">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-6')">
+          <td class="td-date">
+            <div>7 April 2026</div>
+            <div class="td-time">17.48.59</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Fix login magic link</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/6" target="_blank">#6</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/6" target="_blank" onclick="event.stopPropagation()">#6</a>
+            <span class="expand-chevron" id="chev-avq-astra-6">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">2 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-6">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-1')">
+          <td class="td-date">
+            <div>2 April 2026</div>
+            <div class="td-time">10.55.31</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
           <td><span class="type-badge">🔧 Internal</span></td>
           <td class="td-title">Internal update</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/1" target="_blank">#1</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/1" target="_blank" onclick="event.stopPropagation()">#1</a>
+            <span class="expand-chevron" id="chev-avq-artha-1">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">1 April 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Shastra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-artha-1">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">evidence bisa lihati [di sini](https://jam.dev/c/e67595f3-ec94-497c-b3d3-b65f315ca97f) 
+
+fixed by: Muhammad Rayhan Ferdinand</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-2')">
+          <td class="td-date">
+            <div>1 April 2026</div>
+            <div class="td-time">12.43.50</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Fix/DP Reality Check on AS Reality Check Page</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/2" target="_blank">#2</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/2" target="_blank" onclick="event.stopPropagation()">#2</a>
+            <span class="expand-chevron" id="chev-avq-shastra-2">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-2">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Before
+&lt;img width=&quot;639&quot; height=&quot;381&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/b96a7708-4232-43f1-9b10-78b11ac584c9&quot; /&gt;
+
+After
+&lt;img width=&quot;1607&quot; height=&quot;362&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/8dcc9f2c-9046-4f64-b0d0-3e3488f76b0a&quot; /&gt;
+
+ada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data production</div>
+          </td>
         </tr></tbody>
         </table>
       </div>
@@ -350,61 +549,186 @@
             </tr>
           </thead>
           <tbody>
-        <tr>
-          <td class="td-date">31 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Shastra</span></td>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-1')">
+          <td class="td-date">
+            <div>31 Maret 2026</div>
+            <div class="td-time">11.15.33</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Adjust DP Reality Check</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/1" target="_blank">#1</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/1" target="_blank" onclick="event.stopPropagation()">#1</a>
+            <span class="expand-chevron" id="chev-avq-shastra-1">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">26 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-shastra-1">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Adjust DP Reality Check on AS Reality Check Page</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-5')">
+          <td class="td-date">
+            <div>26 Maret 2026</div>
+            <div class="td-time">16.35.02</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Test deployment</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/5" target="_blank">#5</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/5" target="_blank" onclick="event.stopPropagation()">#5</a>
+            <span class="expand-chevron" id="chev-avq-astra-5">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">26 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-5">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-4')">
+          <td class="td-date">
+            <div>26 Maret 2026</div>
+            <div class="td-time">16.12.59</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Show AS score for quick_peek domains in Insights portfolio table</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/4" target="_blank">#4</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/4" target="_blank" onclick="event.stopPropagation()">#4</a>
+            <span class="expand-chevron" id="chev-avq-astra-4">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">26 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-4">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Peek domains store their score in `asg` field, not `latestAs`. extractAs() now falls back to `d.asg` so peek domain scores render correctly on the Insights page (same as DomainsPage).</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-3')">
+          <td class="td-date">
+            <div>26 Maret 2026</div>
+            <div class="td-time">15.13.38</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Fix/vs tab score display</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/3" target="_blank">#3</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/3" target="_blank" onclick="event.stopPropagation()">#3</a>
+            <span class="expand-chevron" id="chev-avq-astra-3">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">26 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-3">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-2')">
+          <td class="td-date">
+            <div>26 Maret 2026</div>
+            <div class="td-time">13.48.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
           <td class="td-title">Use absolute callbackURL for Google OAuth redirect (v0.14.2)</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/2" target="_blank">#2</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/2" target="_blank" onclick="event.stopPropagation()">#2</a>
+            <span class="expand-chevron" id="chev-avq-astra-2">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">20 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Sutra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-2">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Google OAuth was redirecting to localhost:3001 (Sutra) instead of localhost:5175 (Astra) after login because callbackURL was a relative path. Fixed to use window.location.origin + from, matching magic link.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-2')">
+          <td class="td-date">
+            <div>20 Maret 2026</div>
+            <div class="td-time">15.41.10</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
           <td><span class="type-badge">✨ Fitur Baru</span></td>
           <td class="td-title">Discovery, focus, VS config, domains, Quick Peek client routes (v0.8.0–v0.9.0)</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/2" target="_blank">#2</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/2" target="_blank" onclick="event.stopPropagation()">#2</a>
+            <span class="expand-chevron" id="chev-avq-sutra-2">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">20 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-sutra-2">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+- **Discovery routes:** Focus discovery trigger, latest result, apply selected focuses, prompt CRUD (create/update/toggle/delete)
+- **Focus routes:** Full focus CRUD proxy, PB status/trigger/rebuild, focus count enforcement by tier
+- **VS Config routes:** Platform listing, snapshot CRUD, probe analytics, fVS history, autorun toggle, platform override, resolved config
+- **Domain routes:** Domain list/detail/search proxy, Quick Peek signal endpoint with usage tracking
+- **Account:** Avatar upload/clear with data URI + URL support
+- **Infra:** Quick Peek usage repo + migration, pipeline detail migration, tier config additions, auth hardening, language passthrough on discovery
+
+## Known issues from review (to fix post-merge or in follow-up)
+- [ ] `x-dev-tier` header override active in production — should be dev-only
+- [ ] Unvalidated type assertions on some request bodies (discovery prompts, account avatar) — add Zod schemas
+- [ ] Quick Peek missing domain access check — allows scanning unowned domains
+- [ ] Avatar endpoint missing audit logging and inconsistent response envelope
+- [ ] Empty catch blocks in focus count checks (focuses.ts)
+- [ ] Query params on vs-config routes not validated
+
+## Test plan
+- [ ] Discovery: trigger run, poll latest, apply focuses
+- [ ] Focus CRUD: create, update, delete, list — respect tier limits
+- [ ] VS: list platforms, trigger measurement, poll snapshot, view analytics
+- [ ] Quick Peek: signal scan, monthly usage counter increments
+- [ ] Avatar: upload data URI, upload URL, clear — verify DB update
+- [ ] Auth: all routes require valid session, tier checks enforced
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-1')">
+          <td class="td-date">
+            <div>20 Maret 2026</div>
+            <div class="td-time">15.35.28</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Practice PR</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/1" target="_blank">#1</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/1" target="_blank" onclick="event.stopPropagation()">#1</a>
+            <span class="expand-chevron" id="chev-avq-astra-1">▾</span>
+          </td>
         </tr>
-        <tr>
-          <td class="td-date">20 Maret 2026</td>
-          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Sutra</span></td>
+        <tr class="detail-row hidden" id="detail-avq-astra-1">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-1')">
+          <td class="td-date">
+            <div>20 Maret 2026</div>
+            <div class="td-time">15.11.19</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
           <td><span class="type-badge">📦 Update</span></td>
           <td class="td-title">Introduces Insights Hub API and VS Features</td>
-          <td><a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/1" target="_blank">#1</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/1" target="_blank" onclick="event.stopPropagation()">#1</a>
+            <span class="expand-chevron" id="chev-avq-sutra-1">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-1">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">This release ships a new API contract for the Karsa Insights Hub and introduces significant client-facing features for Verisimilitude Score (VS), Discovery, and Quick Peek functionality.
+
+### Summary of Changes
+
+*   **Introduces Insights Hub API Contract:** Documents the new unified API for Authority Score (AS) industry benchmarks, combining measured and estimated domain data. This contract lays the foundation for future analytics and VS endpoints.
+*   **Implements Verisimilitude Score (VS) Features:** Adds comprehensive client routes for configuring and accessing VS data, including AI platform management, historical snapshot viewing, detailed probe analytics, and platform override settings for fine-grained control.
+*   **Adds Discovery and Focus Management:** Introduces new client endpoints to enable content discovery, manage strategic content 'focuses', trigger discovery runs, apply recommended focuses, and generate/manage prompt briefs and individual prompts.
+*   **Integrates Quick Peek Functionality:** Provides a new client endpoint (`/api/client/domains/quick-peek`) to retrieve Authority Signal scores for any domain, complete with a 7-day cache and monthly usage quotas enforced per tier.
+*   **Enhances User Account Management:** Enables clients to update their primary domain and user profile pictures, including validation for image inputs.
+*   **Hardens Authentication:** Corrects email verification and magic link URLs to prevent hostname misconfiguration behind proxies and refines cookie handling for better compatibility with modern deployment environments.
+*   **Updates Tier Configuration:** Adds new feature flags (`pipeline_detail`) and usage limits (`quick_peek_monthly`) to the tiering system, allowing granular control over access to the new functionalities.
+*   **Enables Client Domain Removal:** Allows clients to remove domains from their organization through a new endpoint, ensuring proper access revocation and cache invalidation.
+
+Relates to Creating-VS</div>
+          </td>
         </tr></tbody>
         </table>
       </div>
@@ -420,12 +744,24 @@
     const activeLabels = [...document.querySelectorAll('.filter-btn.active')]
       .map(b => b.textContent.trim());
 
-    document.querySelectorAll('tbody tr').forEach(row => {
+    document.querySelectorAll('tbody tr.data-row').forEach(row => {
       const repoBadge = row.querySelector('.repo-badge');
       if (!repoBadge) return;
       const badgeText = repoBadge.textContent.trim();
       row.classList.toggle('hidden', !activeLabels.includes(badgeText));
     });
+
+    // Collapse all detail rows when filter changes
+    document.querySelectorAll('tbody tr.detail-row').forEach(r => r.classList.add('hidden'));
+    document.querySelectorAll('.expand-chevron').forEach(c => c.classList.remove('open'));
+  }
+
+  function toggleDetail(id) {
+    const row = document.getElementById('detail-' + id);
+    const chev = document.getElementById('chev-' + id);
+    if (!row) return;
+    row.classList.toggle('hidden');
+    if (chev) chev.classList.toggle('open');
   }
 </script>
 </body>
