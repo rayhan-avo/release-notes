@@ -9,10 +9,10 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const ORG = 'adsvisory'; // ganti ke nama org baru kalau udah pindah
 
 const REPOS = [
-  { name: 'artha',   label: 'Artha' },
-  { name: 'astra',   label: 'Astra' },
-  { name: 'shastra', label: 'Shastra' },
-  { name: 'sutra',   label: 'Sutra' },
+  { name: 'avq-artha',   label: 'Artha' },
+  { name: 'avq-astra',   label: 'Astra' },
+  { name: 'avq-shastra', label: 'Shastra' },
+  { name: 'avq-sutra',   label: 'Sutra' },
   // tambah repo baru di sini:
   // { name: 'nama-repo', label: 'Label Tampil' },
 ];
@@ -474,25 +474,14 @@ function generateHTML(entries) {
   }
 
   function applyFilters() {
-    const activeRepos = [...document.querySelectorAll('.filter-btn.active')]
-      .map(b => b.dataset.repo);
+    const activeLabels = [...document.querySelectorAll('.filter-btn.active')]
+      .map(b => b.textContent.trim());
 
     document.querySelectorAll('tbody tr').forEach(row => {
       const repoBadge = row.querySelector('.repo-badge');
       if (!repoBadge) return;
-      const repoSlug = repoBadge.textContent.trim().toLowerCase();
-      // match by label — find the repo config
-      const match = activeRepos.some(slug => {
-        const badge = row.querySelector(\`.repo-badge\`);
-        return badge && badge.style.color && row.querySelector(\`[data-repo-slug="${activeRepos}"]\`);
-      });
-      // simpler: hide row if no active filter matches the badge text
       const badgeText = repoBadge.textContent.trim();
-      const isActive = activeRepos.some(slug => {
-        const btn = document.querySelector(\`[data-repo="\${slug}"]\`);
-        return btn && btn.textContent.trim() === badgeText;
-      });
-      row.classList.toggle('hidden', !isActive);
+      row.classList.toggle('hidden', !activeLabels.includes(badgeText));
     });
   }
 </script>
