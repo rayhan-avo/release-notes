@@ -12,7 +12,17 @@
     "mergedAt": "2026-04-09T09:00:16Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "16.00.16",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "163274b",
+        "message": "Fix/env (#15)"
+      },
+      {
+        "sha": "14e7bfa",
+        "message": "Fix hardcoded env (#16)"
+      }
+    ]
   },
   {
     "repo": "Artha",
@@ -27,7 +37,13 @@
     "mergedAt": "2026-04-09T08:55:17Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "15.55.17",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "576351a",
+        "message": "fix: fix calling env (#5)"
+      }
+    ]
   },
   {
     "repo": "Artha",
@@ -42,7 +58,13 @@
     "mergedAt": "2026-04-09T07:13:28Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "14.13.28",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "f834b60",
+        "message": "fix: fix calling env"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -57,7 +79,53 @@
     "mergedAt": "2026-04-09T05:07:32Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "12.07.32",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "cb3f41d",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "aebc78e",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "3910f31",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "08f8867",
+        "message": "fix(auth): ignore vercel json from each server"
+      },
+      {
+        "sha": "7df3548",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "656b667",
+        "message": "feat: add vercel ts dynamic value"
+      },
+      {
+        "sha": "f779080",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "4b76ee0",
+        "message": "feat: add vercel ts dynamic value"
+      },
+      {
+        "sha": "6dd2bfb",
+        "message": "feat: add vercel ts dynamic value"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -72,7 +140,45 @@
     "mergedAt": "2026-04-09T05:02:40Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "12.02.40",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "cb3f41d",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "aebc78e",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "3910f31",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "08f8867",
+        "message": "fix(auth): ignore vercel json from each server"
+      },
+      {
+        "sha": "7df3548",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "656b667",
+        "message": "feat: add vercel ts dynamic value"
+      },
+      {
+        "sha": "f779080",
+        "message": "fix conflict"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -87,7 +193,37 @@
     "mergedAt": "2026-04-09T03:44:08Z",
     "mergedAtDate": "9 April 2026",
     "mergedAtTime": "10.44.08",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "cb3f41d",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "aebc78e",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "3910f31",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "08f8867",
+        "message": "fix(auth): ignore vercel json from each server"
+      },
+      {
+        "sha": "7df3548",
+        "message": "fix conflict"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -102,7 +238,29 @@
     "mergedAt": "2026-04-08T11:01:43Z",
     "mergedAtDate": "8 April 2026",
     "mergedAtTime": "18.01.43",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "cb3f41d",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "aebc78e",
+        "message": "fix: fix hardcode rewrite api"
+      },
+      {
+        "sha": "3910f31",
+        "message": "fix conflict"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -117,7 +275,21 @@
     "mergedAt": "2026-04-08T10:58:32Z",
     "mergedAtDate": "8 April 2026",
     "mergedAtTime": "17.58.32",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "cb3f41d",
+        "message": "fix: fix hardcode rewrite api"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -132,7 +304,17 @@
     "mergedAt": "2026-04-08T09:27:10Z",
     "mergedAtDate": "8 April 2026",
     "mergedAtTime": "16.27.10",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      },
+      {
+        "sha": "d505435",
+        "message": "fix: fix hardcode vite config"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -147,7 +329,13 @@
     "mergedAt": "2026-04-08T09:26:14Z",
     "mergedAtDate": "8 April 2026",
     "mergedAtTime": "16.26.14",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "13ac139",
+        "message": "fix: fix hardcode vite config"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -162,7 +350,13 @@
     "mergedAt": "2026-04-08T09:24:57Z",
     "mergedAtDate": "8 April 2026",
     "mergedAtTime": "16.24.57",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "5300b5e",
+        "message": "fix: fix hardcode vite config"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -177,7 +371,13 @@
     "mergedAt": "2026-04-07T10:48:59Z",
     "mergedAtDate": "7 April 2026",
     "mergedAtTime": "17.48.59",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "d0597d2",
+        "message": "fix: fix login magic link"
+      }
+    ]
   },
   {
     "repo": "Artha",
@@ -192,7 +392,13 @@
     "mergedAt": "2026-04-02T03:55:31Z",
     "mergedAtDate": "2 April 2026",
     "mergedAtTime": "10.55.31",
-    "body": "evidence bisa lihati [di sini](https://jam.dev/c/e67595f3-ec94-497c-b3d3-b65f315ca97f) \r\n\r\nfixed by: Muhammad Rayhan Ferdinand"
+    "body": "evidence bisa lihati [di sini](https://jam.dev/c/e67595f3-ec94-497c-b3d3-b65f315ca97f) \r\n\r\nfixed by: Muhammad Rayhan Ferdinand",
+    "commits": [
+      {
+        "sha": "cbc1a21",
+        "message": "fix/Login-Artha"
+      }
+    ]
   },
   {
     "repo": "Shastra",
@@ -207,7 +413,21 @@
     "mergedAt": "2026-04-01T05:43:50Z",
     "mergedAtDate": "1 April 2026",
     "mergedAtTime": "12.43.50",
-    "body": "Before\r\n<img width=\"639\" height=\"381\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b96a7708-4232-43f1-9b10-78b11ac584c9\" />\r\n\r\nAfter\r\n<img width=\"1607\" height=\"362\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8dcc9f2c-9046-4f64-b0d0-3e3488f76b0a\" />\r\n\r\nada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data production"
+    "body": "Before\r\n<img width=\"639\" height=\"381\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b96a7708-4232-43f1-9b10-78b11ac584c9\" />\r\n\r\nAfter\r\n<img width=\"1607\" height=\"362\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8dcc9f2c-9046-4f64-b0d0-3e3488f76b0a\" />\r\n\r\nada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data production",
+    "commits": [
+      {
+        "sha": "7ccdbe0",
+        "message": "Setup to run on local .env"
+      },
+      {
+        "sha": "9a2ccd0",
+        "message": "Revert changes on Footer"
+      },
+      {
+        "sha": "5df30a0",
+        "message": "Fix button DP Reality Check"
+      }
+    ]
   },
   {
     "repo": "Shastra",
@@ -222,7 +442,17 @@
     "mergedAt": "2026-03-31T04:15:33Z",
     "mergedAtDate": "31 Maret 2026",
     "mergedAtTime": "11.15.33",
-    "body": "Adjust DP Reality Check on AS Reality Check Page"
+    "body": "Adjust DP Reality Check on AS Reality Check Page",
+    "commits": [
+      {
+        "sha": "395eaa1",
+        "message": "Handle fallback DP Reality Check"
+      },
+      {
+        "sha": "829d226",
+        "message": "Update Label after run DP Reality Check"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -237,7 +467,13 @@
     "mergedAt": "2026-03-26T09:35:02Z",
     "mergedAtDate": "26 Maret 2026",
     "mergedAtTime": "16.35.02",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "5e97976",
+        "message": "test deployment"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -252,7 +488,13 @@
     "mergedAt": "2026-03-26T09:12:59Z",
     "mergedAtDate": "26 Maret 2026",
     "mergedAtTime": "16.12.59",
-    "body": "Peek domains store their score in `asg` field, not `latestAs`. extractAs() now falls back to `d.asg` so peek domain scores render correctly on the Insights page (same as DomainsPage)."
+    "body": "Peek domains store their score in `asg` field, not `latestAs`. extractAs() now falls back to `d.asg` so peek domain scores render correctly on the Insights page (same as DomainsPage).",
+    "commits": [
+      {
+        "sha": "14fde32",
+        "message": "fix: show AS score for quick_peek domains in Insights portfolio table"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -267,7 +509,17 @@
     "mergedAt": "2026-03-26T08:13:38Z",
     "mergedAtDate": "26 Maret 2026",
     "mergedAtTime": "15.13.38",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "82b22c7",
+        "message": "fix: unwrap Karsa VS snapshot nested data wrapper in VsTab (v0.14.3)"
+      },
+      {
+        "sha": "cb684c7",
+        "message": "fix: center-align STATUS column in domain portfolio table"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -282,7 +534,13 @@
     "mergedAt": "2026-03-26T06:48:16Z",
     "mergedAtDate": "26 Maret 2026",
     "mergedAtTime": "13.48.16",
-    "body": "Google OAuth was redirecting to localhost:3001 (Sutra) instead of localhost:5175 (Astra) after login because callbackURL was a relative path. Fixed to use window.location.origin + from, matching magic link."
+    "body": "Google OAuth was redirecting to localhost:3001 (Sutra) instead of localhost:5175 (Astra) after login because callbackURL was a relative path. Fixed to use window.location.origin + from, matching magic link.",
+    "commits": [
+      {
+        "sha": "9962995",
+        "message": "fix: use absolute callbackURL for Google OAuth redirect (v0.14.2)"
+      }
+    ]
   },
   {
     "repo": "Sutra",
@@ -297,7 +555,17 @@
     "mergedAt": "2026-03-20T08:41:10Z",
     "mergedAtDate": "20 Maret 2026",
     "mergedAtTime": "15.41.10",
-    "body": "## Summary\n- **Discovery routes:** Focus discovery trigger, latest result, apply selected focuses, prompt CRUD (create/update/toggle/delete)\n- **Focus routes:** Full focus CRUD proxy, PB status/trigger/rebuild, focus count enforcement by tier\n- **VS Config routes:** Platform listing, snapshot CRUD, probe analytics, fVS history, autorun toggle, platform override, resolved config\n- **Domain routes:** Domain list/detail/search proxy, Quick Peek signal endpoint with usage tracking\n- **Account:** Avatar upload/clear with data URI + URL support\n- **Infra:** Quick Peek usage repo + migration, pipeline detail migration, tier config additions, auth hardening, language passthrough on discovery\n\n## Known issues from review (to fix post-merge or in follow-up)\n- [ ] `x-dev-tier` header override active in production — should be dev-only\n- [ ] Unvalidated type assertions on some request bodies (discovery prompts, account avatar) — add Zod schemas\n- [ ] Quick Peek missing domain access check — allows scanning unowned domains\n- [ ] Avatar endpoint missing audit logging and inconsistent response envelope\n- [ ] Empty catch blocks in focus count checks (focuses.ts)\n- [ ] Query params on vs-config routes not validated\n\n## Test plan\n- [ ] Discovery: trigger run, poll latest, apply focuses\n- [ ] Focus CRUD: create, update, delete, list — respect tier limits\n- [ ] VS: list platforms, trigger measurement, poll snapshot, view analytics\n- [ ] Quick Peek: signal scan, monthly usage counter increments\n- [ ] Avatar: upload data URI, upload URL, clear — verify DB update\n- [ ] Auth: all routes require valid session, tier checks enforced\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+    "body": "## Summary\n- **Discovery routes:** Focus discovery trigger, latest result, apply selected focuses, prompt CRUD (create/update/toggle/delete)\n- **Focus routes:** Full focus CRUD proxy, PB status/trigger/rebuild, focus count enforcement by tier\n- **VS Config routes:** Platform listing, snapshot CRUD, probe analytics, fVS history, autorun toggle, platform override, resolved config\n- **Domain routes:** Domain list/detail/search proxy, Quick Peek signal endpoint with usage tracking\n- **Account:** Avatar upload/clear with data URI + URL support\n- **Infra:** Quick Peek usage repo + migration, pipeline detail migration, tier config additions, auth hardening, language passthrough on discovery\n\n## Known issues from review (to fix post-merge or in follow-up)\n- [ ] `x-dev-tier` header override active in production — should be dev-only\n- [ ] Unvalidated type assertions on some request bodies (discovery prompts, account avatar) — add Zod schemas\n- [ ] Quick Peek missing domain access check — allows scanning unowned domains\n- [ ] Avatar endpoint missing audit logging and inconsistent response envelope\n- [ ] Empty catch blocks in focus count checks (focuses.ts)\n- [ ] Query params on vs-config routes not validated\n\n## Test plan\n- [ ] Discovery: trigger run, poll latest, apply focuses\n- [ ] Focus CRUD: create, update, delete, list — respect tier limits\n- [ ] VS: list platforms, trigger measurement, poll snapshot, view analytics\n- [ ] Quick Peek: signal scan, monthly usage counter increments\n- [ ] Avatar: upload data URI, upload URL, clear — verify DB update\n- [ ] Auth: all routes require valid session, tier checks enforced\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "2a132d7",
+        "message": "fix: pass language param through to Karsa discovery run endpoint"
+      },
+      {
+        "sha": "122ca89",
+        "message": "fix: security hardening — dev-tier bypass, input validation, audit logging"
+      }
+    ]
   },
   {
     "repo": "Astra",
@@ -312,7 +580,25 @@
     "mergedAt": "2026-03-20T08:35:28Z",
     "mergedAtDate": "20 Maret 2026",
     "mergedAtTime": "15.35.28",
-    "body": ""
+    "body": "",
+    "commits": [
+      {
+        "sha": "c05c5be",
+        "message": "feat: VS visibility page, theme provider, focus/VS hooks, compare page, auth & profile enhancements (v0.8.0)"
+      },
+      {
+        "sha": "6b65417",
+        "message": "feat: VS visibility page, probe grid, wizard, platform radar, snapshot picker, focus heatmap (v0.9.0)"
+      },
+      {
+        "sha": "2728361",
+        "message": "feat: VS focus card enrichment, ADS surface layering audit, UI store, probes tab expansion (v0.10.0)"
+      },
+      {
+        "sha": "c6f5723",
+        "message": "fix: XSS vectors, auto-save pattern, hardcoded thresholds/costs, platform color tokens"
+      }
+    ]
   },
   {
     "repo": "Sutra",
@@ -327,6 +613,16 @@
     "mergedAt": "2026-03-20T08:11:19Z",
     "mergedAtDate": "20 Maret 2026",
     "mergedAtTime": "15.11.19",
-    "body": "This release ships a new API contract for the Karsa Insights Hub and introduces significant client-facing features for Verisimilitude Score (VS), Discovery, and Quick Peek functionality.\n\n### Summary of Changes\n\n*   **Introduces Insights Hub API Contract:** Documents the new unified API for Authority Score (AS) industry benchmarks, combining measured and estimated domain data. This contract lays the foundation for future analytics and VS endpoints.\n*   **Implements Verisimilitude Score (VS) Features:** Adds comprehensive client routes for configuring and accessing VS data, including AI platform management, historical snapshot viewing, detailed probe analytics, and platform override settings for fine-grained control.\n*   **Adds Discovery and Focus Management:** Introduces new client endpoints to enable content discovery, manage strategic content 'focuses', trigger discovery runs, apply recommended focuses, and generate/manage prompt briefs and individual prompts.\n*   **Integrates Quick Peek Functionality:** Provides a new client endpoint (`/api/client/domains/quick-peek`) to retrieve Authority Signal scores for any domain, complete with a 7-day cache and monthly usage quotas enforced per tier.\n*   **Enhances User Account Management:** Enables clients to update their primary domain and user profile pictures, including validation for image inputs.\n*   **Hardens Authentication:** Corrects email verification and magic link URLs to prevent hostname misconfiguration behind proxies and refines cookie handling for better compatibility with modern deployment environments.\n*   **Updates Tier Configuration:** Adds new feature flags (`pipeline_detail`) and usage limits (`quick_peek_monthly`) to the tiering system, allowing granular control over access to the new functionalities.\n*   **Enables Client Domain Removal:** Allows clients to remove domains from their organization through a new endpoint, ensuring proper access revocation and cache invalidation.\n\nRelates to Creating-VS"
+    "body": "This release ships a new API contract for the Karsa Insights Hub and introduces significant client-facing features for Verisimilitude Score (VS), Discovery, and Quick Peek functionality.\n\n### Summary of Changes\n\n*   **Introduces Insights Hub API Contract:** Documents the new unified API for Authority Score (AS) industry benchmarks, combining measured and estimated domain data. This contract lays the foundation for future analytics and VS endpoints.\n*   **Implements Verisimilitude Score (VS) Features:** Adds comprehensive client routes for configuring and accessing VS data, including AI platform management, historical snapshot viewing, detailed probe analytics, and platform override settings for fine-grained control.\n*   **Adds Discovery and Focus Management:** Introduces new client endpoints to enable content discovery, manage strategic content 'focuses', trigger discovery runs, apply recommended focuses, and generate/manage prompt briefs and individual prompts.\n*   **Integrates Quick Peek Functionality:** Provides a new client endpoint (`/api/client/domains/quick-peek`) to retrieve Authority Signal scores for any domain, complete with a 7-day cache and monthly usage quotas enforced per tier.\n*   **Enhances User Account Management:** Enables clients to update their primary domain and user profile pictures, including validation for image inputs.\n*   **Hardens Authentication:** Corrects email verification and magic link URLs to prevent hostname misconfiguration behind proxies and refines cookie handling for better compatibility with modern deployment environments.\n*   **Updates Tier Configuration:** Adds new feature flags (`pipeline_detail`) and usage limits (`quick_peek_monthly`) to the tiering system, allowing granular control over access to the new functionalities.\n*   **Enables Client Domain Removal:** Allows clients to remove domains from their organization through a new endpoint, ensuring proper access revocation and cache invalidation.\n\nRelates to Creating-VS",
+    "commits": [
+      {
+        "sha": "c2ec31e",
+        "message": "feat: discovery, focus, VS config client routes, pipeline detail migration, auth hardening (v0.8.0)"
+      },
+      {
+        "sha": "c58ad94",
+        "message": "feat: discovery, VS config, domain routes, Quick Peek usage tracking, tier config fixes (v0.9.0)"
+      }
+    ]
   }
 ]

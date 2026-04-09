@@ -41,8 +41,8 @@
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.15;
-      padding-bottom: 0.05em;
+      line-height: 1.3;
+      overflow: visible;
     }
 
     .header-left h1 span {
@@ -159,6 +159,32 @@
       overflow-y: auto;
     }
 
+    .detail-commits-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .commits-list { display: flex; flex-direction: column; gap: 4px; }
+
+    .commit-line {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .commit-sha {
+      font-size: 0.7rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
     .td-pr { white-space: nowrap; }
     .expand-chevron {
       margin-left: 6px;
@@ -250,7 +276,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>9 April 2026 pukul 17.12 WIB
+    Diperbarui otomatis<br>9 April 2026 pukul 17.34 WIB
   </div>
 </header>
 
@@ -289,7 +315,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-17">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">163274b</span>Fix/env (#15)</div><div class="commit-line"><span class="commit-sha">14e7bfa</span>Fix hardcoded env (#16)</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-6')">
@@ -307,7 +333,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-artha-6">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">576351a</span>fix: fix calling env (#5)</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-4')">
@@ -325,7 +351,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-artha-4">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">f834b60</span>fix: fix calling env</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-14')">
@@ -343,7 +369,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-14">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">cb3f41d</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">aebc78e</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">3910f31</span>fix conflict</div><div class="commit-line"><span class="commit-sha">08f8867</span>fix(auth): ignore vercel json from each server</div><div class="commit-line"><span class="commit-sha">7df3548</span>fix conflict</div><div class="commit-line"><span class="commit-sha">656b667</span>feat: add vercel ts dynamic value</div><div class="commit-line"><span class="commit-sha">f779080</span>fix conflict</div><div class="commit-line"><span class="commit-sha">4b76ee0</span>feat: add vercel ts dynamic value</div><div class="commit-line"><span class="commit-sha">6dd2bfb</span>feat: add vercel ts dynamic value</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-13')">
@@ -361,7 +387,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-13">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">cb3f41d</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">aebc78e</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">3910f31</span>fix conflict</div><div class="commit-line"><span class="commit-sha">08f8867</span>fix(auth): ignore vercel json from each server</div><div class="commit-line"><span class="commit-sha">7df3548</span>fix conflict</div><div class="commit-line"><span class="commit-sha">656b667</span>feat: add vercel ts dynamic value</div><div class="commit-line"><span class="commit-sha">f779080</span>fix conflict</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-12')">
@@ -379,7 +405,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-12">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">cb3f41d</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">aebc78e</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">3910f31</span>fix conflict</div><div class="commit-line"><span class="commit-sha">08f8867</span>fix(auth): ignore vercel json from each server</div><div class="commit-line"><span class="commit-sha">7df3548</span>fix conflict</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-11')">
@@ -397,7 +423,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-11">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">cb3f41d</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">aebc78e</span>fix: fix hardcode rewrite api</div><div class="commit-line"><span class="commit-sha">3910f31</span>fix conflict</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-10')">
@@ -415,7 +441,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-10">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">cb3f41d</span>fix: fix hardcode rewrite api</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-9')">
@@ -433,7 +459,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-9">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div><div class="commit-line"><span class="commit-sha">d505435</span>fix: fix hardcode vite config</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-8')">
@@ -451,7 +477,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-8">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">13ac139</span>fix: fix hardcode vite config</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-7')">
@@ -469,7 +495,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-7">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">5300b5e</span>fix: fix hardcode vite config</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-6')">
@@ -487,7 +513,7 @@
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-6">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">d0597d2</span>fix: fix login magic link</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-1')">
@@ -582,7 +608,7 @@ ada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data pr
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-5">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">5e97976</span>test deployment</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-4')">
@@ -618,7 +644,7 @@ ada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data pr
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-3">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">82b22c7</span>fix: unwrap Karsa VS snapshot nested data wrapper in VsTab (v0.14.3)</div><div class="commit-line"><span class="commit-sha">cb684c7</span>fix: center-align STATUS column in domain portfolio table</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-2')">
@@ -696,7 +722,7 @@ ada 2 commit lain, itu saya buat agar saya bisa run di local menggunakan data pr
         </tr>
         <tr class="detail-row hidden" id="detail-avq-astra-1">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body"><em style="color:var(--muted)">Tidak ada deskripsi PR.</em></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c05c5be</span>feat: VS visibility page, theme provider, focus/VS hooks, compare page, auth &amp; profile enhancements (v0.8.0)</div><div class="commit-line"><span class="commit-sha">6b65417</span>feat: VS visibility page, probe grid, wizard, platform radar, snapshot picker, focus heatmap (v0.9.0)</div><div class="commit-line"><span class="commit-sha">2728361</span>feat: VS focus card enrichment, ADS surface layering audit, UI store, probes tab expansion (v0.10.0)</div><div class="commit-line"><span class="commit-sha">c6f5723</span>fix: XSS vectors, auto-save pattern, hardcoded thresholds/costs, platform color tokens</div></div>
           </td>
         </tr>
         <tr class="data-row" onclick="toggleDetail('avq-sutra-1')">
