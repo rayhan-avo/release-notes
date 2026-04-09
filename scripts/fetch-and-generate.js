@@ -90,6 +90,17 @@ function typeToLabel(type) {
   return map[type] || '📦 Update';
 }
 
+function sanitizeBody(body) {
+  if (!body || body.trim() === '') return '<em style="color:var(--muted)">Tidak ada deskripsi PR.</em>';
+  return body
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/\r\n/g, '\n')
+    .replace(/\r/g, '\n');
+}
+
 async function fetchMergedPRs(repo) {
   const since = new Date(Date.now() - DAYS_BACK * 24 * 60 * 60 * 1000).toISOString();
   const prs = [];
@@ -132,6 +143,7 @@ async function main() {
 
       for (const pr of prs) {
         const parsed = cleanTitle(pr.title);
+        const fmt = formatDate(pr.merged_at);
         allEntries.push({
           repo: repo.label,
           repoSlug: repo.name,
@@ -143,7 +155,9 @@ async function main() {
           scope: parsed.scope,
           author: pr.user?.login || 'unknown',
           mergedAt: pr.merged_at,
-          mergedAtFormatted: formatDate(pr.merged_at),
+          mergedAtDate: fmt.date,
+          mergedAtTime: fmt.time,
+          body: pr.body || '',
         });
       }
     } catch (err) {
@@ -171,11 +185,20 @@ async function main() {
 
 function formatDate(isoString) {
   const d = new Date(isoString);
-  return d.toLocaleDateString('id-ID', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  return {
+    date: d.toLocaleDateString('id-ID', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'Asia/Jakarta',
+    }),
+    time: d.toLocaleTimeString('id-ID', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZone: 'Asia/Jakarta',
+    }),
+  };
 }
 
 function generateHTML(entries) {
@@ -195,10 +218,10 @@ function generateHTML(entries) {
   }
 
   const repoColors = {
-    'artha':   '#4F8EF7',
-    'astra':   '#F7934F',
-    'shastra': '#7C4FF7',
-    'sutra':   '#4FF7A0',
+    'avq-artha':   '#4F8EF7',
+    'avq-astra':   '#F7934F',
+    'avq-shastra': '#7C4FF7',
+    'avq-sutra':   '#4FF7A0',
   };
 
   const entriesHTML = Object.keys(grouped).sort().reverse().map(monthKey => {
@@ -206,13 +229,26 @@ function generateHTML(entries) {
     const rows = entries.map(e => {
       const color = repoColors[e.repoSlug] || '#aaa';
       const scopeBadge = e.scope ? `<span class="scope">${e.scope}</span>` : '';
+      const rowId = `${e.repoSlug}-${e.prNumber}`;
+      const bodyContent = sanitizeBody(e.body);
       return `
-        <tr>
-          <td class="td-date">${e.mergedAtFormatted}</td>
+        <tr class="data-row" onclick="toggleDetail('${rowId}')">
+          <td class="td-date">
+            <div>${e.mergedAtDate}</div>
+            <div class="td-time">${e.mergedAtTime}</div>
+          </td>
           <td><span class="repo-badge" style="background:${color}20;color:${color};border-color:${color}40">${e.repo}</span></td>
           <td><span class="type-badge">${e.typeLabel}</span></td>
           <td class="td-title">${scopeBadge}${e.title}</td>
-          <td><a class="pr-link" href="${e.prUrl}" target="_blank">#${e.prNumber}</a></td>
+          <td class="td-pr">
+            <a class="pr-link" href="${e.prUrl}" target="_blank" onclick="event.stopPropagation()">#${e.prNumber}</a>
+            <span class="expand-chevron" id="chev-${rowId}">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-${rowId}">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">${bodyContent}</div>
+          </td>
         </tr>`;
     }).join('');
 
@@ -282,7 +318,8 @@ function generateHTML(entries) {
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1;
+      line-height: 1.15;
+      padding-bottom: 0.05em;
     }
 
     .header-left h1 span {
@@ -380,7 +417,35 @@ function generateHTML(entries) {
       transition: background 0.1s;
     }
 
-    tbody tr:hover { background: var(--surface); }
+    tbody tr.data-row { cursor: pointer; }
+    tbody tr.data-row:hover { background: var(--surface); }
+
+    .detail-row td { padding: 0; border-bottom: none; }
+    .detail-cell {
+      background: #0a0d13;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px !important;
+    }
+    .detail-body {
+      font-size: 0.82rem;
+      color: var(--text);
+      white-space: pre-wrap;
+      font-family: 'DM Mono', monospace;
+      line-height: 1.6;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .td-pr { white-space: nowrap; }
+    .expand-chevron {
+      margin-left: 6px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: inline-block;
+      transition: transform 0.2s;
+      user-select: none;
+    }
+    .expand-chevron.open { transform: rotate(180deg); }
 
     td {
       padding: 12px 12px;
@@ -392,6 +457,14 @@ function generateHTML(entries) {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       white-space: nowrap;
+    }
+
+    .td-time {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.6;
+      margin-top: 2px;
     }
 
     .repo-badge {
@@ -477,12 +550,24 @@ function generateHTML(entries) {
     const activeLabels = [...document.querySelectorAll('.filter-btn.active')]
       .map(b => b.textContent.trim());
 
-    document.querySelectorAll('tbody tr').forEach(row => {
+    document.querySelectorAll('tbody tr.data-row').forEach(row => {
       const repoBadge = row.querySelector('.repo-badge');
       if (!repoBadge) return;
       const badgeText = repoBadge.textContent.trim();
       row.classList.toggle('hidden', !activeLabels.includes(badgeText));
     });
+
+    // Collapse all detail rows when filter changes
+    document.querySelectorAll('tbody tr.detail-row').forEach(r => r.classList.add('hidden'));
+    document.querySelectorAll('.expand-chevron').forEach(c => c.classList.remove('open'));
+  }
+
+  function toggleDetail(id) {
+    const row = document.getElementById('detail-' + id);
+    const chev = document.getElementById('chev-' + id);
+    if (!row) return;
+    row.classList.toggle('hidden');
+    if (chev) chev.classList.toggle('open');
   }
 </script>
 </body>
