@@ -90,15 +90,47 @@ function typeToLabel(type) {
   return map[type] || '📦 Update';
 }
 
-function sanitizeBody(body) {
-  if (!body || body.trim() === '') return '<em style="color:var(--muted)">Tidak ada deskripsi PR.</em>';
-  return body
+function escapeHtml(str) {
+  return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/\r\n/g, '\n')
-    .replace(/\r/g, '\n');
+    .replace(/"/g, '&quot;');
+}
+
+function buildDetailContent(body, commits) {
+  if (body && body.trim()) {
+    const escaped = escapeHtml(body.replace(/\r\n/g, '\n').replace(/\r/g, '\n'));
+    return `<div class="detail-body">${escaped}</div>`;
+  }
+  if (commits && commits.length > 0) {
+    const items = commits
+      .map(c => `<div class="commit-line"><span class="commit-sha">${escapeHtml(c.sha)}</span>${escapeHtml(c.message)}</div>`)
+      .join('');
+    return `<div class="detail-commits-label">Dari commit messages:</div><div class="commits-list">${items}</div>`;
+  }
+  return '<em style="color:var(--muted)">Tidak ada deskripsi PR.</em>';
+}
+
+async function fetchPRCommits(repo, prNumber) {
+  try {
+    const data = await githubRequest(
+      `/repos/${ORG}/${repo}/pulls/${prNumber}/commits?per_page=100`
+    );
+    if (!Array.isArray(data)) return [];
+    return data
+      .map(c => ({
+        sha: c.sha.slice(0, 7),
+        message: c.commit.message.split('\n')[0].trim(),
+      }))
+      .filter(c =>
+        c.message.length > 0 &&
+        !c.message.startsWith('Merge pull request') &&
+        !c.message.startsWith('Merge branch')
+      );
+  } catch {
+    return [];
+  }
 }
 
 async function fetchMergedPRs(repo) {
@@ -144,6 +176,7 @@ async function main() {
       for (const pr of prs) {
         const parsed = cleanTitle(pr.title);
         const fmt = formatDate(pr.merged_at);
+        const commits = await fetchPRCommits(repo.name, pr.number);
         allEntries.push({
           repo: repo.label,
           repoSlug: repo.name,
@@ -158,6 +191,7 @@ async function main() {
           mergedAtDate: fmt.date,
           mergedAtTime: fmt.time,
           body: pr.body || '',
+          commits,
         });
       }
     } catch (err) {
@@ -230,7 +264,7 @@ function generateHTML(entries) {
       const color = repoColors[e.repoSlug] || '#aaa';
       const scopeBadge = e.scope ? `<span class="scope">${e.scope}</span>` : '';
       const rowId = `${e.repoSlug}-${e.prNumber}`;
-      const bodyContent = sanitizeBody(e.body);
+      const bodyContent = buildDetailContent(e.body, e.commits);
       return `
         <tr class="data-row" onclick="toggleDetail('${rowId}')">
           <td class="td-date">
@@ -247,7 +281,7 @@ function generateHTML(entries) {
         </tr>
         <tr class="detail-row hidden" id="detail-${rowId}">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body">${bodyContent}</div>
+            ${bodyContent}
           </td>
         </tr>`;
     }).join('');
@@ -318,8 +352,8 @@ function generateHTML(entries) {
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.15;
-      padding-bottom: 0.05em;
+      line-height: 1.3;
+      overflow: visible;
     }
 
     .header-left h1 span {
@@ -434,6 +468,32 @@ function generateHTML(entries) {
       line-height: 1.6;
       max-height: 300px;
       overflow-y: auto;
+    }
+
+    .detail-commits-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .commits-list { display: flex; flex-direction: column; gap: 4px; }
+
+    .commit-line {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .commit-sha {
+      font-size: 0.7rem;
+      color: var(--muted);
+      flex-shrink: 0;
     }
 
     .td-pr { white-space: nowrap; }
