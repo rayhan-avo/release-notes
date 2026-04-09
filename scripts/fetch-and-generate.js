@@ -335,6 +335,7 @@ function generateHTML(entries) {
       color: var(--text);
       min-height: 100vh;
       padding: 0 0 80px;
+      line-height: 1.5;
     }
 
     /* HEADER */
@@ -346,13 +347,19 @@ function generateHTML(entries) {
       justify-content: space-between;
       gap: 24px;
       flex-wrap: wrap;
+      overflow: visible;
+    }
+
+    .header-left {
+      overflow: visible;
+      padding-bottom: 0.2em;
     }
 
     .header-left h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.3;
+      line-height: 1.5;
       overflow: visible;
     }
 
@@ -510,6 +517,7 @@ function generateHTML(entries) {
     td {
       padding: 12px 12px;
       vertical-align: middle;
+      line-height: 1.5;
     }
 
     .td-date {
