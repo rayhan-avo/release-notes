@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog — Adsvisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #13161e;
+      --border: #1e2330;
+      --text: #e8eaf0;
+      --muted: #5a6070;
+      --accent: #4F8EF7;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 0 0 80px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 56px 48px 40px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .header-left h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .header-left h1 span {
+      color: var(--accent);
+    }
+
+    .header-left p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .header-right {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* FILTERS */
+    .filters {
+      padding: 24px 48px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+
+    .filters-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      margin-right: 4px;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--c, #4F8EF7);
+      color: var(--c, #4F8EF7);
+      padding: 5px 14px;
+      border-radius: 99px;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      opacity: 0.35;
+    }
+
+    .filter-btn.active {
+      background: color-mix(in srgb, var(--c, #4F8EF7) 12%, transparent);
+      opacity: 1;
+    }
+
+    /* CONTENT */
+    .content { padding: 0 48px; }
+
+    .month-group { margin-top: 48px; }
+
+    .month-header {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    thead tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      text-align: left;
+      padding: 8px 12px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: 'DM Mono', monospace;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
+    }
+
+    tbody tr:hover { background: var(--surface); }
+
+    td {
+      padding: 12px 12px;
+      vertical-align: middle;
+    }
+
+    .td-date {
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .repo-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 99px;
+      border: 1px solid;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .type-badge {
+      white-space: nowrap;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .td-title { font-weight: 600; }
+
+    .scope {
+      display: inline-block;
+      background: #ffffff10;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-right: 6px;
+    }
+
+    .pr-link {
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .pr-link:hover { color: var(--accent); }
+
+    tr.hidden { display: none; }
+
+    /* EMPTY STATE */
+    .empty { padding: 80px 48px; text-align: center; color: var(--muted); }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      header, .filters, .content { padding-left: 20px; padding-right: 20px; }
+      th:nth-child(1), td:nth-child(1),
+      th:nth-child(5), td:nth-child(5) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>Change<span>log</span></h1>
+    <p>// semua perubahan produk adsvisory dalam satu tempat</p>
+  </div>
+  <div class="header-right">
+    Diperbarui otomatis<br>9 April 2026 pukul 16.46 WIB
+  </div>
+</header>
+
+<div class="filters">
+  <span class="filters-label">filter:</span>
+  <button class="filter-btn active" data-repo="avq-artha" style="--c:#aaa" onclick="toggleFilter(this)">Artha</button><button class="filter-btn active" data-repo="avq-astra" style="--c:#aaa" onclick="toggleFilter(this)">Astra</button><button class="filter-btn active" data-repo="avq-shastra" style="--c:#aaa" onclick="toggleFilter(this)">Shastra</button><button class="filter-btn active" data-repo="avq-sutra" style="--c:#aaa" onclick="toggleFilter(this)">Sutra</button>
+</div>
+
+<div class="content">
+  
+      <div class="month-group">
+        <h2 class="month-header">April 2026</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Produk</th>
+              <th>Tipe</th>
+              <th>Perubahan</th>
+              <th>PR</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Release</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/17" target="_blank">#17</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix calling env (#5)</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/6" target="_blank">#6</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix calling env</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/4" target="_blank">#4</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/14" target="_blank">#14</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/13" target="_blank">#13</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">9 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">auth</span>Ignore vercel json from each server</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/12" target="_blank">#12</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">8 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/11" target="_blank">#11</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">8 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/10" target="_blank">#10</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">8 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/9" target="_blank">#9</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">8 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix hardcode vite config</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/8" target="_blank">#8</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">8 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix hardcode vite config</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/7" target="_blank">#7</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">7 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix login magic link</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/6" target="_blank">#6</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">2 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Artha</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Internal update</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/1" target="_blank">#1</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">1 April 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Shastra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Fix/DP Reality Check on AS Reality Check Page</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/2" target="_blank">#2</a></td>
+        </tr></tbody>
+        </table>
+      </div>
+      <div class="month-group">
+        <h2 class="month-header">Maret 2026</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Produk</th>
+              <th>Tipe</th>
+              <th>Perubahan</th>
+              <th>PR</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr>
+          <td class="td-date">31 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Shastra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Adjust DP Reality Check</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/1" target="_blank">#1</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">26 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Test deployment</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/5" target="_blank">#5</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">26 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Show AS score for quick_peek domains in Insights portfolio table</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/4" target="_blank">#4</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">26 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Fix/vs tab score display</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/3" target="_blank">#3</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">26 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Use absolute callbackURL for Google OAuth redirect (v0.14.2)</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/2" target="_blank">#2</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">20 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Discovery, focus, VS config, domains, Quick Peek client routes (v0.8.0–v0.9.0)</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/2" target="_blank">#2</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">20 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Practice PR</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/1" target="_blank">#1</a></td>
+        </tr>
+        <tr>
+          <td class="td-date">20 Maret 2026</td>
+          <td><span class="repo-badge" style="background:#aaa20;color:#aaa;border-color:#aaa40">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Introduces Insights Hub API and VS Features</td>
+          <td><a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/1" target="_blank">#1</a></td>
+        </tr></tbody>
+        </table>
+      </div>
+</div>
+
+<script>
+  function toggleFilter(btn) {
+    btn.classList.toggle('active');
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const activeLabels = [...document.querySelectorAll('.filter-btn.active')]
+      .map(b => b.textContent.trim());
+
+    document.querySelectorAll('tbody tr').forEach(row => {
+      const repoBadge = row.querySelector('.repo-badge');
+      if (!repoBadge) return;
+      const badgeText = repoBadge.textContent.trim();
+      row.classList.toggle('hidden', !activeLabels.includes(badgeText));
+    });
+  }
+</script>
+</body>
+</html>
