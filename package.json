@@ -1,0 +1,10 @@
+{
+  "name": "adsvisory-changelog",
+  "version": "1.0.0",
+  "description": "Auto-generated changelog dari semua repo Adsvisory",
+  "scripts": {
+    "generate": "node scripts/fetch-and-generate.js",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {}
+}
