@@ -2,6 +2,212 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 20,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/20",
+    "title": "Astra v1.6.4 — BookAuthorityTab, AddDomainModal, AuthorityPage",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-10T11:05:20Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "18.05.20",
+    "body": "## Summary\n- BookAuthorityTab refinements\n- AddDomainModal fixes\n- AuthorityPage updates\n\n## Test plan\n- [ ] Verify Authority tab renders in book view\n- [ ] Add domain modal flow works\n- [ ] Authority page loads correctly\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      },
+      {
+        "sha": "90e9398",
+        "message": "fix: BookAuthorityTab, AddDomainModal, AuthorityPage refinements (v1.6.4)"
+      },
+      {
+        "sha": "caa6d94",
+        "message": "feat: astra updates (v1.7.0)"
+      },
+      {
+        "sha": "1e6099e",
+        "message": "fix conflicts"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 5,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/5",
+    "title": "Shastra v2.158.0 — cost per run measurement brief, session updates",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-10T10:59:01Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "17.59.01",
+    "body": "## Summary\n- Cost per run measurement brief added\n- Session memory and config updates\n\n## Test plan\n- [ ] Verify Shastra dev console renders correctly\n- [ ] No regressions on diagnostic pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      },
+      {
+        "sha": "463126c",
+        "message": "feat: shastra updates (v2.158.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 4,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/4",
+    "title": "Shastra v2.157.6 — session updates",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-10T08:05:53Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "15.05.53",
+    "body": "## Summary\n- Session memory tracking and minor refinements (v2.157.4 → v2.157.6)\n\n## Test plan\n- [ ] Verify Shastra dev console renders correctly\n- [ ] Smoke test pipeline diagnostic pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 19,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/19",
+    "title": "Astra v1.6.3 — Ava domain briefs, UI refinements",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-10T08:05:47Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "15.05.47",
+    "body": "## Summary\n- Ava domain briefs page with TopNav and router updates\n- AvaContentLoader component and content loader messages\n- UI refinements across components\n\n## Test plan\n- [ ] Verify domain briefs page renders for authenticated users\n- [ ] Ava content loader animates correctly\n- [ ] No regressions on existing pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 3,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/3",
+    "title": "Sutra v0.24.3 — VS config, content credits, route refinements",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-10T07:55:35Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "14.55.35",
+    "body": "## Summary\n- VS config and DB plugin updates\n- Content credits migration (038)\n- VS probe pricebook migration (039)\n- Client content route additions\n\n## Test plan\n- [ ] Migrations 038 and 039 apply cleanly on dev DB\n- [ ] Client content route serves data correctly\n- [ ] VS config endpoint returns expected shape\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "718bfcf",
+        "message": "fix: route and service refinements (v0.24.1)"
+      },
+      {
+        "sha": "9723808",
+        "message": "fix: VS config and DB plugin updates (v0.24.2)"
+      },
+      {
+        "sha": "0a4f53a",
+        "message": "chore: version bump (v0.24.3)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 4,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/4",
+    "title": "Fixing login cookie for multi organization",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-04-10T06:38:56Z",
+    "mergedAtDate": "10 April 2026",
+    "mergedAtTime": "13.38.56",
+    "body": "",
+    "commits": [
+      {
+        "sha": "b4ada91",
+        "message": "fixing login cookie for multi organization"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 17,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/17",
     "title": "Release",
