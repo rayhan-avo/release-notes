@@ -357,9 +357,10 @@ function generateHTML(entries) {
 
     .header-left h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: -0.03em;
-      line-height: 1.5;
+      line-height: 1;
+      padding-bottom: 0.35em;
       overflow: visible;
     }
 
