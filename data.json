@@ -2,6 +2,120 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 23,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/23",
+    "title": "Astra v1.9.1 — content workspace redesign, inbox UX, language picker",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-13T10:10:09Z",
+    "mergedAtDate": "13 April 2026",
+    "mergedAtTime": "17.10.09",
+    "body": "## Summary\n- Content workspace redesign (CE-3R): brief detail page, pill switcher, sidebar stats\n- Content language picker for brief generation\n- MarkdownRenderer extraction and shared rendering\n- Inbox UX improvements\n- UI refinements across components\n\n## Test plan\n- [ ] Content workspace page renders and navigates correctly\n- [ ] Brief detail page with draft tab works\n- [ ] Language picker sends correct param to Ava\n- [ ] No regressions on Authority/Visibility pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      },
+      {
+        "sha": "90e9398",
+        "message": "fix: BookAuthorityTab, AddDomainModal, AuthorityPage refinements (v1.6.4)"
+      },
+      {
+        "sha": "caa6d94",
+        "message": "feat: astra updates (v1.7.0)"
+      },
+      {
+        "sha": "1e6099e",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "6ea5bee",
+        "message": "feat: content workspace redesign, brief language override, inbox UX (v1.9.0)"
+      },
+      {
+        "sha": "355b200",
+        "message": "fix: content page refinements (v1.9.1)"
+      },
+      {
+        "sha": "e5832e4",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "7a67ece",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "be4ef87",
+        "message": "fix conflict alex to main"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 6,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/6",
+    "title": "Shastra v2.158.2 — session updates",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-13T09:57:04Z",
+    "mergedAtDate": "13 April 2026",
+    "mergedAtTime": "16.57.04",
+    "body": "## Summary\n- Session memory and config updates\n- Cost per run measurement brief\n\n## Test plan\n- [ ] Shastra dev console renders correctly\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      },
+      {
+        "sha": "463126c",
+        "message": "feat: shastra updates (v2.158.0)"
+      },
+      {
+        "sha": "8e34b3a",
+        "message": "chore: session updates (v2.158.1)"
+      },
+      {
+        "sha": "d5c36ec",
+        "message": "chore: session updates (v2.158.2)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 22,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/22",
     "title": "Narrow status type in useUpdateFocus mutation to fix TS2345 buil…",
