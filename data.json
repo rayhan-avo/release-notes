@@ -1,5 +1,435 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 11,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/11",
+    "title": "Release: artha ReleaseSatu — v1.25.4",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-14T16:02:22Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "23.02.22",
+    "body": "## Summary\nRelease branch ReleaseSatu — cumulative work from feature/alex-work.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "0d2e14b",
+        "message": "feat: GitPulse page, auth and admin shell updates (v1.25.0)"
+      },
+      {
+        "sha": "0b54756",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "6342e2b",
+        "message": "fix: config and styling updates (v1.25.1)"
+      },
+      {
+        "sha": "2232f28",
+        "message": "fix: auth route and config updates (v1.25.2)"
+      },
+      {
+        "sha": "f636d41",
+        "message": "feat: multi-Sutra resolver, partner status, WL-3 groundwork (v1.25.3)"
+      },
+      {
+        "sha": "e58aebf",
+        "message": "fix: reports API refinements (v1.25.4)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 13,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/13",
+    "title": "Release: shastra ReleaseSatu — v2.158.9",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-14T16:02:20Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "23.02.20",
+    "body": "## Summary\nRelease branch ReleaseSatu — cumulative work from feature/alex-work.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      },
+      {
+        "sha": "463126c",
+        "message": "feat: shastra updates (v2.158.0)"
+      },
+      {
+        "sha": "8e34b3a",
+        "message": "chore: session updates (v2.158.1)"
+      },
+      {
+        "sha": "d5c36ec",
+        "message": "chore: session updates (v2.158.2)"
+      },
+      {
+        "sha": "e7d9960",
+        "message": "chore: session updates (v2.158.3)"
+      },
+      {
+        "sha": "6cf881e",
+        "message": "chore: session updates (v2.158.4)"
+      },
+      {
+        "sha": "e3f2d4d",
+        "message": "chore: session updates (v2.158.5)"
+      },
+      {
+        "sha": "6682333",
+        "message": "chore: session updates (v2.158.6)"
+      },
+      {
+        "sha": "b55ef5e",
+        "message": "chore: session updates (v2.158.7)"
+      },
+      {
+        "sha": "9161dcc",
+        "message": "chore: version bump (v2.158.8)"
+      },
+      {
+        "sha": "197322c",
+        "message": "chore: settings update (v2.158.9)"
+      },
+      {
+        "sha": "d9bf746",
+        "message": "fix conflict main"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 29,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/29",
+    "title": "Release: astra ReleaseSatu — v1.10.5",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-14T16:02:17Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "23.02.17",
+    "body": "## Summary\nRelease branch ReleaseSatu — cumulative work from feature/alex-work.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      },
+      {
+        "sha": "90e9398",
+        "message": "fix: BookAuthorityTab, AddDomainModal, AuthorityPage refinements (v1.6.4)"
+      },
+      {
+        "sha": "caa6d94",
+        "message": "feat: astra updates (v1.7.0)"
+      },
+      {
+        "sha": "1e6099e",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "6ea5bee",
+        "message": "feat: content workspace redesign, brief language override, inbox UX (v1.9.0)"
+      },
+      {
+        "sha": "355b200",
+        "message": "fix: content page refinements (v1.9.1)"
+      },
+      {
+        "sha": "e5832e4",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "7a67ece",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "be4ef87",
+        "message": "fix conflict alex to main"
+      },
+      {
+        "sha": "b428166",
+        "message": "feat: VS evidence tabs, billing page, content workspace updates (v1.10.0)"
+      },
+      {
+        "sha": "e21c438",
+        "message": "fix: MarkdownResponse refinements (v1.10.1)"
+      },
+      {
+        "sha": "9be88b5",
+        "message": "fix: VS tabs, book authority tab, markdown response refinements (v1.10.2)"
+      },
+      {
+        "sha": "7cffa9d",
+        "message": "feat: Intelligence page, Korean locale, i18n improvements (v1.10.3)"
+      },
+      {
+        "sha": "020016f",
+        "message": "refactor: remove legacy report-builder, server-side report generation via Sutra (v1.10.4)"
+      },
+      {
+        "sha": "69d50fa",
+        "message": "fix: VisibilityPage refinement (v1.10.5)"
+      },
+      {
+        "sha": "0b8fd1d",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "f52fc09",
+        "message": "Fix: Missing else clause in onError handler causes silent failures for non-billing, non-409 errors during draft generation"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 6,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/6",
+    "title": "Sutra v0.24.5 — focuses route, auth fixes, i18n content system",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-14T15:32:53Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "22.32.53",
+    "body": "## Summary\n- Focuses route refinements\n- Auth and client-auth plugin fixes (from main merge)\n- i18n content system with Inngest integration\n- Content credits and VS probe pricebook migrations\n- Usage tracking and tiers\n\n## Test plan\n- [ ] Focuses route returns correct data\n- [ ] Auth flow works with multi-org login\n- [ ] Migrations apply cleanly on dev DB\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "1d8bf65",
+        "message": "fix: route refinements (v0.24.4)"
+      },
+      {
+        "sha": "1fd4dad",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "5a46dbd",
+        "message": "fix: focuses route and docs update (v0.24.5)"
+      },
+      {
+        "sha": "9aa646c",
+        "message": "feat: VS evidence proxy, billing routes (v0.25.0)"
+      },
+      {
+        "sha": "839be29",
+        "message": "fix: tenant lib update (v0.25.1)"
+      },
+      {
+        "sha": "5f15038",
+        "message": "feat: intelligence route, compare/VS report HTML services (v0.25.2)"
+      },
+      {
+        "sha": "1e609b6",
+        "message": "fix: report HTML services, export service, document exports migration (v0.25.3)"
+      },
+      {
+        "sha": "b5a2eee",
+        "message": "fix: report HTML and PDF service refinements (v0.25.4)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 9,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/9",
+    "title": "Release: sutra ReleaseSatu — v0.25.4",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-14T15:32:50Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "22.32.50",
+    "body": "## Summary\nRelease branch ReleaseSatu — cumulative work from feature/alex-work.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "1d8bf65",
+        "message": "fix: route refinements (v0.24.4)"
+      },
+      {
+        "sha": "1fd4dad",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "5a46dbd",
+        "message": "fix: focuses route and docs update (v0.24.5)"
+      },
+      {
+        "sha": "9aa646c",
+        "message": "feat: VS evidence proxy, billing routes (v0.25.0)"
+      },
+      {
+        "sha": "839be29",
+        "message": "fix: tenant lib update (v0.25.1)"
+      },
+      {
+        "sha": "5f15038",
+        "message": "feat: intelligence route, compare/VS report HTML services (v0.25.2)"
+      },
+      {
+        "sha": "1e609b6",
+        "message": "fix: report HTML services, export service, document exports migration (v0.25.3)"
+      },
+      {
+        "sha": "b5a2eee",
+        "message": "fix: report HTML and PDF service refinements (v0.25.4)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 11,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/11",
+    "title": "Adj/Revert vite.config.ts",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-14T06:41:07Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "13.41.07",
+    "body": "Ubah dari 0.0.0.0 ke localhost",
+    "commits": [
+      {
+        "sha": "e7d6b2d",
+        "message": "adj/Revert vite.config.ts"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 9,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/9",
+    "title": "Adj/Revert vite.config.ts",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-14T06:40:58Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "13.40.58",
+    "body": "Adjust dari 0.0.0.0 ke localhost",
+    "commits": [
+      {
+        "sha": "88e6b31",
+        "message": "adj/Revert vite.config.ts"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 27,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/27",
+    "title": "Adj/Revert vite.config.ts di Astra",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-14T06:40:46Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "13.40.46",
+    "body": "Ubah dari 0.0.0.0 kembali ke localhost",
+    "commits": [
+      {
+        "sha": "fb92357",
+        "message": "adj/Revert vite.config.ts di Astra"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 9,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/9",
+    "title": "Fix/expose env",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-14T06:27:27Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "13.27.27",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6c601e7",
+        "message": "fix: remove expose env"
+      },
+      {
+        "sha": "c59bb2e",
+        "message": "fix: stop track env"
+      },
+      {
+        "sha": "a61d835",
+        "message": "feat: add sample env"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 7,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/7",
+    "title": "Add adjstment cast for client preferences",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-04-14T04:52:59Z",
+    "mergedAtDate": "14 April 2026",
+    "mergedAtTime": "11.52.59",
+    "body": "",
+    "commits": [
+      {
+        "sha": "b383ff8",
+        "message": "add adjstment cast for client preferences"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 23,
