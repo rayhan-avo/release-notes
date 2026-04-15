@@ -1,5 +1,30 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 30,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/30",
+    "title": "Fix/accept invitation",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-15T07:43:36Z",
+    "mergedAtDate": "15 April 2026",
+    "mergedAtTime": "14.43.36",
+    "body": "",
+    "commits": [
+      {
+        "sha": "f498679",
+        "message": "fix: preserve invite token when existing user navigates to login"
+      },
+      {
+        "sha": "21f709a",
+        "message": "fix: fix accept invitation"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 11,
