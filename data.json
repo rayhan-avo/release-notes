@@ -2,6 +2,110 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 35,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/35",
+    "title": "Feat/redirect login",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-16T10:27:00Z",
+    "mergedAtDate": "16 April 2026",
+    "mergedAtTime": "17.27.00",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2192b4b",
+        "message": "feat(auth): redirect to /authority?view=all-owned after login"
+      },
+      {
+        "sha": "b39d113",
+        "message": "fix(auth): ignore root '/' as fromState, always redirect to /authority?view=all-owned"
+      },
+      {
+        "sha": "b2f29f2",
+        "message": "fix conflict"
+      },
+      {
+        "sha": "197a8be",
+        "message": "fix(auth): use /login as magic link callbackURL to bypass Better Auth query param issue"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 34,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/34",
+    "title": "Feat/redirect login",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-16T10:13:47Z",
+    "mergedAtDate": "16 April 2026",
+    "mergedAtTime": "17.13.47",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2192b4b",
+        "message": "feat(auth): redirect to /authority?view=all-owned after login"
+      },
+      {
+        "sha": "b39d113",
+        "message": "fix(auth): ignore root '/' as fromState, always redirect to /authority?view=all-owned"
+      },
+      {
+        "sha": "b2f29f2",
+        "message": "fix conflict"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 32,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/32",
+    "title": "Redirect to /authority?view=all-owned after login",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "auth",
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-16T09:35:25Z",
+    "mergedAtDate": "16 April 2026",
+    "mergedAtTime": "16.35.25",
+    "body": "Default post-login destination changed from '/' to '/authority?view=all-owned'. Applies to all auth methods: password, magic link, and Google OAuth. If user was redirected from a protected route, that original destination is still respected.",
+    "commits": [
+      {
+        "sha": "2192b4b",
+        "message": "feat(auth): redirect to /authority?view=all-owned after login"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 11,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/11",
+    "title": "Fix/circuit breaker read trigger split",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-04-16T07:24:22Z",
+    "mergedAtDate": "16 April 2026",
+    "mergedAtTime": "14.24.22",
+    "body": "",
+    "commits": [
+      {
+        "sha": "387276f",
+        "message": "fix(karsa-client): separate read/trigger circuits, fix half-open recovery"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 30,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/30",
     "title": "Fix/accept invitation",
