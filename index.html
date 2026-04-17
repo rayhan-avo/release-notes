@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>17 April 2026 pukul 03.06 WIB
+    Diperbarui otomatis<br>18 April 2026 pukul 03.01 WIB
   </div>
 </header>
 
@@ -309,6 +309,136 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-37')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">16.49.04</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix selected domain to export report</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/37" target="_blank" onclick="event.stopPropagation()">#37</a>
+            <span class="expand-chevron" id="chev-avq-astra-37">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-37">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Export Report button: selalu pakai selectedId → pakai compareCompId kalau sedang viewing competitor</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-13')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">16.48.45</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Fix timeout generate report</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/13" target="_blank" onclick="event.stopPropagation()">#13</a>
+            <span class="expand-chevron" id="chev-avq-sutra-13">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-13">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Changes: 
+
+1. fetchDomainLogoDataUri: serial loop → Promise.any (parallel)
+2. 4 Karsa calls sequential → Promise.allSettled (parallel)
+3. Steps 5-8 (competitors, own logo, white-label, QR) → 1 Promise.all besar</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-17')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">15.05.44</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Chore/db migration main</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/17" target="_blank" onclick="event.stopPropagation()">#17</a>
+            <span class="expand-chevron" id="chev-avq-artha-17">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-17">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">9ced89d</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">94ee0c7</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">6a069e8</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">be094b0</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">699979a</span>fix conflict main</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-15')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">14.22.21</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Chore/db migration</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/15" target="_blank" onclick="event.stopPropagation()">#15</a>
+            <span class="expand-chevron" id="chev-avq-artha-15">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-15">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">9ced89d</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">94ee0c7</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">6a069e8</span>chore: add hook db migrations before build</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-14')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">14.13.09</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Chore/db migration</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/14" target="_blank" onclick="event.stopPropagation()">#14</a>
+            <span class="expand-chevron" id="chev-avq-artha-14">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-14">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">9ced89d</span>chore: add hook db migrations before build</div><div class="commit-line"><span class="commit-sha">94ee0c7</span>chore: add hook db migrations before build</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-13')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">14.08.06</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">🔧 Internal</span></td>
+          <td class="td-title">Add hook db migrations before build</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/13" target="_blank" onclick="event.stopPropagation()">#13</a>
+            <span class="expand-chevron" id="chev-avq-artha-13">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-13">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">9ced89d</span>chore: add hook db migrations before build</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-36')">
+          <td class="td-date">
+            <div>17 April 2026</div>
+            <div class="td-time">11.33.56</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">login</span>Adjust redirect after login</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/36" target="_blank" onclick="event.stopPropagation()">#36</a>
+            <span class="expand-chevron" id="chev-avq-astra-36">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-36">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">30b5ee3</span>feat(login): adjust redirect after login</div></div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-35')">
           <td class="td-date">
             <div>16 April 2026</div>

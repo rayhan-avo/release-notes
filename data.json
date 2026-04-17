@@ -2,6 +2,181 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 37,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/37",
+    "title": "Fix selected domain to export report",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T09:49:04Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "16.49.04",
+    "body": "Export Report button: selalu pakai selectedId → pakai compareCompId kalau sedang viewing competitor",
+    "commits": [
+      {
+        "sha": "4611050",
+        "message": "fix: fix selected domain to export report"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 13,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/13",
+    "title": "Fix timeout generate report",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T09:48:45Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "16.48.45",
+    "body": "Changes: \r\n\r\n1. fetchDomainLogoDataUri: serial loop → Promise.any (parallel)\r\n2. 4 Karsa calls sequential → Promise.allSettled (parallel)\r\n3. Steps 5-8 (competitors, own logo, white-label, QR) → 1 Promise.all besar",
+    "commits": [
+      {
+        "sha": "c193c3d",
+        "message": "fix: fix timeout generate report"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 17,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/17",
+    "title": "Chore/db migration main",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T08:05:44Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "15.05.44",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9ced89d",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "94ee0c7",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "6a069e8",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "be094b0",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "699979a",
+        "message": "fix conflict main"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 15,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/15",
+    "title": "Chore/db migration",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T07:22:21Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "14.22.21",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9ced89d",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "94ee0c7",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "6a069e8",
+        "message": "chore: add hook db migrations before build"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 14,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/14",
+    "title": "Chore/db migration",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T07:13:09Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "14.13.09",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9ced89d",
+        "message": "chore: add hook db migrations before build"
+      },
+      {
+        "sha": "94ee0c7",
+        "message": "chore: add hook db migrations before build"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 13,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/13",
+    "title": "Add hook db migrations before build",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T07:08:06Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "14.08.06",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9ced89d",
+        "message": "chore: add hook db migrations before build"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 36,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/36",
+    "title": "Adjust redirect after login",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "login",
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-17T04:33:56Z",
+    "mergedAtDate": "17 April 2026",
+    "mergedAtTime": "11.33.56",
+    "body": "",
+    "commits": [
+      {
+        "sha": "30b5ee3",
+        "message": "feat(login): adjust redirect after login"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 35,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/35",
     "title": "Feat/redirect login",
