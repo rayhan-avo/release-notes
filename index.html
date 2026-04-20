@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>20 April 2026 pukul 02.31 WIB
+    Diperbarui otomatis<br>21 April 2026 pukul 03.07 WIB
   </div>
 </header>
 
@@ -309,6 +309,204 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-39')">
+          <td class="td-date">
+            <div>20 April 2026</div>
+            <div class="td-time">17.47.10</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Release: astra feature/alex-work → main (v1.13.0)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/39" target="_blank" onclick="event.stopPropagation()">#39</a>
+            <span class="expand-chevron" id="chev-avq-astra-39">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-39">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+
+### v1.13.0 — Onboarding maintenance toolkit (M1 + M2 + M3)
+- **Locale parity linter** (`scripts/check-locale-parity.ts`) + CI workflow (`.github/workflows/locale-parity.yml`) flags missing/extra keys across all 20 namespaces
+- **Tour preview URL** (`TourPreviewController`) — `?preview_tour={id}` validates, navigates, strips param, auto-starts after 400ms (DEV-only)
+- **Developer docs** — `docs/ONBOARDING.md` (475 lines, 12 sections) with worked hint/tour examples; root `README.md`
+- Known drift flagged (dp.json/billing/inbox keys missing in id/ja/zh); follow-up translations cleanup
+
+### v1.12.1 — Per-page tours wired (A5 follow-up)
+- `HeaderTourButton` maps routes → tours (/authority → authority, /visibility|/ → visibility, /domains → domains, /compare → compare; dashboard fallback)
+- New `compare` tour (3 steps) with i18n for all 5 locales
+- 13 `data-tour-target` attributes across Authority/VS/Domains/Compare pages (no logic changes)
+
+### v1.12.0 — Onboarding foundation + hints + tours + announcements (Briefs A2/A4/A5)
+- Foundation: `OnboardingProvider`, `useOnboardingState`, `useCompleteTour`, `useDismissHint`, `useResetOnboarding` backed by Sutra `/api/client/onboarding/*`
+- i18n namespace `onboarding` across en/id/ja/zh/ko
+- Primitives: `&lt;Hint&gt;` (Floating UI + ADS v3 glass, fails silently on missing target), `&lt;EmptyState&gt;`
+- `&lt;HintManager&gt;` — one-hint-at-a-time with deterministic priority
+- `&lt;Tour&gt;` — lazy-loaded react-joyride v3 with custom ADS tooltip + 5 tour definitions
+- `&lt;AnnouncementsBell&gt;` — unread badge, auto-mark-seen on open, Lucide name lookup from payload
+- `&lt;ResetOnboardingButton&gt;` in ProfilePanel
+- Deps added: `@floating-ui/react`, `react-joyride@3`
+
+### v1.11.1 — Public `/bot` page for avo-agent crawler
+- `public/bot/index.html` info page (identity, purpose, robots.txt, WAF, contact)
+- Vercel rewrite `/bot → /bot/index.html` before SPA catchall
+- Linked from User-Agent of every Karsa crawl
+
+### v1.11.0 — Report locales + VS/AS refinements
+- `report.json` dictionaries for en/id/ja/ko/zh
+- VS/AS component refinements across Authority, Visibility, Compare, DomainBook, DomainDetail, ContentBriefDetail
+- New utils: `probe-rates.ts`, `vector.ts`
+- Integrated from main: export-report domain fix, login redirect
+
+## Version
+v1.13.0
+
+## Test plan
+- [ ] `pnpm check:locales` passes after follow-up translation cleanup
+- [ ] `?preview_tour=authority` on /authority starts the authority tour
+- [ ] First-run hint flow: domain-switcher hint → nav hint (one at a time)
+- [ ] Per-page tour button appears/hides based on route
+- [ ] Compare tour on /compare steps through identity → pillars → gaps
+- [ ] Announcements bell: unread badge, open marks seen after 1.5s, click-outside closes
+- [ ] Reset onboarding (ProfilePanel) clears server state + localStorage
+- [ ] `/bot` renders Avonetiq crawler info page
+- [ ] Locale switch en/id/ja/ko/zh — all onboarding strings render
+- [ ] Server-side PDF report in each locale via Sutra
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-15')">
+          <td class="td-date">
+            <div>20 April 2026</div>
+            <div class="td-time">17.44.09</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Release: shastra feature/alex-work → main (v2.159.2)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-shastra/pull/15" target="_blank" onclick="event.stopPropagation()">#15</a>
+            <span class="expand-chevron" id="chev-avq-shastra-15">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-15">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+- **Circuit breaker config page** (`/configure/circuit-breaker`) following ADS canonical config-page pattern (v2.159.2)
+- VS docs + helpers aligned to single-run reality (v2.159.1)
+- Badge for rewritten PB prompts in the inspector (v2.158.10)
+- Settings allowlist + advice-history diagnostic script (v2.158.11)
+- Earlier batch: Shastra updates v2.158.0–v2.158.11
+
+## Version
+v2.159.2
+
+## Test plan
+- [ ] `/configure/circuit-breaker` renders with staggered Card fade-in + in-SPA Link navigation
+- [ ] Circuit breaker settings edit + Save persists through Karsa `/api/settings`
+- [ ] PB prompt inspector shows rewritten badge where `was_rewritten` is true
+- [ ] Navigation and all configure pages load without console errors
+- [ ] No regressions in domain list, domain detail, or inspector panels
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-14')">
+          <td class="td-date">
+            <div>20 April 2026</div>
+            <div class="td-time">17.37.19</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Release: sutra feature/alex-work → main (v0.28.1)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/14" target="_blank" onclick="event.stopPropagation()">#14</a>
+            <span class="expand-chevron" id="chev-avq-sutra-14">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-14">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+
+### v0.28.1 — Admin announcements list
+- `GET /api/admin/announcements?partner_id=…` for Artha admin UI
+- Returns all rows (including unpublished drafts), optionally scoped to a partner
+- OPS JWT via `app.validateAdminAuth`
+
+### v0.28.0 — Onboarding state API + feature announcements (Brief A1)
+- Migration 043: `sutra_user_onboarding` + `sutra_feature_announcements` tables (i18n across en/id/ja/zh/ko)
+- Migration 044: user_id/organization_id UUID → TEXT for Better Auth nanoid compatibility
+- Client routes: `/api/client/onboarding/{state,tours/complete,hints/dismiss,features/seen,reset}` + `/api/client/features/announcements` (locale-aware)
+- Admin routes: `POST /api/admin/announcements`, `DELETE /api/admin/announcements/:key`
+- partner_id scoping via `env.PARTNER_SLUG`
+
+### v0.27.0 — Partner canonical_language
+- Migration 042: `canonical_language` column on `sutra_partners` with 9-language check constraint
+- Backfill: cacaFly → zh-TW, NAVICUS → ja, Avonetiq → en
+- `PartnerRepo.create/update` + `PATCH /api/admin/partners/:id` accept `canonical_language`
+
+### v0.26.0 — HTML report i18n
+- Server-side locale loading via `src/lib/report-i18n.ts`
+- Per-locale JSON dictionaries under `src/locales/`
+- AS, VS, compare report HTML services localized
+- Integrated from main: karsa-client read/trigger circuit breaker split, report timeout fix
+
+## Version
+v0.28.1
+
+## Migrations
+- 042_partner_canonical_language.sql
+- 043_onboarding_system.sql
+- 044_fix_onboarding_user_id_types.sql
+
+## Test plan
+- [ ] Run migrations 042, 043, 044 on dev DB
+- [ ] Artha admin announcements page lists all rows (published + drafts) scoped by partner
+- [ ] Client `/api/client/onboarding/state` returns expected shape for a logged-in user
+- [ ] Tour completion + hint dismissal + feature-seen idempotent
+- [ ] Reset clears server state
+- [ ] `canonical_language` validated against 9-language union
+- [ ] Generate AS/VS/compare report in all 5 locales — fallback to en when missing
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-19')">
+          <td class="td-date">
+            <div>20 April 2026</div>
+            <div class="td-time">10.40.43</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Partner create 500 — include partner_slug in INSERT</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-artha/pull/19" target="_blank" onclick="event.stopPropagation()">#19</a>
+            <span class="expand-chevron" id="chev-avq-artha-19">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-19">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">partner_slug is NOT NULL (migration 018) but was missing from the INSERT statement, causing a DB constraint violation on every new partner. Also sanitize the id input client-side (auto-lowercase + strip invalid chars) and surface field-level validation errors from the API.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-38')">
+          <td class="td-date">
+            <div>20 April 2026</div>
+            <div class="td-time">09.29.07</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Revert "fix: fix selected domain to export report (#37)"</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/adsvisory/avq-astra/pull/38" target="_blank" onclick="event.stopPropagation()">#38</a>
+            <span class="expand-chevron" id="chev-avq-astra-38">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-38">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">This reverts commit 5a54190931b1eed000efea4cac1ccaa2d067a699.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-37')">
           <td class="td-date">
             <div>17 April 2026</div>
@@ -939,7 +1137,7 @@ Release branch ReleaseSatu — cumulative work from feature/alex-work.
           </td>
           <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
           <td><span class="type-badge">✨ Fitur Baru</span></td>
-          <td class="td-title">Sutra v0.24.3 �� VS config, content credits, route refinements</td>
+          <td class="td-title">Sutra v0.24.3 — VS config, content credits, route refinements</td>
           <td class="td-pr">
             <a class="pr-link" href="https://github.com/adsvisory/avq-sutra/pull/3" target="_blank" onclick="event.stopPropagation()">#3</a>
             <span class="expand-chevron" id="chev-avq-sutra-3">▾</span>

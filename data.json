@@ -2,6 +2,335 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 39,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/39",
+    "title": "Release: astra feature/alex-work → main (v1.13.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-20T10:47:10Z",
+    "mergedAtDate": "20 April 2026",
+    "mergedAtTime": "17.47.10",
+    "body": "## Summary\n\n### v1.13.0 — Onboarding maintenance toolkit (M1 + M2 + M3)\n- **Locale parity linter** (`scripts/check-locale-parity.ts`) + CI workflow (`.github/workflows/locale-parity.yml`) flags missing/extra keys across all 20 namespaces\n- **Tour preview URL** (`TourPreviewController`) — `?preview_tour={id}` validates, navigates, strips param, auto-starts after 400ms (DEV-only)\n- **Developer docs** — `docs/ONBOARDING.md` (475 lines, 12 sections) with worked hint/tour examples; root `README.md`\n- Known drift flagged (dp.json/billing/inbox keys missing in id/ja/zh); follow-up translations cleanup\n\n### v1.12.1 — Per-page tours wired (A5 follow-up)\n- `HeaderTourButton` maps routes → tours (/authority → authority, /visibility|/ → visibility, /domains → domains, /compare → compare; dashboard fallback)\n- New `compare` tour (3 steps) with i18n for all 5 locales\n- 13 `data-tour-target` attributes across Authority/VS/Domains/Compare pages (no logic changes)\n\n### v1.12.0 — Onboarding foundation + hints + tours + announcements (Briefs A2/A4/A5)\n- Foundation: `OnboardingProvider`, `useOnboardingState`, `useCompleteTour`, `useDismissHint`, `useResetOnboarding` backed by Sutra `/api/client/onboarding/*`\n- i18n namespace `onboarding` across en/id/ja/zh/ko\n- Primitives: `<Hint>` (Floating UI + ADS v3 glass, fails silently on missing target), `<EmptyState>`\n- `<HintManager>` — one-hint-at-a-time with deterministic priority\n- `<Tour>` — lazy-loaded react-joyride v3 with custom ADS tooltip + 5 tour definitions\n- `<AnnouncementsBell>` — unread badge, auto-mark-seen on open, Lucide name lookup from payload\n- `<ResetOnboardingButton>` in ProfilePanel\n- Deps added: `@floating-ui/react`, `react-joyride@3`\n\n### v1.11.1 — Public `/bot` page for avo-agent crawler\n- `public/bot/index.html` info page (identity, purpose, robots.txt, WAF, contact)\n- Vercel rewrite `/bot → /bot/index.html` before SPA catchall\n- Linked from User-Agent of every Karsa crawl\n\n### v1.11.0 — Report locales + VS/AS refinements\n- `report.json` dictionaries for en/id/ja/ko/zh\n- VS/AS component refinements across Authority, Visibility, Compare, DomainBook, DomainDetail, ContentBriefDetail\n- New utils: `probe-rates.ts`, `vector.ts`\n- Integrated from main: export-report domain fix, login redirect\n\n## Version\nv1.13.0\n\n## Test plan\n- [ ] `pnpm check:locales` passes after follow-up translation cleanup\n- [ ] `?preview_tour=authority` on /authority starts the authority tour\n- [ ] First-run hint flow: domain-switcher hint → nav hint (one at a time)\n- [ ] Per-page tour button appears/hides based on route\n- [ ] Compare tour on /compare steps through identity → pillars → gaps\n- [ ] Announcements bell: unread badge, open marks seen after 1.5s, click-outside closes\n- [ ] Reset onboarding (ProfilePanel) clears server state + localStorage\n- [ ] `/bot` renders Avonetiq crawler info page\n- [ ] Locale switch en/id/ja/ko/zh — all onboarding strings render\n- [ ] Server-side PDF report in each locale via Sutra\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      },
+      {
+        "sha": "90e9398",
+        "message": "fix: BookAuthorityTab, AddDomainModal, AuthorityPage refinements (v1.6.4)"
+      },
+      {
+        "sha": "caa6d94",
+        "message": "feat: astra updates (v1.7.0)"
+      },
+      {
+        "sha": "1e6099e",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "6ea5bee",
+        "message": "feat: content workspace redesign, brief language override, inbox UX (v1.9.0)"
+      },
+      {
+        "sha": "355b200",
+        "message": "fix: content page refinements (v1.9.1)"
+      },
+      {
+        "sha": "e5832e4",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "7a67ece",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "be4ef87",
+        "message": "fix conflict alex to main"
+      },
+      {
+        "sha": "b428166",
+        "message": "feat: VS evidence tabs, billing page, content workspace updates (v1.10.0)"
+      },
+      {
+        "sha": "e21c438",
+        "message": "fix: MarkdownResponse refinements (v1.10.1)"
+      },
+      {
+        "sha": "9be88b5",
+        "message": "fix: VS tabs, book authority tab, markdown response refinements (v1.10.2)"
+      },
+      {
+        "sha": "7cffa9d",
+        "message": "feat: Intelligence page, Korean locale, i18n improvements (v1.10.3)"
+      },
+      {
+        "sha": "020016f",
+        "message": "refactor: remove legacy report-builder, server-side report generation via Sutra (v1.10.4)"
+      },
+      {
+        "sha": "69d50fa",
+        "message": "fix: VisibilityPage refinement (v1.10.5)"
+      },
+      {
+        "sha": "ba8b77b",
+        "message": "feat: ASG score UI, report-builder lib, admin pages (WIP)"
+      },
+      {
+        "sha": "1ee64c5",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "b2969cf",
+        "message": "feat(login): adjust redirect after login (#36)"
+      },
+      {
+        "sha": "97690f0",
+        "message": "fix: fix selected domain to export report (#37)"
+      },
+      {
+        "sha": "af15ff7",
+        "message": "feat: report locales, VS/AS component refinements, probe-rates + vector utils (v1.11.0)"
+      },
+      {
+        "sha": "2f317d7",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "629ed25",
+        "message": "feat: public /bot info page for avo-agent crawler (v1.11.1)"
+      },
+      {
+        "sha": "20e7ee2",
+        "message": "feat: onboarding foundation + hints + tours + announcements (v1.12.0)"
+      },
+      {
+        "sha": "839030e",
+        "message": "feat: per-page tours + onboarding maintenance toolkit (v1.13.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 15,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/15",
+    "title": "Release: shastra feature/alex-work → main (v2.159.2)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-20T10:44:09Z",
+    "mergedAtDate": "20 April 2026",
+    "mergedAtTime": "17.44.09",
+    "body": "## Summary\n- **Circuit breaker config page** (`/configure/circuit-breaker`) following ADS canonical config-page pattern (v2.159.2)\n- VS docs + helpers aligned to single-run reality (v2.159.1)\n- Badge for rewritten PB prompts in the inspector (v2.158.10)\n- Settings allowlist + advice-history diagnostic script (v2.158.11)\n- Earlier batch: Shastra updates v2.158.0–v2.158.11\n\n## Version\nv2.159.2\n\n## Test plan\n- [ ] `/configure/circuit-breaker` renders with staggered Card fade-in + in-SPA Link navigation\n- [ ] Circuit breaker settings edit + Save persists through Karsa `/api/settings`\n- [ ] PB prompt inspector shows rewritten badge where `was_rewritten` is true\n- [ ] Navigation and all configure pages load without console errors\n- [ ] No regressions in domain list, domain detail, or inspector panels\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      },
+      {
+        "sha": "463126c",
+        "message": "feat: shastra updates (v2.158.0)"
+      },
+      {
+        "sha": "8e34b3a",
+        "message": "chore: session updates (v2.158.1)"
+      },
+      {
+        "sha": "d5c36ec",
+        "message": "chore: session updates (v2.158.2)"
+      },
+      {
+        "sha": "e7d9960",
+        "message": "chore: session updates (v2.158.3)"
+      },
+      {
+        "sha": "6cf881e",
+        "message": "chore: session updates (v2.158.4)"
+      },
+      {
+        "sha": "e3f2d4d",
+        "message": "chore: session updates (v2.158.5)"
+      },
+      {
+        "sha": "6682333",
+        "message": "chore: session updates (v2.158.6)"
+      },
+      {
+        "sha": "b55ef5e",
+        "message": "chore: session updates (v2.158.7)"
+      },
+      {
+        "sha": "9161dcc",
+        "message": "chore: version bump (v2.158.8)"
+      },
+      {
+        "sha": "197322c",
+        "message": "chore: settings update (v2.158.9)"
+      },
+      {
+        "sha": "2dc6d8a",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "5a6b32d",
+        "message": "feat: badge rewritten PB prompts in inspector (v2.158.10)"
+      },
+      {
+        "sha": "10e0168",
+        "message": "chore: session memory, settings allowlist, advice-history diag script (v2.158.11)"
+      },
+      {
+        "sha": "ad8b938",
+        "message": "fix: align VS docs + helpers to single-run reality (v2.159.1)"
+      },
+      {
+        "sha": "96b49f9",
+        "message": "feat: circuit breaker config page + ADS normalization (v2.159.2)"
+      },
+      {
+        "sha": "7461e45",
+        "message": "fix: circuit breaker typography + log investigation module deep-link (v2.159.3)"
+      },
+      {
+        "sha": "eaa012d",
+        "message": "chore: session memory log update (v2.159.4)"
+      },
+      {
+        "sha": "6b0c01e",
+        "message": "chore: session memory log update (v2.159.5)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 14,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/14",
+    "title": "Release: sutra feature/alex-work → main (v0.28.1)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-20T10:37:19Z",
+    "mergedAtDate": "20 April 2026",
+    "mergedAtTime": "17.37.19",
+    "body": "## Summary\n\n### v0.28.1 — Admin announcements list\n- `GET /api/admin/announcements?partner_id=…` for Artha admin UI\n- Returns all rows (including unpublished drafts), optionally scoped to a partner\n- OPS JWT via `app.validateAdminAuth`\n\n### v0.28.0 — Onboarding state API + feature announcements (Brief A1)\n- Migration 043: `sutra_user_onboarding` + `sutra_feature_announcements` tables (i18n across en/id/ja/zh/ko)\n- Migration 044: user_id/organization_id UUID → TEXT for Better Auth nanoid compatibility\n- Client routes: `/api/client/onboarding/{state,tours/complete,hints/dismiss,features/seen,reset}` + `/api/client/features/announcements` (locale-aware)\n- Admin routes: `POST /api/admin/announcements`, `DELETE /api/admin/announcements/:key`\n- partner_id scoping via `env.PARTNER_SLUG`\n\n### v0.27.0 — Partner canonical_language\n- Migration 042: `canonical_language` column on `sutra_partners` with 9-language check constraint\n- Backfill: cacaFly → zh-TW, NAVICUS → ja, Avonetiq → en\n- `PartnerRepo.create/update` + `PATCH /api/admin/partners/:id` accept `canonical_language`\n\n### v0.26.0 — HTML report i18n\n- Server-side locale loading via `src/lib/report-i18n.ts`\n- Per-locale JSON dictionaries under `src/locales/`\n- AS, VS, compare report HTML services localized\n- Integrated from main: karsa-client read/trigger circuit breaker split, report timeout fix\n\n## Version\nv0.28.1\n\n## Migrations\n- 042_partner_canonical_language.sql\n- 043_onboarding_system.sql\n- 044_fix_onboarding_user_id_types.sql\n\n## Test plan\n- [ ] Run migrations 042, 043, 044 on dev DB\n- [ ] Artha admin announcements page lists all rows (published + drafts) scoped by partner\n- [ ] Client `/api/client/onboarding/state` returns expected shape for a logged-in user\n- [ ] Tour completion + hint dismissal + feature-seen idempotent\n- [ ] Reset clears server state\n- [ ] `canonical_language` validated against 9-language union\n- [ ] Generate AS/VS/compare report in all 5 locales — fallback to en when missing\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "c1eac62",
+        "message": "feat: i18n-content service, warming jobs, inngest functions (WIP)"
+      },
+      {
+        "sha": "6b79620",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "412854e",
+        "message": "fix(karsa-client): separate read/trigger circuits, fix half-open recovery"
+      },
+      {
+        "sha": "73f761b",
+        "message": "fix: fix timeout generate report (#13)"
+      },
+      {
+        "sha": "2525f14",
+        "message": "feat: i18n for HTML reports (AS, VS, compare) with server-side locale loading (v0.26.0)"
+      },
+      {
+        "sha": "d897155",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "6e01fff",
+        "message": "feat: partner canonical_language for Ava output generation (v0.27.0)"
+      },
+      {
+        "sha": "3bd3847",
+        "message": "feat: onboarding state API + partner-scoped feature announcements (v0.28.0)"
+      },
+      {
+        "sha": "d07ff06",
+        "message": "feat: GET /api/admin/announcements for Artha admin UI (v0.28.1)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 19,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/19",
+    "title": "Partner create 500 — include partner_slug in INSERT",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-20T03:40:43Z",
+    "mergedAtDate": "20 April 2026",
+    "mergedAtTime": "10.40.43",
+    "body": "partner_slug is NOT NULL (migration 018) but was missing from the INSERT statement, causing a DB constraint violation on every new partner. Also sanitize the id input client-side (auto-lowercase + strip invalid chars) and surface field-level validation errors from the API.",
+    "commits": [
+      {
+        "sha": "9666fc0",
+        "message": "fix: partner create 500 — include partner_slug in INSERT"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 38,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/38",
+    "title": "Revert \"fix: fix selected domain to export report (#37)\"",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-20T02:29:07Z",
+    "mergedAtDate": "20 April 2026",
+    "mergedAtTime": "09.29.07",
+    "body": "This reverts commit 5a54190931b1eed000efea4cac1ccaa2d067a699.",
+    "commits": [
+      {
+        "sha": "09fd074",
+        "message": "Revert \"fix: fix selected domain to export report (#37)\""
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 37,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/37",
     "title": "Fix selected domain to export report",
@@ -1050,7 +1379,7 @@
     "repoSlug": "avq-sutra",
     "prNumber": 3,
     "prUrl": "https://github.com/adsvisory/avq-sutra/pull/3",
-    "title": "Sutra v0.24.3 �� VS config, content credits, route refinements",
+    "title": "Sutra v0.24.3 — VS config, content credits, route refinements",
     "type": "feat",
     "typeLabel": "✨ Fitur Baru",
     "scope": null,
