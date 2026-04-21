@@ -1,5 +1,68 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 16,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/16",
+    "title": "Fix discovery prompt for CAT manual prompt",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-21T08:06:03Z",
+    "mergedAtDate": "21 April 2026",
+    "mergedAtTime": "15.06.03",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ddc2677",
+        "message": "fix discovery prompt for CAT manual prompt"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 40,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/40",
+    "title": "Fix slot domain",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-21T08:05:11Z",
+    "mergedAtDate": "21 April 2026",
+    "mergedAtTime": "15.05.11",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9c165d2",
+        "message": "fix: fix slot domain"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 15,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/15",
+    "title": "Fix slot domain",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-21T08:05:04Z",
+    "mergedAtDate": "21 April 2026",
+    "mergedAtTime": "15.05.04",
+    "body": "",
+    "commits": [
+      {
+        "sha": "67a278d",
+        "message": "fix: fix slot domain"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 39,
