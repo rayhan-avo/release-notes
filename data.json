@@ -1,5 +1,26 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 21,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/21",
+    "title": "Add partner management",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-22T03:56:50Z",
+    "mergedAtDate": "22 April 2026",
+    "mergedAtTime": "10.56.50",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6f089da",
+        "message": "feat: add partner management"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 16,
