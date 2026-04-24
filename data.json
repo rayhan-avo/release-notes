@@ -2,6 +2,553 @@
   {
     "repo": "Artha",
     "repoSlug": "avq-artha",
+    "prNumber": 23,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/23",
+    "title": "Main 2404",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-24T03:00:30Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "10.00.30",
+    "body": "",
+    "commits": [
+      {
+        "sha": "4d50faf",
+        "message": "deploy main 2404"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 42,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/42",
+    "title": "Main 2404",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-24T02:52:35Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.52.35",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ade1abc",
+        "message": "deploy main 2404"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 17,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/17",
+    "title": "Main 2404",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-04-24T02:48:34Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.48.34",
+    "body": "",
+    "commits": [
+      {
+        "sha": "f5b18e0",
+        "message": "deploy 2404"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 22,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/22",
+    "title": "Release: artha feature/alex-work → main (v1.27.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-24T02:36:27Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.36.27",
+    "body": "## Summary\n\n### v1.27.0 — Partner canonical language (WL-3)\n- Migration 024: `canonical_language` column on partners (sync with Sutra partner field)\n- PartnersPage: canonical_language editor in partner settings (combined with main's save-and-test flow via `persistCanonicalLanguageIfChanged` helper)\n- `api/repositories/partners.ts`, `api/routes/partners.ts`, `src/lib/api/artha/partners.ts`: plumb `canonical_language` through create/update\n- Brief: docs/briefs/2026-04-23_wl-3-artha-canonical-language.md\n\n### v1.26.2 — GitPulse correctness overhaul\n- Migration 023: `artha_github_weekly_stats` + `artha_github_daily_commits` now key on `(repo, author, week|date, source)` where `source ∈ {default, feature}`\n- Unique-to-branch via `/compare/{default}...{branch}` replaces blind per-branch `/commits` fan-out\n- Delete-before-insert for `source='feature'` rows — stale data from rebased/deleted branches no longer accumulates\n- Sync warnings surfaced in UI (`artha_github_sync_log.warnings TEXT[]`)\n- Merged vs unmerged UI split\n- Email → login attribution map\n- **Known limitation:** squash-merged PRs with undeleted feature branches still over-count; use \"delete branch on merge\"\n\n### v1.26.1 — GitPulse: detect LOC from feature branches\n- All-branch commit fan-out, feature-branch LOC enrichment, author attribution fallback\n\n### v1.26.0 — Announcements admin page (Astra onboarding Brief A1 followup)\n- New `/announcements` page with Drawer; partner filter, icon picker, 5-locale i18n fields\n- Hooks: `useAnnouncements`, `useUpsertAnnouncement`, `useDeleteAnnouncement`\n- Nav entry in AdminShell\n\n## Version\nv1.27.0\n\n## Migrations\n- 023_github_stats_source_split.sql\n- 024_partner_canonical_language.sql\n\n## Test plan\n- [ ] Run migrations 023, 024 on dev DB\n- [ ] Partner canonical language editable in PartnersPage, persists on Save / Save & Test\n- [ ] GitPulse shows correct LOC across default + feature branches\n- [ ] Unmerged commits badge renders on contributor cards\n- [ ] Sync warnings pill shows when applicable\n- [ ] Announcements admin CRUD against Sutra `/api/admin/announcements`\n- [ ] No regressions in partner management, accounts, billing pages\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "0d2e14b",
+        "message": "feat: GitPulse page, auth and admin shell updates (v1.25.0)"
+      },
+      {
+        "sha": "0b54756",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "6342e2b",
+        "message": "fix: config and styling updates (v1.25.1)"
+      },
+      {
+        "sha": "2232f28",
+        "message": "fix: auth route and config updates (v1.25.2)"
+      },
+      {
+        "sha": "f636d41",
+        "message": "feat: multi-Sutra resolver, partner status, WL-3 groundwork (v1.25.3)"
+      },
+      {
+        "sha": "e58aebf",
+        "message": "fix: reports API refinements (v1.25.4)"
+      },
+      {
+        "sha": "50e5068",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "20dfef1",
+        "message": "chore: add hook db migrations before build (#13)"
+      },
+      {
+        "sha": "4a0d742",
+        "message": "Chore/db migration (#14)"
+      },
+      {
+        "sha": "3f2e879",
+        "message": "Chore/db migration (#15)"
+      },
+      {
+        "sha": "e14bbf9",
+        "message": "Chore/db migration main (#17)"
+      },
+      {
+        "sha": "f8b5758",
+        "message": "feat: announcements admin page (v1.26.0)"
+      },
+      {
+        "sha": "7ade658",
+        "message": "fix: GitPulse detects LOC from feature branches (v1.26.1)"
+      },
+      {
+        "sha": "854b198",
+        "message": "fix: GitPulse correctness overhaul — four LOC count bugs (v1.26.2)"
+      },
+      {
+        "sha": "99342ed",
+        "message": "feat: partner canonical language (WL-3) (v1.27.0)"
+      },
+      {
+        "sha": "2e10726",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 41,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/41",
+    "title": "Release: astra feature/alex-work → main (v1.17.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-24T02:36:20Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.36.20",
+    "body": "## Summary\n\n### v1.17.0 — Content split-pane + nav simplification\n- New `ContentPage.tsx` single split-pane (BriefList + BriefDetail + DraftsPanel + ProposalsList)\n- Removed `ContentSectionPage.tsx`, `ContentWorkspacePage.tsx`, `content-hooks.ts` (consolidated)\n- `ContentBriefDetailPage` reduced to redirect stub for bookmarks\n- Top nav drops Insights tab (route stays mounted for direct navigation)\n- Cards block renderers tightened + new `highlight.ts` syntax helper\n\n### v1.16.1 — Cards feature block renderers + DP fix panel wiring\n\n### v1.16.0 — Cards feature module, proposals, admin branding, language wiring\n- New `src/features/cards/` module (FixView, NarrationView, 10 block primitives)\n- `ProposalCard`, `ProposalsList`\n- `AdminBrandingPage` (WL-4), `DpFixPanel`\n- Brief: PC-4c language wiring, WL-4 branding admin\n\n### v1.15.x — Insight card lift math\n- v1.15.2: removed duplicate `pts pts` on fix card + sevKey refactor\n- v1.15.1: `cardPillarLift` util; cards show `+X.X {O|M|G} pts` — no 100× AS inflation\n- v1.15.0: three-track card UI (fix / content / strategic), advisor removed\n\n### v1.14.x — Insight card actions\n- v1.14.1: kebab dropdown clipping fix\n- v1.14.0: ActionsSection, CardKebab, FixArtifact, InsightCardView, AnalyticsSection, ContentSection, CreditPill\n\n## Version\nv1.17.0\n\n## Test plan\n- [ ] `/content` shows split-pane: brief list left, detail + drafts right\n- [ ] Legacy `/content/:domainId/:briefId` redirects to `/content/:domainId`\n- [ ] Authority / Visibility / Content / Domains tabs in nav (no Insights tab)\n- [ ] Direct navigation to `/` or `/insights` still works\n- [ ] Three-track card UI on Fixes / Content / Strategic sections\n- [ ] Card badges show `+X.X {O|M|G} pts` with correct pillar letter (no duplicate \"pts\")\n- [ ] Admin Branding page accessible at `/admin/branding`\n- [ ] Kebab dropdown layers above sibling cards\n- [ ] Onboarding tours + hints + announcements still functional\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a2572d3",
+        "message": "feat: Ava card redesign, BookHero/BookMarketPosition polish, score ring improvements (v1.4.0)"
+      },
+      {
+        "sha": "baa6afb",
+        "message": "feat: inbox system, content workspace, i18n expansion, component polish (v1.6.0)"
+      },
+      {
+        "sha": "9721199",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v1.6.0)"
+      },
+      {
+        "sha": "670f163",
+        "message": "fix: UI and component refinements (v1.6.2)"
+      },
+      {
+        "sha": "fca5c89",
+        "message": "fix: UI refinements (v1.6.3)"
+      },
+      {
+        "sha": "90e9398",
+        "message": "fix: BookAuthorityTab, AddDomainModal, AuthorityPage refinements (v1.6.4)"
+      },
+      {
+        "sha": "caa6d94",
+        "message": "feat: astra updates (v1.7.0)"
+      },
+      {
+        "sha": "1e6099e",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "6ea5bee",
+        "message": "feat: content workspace redesign, brief language override, inbox UX (v1.9.0)"
+      },
+      {
+        "sha": "355b200",
+        "message": "fix: content page refinements (v1.9.1)"
+      },
+      {
+        "sha": "e5832e4",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "7a67ece",
+        "message": "Update src/pages/ContentBriefDetailPage.tsx"
+      },
+      {
+        "sha": "be4ef87",
+        "message": "fix conflict alex to main"
+      },
+      {
+        "sha": "b428166",
+        "message": "feat: VS evidence tabs, billing page, content workspace updates (v1.10.0)"
+      },
+      {
+        "sha": "e21c438",
+        "message": "fix: MarkdownResponse refinements (v1.10.1)"
+      },
+      {
+        "sha": "9be88b5",
+        "message": "fix: VS tabs, book authority tab, markdown response refinements (v1.10.2)"
+      },
+      {
+        "sha": "7cffa9d",
+        "message": "feat: Intelligence page, Korean locale, i18n improvements (v1.10.3)"
+      },
+      {
+        "sha": "020016f",
+        "message": "refactor: remove legacy report-builder, server-side report generation via Sutra (v1.10.4)"
+      },
+      {
+        "sha": "69d50fa",
+        "message": "fix: VisibilityPage refinement (v1.10.5)"
+      },
+      {
+        "sha": "ba8b77b",
+        "message": "feat: ASG score UI, report-builder lib, admin pages (WIP)"
+      },
+      {
+        "sha": "1ee64c5",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "b2969cf",
+        "message": "feat(login): adjust redirect after login (#36)"
+      },
+      {
+        "sha": "97690f0",
+        "message": "fix: fix selected domain to export report (#37)"
+      },
+      {
+        "sha": "af15ff7",
+        "message": "feat: report locales, VS/AS component refinements, probe-rates + vector utils (v1.11.0)"
+      },
+      {
+        "sha": "2f317d7",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "629ed25",
+        "message": "feat: public /bot info page for avo-agent crawler (v1.11.1)"
+      },
+      {
+        "sha": "20e7ee2",
+        "message": "feat: onboarding foundation + hints + tours + announcements (v1.12.0)"
+      },
+      {
+        "sha": "839030e",
+        "message": "feat: per-page tours + onboarding maintenance toolkit (v1.13.0)"
+      },
+      {
+        "sha": "a64815b",
+        "message": "feat: Ava rebuild Stage 2 — Astra insights UI + D.1 forms + history"
+      },
+      {
+        "sha": "06bcfc3",
+        "message": "feat: Ava rebuild Stage 3 — Astra content section UI"
+      },
+      {
+        "sha": "7e67736",
+        "message": "feat: Ava rebuild Stage 4 — Astra analytics section (4 charts + i18n)"
+      },
+      {
+        "sha": "bedb522",
+        "message": "fix: Astra hook request shapes to match Ava v2 contract"
+      },
+      {
+        "sha": "fda3de5",
+        "message": "fix: collapse i18n region subtags to base language"
+      },
+      {
+        "sha": "7ccc7fa",
+        "message": "feat: insight card actions + actions/analytics/content sections (v1.14.0)"
+      },
+      {
+        "sha": "85c2c19",
+        "message": "fix: insight card kebab dropdown clipping + content section + zh-TW locale (v1.14.1)"
+      },
+      {
+        "sha": "020e3b8",
+        "message": "feat: three-track card UI (fix / content / strategic), advisor removed (v1.15.0)"
+      },
+      {
+        "sha": "173a9d0",
+        "message": "fix: insight card lift shown as pillar pts (not inflated AS pts) (v1.15.1)"
+      },
+      {
+        "sha": "f4ef0fd",
+        "message": "fix: duplicate 'pts pts' rendering on fix-card + severity key refactor (v1.15.2)"
+      },
+      {
+        "sha": "7fe313f",
+        "message": "feat: cards feature module, proposals, admin branding, language wiring (v1.16.0)"
+      },
+      {
+        "sha": "a70e786",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "b6980c8",
+        "message": "fix: cards feature block renderers + DP fix panel content-blocks wiring (v1.16.1)"
+      },
+      {
+        "sha": "6bcf83f",
+        "message": "feat: Content split-pane consolidation, nav simplification (v1.17.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 16,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/16",
+    "title": "Release: shastra feature/alex-work → main (v2.159.12)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-24T02:36:12Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.36.12",
+    "body": "## Summary\n\nAccumulated chore + feature work since v2.158.11. The substantive content lives in tagged patch releases; everything else is session memory + settings tracking that ships alongside.\n\n### v2.159.x patch stream\n- v2.159.3 — Circuit Breaker page typography + Log Investigation `?module=` deep-link\n- v2.159.2 — Circuit Breaker config page + ADS normalization\n- v2.159.1 — VS single-run docs + helpers aligned\n- v2.159.0 — Shastra updates batch\n\n### Earlier in the branch\n- v2.158.x — various chore + settings updates\n\n## Version\nv2.159.12\n\n## Test plan\n- [ ] `/configure/circuit-breaker` renders with staggered Card fade-in + in-SPA Link navigation\n- [ ] Circuit breaker settings edit + Save persists through Karsa `/api/settings`\n- [ ] `/admin/logs?module=vs-platform-guard` pre-filters the log list\n- [ ] PB prompt inspector shows rewritten badge where `was_rewritten` is true\n- [ ] No regressions in configure pages, domain list, inspector panels\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "a8de5c4",
+        "message": "feat: Ava domain briefs page, TopNav and router updates (v0.25.0)"
+      },
+      {
+        "sha": "e613e4d",
+        "message": "chore: update session memory tracking (v2.157.4)"
+      },
+      {
+        "sha": "75b5ed1",
+        "message": "chore: session updates (v2.157.5)"
+      },
+      {
+        "sha": "4294517",
+        "message": "chore: session updates (v2.157.6)"
+      },
+      {
+        "sha": "463126c",
+        "message": "feat: shastra updates (v2.158.0)"
+      },
+      {
+        "sha": "8e34b3a",
+        "message": "chore: session updates (v2.158.1)"
+      },
+      {
+        "sha": "d5c36ec",
+        "message": "chore: session updates (v2.158.2)"
+      },
+      {
+        "sha": "e7d9960",
+        "message": "chore: session updates (v2.158.3)"
+      },
+      {
+        "sha": "6cf881e",
+        "message": "chore: session updates (v2.158.4)"
+      },
+      {
+        "sha": "e3f2d4d",
+        "message": "chore: session updates (v2.158.5)"
+      },
+      {
+        "sha": "6682333",
+        "message": "chore: session updates (v2.158.6)"
+      },
+      {
+        "sha": "b55ef5e",
+        "message": "chore: session updates (v2.158.7)"
+      },
+      {
+        "sha": "9161dcc",
+        "message": "chore: version bump (v2.158.8)"
+      },
+      {
+        "sha": "197322c",
+        "message": "chore: settings update (v2.158.9)"
+      },
+      {
+        "sha": "2dc6d8a",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "5a6b32d",
+        "message": "feat: badge rewritten PB prompts in inspector (v2.158.10)"
+      },
+      {
+        "sha": "10e0168",
+        "message": "chore: session memory, settings allowlist, advice-history diag script (v2.158.11)"
+      },
+      {
+        "sha": "ad8b938",
+        "message": "fix: align VS docs + helpers to single-run reality (v2.159.1)"
+      },
+      {
+        "sha": "96b49f9",
+        "message": "feat: circuit breaker config page + ADS normalization (v2.159.2)"
+      },
+      {
+        "sha": "7461e45",
+        "message": "fix: circuit breaker typography + log investigation module deep-link (v2.159.3)"
+      },
+      {
+        "sha": "eaa012d",
+        "message": "chore: session memory log update (v2.159.4)"
+      },
+      {
+        "sha": "6b0c01e",
+        "message": "chore: session memory log update (v2.159.5)"
+      },
+      {
+        "sha": "2642361",
+        "message": "chore: session memory log update (v2.159.6)"
+      },
+      {
+        "sha": "8b20c30",
+        "message": "chore: session memory log update (v2.159.7)"
+      },
+      {
+        "sha": "7e65f2a",
+        "message": "chore: session memory log update (v2.159.8)"
+      },
+      {
+        "sha": "a71e367",
+        "message": "chore: session memory log update (v2.159.9)"
+      },
+      {
+        "sha": "404925d",
+        "message": "chore: session memory log update (v2.159.10)"
+      },
+      {
+        "sha": "5056d6e",
+        "message": "chore: session memory log update (v2.159.11)"
+      },
+      {
+        "sha": "132ad82",
+        "message": "chore: session memory log update (v2.159.12)"
+      },
+      {
+        "sha": "84bb2b0",
+        "message": "chore: session memory log update (v2.159.13)"
+      },
+      {
+        "sha": "c7877fc",
+        "message": "fix conflicts"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 17,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/17",
+    "title": "Release: sutra feature/alex-work → main (v0.31.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-24T02:24:25Z",
+    "mergedAtDate": "24 April 2026",
+    "mergedAtTime": "09.24.25",
+    "body": "## Summary\n\n### v0.31.0 — P&L endpoint backing Artha WL-4\n- `wallet.repo.ts`: queries backing the partner P&L surface\n- `routes/admin/billing.ts`: endpoint adjustments for Artha's P&L page\n\n### v0.30.0 — Remove advisor client route\n- Deleted `src/routes/client/advisor.ts` (Ava rebuild replaces advisor with three-track cards via insights proxy)\n- `app.ts`: unregistered advisor route\n- `audit-events.ts`, `triggers.ts`: refinements\n\n### v0.29.1 — Remove orphaned Inngest integration\n- 12 files deleted (`src/inngest/**`, routes/inngest.ts, i18n-content service/repos/routes, warming-job repo, warming-status route)\n- Removed `inngest` dep, dropped `INNGEST_*` env vars, removed rate-limit allow-list + dev-sync hook\n- Translation flows via `clientContentTranslationProxyRoutes` → Ava\n- **Remember to archive avq-sutra in Inngest Cloud post-deploy**\n\n### v0.29.0 — Unified intervention proxy route\n- `POST /api/client/insights/cards/:cardId/intervention` (Brief 2.8c v2)\n- Proxy validates card UUID; Ava lifecycle is authoritative\n\n## Version\nv0.31.0\n\n## Test plan\n- [ ] Admin billing P&L endpoint returns partner-scoped data\n- [ ] `POST /api/client/insights/cards/:cardId/intervention` forwards to Ava\n- [ ] No references to removed advisor route remain\n- [ ] Inngest Cloud app archived post-deploy\n- [ ] All client routes + admin routes still auth-gated (401 for unauthenticated)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "c1eac62",
+        "message": "feat: i18n-content service, warming jobs, inngest functions (WIP)"
+      },
+      {
+        "sha": "6b79620",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "412854e",
+        "message": "fix(karsa-client): separate read/trigger circuits, fix half-open recovery"
+      },
+      {
+        "sha": "73f761b",
+        "message": "fix: fix timeout generate report (#13)"
+      },
+      {
+        "sha": "2525f14",
+        "message": "feat: i18n for HTML reports (AS, VS, compare) with server-side locale loading (v0.26.0)"
+      },
+      {
+        "sha": "d897155",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "6e01fff",
+        "message": "feat: partner canonical_language for Ava output generation (v0.27.0)"
+      },
+      {
+        "sha": "3bd3847",
+        "message": "feat: onboarding state API + partner-scoped feature announcements (v0.28.0)"
+      },
+      {
+        "sha": "d07ff06",
+        "message": "feat: GET /api/admin/announcements for Artha admin UI (v0.28.1)"
+      },
+      {
+        "sha": "c7e7eee",
+        "message": "feat: Sutra proxy routes for Ava v2 rebuild surface"
+      },
+      {
+        "sha": "33fcdf1",
+        "message": "feat: unified intervention proxy route for insight cards (v0.29.0)"
+      },
+      {
+        "sha": "c8e8004",
+        "message": "chore: remove orphaned Inngest integration (v0.29.1)"
+      },
+      {
+        "sha": "1769ad9",
+        "message": "feat: remove advisor client route, audit + triggers refinements (v0.30.0)"
+      },
+      {
+        "sha": "5ce5b0f",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "7c2dc89",
+        "message": "feat: P&L endpoint backing Artha WL-4 (v0.31.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
     "prNumber": 21,
     "prUrl": "https://github.com/adsvisory/avq-artha/pull/21",
     "title": "Add partner management",
@@ -1307,7 +1854,7 @@
     "repoSlug": "avq-astra",
     "prNumber": 20,
     "prUrl": "https://github.com/adsvisory/avq-astra/pull/20",
-    "title": "Astra v1.6.4 ��� BookAuthorityTab, AddDomainModal, AuthorityPage",
+    "title": "Astra v1.6.4 — BookAuthorityTab, AddDomainModal, AuthorityPage",
     "type": "fix",
     "typeLabel": "🐛 Perbaikan",
     "scope": null,
