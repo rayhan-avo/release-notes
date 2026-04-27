@@ -2,6 +2,314 @@
   {
     "repo": "Artha",
     "repoSlug": "avq-artha",
+    "prNumber": 24,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/24",
+    "title": "Release: artha feature/alex-work → main (v1.30.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-27T02:01:23Z",
+    "mergedAtDate": "27 April 2026",
+    "mergedAtTime": "09.01.23",
+    "body": "## Summary\n\n- v1.29.1: GitPulse iteration (LOC attribution, sync diagnostics, UI surfacing)\n- v1.30.0: Cohort console scaffold + Samhita admin client (Briefs 29–30)\n\n## Test plan\n\n- [ ] Cohort summary, partitions, partner books, spend, sales-reports pages render\n- [ ] GitPulse stats look correct against live GitHub\n- [ ] Admin shell nav reflects new cohort routes\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "6c36c23",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "7fcef57",
+        "message": "feat: partner credit rate + USD→credits billing display (CRED-3b) (v1.28.0)"
+      },
+      {
+        "sha": "db683a7",
+        "message": "fix: BillingPage + sutra route alignment with Billing V3 (v1.28.1)"
+      },
+      {
+        "sha": "e655b2c",
+        "message": "feat: Finance + Platform pages + pixel badge (PIX-IND-2) + admin restructure (v1.29.0)"
+      },
+      {
+        "sha": "876e2b7",
+        "message": "chore: GitPulse iteration (v1.29.1)"
+      },
+      {
+        "sha": "c8819f5",
+        "message": "feat: cohort console scaffold + samhita client (v1.30.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 18,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/18",
+    "title": "Release: shastra feature/alex-work → main (v2.171.1)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-27T02:01:21Z",
+    "mergedAtDate": "27 April 2026",
+    "mergedAtTime": "09.01.21",
+    "body": "## Summary\n\nSession memory log updates since the last release (v2.159.12).\n\n## Version\nv2.159.15\n\n## Test plan\n- [ ] Sanity check: app builds and runs\n- [ ] No new features — chore-only release\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "d3996d7",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "4a5f73f",
+        "message": "chore: session memory log update (v2.159.14)"
+      },
+      {
+        "sha": "8b2b8bb",
+        "message": "chore: session memory log update (v2.159.15)"
+      },
+      {
+        "sha": "659f91d",
+        "message": "chore: session memory + CLAUDE.md update (v2.159.16)"
+      },
+      {
+        "sha": "612742e",
+        "message": "chore: session memory log update (v2.159.17)"
+      },
+      {
+        "sha": "a37c28a",
+        "message": "feat: pixel badge on domain rows + DKL bridge brief (PIX-IND-3, A2) (v2.160.0)"
+      },
+      {
+        "sha": "ad65133",
+        "message": "feat: insights smoke test + ava restructure (v2.165.0)"
+      },
+      {
+        "sha": "67f59d0",
+        "message": "feat: samhita scaffold + unified logs + ava insights config (v2.171.0)"
+      },
+      {
+        "sha": "eafa081",
+        "message": "feat: ava diagnostics page (v2.171.1)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 43,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/43",
+    "title": "Release: astra feature/alex-work → main (v1.23.0)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-27T02:01:20Z",
+    "mergedAtDate": "27 April 2026",
+    "mergedAtTime": "09.01.20",
+    "body": "## Summary\n\n### v1.17.4 — Pipeline-run polling + api-error util + content page refinements\n- New `src/lib/api/sutra/pipeline-run.ts` — pipeline-run polling helper\n- New `src/lib/utils/api-error.ts` — common API error parser\n- `AvaContentLoader` surfaces failure reason when runs error out\n- `ContentPage`, `ContentBriefDetailPage` wired to polling + error surfacing\n\n### v1.17.3 — Global dd/mm/yy date format\n- New `src/lib/utils/date.ts` unified date formatting helper\n- 30+ component updates across AS, VS, Book, Content, Insights, Analytics surfaces\n\n### v1.17.2 — AI Optimization sidebar card on content briefs (CE-3R-AI-OPT)\n\n### v1.17.1 — Content brief detail redesign (CE-3R)\n- Brief summary as gold Ava suggestion card, outline drag handles, new AI Citation Readiness card with ScoreRingMini\n\n## Version\nv1.17.4\n\n## Test plan\n- [ ] Brief/draft generation surfaces progress via pipeline-run polling\n- [ ] Failed runs display the correct failure reason from Sutra\n- [ ] All dates in dd/mm/yy across the app\n- [ ] Brief detail shows gold suggestion card, outline with drag handles, AI Citation Readiness + AI Optimization sidebar cards\n- [ ] Draft meta bar no longer exposes LLM model name\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "eb0e8fd",
+        "message": "feat: AI Optimization sidebar + brief detail redesign + content cleanup (v1.17.2)"
+      },
+      {
+        "sha": "d0fbc05",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "d9c3041",
+        "message": "feat: global dd/mm/yy date format + date util (v1.17.3)"
+      },
+      {
+        "sha": "29b96d1",
+        "message": "feat: pipeline-run polling + api-error util + content page refinements (v1.17.4)"
+      },
+      {
+        "sha": "5158fde",
+        "message": "feat: client credits display + content i18n namespace (CRED-3a) (v1.18.0)"
+      },
+      {
+        "sha": "e1a3006",
+        "message": "feat: Billing V3 client UI + admin billing page (v1.19.0)"
+      },
+      {
+        "sha": "6ed2590",
+        "message": "feat: Pixel + Analytics tabs + PixelPage + nav (PIX-IND-1, AST-1B, AST-2A) (v1.20.0)"
+      },
+      {
+        "sha": "da3c4f4",
+        "message": "feat(insights): account-level Insights landing page (Brief #9, v1.20.1)"
+      },
+      {
+        "sha": "407466f",
+        "message": "chore(cleanup): remove orphan/replaced pages, dirs, hooks (Brief #10, v1.20.2)"
+      },
+      {
+        "sha": "d7de621",
+        "message": "feat(nav): restore Insights tab in top nav (v1.20.2)"
+      },
+      {
+        "sha": "e365601",
+        "message": "fix: account insights contract + SSE invalidation + locale baselines (F1, F4, F6) (v1.20.3)"
+      },
+      {
+        "sha": "7cc9504",
+        "message": "feat: drop zh, apply partner default language (F8) (v1.20.4)"
+      },
+      {
+        "sha": "40078ed",
+        "message": "chore: drop inbox i18n namespace + locale files (v1.20.5)"
+      },
+      {
+        "sha": "6afe0be",
+        "message": "feat: position anchor + insight visual refinements (v1.22.2)"
+      },
+      {
+        "sha": "483be64",
+        "message": "feat: portfolio health + market pulse + masonry card grid (v1.23.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 18,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/18",
+    "title": "Release: sutra feature/alex-work → main (v0.35.9)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-04-27T01:58:54Z",
+    "mergedAtDate": "27 April 2026",
+    "mergedAtTime": "08.58.54",
+    "body": "## Summary\n\n### v0.32.1 — Consolidate content-engine-proxy routes\n- Removed duplicate `briefs/:briefId/duplicate` block kept during the earlier main merge; route is now surfaced via the canonical list.\n\n### v0.32.0 — Content-stream proxy + internal wallet route\n- `routes/client/content-stream-proxy.ts`: SSE/stream proxy for Ava's content-stream endpoint (surfaces brief/draft generation progress to clients in real time).\n- `routes/internal/wallet.ts`: service-to-service route for Ava credit deduction on brief/draft generation.\n\n## Version\nv0.32.1\n\n## Test plan\n- [ ] Brief/draft generation progress streams through Sutra to Astra in real time\n- [ ] Ava deducts credits via internal wallet route on generation\n- [ ] `briefs/:briefId/duplicate` still works (single definition now)\n- [ ] No duplicate route registration errors at boot\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "c1eac62",
+        "message": "feat: i18n-content service, warming jobs, inngest functions (WIP)"
+      },
+      {
+        "sha": "6b79620",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "412854e",
+        "message": "fix(karsa-client): separate read/trigger circuits, fix half-open recovery"
+      },
+      {
+        "sha": "73f761b",
+        "message": "fix: fix timeout generate report (#13)"
+      },
+      {
+        "sha": "2525f14",
+        "message": "feat: i18n for HTML reports (AS, VS, compare) with server-side locale loading (v0.26.0)"
+      },
+      {
+        "sha": "d897155",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "6e01fff",
+        "message": "feat: partner canonical_language for Ava output generation (v0.27.0)"
+      },
+      {
+        "sha": "3bd3847",
+        "message": "feat: onboarding state API + partner-scoped feature announcements (v0.28.0)"
+      },
+      {
+        "sha": "d07ff06",
+        "message": "feat: GET /api/admin/announcements for Artha admin UI (v0.28.1)"
+      },
+      {
+        "sha": "c7e7eee",
+        "message": "feat: Sutra proxy routes for Ava v2 rebuild surface"
+      },
+      {
+        "sha": "33fcdf1",
+        "message": "feat: unified intervention proxy route for insight cards (v0.29.0)"
+      },
+      {
+        "sha": "c8e8004",
+        "message": "chore: remove orphaned Inngest integration (v0.29.1)"
+      },
+      {
+        "sha": "1769ad9",
+        "message": "feat: remove advisor client route, audit + triggers refinements (v0.30.0)"
+      },
+      {
+        "sha": "5ce5b0f",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "7c2dc89",
+        "message": "feat: P&L endpoint backing Artha WL-4 (v0.31.0)"
+      },
+      {
+        "sha": "b2414f6",
+        "message": "feat: content-stream proxy + internal wallet route (v0.32.0)"
+      },
+      {
+        "sha": "f36c724",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "f87dd76",
+        "message": "chore: consolidate content-engine-proxy routes (v0.32.1)"
+      },
+      {
+        "sha": "9d82d60",
+        "message": "fix: pass through pipeline + crawlStatus on competitor domain list (v0.32.2)"
+      },
+      {
+        "sha": "64e00ee",
+        "message": "feat: USD→credits rename + billing config + wallet refactor (CRED-2) (v0.33.0)"
+      },
+      {
+        "sha": "500afc9",
+        "message": "feat: Billing V3 — purchase, invoices, payment methods, profile, gateways (v0.34.0)"
+      },
+      {
+        "sha": "6a000d5",
+        "message": "feat: pixel endpoints + Karsa DKL writer + default credit pricing (v0.35.0)"
+      },
+      {
+        "sha": "93307d7",
+        "message": "feat: account-insights BFF + tier gating (Brief #8 / v0.35.1)"
+      },
+      {
+        "sha": "4c0a682",
+        "message": "chore: delete deprecated intelligence + insights-proxy routes (Brief #11, v0.35.2)"
+      },
+      {
+        "sha": "d6fda97",
+        "message": "feat(sutra): emit account-insight signals to Ava (Brief F5B) v0.35.3"
+      },
+      {
+        "sha": "bb35dea",
+        "message": "fix: resolve competitor_url via SQL in F7 signal emission (0.35.4)"
+      },
+      {
+        "sha": "5973663",
+        "message": "feat: partner default language + drop zh from UI locales (F8) (v0.35.5)"
+      },
+      {
+        "sha": "a1ab216",
+        "message": "feat: pixel unmatched events surface (v0.35.6)"
+      },
+      {
+        "sha": "241f962",
+        "message": "feat: insights-proxy + pixel analytics proxy (v0.35.8)"
+      },
+      {
+        "sha": "149759d",
+        "message": "feat: portfolio health + market pulse plumbing (v0.35.9)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
     "prNumber": 23,
     "prUrl": "https://github.com/adsvisory/avq-artha/pull/23",
     "title": "Main 2404",
