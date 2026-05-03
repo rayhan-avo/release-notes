@@ -436,7 +436,7 @@
     "mergedAt": "2026-04-30T03:42:46Z",
     "mergedAtDate": "30 April 2026",
     "mergedAtTime": "10.42.46",
-    "body": "## Summary\n- v1.30.0: content engine v2 — BriefViewPage, DraftViewPage, AddFocusModal, OpportunityFooter; removed standing surface\n- v1.29.0: standing surface (now superseded)\n- v1.28.0: removed legacy actions/ card components\n\n## Test plan\n- [ ] /insights renders with cards + opportunity footers\n- [ ] /content brief/draft view pages load\n- [ ] AddFocus modal flow works against new content-engine-v2 hooks\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "body": "## Summary\n- v1.30.0: content engine v2 — BriefViewPage, DraftViewPage, AddFocusModal, OpportunityFooter; removed standing surface\n- v1.29.0: standing surface (now superseded)\n- v1.28.0: removed legacy actions/ card components\n\n## Test plan\n- [ ] /insights renders with cards + opportunity footers\n- [ ] /content brief/draft view pages load\n- [ ] AddFocus modal flow works against new content-engine-v2 hooks\n\n���� Generated with [Claude Code](https://claude.com/claude-code)",
     "commits": [
       {
         "sha": "eb0e8fd",
