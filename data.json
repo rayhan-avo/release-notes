@@ -1,5 +1,610 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 34,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/34",
+    "title": "Fix credits and markup price",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-05-05T10:12:40Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "17.12.40",
+    "body": "",
+    "commits": [
+      {
+        "sha": "d143f3a",
+        "message": "fix: fix credits and markup price"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 33,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/33",
+    "title": "Fix credits and markup price",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-05-05T10:11:34Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "17.11.34",
+    "body": "",
+    "commits": [
+      {
+        "sha": "d143f3a",
+        "message": "fix: fix credits and markup price"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 28,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/28",
+    "title": "Fix LLM default for visibility",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-05-05T09:57:31Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "16.57.31",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8b4ba18",
+        "message": "Fix LLM default for visibility"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 60,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/60",
+    "title": "Re revert llm visibility",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-05-05T09:57:16Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "16.57.16",
+    "body": "",
+    "commits": [
+      {
+        "sha": "48c837f",
+        "message": "fix default LLM"
+      },
+      {
+        "sha": "1554abd",
+        "message": "bug fix LLM visibility"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 59,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/59",
+    "title": "Bugfix visibility llm selection",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-05-05T09:47:08Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "16.47.08",
+    "body": "",
+    "commits": [
+      {
+        "sha": "f869010",
+        "message": "fix default LLM"
+      },
+      {
+        "sha": "169da70",
+        "message": "bug fix LLM visibility"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 58,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/58",
+    "title": "Astra: visibility V2 detail polish (v1.39.10)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-05-05T02:18:33Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "09.18.33",
+    "body": "## Summary\nOn top of merged PR #52:\n- VisibilityDetail + VisibilityEvidence tweaks\n- vs-hooks adjustments\n- VisibilityPageV2 polish\n\nLatest tag: v1.39.10\n\n(Earlier alex-work commits already shipped via PR #52 squash merge — this PR only contains net-new changes.)\n\n## Test plan\n- [ ] Visibility V2 detail page loads with evidence\n- [ ] No regression in V1 toggle\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "eb0e8fd",
+        "message": "feat: AI Optimization sidebar + brief detail redesign + content cleanup (v1.17.2)"
+      },
+      {
+        "sha": "d0fbc05",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "d9c3041",
+        "message": "feat: global dd/mm/yy date format + date util (v1.17.3)"
+      },
+      {
+        "sha": "29b96d1",
+        "message": "feat: pipeline-run polling + api-error util + content page refinements (v1.17.4)"
+      },
+      {
+        "sha": "5158fde",
+        "message": "feat: client credits display + content i18n namespace (CRED-3a) (v1.18.0)"
+      },
+      {
+        "sha": "e1a3006",
+        "message": "feat: Billing V3 client UI + admin billing page (v1.19.0)"
+      },
+      {
+        "sha": "6ed2590",
+        "message": "feat: Pixel + Analytics tabs + PixelPage + nav (PIX-IND-1, AST-1B, AST-2A) (v1.20.0)"
+      },
+      {
+        "sha": "da3c4f4",
+        "message": "feat(insights): account-level Insights landing page (Brief #9, v1.20.1)"
+      },
+      {
+        "sha": "407466f",
+        "message": "chore(cleanup): remove orphan/replaced pages, dirs, hooks (Brief #10, v1.20.2)"
+      },
+      {
+        "sha": "d7de621",
+        "message": "feat(nav): restore Insights tab in top nav (v1.20.2)"
+      },
+      {
+        "sha": "e365601",
+        "message": "fix: account insights contract + SSE invalidation + locale baselines (F1, F4, F6) (v1.20.3)"
+      },
+      {
+        "sha": "7cc9504",
+        "message": "feat: drop zh, apply partner default language (F8) (v1.20.4)"
+      },
+      {
+        "sha": "40078ed",
+        "message": "chore: drop inbox i18n namespace + locale files (v1.20.5)"
+      },
+      {
+        "sha": "6afe0be",
+        "message": "feat: position anchor + insight visual refinements (v1.22.2)"
+      },
+      {
+        "sha": "483be64",
+        "message": "feat: portfolio health + market pulse + masonry card grid (v1.23.0)"
+      },
+      {
+        "sha": "96cec53",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "8d896b4",
+        "message": "feat: F21/F22/F28 - insight drawer + cta param plumbing + authority deep links (v1.26.0)"
+      },
+      {
+        "sha": "b584b7e",
+        "message": "revert: roll back InsightDrawer (v1.27.0)"
+      },
+      {
+        "sha": "0f955d6",
+        "message": "chore: remove legacy actions/ card components (v1.28.0)"
+      },
+      {
+        "sha": "ae012c7",
+        "message": "feat: standing surface + locale baselines (v1.29.0)"
+      },
+      {
+        "sha": "df2bb71",
+        "message": "feat: content engine v2 + opportunity footer; standing surface removed (v1.30.0)"
+      },
+      {
+        "sha": "37c5c6c",
+        "message": "feat: content surface refactor — ImprovePage + OutcomeView (v1.31.0)"
+      },
+      {
+        "sha": "0bb25b1",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "31d9a52",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "68acb7c",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "9339457",
+        "message": "Merge remote-tracking branch 'origin/feature/alex-work' into feature/alex-work"
+      },
+      {
+        "sha": "f0b41f4",
+        "message": "chore: content surface polish + WIP integration (v1.32.0)"
+      },
+      {
+        "sha": "e0f7c70",
+        "message": "feat: content engine v2 page polish + admin pages (v1.33.0)"
+      },
+      {
+        "sha": "f784f52",
+        "message": "feat: brief workbench modal + ui lang resolver (v1.34.0)"
+      },
+      {
+        "sha": "0e5ffae",
+        "message": "chore: i18n init tweak (v1.34.1)"
+      },
+      {
+        "sha": "99ab232",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "b465788",
+        "message": "chore: ClusterRow tweak + radix-select dep (v1.34.2)"
+      },
+      {
+        "sha": "4d1130f",
+        "message": "feat: domain role caveat surface (v1.35.0)"
+      },
+      {
+        "sha": "b492a92",
+        "message": "feat: card-key i18n catalog + translation tooling (v1.36.0)"
+      },
+      {
+        "sha": "310b034",
+        "message": "fix(F1): rename 244 orphan lineN keys to semantic across all 5 locales"
+      },
+      {
+        "sha": "2cf6d02",
+        "message": "fix(F2): reconcile source_hashes to current en source-of-truth"
+      },
+      {
+        "sha": "7542fcc",
+        "message": "fix(F3+F4): apply F3 locale patches and migrate cards.json to schema v2"
+      },
+      {
+        "sha": "cdf3de2",
+        "message": "feat(F5): partner cards.json overlay loader"
+      },
+      {
+        "sha": "dacd769",
+        "message": "feat(F6): wire translate:cards:check into locale-parity CI"
+      },
+      {
+        "sha": "d7b90ea",
+        "message": "chore: VsProbesTab + AccountInsights polish + locale baselines (v1.36.1)"
+      },
+      {
+        "sha": "5b7f97b",
+        "message": "chore: insight translation poll hook (T1B, v1.36.2)"
+      },
+      {
+        "sha": "9caa842",
+        "message": "fix: account insights translations and component refinements (v1.36.3)"
+      },
+      {
+        "sha": "a4b3766",
+        "message": "feat: translation progress indicator + insights/authority polish (v1.36.4)"
+      },
+      {
+        "sha": "3e3617f",
+        "message": "feat: vaidya audits UI + S3-CT-1a static list card + i18n updates (v1.37.0)"
+      },
+      {
+        "sha": "06ed197",
+        "message": "chore: content/profile hooks + opportunity table + domain switcher polish (v1.37.1)"
+      },
+      {
+        "sha": "5aaceb9",
+        "message": "feat: vaidya audit lineage + reaudit + builders/findings/export UI + anomaly/timeline cards (v1.38.0)"
+      },
+      {
+        "sha": "78f16b8",
+        "message": "chore: i18n extraction/stub-report scripts (v1.38.1)"
+      },
+      {
+        "sha": "c30cfab",
+        "message": "feat: visibility V2 page split + page-match hooks + draft progress/validation/wave grids (v1.39.0)"
+      },
+      {
+        "sha": "2488d03",
+        "message": "feat: visibility V2 polish + content drafts/briefs improvements + quality flags banner (v1.39.8)"
+      },
+      {
+        "sha": "3071ef6",
+        "message": "chore: visibility V2 + content drafts/briefs polish + i18n updates (v1.39.9)"
+      },
+      {
+        "sha": "dbb5991",
+        "message": "chore: visibility V2 detail/evidence + vs-hooks tweaks (v1.39.10)"
+      },
+      {
+        "sha": "f1222d4",
+        "message": "feat: VS wizard focus step + visibility V2 prompt expansion + platform logo (v1.40.0)"
+      },
+      {
+        "sha": "428141f",
+        "message": "chore: visibility V2 detail/drawer/evidence + setup stage polish (v1.40.1)"
+      },
+      {
+        "sha": "dd367fd",
+        "message": "chore: content drafts/briefs UI polish + visibility V2 evidence/prompt tweaks (v1.40.2)"
+      },
+      {
+        "sha": "7c07a20",
+        "message": "fix conflicts"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 24,
+    "prUrl": "https://github.com/adsvisory/avq-shastra/pull/24",
+    "title": "Shastra: project stats tweaks (v2.171.16)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-05-05T01:51:02Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "08.51.02",
+    "body": "## Summary\nSmall update on top of merged PR #22:\n- project-stats.html + generate-report.sh tweaks\n- Memory log updates\n\nLatest tag: v2.171.16\n\n(Earlier alex-work commits already shipped via PR #22 squash merge — this PR only contains net-new changes.)\n\n## Test plan\n- [ ] Stats report generates without errors\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "d3996d7",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "4a5f73f",
+        "message": "chore: session memory log update (v2.159.14)"
+      },
+      {
+        "sha": "8b2b8bb",
+        "message": "chore: session memory log update (v2.159.15)"
+      },
+      {
+        "sha": "659f91d",
+        "message": "chore: session memory + CLAUDE.md update (v2.159.16)"
+      },
+      {
+        "sha": "612742e",
+        "message": "chore: session memory log update (v2.159.17)"
+      },
+      {
+        "sha": "a37c28a",
+        "message": "feat: pixel badge on domain rows + DKL bridge brief (PIX-IND-3, A2) (v2.160.0)"
+      },
+      {
+        "sha": "ad65133",
+        "message": "feat: insights smoke test + ava restructure (v2.165.0)"
+      },
+      {
+        "sha": "67f59d0",
+        "message": "feat: samhita scaffold + unified logs + ava insights config (v2.171.0)"
+      },
+      {
+        "sha": "eafa081",
+        "message": "feat: ava diagnostics page (v2.171.1)"
+      },
+      {
+        "sha": "1c87978",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "2f52cc7",
+        "message": "chore: insights hooks + validators tweaks (v2.171.2)"
+      },
+      {
+        "sha": "2197c2d",
+        "message": "chore: session memory log update"
+      },
+      {
+        "sha": "3289e30",
+        "message": "chore: ava-diagnostics tweak + CLAUDE.md (v2.171.3)"
+      },
+      {
+        "sha": "d0e657d",
+        "message": "chore: ledger UI tweaks (v2.171.4)"
+      },
+      {
+        "sha": "3f0c318",
+        "message": "chore: insights smoke + topnav tweaks (v2.171.5)"
+      },
+      {
+        "sha": "564231d",
+        "message": "chore: insights tabs polish + platform util (v2.171.6)"
+      },
+      {
+        "sha": "6468c07",
+        "message": "fix: ava manual triggers dispatch passes orgId (v2.171.7)"
+      },
+      {
+        "sha": "c6fd57d",
+        "message": "chore: session memory log update"
+      },
+      {
+        "sha": "bc515e1",
+        "message": "fix conflicts"
+      },
+      {
+        "sha": "92d7caa",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "7b28e11",
+        "message": "Merge remote-tracking branch 'origin/feature/alex-work' into feature/alex-work"
+      },
+      {
+        "sha": "cdcbf6e",
+        "message": "chore: session memory log update"
+      },
+      {
+        "sha": "73c8731",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "44ccdb9",
+        "message": "chore: session memory log update"
+      },
+      {
+        "sha": "34e4419",
+        "message": "chore: session memory log update"
+      },
+      {
+        "sha": "cd55f5e",
+        "message": "chore: session updates (v2.171.8)"
+      },
+      {
+        "sha": "d718998",
+        "message": "chore: session memory log update (v2.171.9)"
+      },
+      {
+        "sha": "70c2647",
+        "message": "chore: session memory log update (v2.171.10)"
+      },
+      {
+        "sha": "2d745da",
+        "message": "chore: session memory log update (v2.171.11)"
+      },
+      {
+        "sha": "e187c8f",
+        "message": "feat: vaidya pages + api hooks + topnav entry (v2.171.12)"
+      },
+      {
+        "sha": "34a942c",
+        "message": "chore: VS report v2 design brief + memory log + dep updates (v2.171.13)"
+      },
+      {
+        "sha": "485f3a2",
+        "message": "chore: session memory log update (v2.171.14)"
+      },
+      {
+        "sha": "d184b9e",
+        "message": "chore: session memory log update (v2.171.15)"
+      },
+      {
+        "sha": "585bf9f",
+        "message": "chore: project stats report tweaks (v2.171.16)"
+      },
+      {
+        "sha": "24b9e49",
+        "message": "chore: session memory log update (v2.171.17)"
+      },
+      {
+        "sha": "36965d4",
+        "message": "chore: session memory log update (v2.171.18)"
+      },
+      {
+        "sha": "160f630",
+        "message": "chore: session memory log update (v2.171.19)"
+      },
+      {
+        "sha": "b4d33cf",
+        "message": "fix conflicts"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 32,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/32",
+    "title": "Artha: health check tooltip + ava health path fix",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-05-05T01:46:20Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "08.46.20",
+    "body": "## Summary\nSmall fixes on top of merged PR #28:\n- Health-check status tooltip flipped to render above (was clipped by topbar)\n- Ava health-check path corrected to /api/ava/health\n\n(Earlier alex-work commits already shipped via PR #28 squash merge.)\n\n## Test plan\n- [ ] Hover health badges in admin shell — tooltip shows above without clipping\n- [ ] Ava health badge shows green when Ava is up\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "6c36c23",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "7fcef57",
+        "message": "feat: partner credit rate + USD→credits billing display (CRED-3b) (v1.28.0)"
+      },
+      {
+        "sha": "db683a7",
+        "message": "fix: BillingPage + sutra route alignment with Billing V3 (v1.28.1)"
+      },
+      {
+        "sha": "e655b2c",
+        "message": "feat: Finance + Platform pages + pixel badge (PIX-IND-2) + admin restructure (v1.29.0)"
+      },
+      {
+        "sha": "876e2b7",
+        "message": "chore: GitPulse iteration (v1.29.1)"
+      },
+      {
+        "sha": "c8819f5",
+        "message": "feat: cohort console scaffold + samhita client (v1.30.0)"
+      },
+      {
+        "sha": "dde774c",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "04a6b49",
+        "message": "feat: karsa proxy routes + accounts page wiring (v1.31.0)"
+      },
+      {
+        "sha": "1bb9bef",
+        "message": "chore: CLAUDE.md update (v1.31.1)"
+      },
+      {
+        "sha": "8633451",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      },
+      {
+        "sha": "e7b88ea",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 27,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/27",
+    "title": "Sutra: triggers + content drafts v2 (v0.41.1)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "adsvisory",
+    "mergedAt": "2026-05-05T01:38:40Z",
+    "mergedAtDate": "5 Mei 2026",
+    "mergedAtTime": "08.38.40",
+    "body": "## Summary\nOn top of merged PR #25:\n- New triggers route + trigger service (v0.41.0)\n- content-drafts-v2 route + service tweaks (v0.41.1)\n\nLatest tag: v0.41.1\n\n## Test plan\n- [ ] Triggers route accepts and dispatches expected events\n- [ ] Content drafts v2 endpoint returns expected shape\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commits": [
+      {
+        "sha": "72800b4",
+        "message": "feat: triggers route + trigger service updates (v0.41.0)"
+      },
+      {
+        "sha": "c64d964",
+        "message": "chore: content drafts v2 route + service tweaks (v0.41.1)"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 57,
