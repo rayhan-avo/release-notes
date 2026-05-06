@@ -2,6 +2,102 @@
   {
     "repo": "Artha",
     "repoSlug": "avq-artha",
+    "prNumber": 36,
+    "prUrl": "https://github.com/adsvisory/avq-artha/pull/36",
+    "title": "Fix organization isolation",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "partner",
+    "author": "optimize-avo",
+    "mergedAt": "2026-05-06T08:02:04Z",
+    "mergedAtDate": "6 Mei 2026",
+    "mergedAtTime": "15.02.04",
+    "body": "",
+    "commits": [
+      {
+        "sha": "c2e9e0f",
+        "message": "fix(partner): fix organization isolation"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 31,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/31",
+    "title": "Bugfix visibility llm selection",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-05-06T04:30:10Z",
+    "mergedAtDate": "6 Mei 2026",
+    "mergedAtTime": "11.30.10",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8b4ba18",
+        "message": "Fix LLM default for visibility"
+      },
+      {
+        "sha": "fd39631",
+        "message": "fix default wizzard model"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 62,
+    "prUrl": "https://github.com/adsvisory/avq-astra/pull/62",
+    "title": "Re revert llm visibility",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-05-06T04:28:21Z",
+    "mergedAtDate": "6 Mei 2026",
+    "mergedAtTime": "11.28.21",
+    "body": "",
+    "commits": [
+      {
+        "sha": "48c837f",
+        "message": "fix default LLM"
+      },
+      {
+        "sha": "1554abd",
+        "message": "bug fix LLM visibility"
+      },
+      {
+        "sha": "ad09bf4",
+        "message": "fix default wizzard model"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 29,
+    "prUrl": "https://github.com/adsvisory/avq-sutra/pull/29",
+    "title": "Fix deduct vs process",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "credit",
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-05-06T03:25:43Z",
+    "mergedAtDate": "6 Mei 2026",
+    "mergedAtTime": "10.25.43",
+    "body": "",
+    "commits": [
+      {
+        "sha": "555f0ef",
+        "message": "fix(credit): fix deduct vs process"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
     "prNumber": 34,
     "prUrl": "https://github.com/adsvisory/avq-artha/pull/34",
     "title": "Fix credits and markup price",
