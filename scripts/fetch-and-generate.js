@@ -140,7 +140,7 @@ async function fetchMergedPRs(repo) {
 
   while (true) {
     const data = await githubRequest(
-      `/repos/${ORG}/${repo}/pulls?state=closed&base=main&per_page=100&page=${page}&sort=updated&direction=desc`
+      `/repos/${ORG}/${repo}/pulls?state=closed&base=release&per_page=100&page=${page}&sort=updated&direction=desc`
     );
 
     if (!Array.isArray(data) || data.length === 0) break;
