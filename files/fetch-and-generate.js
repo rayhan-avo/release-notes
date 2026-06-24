@@ -6,7 +6,7 @@ const path = require('path');
 // CONFIG — sesuaikan nama repo di sini
 // ============================================================
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const ORG = 'adsvisory'; // ganti ke nama org baru kalau udah pindah
+const ORG = 'Avonetiq'; // ganti ke nama org baru kalau udah pindah
 
 const REPOS = [
   { name: 'artha',   label: 'Artha' },
