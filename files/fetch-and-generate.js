@@ -6,13 +6,13 @@ const path = require('path');
 // CONFIG — sesuaikan nama repo di sini
 // ============================================================
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const ORG = 'Avonetiq'; // ganti ke nama org baru kalau udah pindah
+const ORG = 'adsvisory'; // ganti ke nama org baru kalau udah pindah
 
 const REPOS = [
-  { name: 'avq-artha',   label: 'Artha' },
-  { name: 'avq-astra',   label: 'Astra' },
-  { name: 'avq-shastra', label: 'Shastra' },
-  { name: 'avq-sutra',   label: 'Sutra' },
+  { name: 'artha',   label: 'Artha' },
+  { name: 'astra',   label: 'Astra' },
+  { name: 'shastra', label: 'Shastra' },
+  { name: 'sutra',   label: 'Sutra' },
   // tambah repo baru di sini:
   // { name: 'nama-repo', label: 'Label Tampil' },
 ];
@@ -90,49 +90,6 @@ function typeToLabel(type) {
   return map[type] || '📦 Update';
 }
 
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function buildDetailContent(body, commits) {
-  if (body && body.trim()) {
-    const escaped = escapeHtml(body.replace(/\r\n/g, '\n').replace(/\r/g, '\n'));
-    return `<div class="detail-body">${escaped}</div>`;
-  }
-  if (commits && commits.length > 0) {
-    const items = commits
-      .map(c => `<div class="commit-line"><span class="commit-sha">${escapeHtml(c.sha)}</span>${escapeHtml(c.message)}</div>`)
-      .join('');
-    return `<div class="detail-commits-label">Dari commit messages:</div><div class="commits-list">${items}</div>`;
-  }
-  return '<em style="color:var(--muted)">Tidak ada deskripsi PR.</em>';
-}
-
-async function fetchPRCommits(repo, prNumber) {
-  try {
-    const data = await githubRequest(
-      `/repos/${ORG}/${repo}/pulls/${prNumber}/commits?per_page=100`
-    );
-    if (!Array.isArray(data)) return [];
-    return data
-      .map(c => ({
-        sha: c.sha.slice(0, 7),
-        message: c.commit.message.split('\n')[0].trim(),
-      }))
-      .filter(c =>
-        c.message.length > 0 &&
-        !c.message.startsWith('Merge pull request') &&
-        !c.message.startsWith('Merge branch')
-      );
-  } catch {
-    return [];
-  }
-}
-
 async function fetchMergedPRs(repo) {
   const since = new Date(Date.now() - DAYS_BACK * 24 * 60 * 60 * 1000).toISOString();
   const prs = [];
@@ -175,8 +132,6 @@ async function main() {
 
       for (const pr of prs) {
         const parsed = cleanTitle(pr.title);
-        const fmt = formatDate(pr.merged_at);
-        const commits = await fetchPRCommits(repo.name, pr.number);
         allEntries.push({
           repo: repo.label,
           repoSlug: repo.name,
@@ -188,10 +143,7 @@ async function main() {
           scope: parsed.scope,
           author: pr.user?.login || 'unknown',
           mergedAt: pr.merged_at,
-          mergedAtDate: fmt.date,
-          mergedAtTime: fmt.time,
-          body: pr.body || '',
-          commits,
+          mergedAtFormatted: formatDate(pr.merged_at),
         });
       }
     } catch (err) {
@@ -219,20 +171,11 @@ async function main() {
 
 function formatDate(isoString) {
   const d = new Date(isoString);
-  return {
-    date: d.toLocaleDateString('id-ID', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-      timeZone: 'Asia/Jakarta',
-    }),
-    time: d.toLocaleTimeString('id-ID', {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      timeZone: 'Asia/Jakarta',
-    }),
-  };
+  return d.toLocaleDateString('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 }
 
 function generateHTML(entries) {
@@ -252,10 +195,10 @@ function generateHTML(entries) {
   }
 
   const repoColors = {
-    'avq-artha':   '#4F8EF7',
-    'avq-astra':   '#F7934F',
-    'avq-shastra': '#7C4FF7',
-    'avq-sutra':   '#4FF7A0',
+    'artha':   '#4F8EF7',
+    'astra':   '#F7934F',
+    'shastra': '#7C4FF7',
+    'sutra':   '#4FF7A0',
   };
 
   const entriesHTML = Object.keys(grouped).sort().reverse().map(monthKey => {
@@ -263,26 +206,13 @@ function generateHTML(entries) {
     const rows = entries.map(e => {
       const color = repoColors[e.repoSlug] || '#aaa';
       const scopeBadge = e.scope ? `<span class="scope">${e.scope}</span>` : '';
-      const rowId = `${e.repoSlug}-${e.prNumber}`;
-      const bodyContent = buildDetailContent(e.body, e.commits);
       return `
-        <tr class="data-row" onclick="toggleDetail('${rowId}')">
-          <td class="td-date">
-            <div>${e.mergedAtDate}</div>
-            <div class="td-time">${e.mergedAtTime}</div>
-          </td>
+        <tr>
+          <td class="td-date">${e.mergedAtFormatted}</td>
           <td><span class="repo-badge" style="background:${color}20;color:${color};border-color:${color}40">${e.repo}</span></td>
           <td><span class="type-badge">${e.typeLabel}</span></td>
           <td class="td-title">${scopeBadge}${e.title}</td>
-          <td class="td-pr">
-            <a class="pr-link" href="${e.prUrl}" target="_blank" onclick="event.stopPropagation()">#${e.prNumber}</a>
-            <span class="expand-chevron" id="chev-${rowId}">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-${rowId}">
-          <td colspan="5" class="detail-cell">
-            ${bodyContent}
-          </td>
+          <td><a class="pr-link" href="${e.prUrl}" target="_blank">#${e.prNumber}</a></td>
         </tr>`;
     }).join('');
 
@@ -335,7 +265,6 @@ function generateHTML(entries) {
       color: var(--text);
       min-height: 100vh;
       padding: 0 0 80px;
-      line-height: 1.5;
     }
 
     /* HEADER */
@@ -347,21 +276,13 @@ function generateHTML(entries) {
       justify-content: space-between;
       gap: 24px;
       flex-wrap: wrap;
-      overflow: visible;
-    }
-
-    .header-left {
-      overflow: visible;
-      padding-bottom: 0.2em;
     }
 
     .header-left h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.03em;
       line-height: 1;
-      padding-bottom: 0.35em;
-      overflow: visible;
     }
 
     .header-left h1 span {
@@ -459,66 +380,11 @@ function generateHTML(entries) {
       transition: background 0.1s;
     }
 
-    tbody tr.data-row { cursor: pointer; }
-    tbody tr.data-row:hover { background: var(--surface); }
-
-    .detail-row td { padding: 0; border-bottom: none; }
-    .detail-cell {
-      background: #0a0d13;
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px !important;
-    }
-    .detail-body {
-      font-size: 0.82rem;
-      color: var(--text);
-      white-space: pre-wrap;
-      font-family: 'DM Mono', monospace;
-      line-height: 1.6;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-
-    .detail-commits-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-
-    .commits-list { display: flex; flex-direction: column; gap: 4px; }
-
-    .commit-line {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--text);
-      display: flex;
-      gap: 12px;
-      align-items: baseline;
-    }
-
-    .commit-sha {
-      font-size: 0.7rem;
-      color: var(--muted);
-      flex-shrink: 0;
-    }
-
-    .td-pr { white-space: nowrap; }
-    .expand-chevron {
-      margin-left: 6px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      display: inline-block;
-      transition: transform 0.2s;
-      user-select: none;
-    }
-    .expand-chevron.open { transform: rotate(180deg); }
+    tbody tr:hover { background: var(--surface); }
 
     td {
       padding: 12px 12px;
       vertical-align: middle;
-      line-height: 1.5;
     }
 
     .td-date {
@@ -526,14 +392,6 @@ function generateHTML(entries) {
       font-family: 'DM Mono', monospace;
       font-size: 0.75rem;
       white-space: nowrap;
-    }
-
-    .td-time {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--muted);
-      opacity: 0.6;
-      margin-top: 2px;
     }
 
     .repo-badge {
@@ -616,27 +474,26 @@ function generateHTML(entries) {
   }
 
   function applyFilters() {
-    const activeLabels = [...document.querySelectorAll('.filter-btn.active')]
-      .map(b => b.textContent.trim());
+    const activeRepos = [...document.querySelectorAll('.filter-btn.active')]
+      .map(b => b.dataset.repo);
 
-    document.querySelectorAll('tbody tr.data-row').forEach(row => {
+    document.querySelectorAll('tbody tr').forEach(row => {
       const repoBadge = row.querySelector('.repo-badge');
       if (!repoBadge) return;
+      const repoSlug = repoBadge.textContent.trim().toLowerCase();
+      // match by label — find the repo config
+      const match = activeRepos.some(slug => {
+        const badge = row.querySelector(\`.repo-badge\`);
+        return badge && badge.style.color && row.querySelector(\`[data-repo-slug="${activeRepos}"]\`);
+      });
+      // simpler: hide row if no active filter matches the badge text
       const badgeText = repoBadge.textContent.trim();
-      row.classList.toggle('hidden', !activeLabels.includes(badgeText));
+      const isActive = activeRepos.some(slug => {
+        const btn = document.querySelector(\`[data-repo="\${slug}"]\`);
+        return btn && btn.textContent.trim() === badgeText;
+      });
+      row.classList.toggle('hidden', !isActive);
     });
-
-    // Collapse all detail rows when filter changes
-    document.querySelectorAll('tbody tr.detail-row').forEach(r => r.classList.add('hidden'));
-    document.querySelectorAll('.expand-chevron').forEach(c => c.classList.remove('open'));
-  }
-
-  function toggleDetail(id) {
-    const row = document.getElementById('detail-' + id);
-    const chev = document.getElementById('chev-' + id);
-    if (!row) return;
-    row.classList.toggle('hidden');
-    if (chev) chev.classList.toggle('open');
   }
 </script>
 </body>

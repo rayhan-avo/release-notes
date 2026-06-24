@@ -1,0 +1,38 @@
+name: Generate Changelog
+
+on:
+  workflow_dispatch: # manual trigger juga bisa
+  schedule:
+    - cron: '0 17 * * *' # jam 00.00 WIB = 17.00 UTC
+  repository_dispatch:
+    types: [pr-merged] # trigger dari repo lain
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch PRs & Generate HTML
+        env:
+          GITHUB_TOKEN: ${{ secrets.CHANGELOG_PAT }}
+        run: node scripts/fetch-and-generate.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          commit_message: 'chore: update changelog'
