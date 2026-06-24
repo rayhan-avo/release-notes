@@ -1,5 +1,110 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 193,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/193",
+    "title": "Edit View Astra",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-24T11:25:33Z",
+    "mergedAtDate": "24 Juni 2026",
+    "mergedAtTime": "18.25.33",
+    "body": "- Hide button skip di onboarding\r\n- Hide field phone dari registrasi akun",
+    "commits": [
+      {
+        "sha": "9690328",
+        "message": "Edit View Astra"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 190,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/190",
+    "title": "Popup Confirmation for Tools Usage",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-24T10:08:00Z",
+    "mergedAtDate": "24 Juni 2026",
+    "mergedAtTime": "17.08.00",
+    "body": "Added Popup confirmation when user want to use tools that using credit",
+    "commits": [
+      {
+        "sha": "559ea12",
+        "message": "Popup Confirmation for Tools Usage"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 188,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/188",
+    "title": "Adjust Field Phone",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-24T09:40:43Z",
+    "mergedAtDate": "24 Juni 2026",
+    "mergedAtTime": "16.40.43",
+    "body": "Penambahan field nomor handphone saat onboarding & registrasi",
+    "commits": [
+      {
+        "sha": "1602565",
+        "message": "Adjust Field Phone"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 122,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/122",
+    "title": "Adjust DB for Phone Regis Field",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "rayhan-avo",
+    "mergedAt": "2026-06-24T09:37:22Z",
+    "mergedAtDate": "24 Juni 2026",
+    "mergedAtTime": "16.37.22",
+    "body": "Penambahan kolom phone di table sutra_org_profiles",
+    "commits": [
+      {
+        "sha": "31601e5",
+        "message": "Adjust DB for Phone Regis Field"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 120,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/120",
+    "title": "Update Industry Brand Context",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "rayhan-avo",
+    "mergedAt": "2026-06-24T06:27:43Z",
+    "mergedAtDate": "24 Juni 2026",
+    "mergedAtTime": "13.27.43",
+    "body": "Handle error {\"error\":\"validation\",\"message\":\"industry must be a valid active industry id\"}",
+    "commits": [
+      {
+        "sha": "e6f102a",
+        "message": "Update Industry Brand Context"
+      }
+    ]
+  },
+  {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
     "prNumber": 50,
