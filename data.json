@@ -2,6 +2,31 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 198,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/198",
+    "title": "Feat/popup usage confirmation release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-25T03:35:53Z",
+    "mergedAtDate": "25 Juni 2026",
+    "mergedAtTime": "10.35.53",
+    "body": "",
+    "commits": [
+      {
+        "sha": "559ea12",
+        "message": "Popup Confirmation for Tools Usage"
+      },
+      {
+        "sha": "48e1a61",
+        "message": "Adjust Popup"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 193,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/193",
     "title": "Edit View Astra",
