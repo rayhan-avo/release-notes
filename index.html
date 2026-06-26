@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>26 Juni 2026 pukul 02.03 WIB
+    Diperbarui otomatis<br>27 Juni 2026 pukul 01.27 WIB
   </div>
 </header>
 
@@ -309,6 +309,146 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-215')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">15.34.58</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Adj/credit overview release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/215" target="_blank" onclick="event.stopPropagation()">#215</a>
+            <span class="expand-chevron" id="chev-avq-astra-215">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-215">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">5274a70</span>feat(billing): enhance Recent Activity with date filter, pagination, and domain labels</div><div class="commit-line"><span class="commit-sha">b443a54</span>fix: resolve merge conflicts in AuthorityPage and BillingPage</div><div class="commit-line"><span class="commit-sha">ad403ce</span>fix: pass domain hostname to VS trigger and content brief; fix date filter end-of-day</div><div class="commit-line"><span class="commit-sha">019ae47</span>fix: strip protocol/www from VS trigger hostname (nakedDomain)</div><div class="commit-line"><span class="commit-sha">68ee164</span>chore: remove unrelated cherry-pick artifacts from release branch</div><div class="commit-line"><span class="commit-sha">d6111b3</span>fix: restore BillingPage to release base + apply only relevant changes</div><div class="commit-line"><span class="commit-sha">12ce9c2</span>chore: revert locale audits key and remove airwallex-fees.ts from release</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-214')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">15.12.37</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">RefreshDomainAfterPipeline explicitly busts as-history cache</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/214" target="_blank" onclick="event.stopPropagation()">#214</a>
+            <span class="expand-chevron" id="chev-avq-astra-214">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-214">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Parallel fetch domain detail + as-history with ?refresh=1 after pipeline completes. Seeds React Query cache directly to eliminate race condition where refetch hits stale Sutra cache.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-134')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">15.08.23</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Add ?refresh=1 support to as-history route and reduce history ca…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/134" target="_blank" onclick="event.stopPropagation()">#134</a>
+            <span class="expand-chevron" id="chev-avq-sutra-134">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-134">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…che TTL
+
+as-history was the only domain route without ?refresh=1 support, causing stale cache (up to 1 hour) when SSE event delivery fails. Reduces TTL.HISTORY from 3600s to 900s to align with SCORES TTL.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-133')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">14.49.25</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Use domain hostname in AS/VS/content-brief activity descriptions</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/133" target="_blank" onclick="event.stopPropagation()">#133</a>
+            <span class="expand-chevron" id="chev-avq-sutra-133">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-133">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">6c3efb2</span>feat(billing): use domain hostname in transaction description and expose created_by</div><div class="commit-line"><span class="commit-sha">e53f1dd</span>fix: use domain hostname in AS/VS/content-brief activity descriptions</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-211')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">11.14.46</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">feedback</span>Add floating Help tab linking to help center</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/211" target="_blank" onclick="event.stopPropagation()">#211</a>
+            <span class="expand-chevron" id="chev-avq-astra-211">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-211">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Add a second vertical edge tab (&quot;Help&quot;) stacked above the existing Feedback tab on the right edge. Clicking it opens the public help center in a new tab.
+
+- New HelpTab component reuses the .fb-trigger styling (HelpCircle icon)
+- FeedbackWidget wraps both tabs in a .fb-launcher group, vertically centered; hidden while the feedback panel / frustration prompt is open
+- Help target URL is configurable via VITE_HELP_CENTER_URL (config.helpCenterUrl), defaulting to https://help.getavo.ai
+- Tab is hidden for white-label tenants (showHelp = !isWhiteLabeled) so Avo branding is not exposed
+- Scope is post-login only (FeedbackBridge returns null when no user)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-53')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">11.07.59</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">inspect</span>Isolate job error/activity logs to the job (v2.175.1)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/53" target="_blank" onclick="event.stopPropagation()">#53</a>
+            <span class="expand-chevron" id="chev-avq-shastra-53">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-53">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">The Job Inspector &quot;Errors&quot; and &quot;Activity&quot; tabs leaked global logs from other jobs and domains, and rendered &quot;Invalid Date&quot; for system entries.
+
+Root cause: useJobLogs called GET /api/logs?traceId=&lt;jobId&gt;, but Karsa's logs query schema expects snake_case `trace_id`. Zod stripped the unknown `traceId` key, so no trace filter was applied and the endpoint returned the latest 200 logs across ALL jobs/domains. That same endpoint also returns snake_case fields (created_at), so `new Date(log.createdAt)` was NaN -&gt; &quot;Invalid Date&quot;.
+
+Fix:
+- Switch useJobLogs to the trace-scoped endpoint GET /api/logs/trace/:jobId (path param parsed server-side), so logs are isolated to this job. This endpoint also returns camelCase fields (createdAt/traceId) via formatLog, fixing the timestamps.
+- Guard timestamp rendering in JobInspector (mergeActivityItems + formatLogTime helper) so any missing/bad time shows &quot;—&quot; instead of &quot;Invalid Date&quot;.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-208')">
+          <td class="td-date">
+            <div>26 Juni 2026</div>
+            <div class="td-time">09.23.23</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Adj/astra cosmetic release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/208" target="_blank" onclick="event.stopPropagation()">#208</a>
+            <span class="expand-chevron" id="chev-avq-astra-208">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-208">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">9690328</span>Edit View Astra</div><div class="commit-line"><span class="commit-sha">e8ce6d4</span>Adjust T&amp;C</div><div class="commit-line"><span class="commit-sha">85704b0</span>Tambah Checkbox</div></div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-198')">
           <td class="td-date">
             <div>25 Juni 2026</div>

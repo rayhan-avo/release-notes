@@ -2,6 +2,189 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 215,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/215",
+    "title": "Adj/credit overview release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-26T08:34:58Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "15.34.58",
+    "body": "",
+    "commits": [
+      {
+        "sha": "5274a70",
+        "message": "feat(billing): enhance Recent Activity with date filter, pagination, and domain labels"
+      },
+      {
+        "sha": "b443a54",
+        "message": "fix: resolve merge conflicts in AuthorityPage and BillingPage"
+      },
+      {
+        "sha": "ad403ce",
+        "message": "fix: pass domain hostname to VS trigger and content brief; fix date filter end-of-day"
+      },
+      {
+        "sha": "019ae47",
+        "message": "fix: strip protocol/www from VS trigger hostname (nakedDomain)"
+      },
+      {
+        "sha": "68ee164",
+        "message": "chore: remove unrelated cherry-pick artifacts from release branch"
+      },
+      {
+        "sha": "d6111b3",
+        "message": "fix: restore BillingPage to release base + apply only relevant changes"
+      },
+      {
+        "sha": "12ce9c2",
+        "message": "chore: revert locale audits key and remove airwallex-fees.ts from release"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 214,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/214",
+    "title": "RefreshDomainAfterPipeline explicitly busts as-history cache",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-26T08:12:37Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "15.12.37",
+    "body": "Parallel fetch domain detail + as-history with ?refresh=1 after pipeline completes. Seeds React Query cache directly to eliminate race condition where refetch hits stale Sutra cache.",
+    "commits": [
+      {
+        "sha": "f750693",
+        "message": "fix: refreshDomainAfterPipeline explicitly busts as-history cache"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 134,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/134",
+    "title": "Add ?refresh=1 support to as-history route and reduce history ca…",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-06-26T08:08:23Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "15.08.23",
+    "body": "…che TTL\r\n\r\nas-history was the only domain route without ?refresh=1 support, causing stale cache (up to 1 hour) when SSE event delivery fails. Reduces TTL.HISTORY from 3600s to 900s to align with SCORES TTL.",
+    "commits": [
+      {
+        "sha": "4fd51f7",
+        "message": "fix: add ?refresh=1 support to as-history route and reduce history cache TTL"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 133,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/133",
+    "title": "Use domain hostname in AS/VS/content-brief activity descriptions",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-06-26T07:49:25Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "14.49.25",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6c3efb2",
+        "message": "feat(billing): use domain hostname in transaction description and expose created_by"
+      },
+      {
+        "sha": "e53f1dd",
+        "message": "fix: use domain hostname in AS/VS/content-brief activity descriptions"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 211,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/211",
+    "title": "Add floating Help tab linking to help center",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "feedback",
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-26T04:14:46Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "11.14.46",
+    "body": "Add a second vertical edge tab (\"Help\") stacked above the existing Feedback tab on the right edge. Clicking it opens the public help center in a new tab.\r\n\r\n- New HelpTab component reuses the .fb-trigger styling (HelpCircle icon)\r\n- FeedbackWidget wraps both tabs in a .fb-launcher group, vertically centered; hidden while the feedback panel / frustration prompt is open\r\n- Help target URL is configurable via VITE_HELP_CENTER_URL (config.helpCenterUrl), defaulting to https://help.getavo.ai\r\n- Tab is hidden for white-label tenants (showHelp = !isWhiteLabeled) so Avo branding is not exposed\r\n- Scope is post-login only (FeedbackBridge returns null when no user)",
+    "commits": [
+      {
+        "sha": "d5a8096",
+        "message": "feat(feedback): add floating Help tab linking to help center"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 53,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/53",
+    "title": "Isolate job error/activity logs to the job (v2.175.1)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "inspect",
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-26T04:07:59Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "11.07.59",
+    "body": "The Job Inspector \"Errors\" and \"Activity\" tabs leaked global logs from other jobs and domains, and rendered \"Invalid Date\" for system entries.\r\n\r\nRoot cause: useJobLogs called GET /api/logs?traceId=<jobId>, but Karsa's logs query schema expects snake_case `trace_id`. Zod stripped the unknown `traceId` key, so no trace filter was applied and the endpoint returned the latest 200 logs across ALL jobs/domains. That same endpoint also returns snake_case fields (created_at), so `new Date(log.createdAt)` was NaN -> \"Invalid Date\".\r\n\r\nFix:\r\n- Switch useJobLogs to the trace-scoped endpoint GET /api/logs/trace/:jobId (path param parsed server-side), so logs are isolated to this job. This endpoint also returns camelCase fields (createdAt/traceId) via formatLog, fixing the timestamps.\r\n- Guard timestamp rendering in JobInspector (mergeActivityItems + formatLogTime helper) so any missing/bad time shows \"—\" instead of \"Invalid Date\".",
+    "commits": [
+      {
+        "sha": "691f484",
+        "message": "fix(inspect): isolate job error/activity logs to the job (v2.175.1)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 208,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/208",
+    "title": "Adj/astra cosmetic release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-26T02:23:23Z",
+    "mergedAtDate": "26 Juni 2026",
+    "mergedAtTime": "09.23.23",
+    "body": "",
+    "commits": [
+      {
+        "sha": "9690328",
+        "message": "Edit View Astra"
+      },
+      {
+        "sha": "e8ce6d4",
+        "message": "Adjust T&C"
+      },
+      {
+        "sha": "85704b0",
+        "message": "Tambah Checkbox"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 198,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/198",
     "title": "Feat/popup usage confirmation release",
