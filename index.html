@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>29 Juni 2026 pukul 01.01 WIB
+    Diperbarui otomatis<br>30 Juni 2026 pukul 02.01 WIB
   </div>
 </header>
 
@@ -309,6 +309,173 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-141')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">14.57.25</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Add CTA landing page registration endpoint</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/141" target="_blank" onclick="event.stopPropagation()">#141</a>
+            <span class="expand-chevron" id="chev-avq-sutra-141">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-141">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">New password-based registration flow for landing page CTAs. Creates verified user + org + demo tier + domain access in one call. Redirects to billing page after registration.
+
+- POST /api/auth/register/cta (public, rate-limited)
+- Handles orphan user recovery from failed attempts
+- Fire-and-forget Artha webhook notification
+- No voucher, no onboarding wizard, no AS trigger</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-225')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">14.38.13</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/release note release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/225" target="_blank" onclick="event.stopPropagation()">#225</a>
+            <span class="expand-chevron" id="chev-avq-astra-225">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-225">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">ec705be</span>feat: What's New page — release notes &amp; upcoming features roadmap</div><div class="commit-line"><span class="commit-sha">4e58d12</span>fix: render HTML descriptions in ReleaseNotePopup and WhatsNew page</div><div class="commit-line"><span class="commit-sha">28daa56</span>docs: add CHANGELOG entry requirement to Non-Negotiable Rules</div><div class="commit-line"><span class="commit-sha">0a8a82c</span>feat: move What's New from navbar to UserDrawer under Other</div><div class="commit-line"><span class="commit-sha">229f0b8</span>fix: remove Share button and fix popup double-open on See All Releases</div><div class="commit-line"><span class="commit-sha">4c36f9d</span>chore: delete orphaned navItems.ts and rename Upcoming to What's New</div><div class="commit-line"><span class="commit-sha">a217c0c</span>fix: resolve TS build errors from cherry-pick</div><div class="commit-line"><span class="commit-sha">8e95ceb</span>fix: remove dead isNew badge block from AppLayout nav</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-119')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">14.31.38</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/release note release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/119" target="_blank" onclick="event.stopPropagation()">#119</a>
+            <span class="expand-chevron" id="chev-avq-artha-119">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-119">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">8b602a9</span>feat: roadmap &amp; release notes management</div><div class="commit-line"><span class="commit-sha">2fd39d5</span>feat: replace GitHub PR sync with CHANGELOG.md-based release note sync</div><div class="commit-line"><span class="commit-sha">7671196</span>feat: watch all AVQ repos for CHANGELOG.md release note sync</div><div class="commit-line"><span class="commit-sha">4dbc861</span>fix: cap published release notes at 50, update completion checklist</div><div class="commit-line"><span class="commit-sha">a236825</span>fix: sync pnpm-lock.yaml with @aws-sdk packages</div><div class="commit-line"><span class="commit-sha">dcac783</span>fix: replace import.meta.url with process.cwd() in changelog service</div><div class="commit-line"><span class="commit-sha">438b09d</span>fix: explicitly register CORS paths for release-notes upvote endpoints</div><div class="commit-line"><span class="commit-sha">d132ffc</span>fix: move release-notes CORS to sub-app to fix upvote preflight</div><div class="commit-line"><span class="commit-sha">a2cb50c</span>fix: add explicit OPTIONS handler for release-notes CORS preflight</div><div class="commit-line"><span class="commit-sha">fbc6fd0</span>fix: add global OPTIONS handler in parent app for CORS preflight</div><div class="commit-line"><span class="commit-sha">7cb38f5</span>fix: export OPTIONS handler so Vercel forwards CORS preflight to Hono</div><div class="commit-line"><span class="commit-sha">4e9ee40</span>feat: support multiple CORS origins via ASTRA_ALLOWED_ORIGINS env var</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-224')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">14.13.41</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/release note release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/224" target="_blank" onclick="event.stopPropagation()">#224</a>
+            <span class="expand-chevron" id="chev-avq-astra-224">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-224">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">ec705be</span>feat: What's New page — release notes &amp; upcoming features roadmap</div><div class="commit-line"><span class="commit-sha">4e58d12</span>fix: render HTML descriptions in ReleaseNotePopup and WhatsNew page</div><div class="commit-line"><span class="commit-sha">28daa56</span>docs: add CHANGELOG entry requirement to Non-Negotiable Rules</div><div class="commit-line"><span class="commit-sha">0a8a82c</span>feat: move What's New from navbar to UserDrawer under Other</div><div class="commit-line"><span class="commit-sha">229f0b8</span>fix: remove Share button and fix popup double-open on See All Releases</div><div class="commit-line"><span class="commit-sha">4c36f9d</span>chore: delete orphaned navItems.ts and rename Upcoming to What's New</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-118')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">13.30.46</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/release note</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/118" target="_blank" onclick="event.stopPropagation()">#118</a>
+            <span class="expand-chevron" id="chev-avq-artha-118">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-118">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">8b602a9</span>feat: roadmap &amp; release notes management</div><div class="commit-line"><span class="commit-sha">2fd39d5</span>feat: replace GitHub PR sync with CHANGELOG.md-based release note sync</div><div class="commit-line"><span class="commit-sha">7671196</span>feat: watch all AVQ repos for CHANGELOG.md release note sync</div><div class="commit-line"><span class="commit-sha">4dbc861</span>fix: cap published release notes at 50, update completion checklist</div><div class="commit-line"><span class="commit-sha">a236825</span>fix: sync pnpm-lock.yaml with @aws-sdk packages</div><div class="commit-line"><span class="commit-sha">dcac783</span>fix: replace import.meta.url with process.cwd() in changelog service</div><div class="commit-line"><span class="commit-sha">438b09d</span>fix: explicitly register CORS paths for release-notes upvote endpoints</div><div class="commit-line"><span class="commit-sha">d132ffc</span>fix: move release-notes CORS to sub-app to fix upvote preflight</div><div class="commit-line"><span class="commit-sha">a2cb50c</span>fix: add explicit OPTIONS handler for release-notes CORS preflight</div><div class="commit-line"><span class="commit-sha">fbc6fd0</span>fix: add global OPTIONS handler in parent app for CORS preflight</div><div class="commit-line"><span class="commit-sha">7cb38f5</span>fix: export OPTIONS handler so Vercel forwards CORS preflight to Hono</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-139')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">10.14.33</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Standardize invoice number format</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/139" target="_blank" onclick="event.stopPropagation()">#139</a>
+            <span class="expand-chevron" id="chev-avq-sutra-139">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-139">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">2e4dd89</span>feat(billing): standardize invoice numbers + fix Airwallex top-up/modal regressions</div><div class="commit-line"><span class="commit-sha">1340511</span>fix: adjust invoice format</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-223')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">10.05.19</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feature/lp cta register</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/223" target="_blank" onclick="event.stopPropagation()">#223</a>
+            <span class="expand-chevron" id="chev-avq-astra-223">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-223">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">5e8194f</span>feat: add CTA landing page registration page</div><div class="commit-line"><span class="commit-sha">5c7fe2a</span>fix: lock email and domain fields to read-only</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-221')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">09.57.03</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">first promoter</span>Add tracking signup and sale</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/221" target="_blank" onclick="event.stopPropagation()">#221</a>
+            <span class="expand-chevron" id="chev-avq-astra-221">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-221">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">771782b</span>fix: add firstpromoter tracking</div><div class="commit-line"><span class="commit-sha">897558c</span>fix: track referal on onboarding skiped</div><div class="commit-line"><span class="commit-sha">0716fe9</span>fix: immediatelly trigger referal on page load</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-138')">
+          <td class="td-date">
+            <div>29 Juni 2026</div>
+            <div class="td-time">09.49.26</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat9first promoter): add tracking signup and sale</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/138" target="_blank" onclick="event.stopPropagation()">#138</a>
+            <span class="expand-chevron" id="chev-avq-sutra-138">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-138">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c639e25</span>fix: add firstpromoter tracking</div><div class="commit-line"><span class="commit-sha">3efd7f3</span>fix: track sale</div><div class="commit-line"><span class="commit-sha">c2af814</span>fix: handle webhook event for plan activation and tracking</div></div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-215')">
           <td class="td-date">
             <div>26 Juni 2026</div>
@@ -2261,7 +2428,7 @@ Hint-first ordering preserved, so blocked/failed states still show their backend
         </tr>
         <tr class="detail-row hidden" id="detail-avq-sutra-26">
           <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c1eac62</span>feat: i18n-content service, warming jobs, inngest functions (WIP)</div><div class="commit-line"><span class="commit-sha">6b79620</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">bd812c5</span>fix: fix timeout generate report (#13)</div><div class="commit-line"><span class="commit-sha">412854e</span>fix(karsa-client): separate read/trigger circuits, fix half-open recovery</div><div class="commit-line"><span class="commit-sha">73f761b</span>fix: fix timeout generate report (#13)</div><div class="commit-line"><span class="commit-sha">2525f14</span>feat: i18n for HTML reports (AS, VS, compare) with server-side locale loading (v0.26.0)</div><div class="commit-line"><span class="commit-sha">d897155</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">6e01fff</span>feat: partner canonical_language for Ava output generation (v0.27.0)</div><div class="commit-line"><span class="commit-sha">3bd3847</span>feat: onboarding state API + partner-scoped feature announcements (v0.28.0)</div><div class="commit-line"><span class="commit-sha">d07ff06</span>feat: GET /api/admin/announcements for Artha admin UI (v0.28.1)</div><div class="commit-line"><span class="commit-sha">320fd22</span>release: sutra feature/alex-work → main (v0.28.1) (#14)</div><div class="commit-line"><span class="commit-sha">c7e7eee</span>feat: Sutra proxy routes for Ava v2 rebuild surface</div><div class="commit-line"><span class="commit-sha">33fcdf1</span>feat: unified intervention proxy route for insight cards (v0.29.0)</div><div class="commit-line"><span class="commit-sha">c41f8b0</span>fix: fix slot domain (#15)</div><div class="commit-line"><span class="commit-sha">e8d42d1</span>fix discovery prompt for CAT manual prompt (#16)</div><div class="commit-line"><span class="commit-sha">c8e8004</span>chore: remove orphaned Inngest integration (v0.29.1)</div><div class="commit-line"><span class="commit-sha">ceb9f32</span>FIXTENANT -- fix(sutra): read domainId from 409 karsaBody instead of fallback search</div><div class="commit-line"><span class="commit-sha">1769ad9</span>feat: remove advisor client route, audit + triggers refinements (v0.30.0)</div><div class="commit-line"><span class="commit-sha">5ce5b0f</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">7c2dc89</span>feat: P&amp;L endpoint backing Artha WL-4 (v0.31.0)</div><div class="commit-line"><span class="commit-sha">250d6cb</span>TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback</div><div class="commit-line"><span class="commit-sha">2c1d7fc</span>Revert &quot;TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback&quot;</div><div class="commit-line"><span class="commit-sha">261d1a6</span>TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback</div><div class="commit-line"><span class="commit-sha">ab83d89</span>release: sutra feature/alex-work → main (v0.31.0) (#17)</div><div class="commit-line"><span class="commit-sha">2308066</span>add adjustment log for multitenant isolation</div><div class="commit-line"><span class="commit-sha">e40f08e</span>fix: add missing columns and drop partner_id NOT NULL on sutra_white_labels</div><div class="commit-line"><span class="commit-sha">b2414f6</span>feat: content-stream proxy + internal wallet route (v0.32.0)</div><div class="commit-line"><span class="commit-sha">f36c724</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">f87dd76</span>chore: consolidate content-engine-proxy routes (v0.32.1)</div><div class="commit-line"><span class="commit-sha">9d82d60</span>fix: pass through pipeline + crawlStatus on competitor domain list (v0.32.2)</div><div class="commit-line"><span class="commit-sha">64e00ee</span>feat: USD→credits rename + billing config + wallet refactor (CRED-2) (v0.33.0)</div><div class="commit-line"><span class="commit-sha">500afc9</span>feat: Billing V3 — purchase, invoices, payment methods, profile, gateways (v0.34.0)</div><div class="commit-line"><span class="commit-sha">6a000d5</span>feat: pixel endpoints + Karsa DKL writer + default credit pricing (v0.35.0)</div><div class="commit-line"><span class="commit-sha">93307d7</span>feat: account-insights BFF + tier gating (Brief #8 / v0.35.1)</div><div class="commit-line"><span class="commit-sha">4c0a682</span>chore: delete deprecated intelligence + insights-proxy routes (Brief #11, v0.35.2)</div><div class="commit-line"><span class="commit-sha">d6fda97</span>feat(sutra): emit account-insight signals to Ava (Brief F5B) v0.35.3</div><div class="commit-line"><span class="commit-sha">bb35dea</span>fix: resolve competitor_url via SQL in F7 signal emission (0.35.4)</div><div class="commit-line"><span class="commit-sha">5973663</span>feat: partner default language + drop zh from UI locales (F8) (v0.35.5)</div><div class="commit-line"><span class="commit-sha">a1ab216</span>feat: pixel unmatched events surface (v0.35.6)</div><div class="commit-line"><span class="commit-sha">241f962</span>feat: insights-proxy + pixel analytics proxy (v0.35.8)</div><div class="commit-line"><span class="commit-sha">149759d</span>feat: portfolio health + market pulse plumbing (v0.35.9)</div><div class="commit-line"><span class="commit-sha">bc98764</span>release: sutra feature/alex-work → main (v0.35.9) (#18)</div><div class="commit-line"><span class="commit-sha">8a7b9f9</span>FIX-INSIGHT -- fix(account-insights): pass org context from Sutra to Ava, removing per-partner SUTRA_DATABASE_URL dependency</div><div class="commit-line"><span class="commit-sha">430beec</span>FIX-INSIGHTS -- fix(insights): add portfolio-health and market-pulse alias routes under /api/client/insights</div><div class="commit-line"><span class="commit-sha">5129dc9</span>FIX-INSIGHTS -- fix(insights): add section-seen alias route under /api/client/insights</div><div class="commit-line"><span class="commit-sha">7b645a1</span>FIX-INSIGHTS -- fix(account-insights): pass partnerSlug through regenerate event so mine-for-org uses correct Sutra DB</div><div class="commit-line"><span class="commit-sha">49716ad</span>FIX-INSIGHTS -- feat: build and send orgContext to Ava for white-label isolation</div><div class="commit-line"><span class="commit-sha">e55300f</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">1b6e217</span>chore: insights-proxy tweaks + org industry backfill script (v0.35.10)</div><div class="commit-line"><span class="commit-sha">82fb4e1</span>chore: CLAUDE.md update (v0.35.11)</div><div class="commit-line"><span class="commit-sha">bbfb44b</span>feat: Failure Observability V1 — event handlers, failure notification… (#20)</div><div class="commit-line"><span class="commit-sha">b346b2d</span>feat: add entity_type to schema, admin industries endpoint, and org profile backfill script</div><div class="commit-line"><span class="commit-sha">0fa57c6</span>SPEC-ORG-PROFILE-EXPANSION-V1 — Org profile fields, industry taxonomy, brand context UI, backfill</div><div class="commit-line"><span class="commit-sha">da82b12</span>chore: ava-v2 client + insights-proxy tweaks (v0.35.12)</div><div class="commit-line"><span class="commit-sha">12fda06</span>feat: standing proxy route (v0.35.13)</div><div class="commit-line"><span class="commit-sha">2a4c829</span>feat: content drafts v2 + opportunities + ava events webhook + sse relay (v0.36.0)</div><div class="commit-line"><span class="commit-sha">03c0e2f</span>release: sutra → main (v0.36.0) (#22)</div><div class="commit-line"><span class="commit-sha">9b5e4f9</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">f4633f1</span>Merge remote-tracking branch 'origin/feature/alex-work' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">e97b878</span>Adj/dkl development (#24)</div></div>
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c1eac62</span>feat: i18n-content service, warming jobs, inngest functions (WIP)</div><div class="commit-line"><span class="commit-sha">6b79620</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">bd812c5</span>fix: fix timeout generate report (#13)</div><div class="commit-line"><span class="commit-sha">412854e</span>fix(karsa-client): separate read/trigger circuits, fix half-open recovery</div><div class="commit-line"><span class="commit-sha">73f761b</span>fix: fix timeout generate report (#13)</div><div class="commit-line"><span class="commit-sha">2525f14</span>feat: i18n for HTML reports (AS, VS, compare) with server-side locale loading (v0.26.0)</div><div class="commit-line"><span class="commit-sha">d897155</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">6e01fff</span>feat: partner canonical_language for Ava output generation (v0.27.0)</div><div class="commit-line"><span class="commit-sha">3bd3847</span>feat: onboarding state API + partner-scoped feature announcements (v0.28.0)</div><div class="commit-line"><span class="commit-sha">d07ff06</span>feat: GET /api/admin/announcements for Artha admin UI (v0.28.1)</div><div class="commit-line"><span class="commit-sha">320fd22</span>release: sutra feature/alex-work ��� main (v0.28.1) (#14)</div><div class="commit-line"><span class="commit-sha">c7e7eee</span>feat: Sutra proxy routes for Ava v2 rebuild surface</div><div class="commit-line"><span class="commit-sha">33fcdf1</span>feat: unified intervention proxy route for insight cards (v0.29.0)</div><div class="commit-line"><span class="commit-sha">c41f8b0</span>fix: fix slot domain (#15)</div><div class="commit-line"><span class="commit-sha">e8d42d1</span>fix discovery prompt for CAT manual prompt (#16)</div><div class="commit-line"><span class="commit-sha">c8e8004</span>chore: remove orphaned Inngest integration (v0.29.1)</div><div class="commit-line"><span class="commit-sha">ceb9f32</span>FIXTENANT -- fix(sutra): read domainId from 409 karsaBody instead of fallback search</div><div class="commit-line"><span class="commit-sha">1769ad9</span>feat: remove advisor client route, audit + triggers refinements (v0.30.0)</div><div class="commit-line"><span class="commit-sha">5ce5b0f</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">7c2dc89</span>feat: P&amp;L endpoint backing Artha WL-4 (v0.31.0)</div><div class="commit-line"><span class="commit-sha">250d6cb</span>TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback</div><div class="commit-line"><span class="commit-sha">2c1d7fc</span>Revert &quot;TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback&quot;</div><div class="commit-line"><span class="commit-sha">261d1a6</span>TENANTFIX -- fix: read domainId from Karsa 409 body instead of search fallback</div><div class="commit-line"><span class="commit-sha">ab83d89</span>release: sutra feature/alex-work → main (v0.31.0) (#17)</div><div class="commit-line"><span class="commit-sha">2308066</span>add adjustment log for multitenant isolation</div><div class="commit-line"><span class="commit-sha">e40f08e</span>fix: add missing columns and drop partner_id NOT NULL on sutra_white_labels</div><div class="commit-line"><span class="commit-sha">b2414f6</span>feat: content-stream proxy + internal wallet route (v0.32.0)</div><div class="commit-line"><span class="commit-sha">f36c724</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">f87dd76</span>chore: consolidate content-engine-proxy routes (v0.32.1)</div><div class="commit-line"><span class="commit-sha">9d82d60</span>fix: pass through pipeline + crawlStatus on competitor domain list (v0.32.2)</div><div class="commit-line"><span class="commit-sha">64e00ee</span>feat: USD→credits rename + billing config + wallet refactor (CRED-2) (v0.33.0)</div><div class="commit-line"><span class="commit-sha">500afc9</span>feat: Billing V3 — purchase, invoices, payment methods, profile, gateways (v0.34.0)</div><div class="commit-line"><span class="commit-sha">6a000d5</span>feat: pixel endpoints + Karsa DKL writer + default credit pricing (v0.35.0)</div><div class="commit-line"><span class="commit-sha">93307d7</span>feat: account-insights BFF + tier gating (Brief #8 / v0.35.1)</div><div class="commit-line"><span class="commit-sha">4c0a682</span>chore: delete deprecated intelligence + insights-proxy routes (Brief #11, v0.35.2)</div><div class="commit-line"><span class="commit-sha">d6fda97</span>feat(sutra): emit account-insight signals to Ava (Brief F5B) v0.35.3</div><div class="commit-line"><span class="commit-sha">bb35dea</span>fix: resolve competitor_url via SQL in F7 signal emission (0.35.4)</div><div class="commit-line"><span class="commit-sha">5973663</span>feat: partner default language + drop zh from UI locales (F8) (v0.35.5)</div><div class="commit-line"><span class="commit-sha">a1ab216</span>feat: pixel unmatched events surface (v0.35.6)</div><div class="commit-line"><span class="commit-sha">241f962</span>feat: insights-proxy + pixel analytics proxy (v0.35.8)</div><div class="commit-line"><span class="commit-sha">149759d</span>feat: portfolio health + market pulse plumbing (v0.35.9)</div><div class="commit-line"><span class="commit-sha">bc98764</span>release: sutra feature/alex-work → main (v0.35.9) (#18)</div><div class="commit-line"><span class="commit-sha">8a7b9f9</span>FIX-INSIGHT -- fix(account-insights): pass org context from Sutra to Ava, removing per-partner SUTRA_DATABASE_URL dependency</div><div class="commit-line"><span class="commit-sha">430beec</span>FIX-INSIGHTS -- fix(insights): add portfolio-health and market-pulse alias routes under /api/client/insights</div><div class="commit-line"><span class="commit-sha">5129dc9</span>FIX-INSIGHTS -- fix(insights): add section-seen alias route under /api/client/insights</div><div class="commit-line"><span class="commit-sha">7b645a1</span>FIX-INSIGHTS -- fix(account-insights): pass partnerSlug through regenerate event so mine-for-org uses correct Sutra DB</div><div class="commit-line"><span class="commit-sha">49716ad</span>FIX-INSIGHTS -- feat: build and send orgContext to Ava for white-label isolation</div><div class="commit-line"><span class="commit-sha">e55300f</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">1b6e217</span>chore: insights-proxy tweaks + org industry backfill script (v0.35.10)</div><div class="commit-line"><span class="commit-sha">82fb4e1</span>chore: CLAUDE.md update (v0.35.11)</div><div class="commit-line"><span class="commit-sha">bbfb44b</span>feat: Failure Observability V1 — event handlers, failure notification… (#20)</div><div class="commit-line"><span class="commit-sha">b346b2d</span>feat: add entity_type to schema, admin industries endpoint, and org profile backfill script</div><div class="commit-line"><span class="commit-sha">0fa57c6</span>SPEC-ORG-PROFILE-EXPANSION-V1 — Org profile fields, industry taxonomy, brand context UI, backfill</div><div class="commit-line"><span class="commit-sha">da82b12</span>chore: ava-v2 client + insights-proxy tweaks (v0.35.12)</div><div class="commit-line"><span class="commit-sha">12fda06</span>feat: standing proxy route (v0.35.13)</div><div class="commit-line"><span class="commit-sha">2a4c829</span>feat: content drafts v2 + opportunities + ava events webhook + sse relay (v0.36.0)</div><div class="commit-line"><span class="commit-sha">03c0e2f</span>release: sutra → main (v0.36.0) (#22)</div><div class="commit-line"><span class="commit-sha">9b5e4f9</span>Merge remote-tracking branch 'origin/main' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">f4633f1</span>Merge remote-tracking branch 'origin/feature/alex-work' into feature/alex-work</div><div class="commit-line"><span class="commit-sha">e97b878</span>Adj/dkl development (#24)</div></div>
           </td>
         </tr></tbody>
         </table>

@@ -1,5 +1,350 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 141,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/141",
+    "title": "Add CTA landing page registration endpoint",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-06-29T07:57:25Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "14.57.25",
+    "body": "New password-based registration flow for landing page CTAs. Creates verified user + org + demo tier + domain access in one call. Redirects to billing page after registration.\r\n\r\n- POST /api/auth/register/cta (public, rate-limited)\r\n- Handles orphan user recovery from failed attempts\r\n- Fire-and-forget Artha webhook notification\r\n- No voucher, no onboarding wizard, no AS trigger",
+    "commits": [
+      {
+        "sha": "c0c299b",
+        "message": "feat: add CTA landing page registration endpoint"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 225,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/225",
+    "title": "Feat/release note release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T07:38:13Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "14.38.13",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ec705be",
+        "message": "feat: What's New page — release notes & upcoming features roadmap"
+      },
+      {
+        "sha": "4e58d12",
+        "message": "fix: render HTML descriptions in ReleaseNotePopup and WhatsNew page"
+      },
+      {
+        "sha": "28daa56",
+        "message": "docs: add CHANGELOG entry requirement to Non-Negotiable Rules"
+      },
+      {
+        "sha": "0a8a82c",
+        "message": "feat: move What's New from navbar to UserDrawer under Other"
+      },
+      {
+        "sha": "229f0b8",
+        "message": "fix: remove Share button and fix popup double-open on See All Releases"
+      },
+      {
+        "sha": "4c36f9d",
+        "message": "chore: delete orphaned navItems.ts and rename Upcoming to What's New"
+      },
+      {
+        "sha": "a217c0c",
+        "message": "fix: resolve TS build errors from cherry-pick"
+      },
+      {
+        "sha": "8e95ceb",
+        "message": "fix: remove dead isNew badge block from AppLayout nav"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 119,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/119",
+    "title": "Feat/release note release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T07:31:38Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "14.31.38",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8b602a9",
+        "message": "feat: roadmap & release notes management"
+      },
+      {
+        "sha": "2fd39d5",
+        "message": "feat: replace GitHub PR sync with CHANGELOG.md-based release note sync"
+      },
+      {
+        "sha": "7671196",
+        "message": "feat: watch all AVQ repos for CHANGELOG.md release note sync"
+      },
+      {
+        "sha": "4dbc861",
+        "message": "fix: cap published release notes at 50, update completion checklist"
+      },
+      {
+        "sha": "a236825",
+        "message": "fix: sync pnpm-lock.yaml with @aws-sdk packages"
+      },
+      {
+        "sha": "dcac783",
+        "message": "fix: replace import.meta.url with process.cwd() in changelog service"
+      },
+      {
+        "sha": "438b09d",
+        "message": "fix: explicitly register CORS paths for release-notes upvote endpoints"
+      },
+      {
+        "sha": "d132ffc",
+        "message": "fix: move release-notes CORS to sub-app to fix upvote preflight"
+      },
+      {
+        "sha": "a2cb50c",
+        "message": "fix: add explicit OPTIONS handler for release-notes CORS preflight"
+      },
+      {
+        "sha": "fbc6fd0",
+        "message": "fix: add global OPTIONS handler in parent app for CORS preflight"
+      },
+      {
+        "sha": "7cb38f5",
+        "message": "fix: export OPTIONS handler so Vercel forwards CORS preflight to Hono"
+      },
+      {
+        "sha": "4e9ee40",
+        "message": "feat: support multiple CORS origins via ASTRA_ALLOWED_ORIGINS env var"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 224,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/224",
+    "title": "Feat/release note release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T07:13:41Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "14.13.41",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ec705be",
+        "message": "feat: What's New page — release notes & upcoming features roadmap"
+      },
+      {
+        "sha": "4e58d12",
+        "message": "fix: render HTML descriptions in ReleaseNotePopup and WhatsNew page"
+      },
+      {
+        "sha": "28daa56",
+        "message": "docs: add CHANGELOG entry requirement to Non-Negotiable Rules"
+      },
+      {
+        "sha": "0a8a82c",
+        "message": "feat: move What's New from navbar to UserDrawer under Other"
+      },
+      {
+        "sha": "229f0b8",
+        "message": "fix: remove Share button and fix popup double-open on See All Releases"
+      },
+      {
+        "sha": "4c36f9d",
+        "message": "chore: delete orphaned navItems.ts and rename Upcoming to What's New"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 118,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/118",
+    "title": "Feat/release note",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T06:30:46Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "13.30.46",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8b602a9",
+        "message": "feat: roadmap & release notes management"
+      },
+      {
+        "sha": "2fd39d5",
+        "message": "feat: replace GitHub PR sync with CHANGELOG.md-based release note sync"
+      },
+      {
+        "sha": "7671196",
+        "message": "feat: watch all AVQ repos for CHANGELOG.md release note sync"
+      },
+      {
+        "sha": "4dbc861",
+        "message": "fix: cap published release notes at 50, update completion checklist"
+      },
+      {
+        "sha": "a236825",
+        "message": "fix: sync pnpm-lock.yaml with @aws-sdk packages"
+      },
+      {
+        "sha": "dcac783",
+        "message": "fix: replace import.meta.url with process.cwd() in changelog service"
+      },
+      {
+        "sha": "438b09d",
+        "message": "fix: explicitly register CORS paths for release-notes upvote endpoints"
+      },
+      {
+        "sha": "d132ffc",
+        "message": "fix: move release-notes CORS to sub-app to fix upvote preflight"
+      },
+      {
+        "sha": "a2cb50c",
+        "message": "fix: add explicit OPTIONS handler for release-notes CORS preflight"
+      },
+      {
+        "sha": "fbc6fd0",
+        "message": "fix: add global OPTIONS handler in parent app for CORS preflight"
+      },
+      {
+        "sha": "7cb38f5",
+        "message": "fix: export OPTIONS handler so Vercel forwards CORS preflight to Hono"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 139,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/139",
+    "title": "Standardize invoice number format",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-06-29T03:14:33Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "10.14.33",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2e4dd89",
+        "message": "feat(billing): standardize invoice numbers + fix Airwallex top-up/modal regressions"
+      },
+      {
+        "sha": "1340511",
+        "message": "fix: adjust invoice format"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 223,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/223",
+    "title": "Feature/lp cta register",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T03:05:19Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "10.05.19",
+    "body": "",
+    "commits": [
+      {
+        "sha": "5e8194f",
+        "message": "feat: add CTA landing page registration page"
+      },
+      {
+        "sha": "5c7fe2a",
+        "message": "fix: lock email and domain fields to read-only"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 221,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/221",
+    "title": "Add tracking signup and sale",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "first promoter",
+    "author": "optimize-avo",
+    "mergedAt": "2026-06-29T02:57:03Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "09.57.03",
+    "body": "",
+    "commits": [
+      {
+        "sha": "771782b",
+        "message": "fix: add firstpromoter tracking"
+      },
+      {
+        "sha": "897558c",
+        "message": "fix: track referal on onboarding skiped"
+      },
+      {
+        "sha": "0716fe9",
+        "message": "fix: immediatelly trigger referal on page load"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 138,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/138",
+    "title": "Feat9first promoter): add tracking signup and sale",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-06-29T02:49:26Z",
+    "mergedAtDate": "29 Juni 2026",
+    "mergedAtTime": "09.49.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "c639e25",
+        "message": "fix: add firstpromoter tracking"
+      },
+      {
+        "sha": "3efd7f3",
+        "message": "fix: track sale"
+      },
+      {
+        "sha": "c2af814",
+        "message": "fix: handle webhook event for plan activation and tracking"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 215,
@@ -4032,7 +4377,7 @@
       },
       {
         "sha": "320fd22",
-        "message": "release: sutra feature/alex-work → main (v0.28.1) (#14)"
+        "message": "release: sutra feature/alex-work ��� main (v0.28.1) (#14)"
       },
       {
         "sha": "c7e7eee",
