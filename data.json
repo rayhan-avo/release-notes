@@ -1,5 +1,180 @@
 [
   {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 57,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/57",
+    "title": "Add per-tenant concurrency controls to AS/VS/PB pipe…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "configure",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T10:43:48Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "17.43.48",
+    "body": "…line tabs\r\n\r\nAdd ConfigNumberInput for concurrency_per_tenant to ASPipelineTab, VSPipelineTab, and PBPipelineTab so the new Karsa per-tenant limits are editable from Shastra configure pages.",
+    "commits": [
+      {
+        "sha": "e44ee1f",
+        "message": "feat(configure): add per-tenant concurrency controls to AS/VS/PB pipeline tabs"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 56,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/56",
+    "title": "Feat/ping llm",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T09:53:31Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "16.53.31",
+    "body": "",
+    "commits": [
+      {
+        "sha": "140b919",
+        "message": "feat(routing): \"Test all LLMs now\" health check button + inline report (v2.176.0)"
+      },
+      {
+        "sha": "ab37359",
+        "message": "fix(routing): show LLM health-check ping cost at 6-decimal precision"
+      },
+      {
+        "sha": "52d68d0",
+        "message": "feat(routing): show LLM health-check timestamp in WIB"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 240,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/240",
+    "title": "Add sticky label for Mobile View",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T09:46:43Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "16.46.43",
+    "body": "Menampilkan informasi utk buka di laptop/tablet/browser apabila sedang buka di mobile browser",
+    "commits": [
+      {
+        "sha": "f8b5cb2",
+        "message": "Add sticky label for Mobile View"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 238,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/238",
+    "title": "Add CTA in Login & Register Page",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T08:29:06Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "15.29.06",
+    "body": "Tambah CTA agar bisa switch dari login ke register page dengan mudah",
+    "commits": [
+      {
+        "sha": "eddf6a3",
+        "message": "Add CTA in Login & Register Page"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 155,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/155",
+    "title": "Close C1 free-credit mint + M1 lost AS refund (v0.45.2)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "billing",
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-01T07:45:01Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "14.45.01",
+    "body": "C1 (critical): a client could mint credits for free by sending payment_gateway:\"manual\" to POST /api/client/billing/purchase. Gateway validation exempted 'manual', and the manual fallback branch auto-marked the invoice paid — depositing credits with no payment.\r\n- Reject a client-selected 'manual' gateway (it bypassed the enabled-gateways check).\r\n- The manual / no-gateway path now creates a PENDING invoice settled offline by ops (admin mark-paid), mirroring bank_transfer. Credits are deposited only once an invoice is actually paid.\r\n\r\nM1: AS-scan refunds used referenceId=karsa_domain_id, shared across every scan of a domain. wallet_transactions has a unique index on (wallet_type, organization_id, reference_id) and atomicRefund treats a 23505 as \"already refunded\", so the 2nd+ failed scan on a domain charged the org but issued no refund. Deduct and refund now use a unique per-attempt reference so each failed scan is refunded exactly once.\r\n\r\nNo schema changes. Typecheck clean.",
+    "commits": [
+      {
+        "sha": "9ed7d78",
+        "message": "fix(billing): close C1 free-credit mint + M1 lost AS refund (v0.45.2)"
+      },
+      {
+        "sha": "e6119d2",
+        "message": "Merge remote-tracking branch 'origin/release' into hotfix/billing-c1-m1"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 235,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/235",
+    "title": "Prevent XSS in Ava loader, activity log, and markdown …",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "security",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T04:49:49Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "11.49.49",
+    "body": "…links\r\n\r\nThree confirmed XSS sinks in the client portal, all rendering untrusted data as raw HTML without escaping:\r\n\r\n- H1 (stored XSS): pickMessage() interpolated `vars` into developer-authored HTML templates with an unescaped replaceAll. vars.focus is the client's own focus statement, rendered via dangerouslySetInnerHTML in the VS/AS loaders — a focus statement containing markup executed for anyone in the org viewing the run. Now HTML-escapes every interpolated value before substitution.\r\n\r\n- H2 (DOM XSS): AvaPartnerDetail rendered activity-log `entry.m` (server metadata + SSE stream) via dangerouslySetInnerHTML. The `level` is already derived client-side, so the message needs no HTML — render it as text.\r\n\r\n- M1: MarkdownRenderer copied markdown link URLs into href with no protocol allowlist, so a `[x](javascript:...)` link in LLM-generated draft content was clickable. Now allowlists http/https/mailto/tel/relative/anchor, else `#`.\r\n\r\ntsc --noEmit passes.",
+    "commits": [
+      {
+        "sha": "069d58c",
+        "message": "fix(security): prevent XSS in Ava loader, activity log, and markdown links"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 233,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/233",
+    "title": "Update release note v1.46.0",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-01T03:49:27Z",
+    "mergedAtDate": "1 Juli 2026",
+    "mergedAtTime": "10.49.27",
+    "body": "",
+    "commits": [
+      {
+        "sha": "bd983ab",
+        "message": "feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)"
+      },
+      {
+        "sha": "62697a7",
+        "message": "fix: show original price at plan list"
+      },
+      {
+        "sha": "74c2329",
+        "message": "fix: adjust fee calculation"
+      },
+      {
+        "sha": "f943deb",
+        "message": "fix: wrong subtotal"
+      },
+      {
+        "sha": "cf7cfc9",
+        "message": "fix: update release note"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 129,
@@ -4585,7 +4760,7 @@
       },
       {
         "sha": "852ab40",
-        "message": "release: shastra feature/alex-work ��� main (v2.159.2) (#15)"
+        "message": "release: shastra feature/alex-work → main (v2.159.2) (#15)"
       },
       {
         "sha": "2642361",
