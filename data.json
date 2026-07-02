@@ -1150,12 +1150,7 @@
     "mergedAtDate": "24 Juni 2026",
     "mergedAtTime": "13.27.43",
     "body": "Handle error {\"error\":\"validation\",\"message\":\"industry must be a valid active industry id\"}",
-    "commits": [
-      {
-        "sha": "e6f102a",
-        "message": "Update Industry Brand Context"
-      }
-    ]
+    "commits": []
   },
   {
     "repo": "Shastra",
