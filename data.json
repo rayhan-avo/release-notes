@@ -1,5 +1,26 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 245,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/245",
+    "title": "Align Astra HTTP timeouts with Sutra/Ava budget (FE-only)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "timeout",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-03T09:51:53Z",
+    "mergedAtDate": "3 Juli 2026",
+    "mergedAtTime": "16.51.53",
+    "body": "Astra aborted every request at the 30s axios default, but several hops behind Sutra have a worst-case budget longer than 30s. On slow paths Astra gave up first (ECONNABORTED, no response.status), every classifier missed it, and users saw a generic \"failed\" toast while the backend was still working — and retrying hooks re-fired the abort, duplicating expensive LLM work. This is a frontend-only change; no backend repo is touched.\r\n\r\n- api-error: add isAbortError / isProcessingError + a `kind` field so client aborts and Sutra 504 gateway_timeouts are classified as \"still preparing\", not \"failed\".\r\n- sutra-client: interceptor gives aborts and 504s a calm message; export AVA_READ_TIMEOUT_MS (55s) and AVA_LLM_TIMEOUT_MS (130s).\r\n- query-client: retryUnlessAbort() — never auto-retry a client abort (duplicate-spend fix) or an in-flight 504; reused as the global default.\r\n- Per-endpoint 55s timeout on slow Ava-backed reads (domains/:id/ava, ava/summary, org-dashboard, domain-brief, market-outlook, movements, account-insights, position, portfolio-health, market-pulse) so Astra no longer aborts before Sutra's ~49.5s avaFetch finishes.\r\n- translate-persist POST: 130s override (Sutra already waits 120s, Ava 180s).\r\n\r\nKnown limit (BE follow-up): caption + content-translation GETs are capped at 15s inside Sutra (avaV2Fetch); on a cold cache they 504 regardless of Astra. They are now classified honestly; the real fix is async-ify or a longer avaV2Fetch budget on the backend.",
+    "commits": [
+      {
+        "sha": "b73f30c",
+        "message": "fix(timeout): align Astra HTTP timeouts with Sutra/Ava budget (FE-only)"
+      }
+    ]
+  },
+  {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
     "prNumber": 57,
@@ -1150,7 +1171,12 @@
     "mergedAtDate": "24 Juni 2026",
     "mergedAtTime": "13.27.43",
     "body": "Handle error {\"error\":\"validation\",\"message\":\"industry must be a valid active industry id\"}",
-    "commits": []
+    "commits": [
+      {
+        "sha": "e6f102a",
+        "message": "Update Industry Brand Context"
+      }
+    ]
   },
   {
     "repo": "Shastra",

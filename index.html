@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>3 Juli 2026 pukul 01.24 WIB
+    Diperbarui otomatis<br>4 Juli 2026 pukul 01.09 WIB
   </div>
 </header>
 
@@ -309,6 +309,32 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-245')">
+          <td class="td-date">
+            <div>3 Juli 2026</div>
+            <div class="td-time">16.51.53</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">timeout</span>Align Astra HTTP timeouts with Sutra/Ava budget (FE-only)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/245" target="_blank" onclick="event.stopPropagation()">#245</a>
+            <span class="expand-chevron" id="chev-avq-astra-245">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-245">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Astra aborted every request at the 30s axios default, but several hops behind Sutra have a worst-case budget longer than 30s. On slow paths Astra gave up first (ECONNABORTED, no response.status), every classifier missed it, and users saw a generic &quot;failed&quot; toast while the backend was still working — and retrying hooks re-fired the abort, duplicating expensive LLM work. This is a frontend-only change; no backend repo is touched.
+
+- api-error: add isAbortError / isProcessingError + a `kind` field so client aborts and Sutra 504 gateway_timeouts are classified as &quot;still preparing&quot;, not &quot;failed&quot;.
+- sutra-client: interceptor gives aborts and 504s a calm message; export AVA_READ_TIMEOUT_MS (55s) and AVA_LLM_TIMEOUT_MS (130s).
+- query-client: retryUnlessAbort() — never auto-retry a client abort (duplicate-spend fix) or an in-flight 504; reused as the global default.
+- Per-endpoint 55s timeout on slow Ava-backed reads (domains/:id/ava, ava/summary, org-dashboard, domain-brief, market-outlook, movements, account-insights, position, portfolio-health, market-pulse) so Astra no longer aborts before Sutra's ~49.5s avaFetch finishes.
+- translate-persist POST: 130s override (Sutra already waits 120s, Ava 180s).
+
+Known limit (BE follow-up): caption + content-translation GETs are capped at 15s inside Sutra (avaV2Fetch); on a cold cache they 504 regardless of Astra. They are now classified honestly; the real fix is async-ify or a longer avaV2Fetch budget on the backend.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-shastra-57')">
           <td class="td-date">
             <div>1 Juli 2026</div>
