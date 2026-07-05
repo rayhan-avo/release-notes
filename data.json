@@ -1752,7 +1752,7 @@
     "mergedAt": "2026-06-11T09:51:50Z",
     "mergedAtDate": "11 Juni 2026",
     "mergedAtTime": "16.51.50",
-    "body": "Self-registration was sending 2 emails (verify + magic link). Now only sends the magic link. Scoped to self-registration only — admin and provisioning flows still send verification emails.",
+    "body": "Self-registration was sending 2 emails (verify + magic link). Now only sends the magic link. Scoped to self-registration only ��� admin and provisioning flows still send verification emails.",
     "commits": [
       {
         "sha": "4546bfd",
@@ -4205,7 +4205,7 @@
       },
       {
         "sha": "3445deb",
-        "message": "fix: partner create 500 — include partner_slug in INSERT (#19)"
+        "message": "fix: partner create 500 �� include partner_slug in INSERT (#19)"
       },
       {
         "sha": "20dfef1",
@@ -4359,7 +4359,7 @@
       },
       {
         "sha": "3445deb",
-        "message": "fix: partner create 500 ��� include partner_slug in INSERT (#19)"
+        "message": "fix: partner create 500 — include partner_slug in INSERT (#19)"
       },
       {
         "sha": "20dfef1",
