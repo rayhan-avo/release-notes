@@ -2,6 +2,77 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 247,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/247",
+    "title": "Add permanent Home getting-started page with 4-step checklist",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-06T04:16:54Z",
+    "mergedAtDate": "6 Juli 2026",
+    "mergedAtTime": "11.16.54",
+    "body": "Users landed straight on Insights after login with no guided path to their first Authority Score, Focus setup, Visibility Score, and Insights. Home now gates progress on real domain/wallet state and surfaces a credit-shortfall warning (linking to plan upgrade) only after an insufficient-credit CTA click.",
+    "commits": [
+      {
+        "sha": "9a89970",
+        "message": "Add permanent Home getting-started page with 4-step checklist"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 246,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/246",
+    "title": "Fix/skip onboarding release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-06T04:05:38Z",
+    "mergedAtDate": "6 Juli 2026",
+    "mergedAtTime": "11.05.38",
+    "body": "",
+    "commits": [
+      {
+        "sha": "bcf495b",
+        "message": "fix: add skip button on onboarding step 3 (voucher)"
+      },
+      {
+        "sha": "f541acc",
+        "message": "fix: redirect to homepage instead of authority, skip AS on activate"
+      },
+      {
+        "sha": "7815e77",
+        "message": "fix: remove duplicate handleSkip, reuse handleComplete for both buttons"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 160,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/160",
+    "title": "Support skip_voucher flag to bypass voucher requirement and skip AS",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-07-06T04:04:38Z",
+    "mergedAtDate": "6 Juli 2026",
+    "mergedAtTime": "11.04.38",
+    "body": "When skip_voucher=true, bypass the require_voucher check and skip the complimentary AS trigger during registration. Domain is still seeded so it appears in the dashboard.",
+    "commits": [
+      {
+        "sha": "cd638ed",
+        "message": "fix: support skip_voucher flag to bypass voucher requirement and skip AS"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 245,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/245",
     "title": "Align Astra HTTP timeouts with Sutra/Ava budget (FE-only)",
@@ -1752,7 +1823,7 @@
     "mergedAt": "2026-06-11T09:51:50Z",
     "mergedAtDate": "11 Juni 2026",
     "mergedAtTime": "16.51.50",
-    "body": "Self-registration was sending 2 emails (verify + magic link). Now only sends the magic link. Scoped to self-registration only ��� admin and provisioning flows still send verification emails.",
+    "body": "Self-registration was sending 2 emails (verify + magic link). Now only sends the magic link. Scoped to self-registration only — admin and provisioning flows still send verification emails.",
     "commits": [
       {
         "sha": "4546bfd",
@@ -4205,7 +4276,7 @@
       },
       {
         "sha": "3445deb",
-        "message": "fix: partner create 500 �� include partner_slug in INSERT (#19)"
+        "message": "fix: partner create 500 — include partner_slug in INSERT (#19)"
       },
       {
         "sha": "20dfef1",
