@@ -2,6 +2,209 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 255,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/255",
+    "title": "Changes Astra",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-07T10:26:57Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "17.26.57",
+    "body": "- Update T&C\r\n- Update scroll di user drawer bagian kiri\r\n- Update informasi renew di halaman plan\r\n- Update redirect login",
+    "commits": [
+      {
+        "sha": "6ac09b7",
+        "message": "Changes Astra"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 254,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/254",
+    "title": "Feat/v3 azhar release v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-07T10:15:09Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "17.15.09",
+    "body": "- Visibility sekarang Cuma ada satu yaitu V3 as default, tapi masih ada file ttg V1 dan V2. User otomatis cuma bisa ke v3 di UI di hide untuk pindah versi (masih bisa Ganti lewat local storage)\r\n\r\nAdjust empty state visibility di awal dan ngasih popup modal review singkat VS.\r\n<img width=\"780\" height=\"509\" alt=\"image\" src=\"https://github.com/user-attachments/assets/30117fb8-051e-4410-973d-99238d8f33e1\" />\r\n\r\n- Adjust UI Focus discovery dan prompt book\r\n\r\n- Menambahkan button topup di wizard VS kalua credit yg akan dipakai < est. credit\r\n\r\n- Menambahkan Popup kalau sudah berhasil run VS\r\n\r\n- Menghilangkan toggle active atau inactive per focus di detail Prompt Book\r\n\r\n- Adjust state Focus, sekarang ada 4 state yaitu All, Active, Need Action, Archived.\r\na. All, semua focus kecuali yg di archived\r\nb. Active, Focus yg udah punya PB dan siap di run (di wizard VS sudah dalam keadaan active)\r\nc. Need Action, belum ada PB (ada di wizard dalam keadaaan inactive)\r\nd. Archieved, Focus langsung dalam keadaan draft (Tidak muncul di wizard)\r\n\r\n- Adjust UI Hero section V3, PB, Detail Focus\r\n<img width=\"792\" height=\"470\" alt=\"image\" src=\"https://github.com/user-attachments/assets/875181be-5f21-4cb5-99b9-78d5fe86800b\" />\r\n\r\n- Hanya untuk dihalaman Visibility tombol Help dikanan membuka drawer yang isinya ttg informasi yang ada di Visibility.\r\n<img width=\"940\" height=\"535\" alt=\"image\" src=\"https://github.com/user-attachments/assets/31d55bdc-d011-435f-9a90-f54d89df98c1\" />",
+    "commits": [
+      {
+        "sha": "d7c2e3d",
+        "message": "feat: add Visibility V3 page with focus drill-down and funnel views"
+      },
+      {
+        "sha": "baf6347",
+        "message": "feat: wire Visibility V3 page into AppLayout with VS run flow and states"
+      },
+      {
+        "sha": "9206654",
+        "message": "feat: Visibility V3.7 focus-first landing with summary strip and snapshot selector"
+      },
+      {
+        "sha": "c256bb8",
+        "message": "feat: Visibility V3.8 focus detail drill-down with competitors, platforms, signals"
+      },
+      {
+        "sha": "747c3b1",
+        "message": "feat: Visibility V3.8/V3.9 rebuild — remedy panel, prompt book, add/archive focus"
+      },
+      {
+        "sha": "a99f0c4",
+        "message": "Adjust Flow Focus Discovery for V1 & V3"
+      },
+      {
+        "sha": "d4814f4",
+        "message": "Adjust flow empty state V3"
+      },
+      {
+        "sha": "9c5d454",
+        "message": "feat(visibility-v3): focus drill-downs, per-run focus scores, per-focus compare, prompt fixes"
+      },
+      {
+        "sha": "f4aba8d",
+        "message": "Adjust V3"
+      },
+      {
+        "sha": "1aac1f4",
+        "message": "Adjust V3 feedback and bug"
+      },
+      {
+        "sha": "1e96708",
+        "message": "feat(visibility-v3): archive focuses, brief credit confirm, PB loader + fixes"
+      },
+      {
+        "sha": "1d7d6db",
+        "message": "Adjust UX Flow in Visibility Page"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 172,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/172",
+    "title": "Adj/archived v3 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "onlyJarr",
+    "mergedAt": "2026-07-07T09:52:53Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "16.52.53",
+    "body": "Adjusment for V3 Archived",
+    "commits": [
+      {
+        "sha": "a569d53",
+        "message": "Adjust For V3 Archived Feature"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 171,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/171",
+    "title": "Focus-remedy BFF proxy route (#S1) — v0.46.0",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "ava",
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-07T09:41:01Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "16.41.01",
+    "body": "Add GET /api/client/ava/focus-remedy proxying Ava's GET /api/ava/focus-remedy/:orgId (Brief #A4). Pass-through of the per-focus remedy (gate, recognition rate, miss breakdown) and per-domain blocking datapoints. Org resolved from session; tenantId forwarded.\r\n\r\n- service: getFocusRemedy twin of getAccountInsights (ava-client.ts)\r\n- route: client/focus-remedy.ts (no tier gating, 503 on upstream failure)\r\n- register at /api/client/ava/focus-remedy in app.ts\r\n- archive brief to docs/briefs/\r\n\r\nNo schema change, no new env vars (reuses AVA_URL + AVA_SERVICE_KEY).",
+    "commits": [
+      {
+        "sha": "94102c8",
+        "message": "feat(ava): focus-remedy BFF proxy route (#S1) — v0.46.0"
+      },
+      {
+        "sha": "da94370",
+        "message": "Merge remote-tracking branch 'origin/release' into feat/focus-remidy"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 136,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/136",
+    "title": "Feat/enhance bug report release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-07T08:21:46Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "15.21.46",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6dbc97b",
+        "message": "Fix feedback attachments never showing up in triage detail"
+      },
+      {
+        "sha": "7686d4e",
+        "message": "Aggregate feedback across all Sutra instances for the ops inbox"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 251,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/251",
+    "title": "Feat/enchance bug report release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-07T03:48:53Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "10.48.53",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6f9a0d7",
+        "message": "Add \"Request a feature\" and \"Give feedback\" CTA to What's New page"
+      },
+      {
+        "sha": "e16aab2",
+        "message": "Fix Vercel build break from widened FeedbackCategory type"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 135,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/135",
+    "title": "Fix feedback attachments never showing up in triage detail",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-07T03:47:41Z",
+    "mergedAtDate": "7 Juli 2026",
+    "mergedAtTime": "10.47.41",
+    "body": "The detail panel rendered files from the feedback list query, but Sutra's list endpoint never joins sutra_feedback_files — only the per-item detail endpoint (GET /api/admin/feedback/:id) does, and that endpoint returns them under `files`, not `screenshots`. Wire up the existing useFeedbackDetail hook and read the correct field, using each file's real mime_type instead of assuming image/jpeg so PDFs render as downloads instead of broken images.\r\n\r\nAlso widen FeedbackCategory to include ux/data/other so items submitted from Astra's new feedback categories show a real label instead of a blank one.",
+    "commits": [
+      {
+        "sha": "6dbc97b",
+        "message": "Fix feedback attachments never showing up in triage detail"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 247,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/247",
     "title": "Add permanent Home getting-started page with 4-step checklist",
