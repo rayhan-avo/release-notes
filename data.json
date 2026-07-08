@@ -2,6 +2,189 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 273,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/273",
+    "title": "Feat/drawer help center release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-08T11:23:31Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "18.23.31",
+    "body": "",
+    "commits": [
+      {
+        "sha": "b25fe41",
+        "message": "Wire Authority & Visibility help drawers to Help Center content"
+      },
+      {
+        "sha": "0b2685b",
+        "message": "Add \"Visit Help Center\" link to the bottom of help drawers"
+      },
+      {
+        "sha": "88c4614",
+        "message": "Wire the in-context help drawer into Visibility V1 and V2"
+      },
+      {
+        "sha": "5bd4344",
+        "message": "Redesign help drawer to match reference; fixes + v1.53.0"
+      },
+      {
+        "sha": "78dbdb0",
+        "message": "Match Authority drawer next-step copy to reference; route to /visibility"
+      },
+      {
+        "sha": "7c8156d",
+        "message": "Push only main content for the help drawer, not the header"
+      },
+      {
+        "sha": "64e439f",
+        "message": "Re-center pushed content so wide screens have no left dead space"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 178,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/178",
+    "title": "Feat/drawer help center release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-08T11:14:53Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "18.14.53",
+    "body": "",
+    "commits": [
+      {
+        "sha": "95de6cf",
+        "message": "Add Help Center content proxy for Astra help drawers"
+      },
+      {
+        "sha": "b7e587c",
+        "message": "Include lastUpdated in help topics proxy response"
+      },
+      {
+        "sha": "38a4e04",
+        "message": "Adapt help-center proxy to release route conventions"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 177,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/177",
+    "title": "Feat/drawer help center release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-08T11:03:50Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "18.03.50",
+    "body": "",
+    "commits": [
+      {
+        "sha": "95de6cf",
+        "message": "Add Help Center content proxy for Astra help drawers"
+      },
+      {
+        "sha": "b7e587c",
+        "message": "Include lastUpdated in help topics proxy response"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 267,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/267",
+    "title": "Scroll payment method",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-08T07:03:58Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "14.03.58",
+    "body": "",
+    "commits": [
+      {
+        "sha": "95c9f85",
+        "message": "fix: scroll payment method"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 265,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/265",
+    "title": "Hide payment tab",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-08T06:06:26Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "13.06.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a24a435",
+        "message": "fix: hide payment tab"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 261,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/261",
+    "title": "Fix/state focus v3 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-08T03:34:18Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "10.34.18",
+    "body": "",
+    "commits": [
+      {
+        "sha": "1990492",
+        "message": "fix toggle version"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 258,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/258",
+    "title": "Fix invisible text in release-note popup on light theme",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-08T03:02:00Z",
+    "mergedAtDate": "8 Juli 2026",
+    "mergedAtTime": "10.02.00",
+    "body": "The popup used hardcoded hex colors (text-[#f1f5f9], text-[#94a3b8], etc.) that don't participate in the light-theme variable swap. In light mode bg-navy-deep flipped to white while text stayed light-gray, making it unreadable. Mapped all hardcoded text/bg/border hex to their theme-aware slate/navy tokens so they flip automatically. Dark-mode appearance is unchanged (navy-edge #334766 == rgba(51,71,102)).",
+    "commits": [
+      {
+        "sha": "778157c",
+        "message": "Fix invisible text in release-note popup on light theme"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 255,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/255",
     "title": "Changes Astra",
@@ -5582,218 +5765,6 @@
       {
         "sha": "4c730a1",
         "message": "test-deploy main branch"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 18,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/18",
-    "title": "Fix hardcode vite config",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-09T09:01:34Z",
-    "mergedAtDate": "9 April 2026",
-    "mergedAtTime": "16.01.34",
-    "body": "",
-    "commits": [
-      {
-        "sha": "5300b5e",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "eceb2d9",
-        "message": "fix: fix hardcode vite config (#8)"
-      },
-      {
-        "sha": "af38f44",
-        "message": "Fix/env (#9)"
-      },
-      {
-        "sha": "aa561e9",
-        "message": "Fix/env (#10)"
-      },
-      {
-        "sha": "8ecfab6",
-        "message": "Fix/env (#11)"
-      },
-      {
-        "sha": "3415f38",
-        "message": "fix(auth): ignore vercel json from each server (#12)"
-      },
-      {
-        "sha": "d0a48d8",
-        "message": "Fix/env (#13)"
-      },
-      {
-        "sha": "1c45e57",
-        "message": "Fix/env (#14)"
-      },
-      {
-        "sha": "516d4dd",
-        "message": "Release (#17)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 16,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/16",
-    "title": "Fix hardcoded env",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-09T08:58:39Z",
-    "mergedAtDate": "9 April 2026",
-    "mergedAtTime": "15.58.39",
-    "body": "",
-    "commits": [
-      {
-        "sha": "5300b5e",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "eceb2d9",
-        "message": "fix: fix hardcode vite config (#8)"
-      },
-      {
-        "sha": "af38f44",
-        "message": "Fix/env (#9)"
-      },
-      {
-        "sha": "aa561e9",
-        "message": "Fix/env (#10)"
-      },
-      {
-        "sha": "8ecfab6",
-        "message": "Fix/env (#11)"
-      },
-      {
-        "sha": "3415f38",
-        "message": "fix(auth): ignore vercel json from each server (#12)"
-      },
-      {
-        "sha": "d0a48d8",
-        "message": "Fix/env (#13)"
-      },
-      {
-        "sha": "1c45e57",
-        "message": "Fix/env (#14)"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 5,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/5",
-    "title": "Fix calling env",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-09T08:26:47Z",
-    "mergedAtDate": "9 April 2026",
-    "mergedAtTime": "15.26.47",
-    "body": "",
-    "commits": [
-      {
-        "sha": "f834b60",
-        "message": "fix: fix calling env"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 15,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/15",
-    "title": "Internal update",
-    "type": "internal",
-    "typeLabel": "🔧 Internal",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-09T06:31:55Z",
-    "mergedAtDate": "9 April 2026",
-    "mergedAtTime": "13.31.55",
-    "body": "",
-    "commits": [
-      {
-        "sha": "5300b5e",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "13ac139",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "eceb2d9",
-        "message": "fix: fix hardcode vite config (#8)"
-      },
-      {
-        "sha": "d505435",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "af38f44",
-        "message": "Fix/env (#9)"
-      },
-      {
-        "sha": "cb3f41d",
-        "message": "fix: fix hardcode rewrite api"
-      },
-      {
-        "sha": "aa561e9",
-        "message": "Fix/env (#10)"
-      },
-      {
-        "sha": "aebc78e",
-        "message": "fix: fix hardcode rewrite api"
-      },
-      {
-        "sha": "3910f31",
-        "message": "fix conflict"
-      },
-      {
-        "sha": "8ecfab6",
-        "message": "Fix/env (#11)"
-      },
-      {
-        "sha": "08f8867",
-        "message": "fix(auth): ignore vercel json from each server"
-      },
-      {
-        "sha": "7df3548",
-        "message": "fix conflict"
-      },
-      {
-        "sha": "3415f38",
-        "message": "fix(auth): ignore vercel json from each server (#12)"
-      },
-      {
-        "sha": "656b667",
-        "message": "feat: add vercel ts dynamic value"
-      },
-      {
-        "sha": "f779080",
-        "message": "fix conflict"
-      },
-      {
-        "sha": "d0a48d8",
-        "message": "Fix/env (#13)"
-      },
-      {
-        "sha": "4b76ee0",
-        "message": "feat: add vercel ts dynamic value"
-      },
-      {
-        "sha": "6dd2bfb",
-        "message": "feat: add vercel ts dynamic value"
       }
     ]
   }
