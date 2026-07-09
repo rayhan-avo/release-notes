@@ -2,6 +2,27 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 277,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/277",
+    "title": "Adj: route new Google OAuth users to onboarding instead of dead-end",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-09T07:31:01Z",
+    "mergedAtDate": "9 Juli 2026",
+    "mergedAtTime": "14.31.01",
+    "body": "When a new user signs in via Google OAuth, they have zero organizations. Previously they were shown a \"No organizations found\" dead-end screen. Now they are redirected to /onboarding where they can create their first org. The onboarding name field is pre-filled from the Google profile.",
+    "commits": [
+      {
+        "sha": "f419c8b",
+        "message": "adj: route new Google OAuth users to onboarding instead of dead-end"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 273,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/273",
     "title": "Feat/drawer help center release",
@@ -5355,7 +5376,7 @@
       },
       {
         "sha": "320fd22",
-        "message": "release: sutra feature/alex-work → main (v0.28.1) (#14)"
+        "message": "release: sutra feature/alex-work ��� main (v0.28.1) (#14)"
       },
       {
         "sha": "c7e7eee",
