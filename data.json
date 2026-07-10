@@ -1,5 +1,240 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 189,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/189",
+    "title": "Replace text AVQ to AVO",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-10T09:05:28Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "16.05.28",
+    "body": "",
+    "commits": [
+      {
+        "sha": "fd4372d",
+        "message": "fix: replace text AVQ to AVO"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 187,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/187",
+    "title": "Remove-from-org 500 due to uuid cast on Better-Auth nanoid user ids",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-10T06:23:59Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "13.23.59",
+    "body": "sutra_user_domain_overrides.user_id is declared UUID (migration 003), but real user ids are Better-Auth nanoids (text). Queries cast the nanoid to ::uuid, so Postgres threw 22P02 before matching any row — even when zero rows matched.\r\n\r\nIn removeFromOrg the member DELETE (::text) committed first, then the overrides cleanup blew up, leaving the paradox: member deleted but API returns 500.\r\n\r\nCast the column to text (user_id::text = $1) in the read/compare/delete paths so they no longer throw. INSERT (upsert) still needs the column type migrated to text (Layer 2) and is flagged with a comment.",
+    "commits": [
+      {
+        "sha": "aaf5634",
+        "message": "fix: remove-from-org 500 due to uuid cast on Better-Auth nanoid user ids"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 185,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/185",
+    "title": "Adj/tier change log v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-07-10T03:27:29Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "10.27.29",
+    "body": "",
+    "commits": [
+      {
+        "sha": "04e5e26",
+        "message": "feat: add tier change logging to sutra_tier_change_log for Metabase"
+      },
+      {
+        "sha": "ce27f8d",
+        "message": "fix: add ::text cast on organization.id query for consistency"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 280,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/280",
+    "title": "Adj/authority page blocked release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-10T02:06:48Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "09.06.48",
+    "body": "",
+    "commits": [
+      {
+        "sha": "34890ec",
+        "message": "feat(authority): AS \"site blocked\" states + troubleshoot drawer (v1.54.0)"
+      },
+      {
+        "sha": "3bda619",
+        "message": "feat(authority): first-scan congrats modal + fix homepage stepper divider"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 281,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/281",
+    "title": "[Release] Feat downgrade next period, email notif, refund",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-10T00:01:58Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "07.01.58",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2242e54",
+        "message": "[Release] Feat downgrade next billing period (#274)"
+      },
+      {
+        "sha": "9e5a432",
+        "message": "[Release] Feat email notification (#275)"
+      },
+      {
+        "sha": "854606b",
+        "message": "Feat/refund pre (#279)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 143,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/143",
+    "title": "[Release] Feat downgrade next period, email notif, refund",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-10T00:01:41Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "07.01.41",
+    "body": "",
+    "commits": [
+      {
+        "sha": "af894ac",
+        "message": "[Release] Feat email notification (#137)"
+      },
+      {
+        "sha": "0555414",
+        "message": "Feat/refund pre (#141)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 184,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/184",
+    "title": "[Release] Feat downgrade next period, email notif, refund",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-09T23:59:46Z",
+    "mergedAtDate": "10 Juli 2026",
+    "mergedAtTime": "06.59.46",
+    "body": "",
+    "commits": [
+      {
+        "sha": "c0a070a",
+        "message": "fix: handle update subscription awx"
+      },
+      {
+        "sha": "6b2ad67",
+        "message": "feat: email notification"
+      },
+      {
+        "sha": "9ef0d93",
+        "message": "feat: adjust template style"
+      },
+      {
+        "sha": "81eda70",
+        "message": "feat: email notification spec"
+      },
+      {
+        "sha": "8bc9dee",
+        "message": "feat: subscription refund flow"
+      },
+      {
+        "sha": "e680529",
+        "message": "fix: email template inline style"
+      },
+      {
+        "sha": "79d05d1",
+        "message": "feat: topup notification"
+      },
+      {
+        "sha": "a34bd5f",
+        "message": "fix: update payment reminder content"
+      },
+      {
+        "sha": "bf590f7",
+        "message": "fix: claw back credits on submit refund"
+      },
+      {
+        "sha": "cd35da9",
+        "message": "fix: prevent duplicate email"
+      },
+      {
+        "sha": "909bc26",
+        "message": "fix: email content missing"
+      },
+      {
+        "sha": "70d6f05",
+        "message": "fix: downgrade flow api"
+      },
+      {
+        "sha": "2e27a43",
+        "message": "fix: billing duration"
+      },
+      {
+        "sha": "fc2e330",
+        "message": "fix: find active plan by org"
+      },
+      {
+        "sha": "3f020ef",
+        "message": "fix: subquery get org"
+      },
+      {
+        "sha": "8f38b74",
+        "message": "fix: wrong parse webhook renew"
+      },
+      {
+        "sha": "26b72ce",
+        "message": "fix: add script simulate renew"
+      },
+      {
+        "sha": "982f42e",
+        "message": "fix: script to cancel duplicate subs"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 277,
@@ -4221,7 +4456,7 @@
       },
       {
         "sha": "19195b0",
-        "message": "fix(prospect): stepper onboarding clipped by navbar — move below — v1.39.2"
+        "message": "fix(prospect): stepper onboarding clipped by navbar — move below �� v1.39.2"
       },
       {
         "sha": "6abb5ef",
@@ -5376,7 +5611,7 @@
       },
       {
         "sha": "320fd22",
-        "message": "release: sutra feature/alex-work ��� main (v0.28.1) (#14)"
+        "message": "release: sutra feature/alex-work → main (v0.28.1) (#14)"
       },
       {
         "sha": "c7e7eee",
