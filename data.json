@@ -4456,7 +4456,7 @@
       },
       {
         "sha": "19195b0",
-        "message": "fix(prospect): stepper onboarding clipped by navbar — move below �� v1.39.2"
+        "message": "fix(prospect): stepper onboarding clipped by navbar — move below — v1.39.2"
       },
       {
         "sha": "6abb5ef",
@@ -5072,7 +5072,7 @@
       },
       {
         "sha": "3445deb",
-        "message": "fix: partner create 500 — include partner_slug in INSERT (#19)"
+        "message": "fix: partner create 500 �� include partner_slug in INSERT (#19)"
       },
       {
         "sha": "20dfef1",
@@ -5886,141 +5886,6 @@
       {
         "sha": "b5a2eee",
         "message": "fix: report HTML and PDF service refinements (v0.25.4)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 24,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/24",
-    "title": "Release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-12T05:00:53Z",
-    "mergedAtDate": "12 April 2026",
-    "mergedAtTime": "12.00.53",
-    "body": "",
-    "commits": [
-      {
-        "sha": "5300b5e",
-        "message": "fix: fix hardcode vite config"
-      },
-      {
-        "sha": "eceb2d9",
-        "message": "fix: fix hardcode vite config (#8)"
-      },
-      {
-        "sha": "af38f44",
-        "message": "Fix/env (#9)"
-      },
-      {
-        "sha": "aa561e9",
-        "message": "Fix/env (#10)"
-      },
-      {
-        "sha": "8ecfab6",
-        "message": "Fix/env (#11)"
-      },
-      {
-        "sha": "3415f38",
-        "message": "fix(auth): ignore vercel json from each server (#12)"
-      },
-      {
-        "sha": "d0a48d8",
-        "message": "Fix/env (#13)"
-      },
-      {
-        "sha": "1c45e57",
-        "message": "Fix/env (#14)"
-      },
-      {
-        "sha": "516d4dd",
-        "message": "Release (#17)"
-      },
-      {
-        "sha": "df12b48",
-        "message": "feat: astra v1.6.3 — Ava domain briefs, UI refinements (#19)"
-      },
-      {
-        "sha": "592c25a",
-        "message": "fix: astra v1.6.4 — BookAuthorityTab, AddDomainModal, AuthorityPage (#20)"
-      },
-      {
-        "sha": "7dbc982",
-        "message": "fix/VS Adjustments (#21)"
-      },
-      {
-        "sha": "e6ad921",
-        "message": "fix: narrow status type in useUpdateFocus mutation to fix TS2345 build error (#22)"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 7,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/7",
-    "title": "Release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-04-12T05:00:50Z",
-    "mergedAtDate": "12 April 2026",
-    "mergedAtTime": "12.00.50",
-    "body": "",
-    "commits": [
-      {
-        "sha": "4e215bb",
-        "message": "feat: shastra v2.157.6 — session updates (#4)"
-      },
-      {
-        "sha": "429977c",
-        "message": "feat: shastra v2.158.0 — cost per run measurement brief, session updates (#5)"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 5,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/5",
-    "title": "Release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-04-12T04:59:46Z",
-    "mergedAtDate": "12 April 2026",
-    "mergedAtTime": "11.59.46",
-    "body": "",
-    "commits": [
-      {
-        "sha": "718bfcf",
-        "message": "fix: route and service refinements (v0.24.1)"
-      },
-      {
-        "sha": "9723808",
-        "message": "fix: VS config and DB plugin updates (v0.24.2)"
-      },
-      {
-        "sha": "0a4f53a",
-        "message": "chore: version bump (v0.24.3)"
-      },
-      {
-        "sha": "b4ada91",
-        "message": "fixing login cookie for multi organization"
-      },
-      {
-        "sha": "5e8b421",
-        "message": "Update INSIGHTS-HUB-API-CONTRACT-V1.md"
-      },
-      {
-        "sha": "4c730a1",
-        "message": "test-deploy main branch"
       }
     ]
   }
