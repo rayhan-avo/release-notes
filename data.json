@@ -1,5 +1,80 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 149,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/149",
+    "title": "Internal update",
+    "type": "internal",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-13T07:06:27Z",
+    "mergedAtDate": "13 Juli 2026",
+    "mergedAtTime": "14.06.27",
+    "body": "",
+    "commits": [
+      {
+        "sha": "874ca6f",
+        "message": "fix: get refund by partner"
+      },
+      {
+        "sha": "b8264f7",
+        "message": "fix: add mark complete btn"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 192,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/192",
+    "title": "Get and update payment intent id",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-13T07:05:36Z",
+    "mergedAtDate": "13 Juli 2026",
+    "mergedAtTime": "14.05.36",
+    "body": "",
+    "commits": [
+      {
+        "sha": "590205f",
+        "message": "fix: get and update payment intent id"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 284,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/284",
+    "title": "Adj/feedback v3 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-13T03:39:43Z",
+    "mergedAtDate": "13 Juli 2026",
+    "mergedAtTime": "10.39.43",
+    "body": "*Detail Focus*\r\n- Hero (skor + funnel) dipindah ke atas, tab Summary/Prompts di bawahnya.\r\n- Section Compare runs, Who AI cites, Deep Dive selalu terbuka (dropdown dihapus).\r\n- Deep Dive judulnya jadi \"Deep Dive\" + indikator sentiment di kanan (bentuk badge disamakan dengan gate \"Recognition pass\" di Remedy, format Label · %).\r\n- Remedy dipindah ke bawah Compare/AI cites, ring diganti angka recognition + stat breakdown (sesuai HTML).\r\n- Sharpest Prompts jadi card sendiri + shortcut \"See all prompts\".\r\n- Label funnel dirata-kiri.\r\n\r\n*AI Response*\r\n- Response AI dirender sebagai markdown (bold/list/heading/link) + highlight brand.\r\n- Tiap response ada indikator Recommended/Mentioned/Cited/Absent.\r\n\r\n*Grafik Trend*\r\n- Saat pindah ke run lama, grafik ikut menyesuaikan: run yang dipilih jadi titik paling kanan, run sebelumnya di kirinya.\r\n\r\n*Focus List & Prompt Book*\r\n- Focus belum ada skor (belum punya PB / sudah punya prompt tapi belum di-run) → peek langsung nampilin Prompt Book, sama seperti empty state.\r\n- promptCount & status dibaca dari focus list (bukan aggregate basi), jadi setelah build PB focus langsung pindah ke Active / tombol Activate langsung muncul tanpa refresh.\r\n- Loader build PB: progress tidak reset ke 0% saat peek dibuka-tutup, dan jalan terus saat dibiarkan terbuka.\r\n- Empty Prompt Book kasih warning wajib minimal 1 prompt.\r\n\r\n*Add Focus & Discovery*\r\n- Copy tombol jadi \"Add Focus\" (empty state tetap \"Discover Focuses\").\r\n- Bahasa di form Add Focus ngikutin bahasa yang dipilih di tombol header.\r\n- Dropdown bahasa solid (tidak tembus) & full-width di form Add Focus.",
+    "commits": [
+      {
+        "sha": "af08ebe",
+        "message": "feat(visibility-v3): polish focus detail, prompt-book loader & discovery flow"
+      },
+      {
+        "sha": "b15795d",
+        "message": "feat(visibility-v3): Adjust Deep dive"
+      },
+      {
+        "sha": "f0166cf",
+        "message": "feat(visibility-v3) : Adjust Prompt Response"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 189,
@@ -5381,7 +5456,7 @@
       },
       {
         "sha": "ec2f3e6",
-        "message": "release: astra �� main (v1.33.0) (#50)"
+        "message": "release: astra → main (v1.33.0) (#50)"
       },
       {
         "sha": "4719db2",
