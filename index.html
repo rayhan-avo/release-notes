@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>14 Juli 2026 pukul 01.29 WIB
+    Diperbarui otomatis<br>15 Juli 2026 pukul 00.58 WIB
   </div>
 </header>
 
@@ -309,6 +309,158 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-202')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">14.13.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Unified admin_transaction email receipt for transactions</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/202" target="_blank" onclick="event.stopPropagation()">#202</a>
+            <span class="expand-chevron" id="chev-avq-sutra-202">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-202">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Backport of the admin_transaction feature from feat/email-admin-trx onto release (admin-only unified receipt for successful subscription + top-up transactions, recipient locked to Admin). Includes both follow-up fixes: numeric coercion (Neon returns numeric columns as strings, so .toFixed threw and swallowed the row) and wiring the receipt on the checkout-session settle path (createPaidInvoiceAndDeposit), which is what the normal hosted-checkout top-up flow runs through — not markPaid.
+
+Excludes unrelated main-only work (feedback notifications, recipient groups, etc.).</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-201')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">13.44.17</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Unified admin_transaction email receipt for transactions</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/201" target="_blank" onclick="event.stopPropagation()">#201</a>
+            <span class="expand-chevron" id="chev-avq-sutra-201">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-201">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Backport of the admin_transaction feature from feat/email-admin-trx onto release (admin-only unified receipt for successful subscription + top-up transactions, recipient locked to Admin). Includes both follow-up fixes: numeric coercion (Neon returns numeric columns as strings, so .toFixed threw and swallowed the row) and wiring the receipt on the checkout-session settle path (createPaidInvoiceAndDeposit), which is what the normal hosted-checkout top-up flow runs through — not markPaid.
+
+Excludes unrelated main-only work (feedback notifications, recipient groups, etc.).</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-199')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.23.33</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Preserve owner role on OPS org invitations</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/199" target="_blank" onclick="event.stopPropagation()">#199</a>
+            <span class="expand-chevron" id="chev-avq-sutra-199">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-199">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">The OPS org invite path folded owner-&gt;admin before writing the invitation row (user-admin.service.ts), so an invitee accepted as admin even when invited as owner. Better Auth's accept faithfully copies invitation.role, so the downgrade was already baked in at invite time.
+
+Pass the validated role through as-is, and tighten the invite route schema to z.enum(['owner','admin','member']). OPS may intentionally invite additional owners; there is no single-owner invariant. The client invite path (team.ts) is intentionally left admin/member only.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-286')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.14.13</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Move invoice generation to paid state</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/286" target="_blank" onclick="event.stopPropagation()">#286</a>
+            <span class="expand-chevron" id="chev-avq-astra-286">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-286">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">e49a325</span>fix: move invoice generation to paid state</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-198')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.13.12</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Move invoice generation to paid state</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/198" target="_blank" onclick="event.stopPropagation()">#198</a>
+            <span class="expand-chevron" id="chev-avq-sutra-198">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-198">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">e1291c5</span>fix: move invoice generation to paid state</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-151')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.07.33</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/feedback email notif</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/151" target="_blank" onclick="event.stopPropagation()">#151</a>
+            <span class="expand-chevron" id="chev-avq-artha-151">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-151">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">8bbec66</span>feat: handle submit feedback notif</div><div class="commit-line"><span class="commit-sha">80587ab</span>feat: admin group config</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-197')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.06.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/feedback email notif</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/197" target="_blank" onclick="event.stopPropagation()">#197</a>
+            <span class="expand-chevron" id="chev-avq-sutra-197">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-197">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">3983091</span>feat: handle submit feedback notif</div><div class="commit-line"><span class="commit-sha">5260355</span>feat: feedback email notification</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-59')">
+          <td class="td-date">
+            <div>14 Juli 2026</div>
+            <div class="td-time">11.01.28</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Add Cost Alerts config page</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/59" target="_blank" onclick="event.stopPropagation()">#59</a>
+            <span class="expand-chevron" id="chev-avq-shastra-59">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-59">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- CostAlertConfigPage: configure threshold step, email recipients, email from, Telegram bot token/chat ID, view last notified state
+- Route: /configure/cost-alerts
+- Sidebar: Cost Alerts under Configure &gt; Infrastructure</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-149')">
           <td class="td-date">
             <div>13 Juli 2026</div>

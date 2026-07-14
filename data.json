@@ -1,5 +1,181 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 202,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/202",
+    "title": "Unified admin_transaction email receipt for transactions",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-14T07:13:16Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "14.13.16",
+    "body": "Backport of the admin_transaction feature from feat/email-admin-trx onto release (admin-only unified receipt for successful subscription + top-up transactions, recipient locked to Admin). Includes both follow-up fixes: numeric coercion (Neon returns numeric columns as strings, so .toFixed threw and swallowed the row) and wiring the receipt on the checkout-session settle path (createPaidInvoiceAndDeposit), which is what the normal hosted-checkout top-up flow runs through — not markPaid.\r\n\r\nExcludes unrelated main-only work (feedback notifications, recipient groups, etc.).",
+    "commits": [
+      {
+        "sha": "77c1b01",
+        "message": "feat: unified admin_transaction email receipt for transactions"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 201,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/201",
+    "title": "Unified admin_transaction email receipt for transactions",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-14T06:44:17Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "13.44.17",
+    "body": "Backport of the admin_transaction feature from feat/email-admin-trx onto release (admin-only unified receipt for successful subscription + top-up transactions, recipient locked to Admin). Includes both follow-up fixes: numeric coercion (Neon returns numeric columns as strings, so .toFixed threw and swallowed the row) and wiring the receipt on the checkout-session settle path (createPaidInvoiceAndDeposit), which is what the normal hosted-checkout top-up flow runs through — not markPaid.\r\n\r\nExcludes unrelated main-only work (feedback notifications, recipient groups, etc.).",
+    "commits": [
+      {
+        "sha": "b607ec7",
+        "message": "feat: unified admin_transaction email receipt for transactions"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 199,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/199",
+    "title": "Preserve owner role on OPS org invitations",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-14T04:23:33Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.23.33",
+    "body": "The OPS org invite path folded owner->admin before writing the invitation row (user-admin.service.ts), so an invitee accepted as admin even when invited as owner. Better Auth's accept faithfully copies invitation.role, so the downgrade was already baked in at invite time.\r\n\r\nPass the validated role through as-is, and tighten the invite route schema to z.enum(['owner','admin','member']). OPS may intentionally invite additional owners; there is no single-owner invariant. The client invite path (team.ts) is intentionally left admin/member only.",
+    "commits": [
+      {
+        "sha": "de153cf",
+        "message": "fix: preserve owner role on OPS org invitations"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 286,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/286",
+    "title": "Move invoice generation to paid state",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-14T04:14:13Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.14.13",
+    "body": "",
+    "commits": [
+      {
+        "sha": "e49a325",
+        "message": "fix: move invoice generation to paid state"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 198,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/198",
+    "title": "Move invoice generation to paid state",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-14T04:13:12Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.13.12",
+    "body": "",
+    "commits": [
+      {
+        "sha": "e1291c5",
+        "message": "fix: move invoice generation to paid state"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 151,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/151",
+    "title": "Feat/feedback email notif",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-14T04:07:33Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.07.33",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8bbec66",
+        "message": "feat: handle submit feedback notif"
+      },
+      {
+        "sha": "80587ab",
+        "message": "feat: admin group config"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 197,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/197",
+    "title": "Feat/feedback email notif",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-14T04:06:16Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.06.16",
+    "body": "",
+    "commits": [
+      {
+        "sha": "3983091",
+        "message": "feat: handle submit feedback notif"
+      },
+      {
+        "sha": "5260355",
+        "message": "feat: feedback email notification"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 59,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/59",
+    "title": "Add Cost Alerts config page",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-14T04:01:28Z",
+    "mergedAtDate": "14 Juli 2026",
+    "mergedAtTime": "11.01.28",
+    "body": "- CostAlertConfigPage: configure threshold step, email recipients, email from, Telegram bot token/chat ID, view last notified state\r\n- Route: /configure/cost-alerts\r\n- Sidebar: Cost Alerts under Configure > Infrastructure",
+    "commits": [
+      {
+        "sha": "e45c03e",
+        "message": "feat: add Cost Alerts config page"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 149,
