@@ -1,5 +1,117 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 291,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/291",
+    "title": "Add Password tab in Settings (reset-style overwrite)",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-15T09:40:26Z",
+    "mergedAtDate": "15 Juli 2026",
+    "mergedAtTime": "16.40.26",
+    "body": "Port of the password feature from feat/create-password onto release. Adds a \"Password\" tab with a New + Confirm form (each with show/hide) that always overwrites the password from the trusted session via Sutra's set-password endpoint — no current password required, so magic-link/social users (who have no known password) can set one.\r\n\r\n- New PasswordPanel + useSetPassword hook; tab wired into SettingsPage.\r\n- i18n: password_* keys appended to settings.json for en/id/ja/zh-TW/ko (only the keys this feature uses; no unrelated main changes pulled in).",
+    "commits": [
+      {
+        "sha": "79f92f8",
+        "message": "feat: add Password tab in Settings (reset-style overwrite)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 208,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/208",
+    "title": "Add set-password (reset-style overwrite) for passwordless accounts",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-15T09:33:32Z",
+    "mergedAtDate": "15 Juli 2026",
+    "mergedAtTime": "16.33.32",
+    "body": "Port of the password feature from feat/create-password onto release, adapted to release's route style (no OpenAPI/withTypeProvider). Excludes unrelated main changes.\r\n\r\n- POST /api/client/account/set-password overwrites the credential hash in place (or links one when none exists) from the trusted session, no current password; revokes other sessions afterward. Fixes magic-link users whose throwaway password they never know.\r\n- Allow set-password for expired orgs so they can set a password then refund.",
+    "commits": [
+      {
+        "sha": "49e970e",
+        "message": "feat: add set-password (reset-style overwrite) for passwordless accounts"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 289,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/289",
+    "title": "Feat/v3 tour",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-15T06:54:32Z",
+    "mergedAtDate": "15 Juli 2026",
+    "mergedAtTime": "13.54.32",
+    "body": "",
+    "commits": [
+      {
+        "sha": "1bf2b9b",
+        "message": "feat: visibility v3 page tour"
+      },
+      {
+        "sha": "453e13a",
+        "message": "feat: focus details product tour"
+      },
+      {
+        "sha": "d210508",
+        "message": "feat: v3 tour translation"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 152,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/152",
+    "title": "Feat/release note notify",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-15T06:46:07Z",
+    "mergedAtDate": "15 Juli 2026",
+    "mergedAtTime": "13.46.07",
+    "body": "",
+    "commits": [
+      {
+        "sha": "1a23824",
+        "message": "feat: release-note publish notifications via email + Telegram (v1.44.0)"
+      },
+      {
+        "sha": "be918ce",
+        "message": "fix: portal link always points at /whats-new (no per-note slug)"
+      },
+      {
+        "sha": "860f509",
+        "message": "fix: gate auto-notify on RELEASE_NOTIFY_ENABLED only (drop hard production check)"
+      },
+      {
+        "sha": "e3bf17b",
+        "message": "fix: make publish notification best-effort — never 500 the publish"
+      },
+      {
+        "sha": "6de7fb9",
+        "message": "fix: formatDate handles Date objects — notifications actually send for real notes"
+      },
+      {
+        "sha": "a019db5",
+        "message": "Merge remote-tracking branch 'origin/release' into feat/release-note-notify"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 202,
@@ -5616,7 +5728,7 @@
       },
       {
         "sha": "b55e290",
-        "message": "SPEC-ORG-PROFILE-EXPANSION-V1 — Org profile fields, industry taxonomy, brand context UI, backfill"
+        "message": "SPEC-ORG-PROFILE-EXPANSION-V1 �� Org profile fields, industry taxonomy, brand context UI, backfill"
       },
       {
         "sha": "7fa225d",
@@ -5745,7 +5857,7 @@
       },
       {
         "sha": "852ab40",
-        "message": "release: shastra feature/alex-work → main (v2.159.2) (#15)"
+        "message": "release: shastra feature/alex-work ��� main (v2.159.2) (#15)"
       },
       {
         "sha": "2642361",
@@ -6059,84 +6171,6 @@
       {
         "sha": "e97b878",
         "message": "Adj/dkl development (#24)"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 12,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/12",
-    "title": "Separate read/trigger circuits, fix half-open recovery",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": "karsa-client",
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-04-16T07:33:37Z",
-    "mergedAtDate": "16 April 2026",
-    "mergedAtTime": "14.33.37",
-    "body": "",
-    "commits": [
-      {
-        "sha": "387276f",
-        "message": "fix(karsa-client): separate read/trigger circuits, fix half-open recovery"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 10,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/10",
-    "title": "Release v16.04.2026",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-04-16T03:22:15Z",
-    "mergedAtDate": "16 April 2026",
-    "mergedAtTime": "10.22.15",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1d8bf65",
-        "message": "fix: route refinements (v0.24.4)"
-      },
-      {
-        "sha": "1fd4dad",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
-      },
-      {
-        "sha": "5a46dbd",
-        "message": "fix: focuses route and docs update (v0.24.5)"
-      },
-      {
-        "sha": "99e94dd",
-        "message": "update api client preferences using patch"
-      },
-      {
-        "sha": "9aa646c",
-        "message": "feat: VS evidence proxy, billing routes (v0.25.0)"
-      },
-      {
-        "sha": "839be29",
-        "message": "fix: tenant lib update (v0.25.1)"
-      },
-      {
-        "sha": "b383ff8",
-        "message": "add adjstment cast for client preferences"
-      },
-      {
-        "sha": "5f15038",
-        "message": "feat: intelligence route, compare/VS report HTML services (v0.25.2)"
-      },
-      {
-        "sha": "1e609b6",
-        "message": "fix: report HTML services, export service, document exports migration (v0.25.3)"
-      },
-      {
-        "sha": "b5a2eee",
-        "message": "fix: report HTML and PDF service refinements (v0.25.4)"
       }
     ]
   }
