@@ -1,5 +1,76 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 155,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/155",
+    "title": "Popup for topup in Artha",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-16T09:52:39Z",
+    "mergedAtDate": "16 Juli 2026",
+    "mergedAtTime": "16.52.39",
+    "body": "Popup to topup",
+    "commits": [
+      {
+        "sha": "afc9fb8",
+        "message": "Popup for topup in Artha"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 61,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/61",
+    "title": "Adj: add billing Telegram alerts config page",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-16T02:19:18Z",
+    "mergedAtDate": "16 Juli 2026",
+    "mergedAtTime": "09.19.18",
+    "body": "- New BillingTelegramConfigPage with toggle, bot token, chat ID, test button\r\n- Route /configure/billing-alerts\r\n- Sidebar nav item under Configure > Infrastructure",
+    "commits": [
+      {
+        "sha": "e7d8374",
+        "message": "adj: add billing Telegram alerts config page"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 209,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/209",
+    "title": "Adj/billing telegram alerts",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-07-16T02:15:26Z",
+    "mergedAtDate": "16 Juli 2026",
+    "mergedAtTime": "09.15.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "48db5d7",
+        "message": "adj: add billing transaction Telegram alerts"
+      },
+      {
+        "sha": "53f60c2",
+        "message": "fix: add Telegram alert to createPaidInvoiceAndDeposit (new topup flow)"
+      },
+      {
+        "sha": "d3006b2",
+        "message": "adj: enrich Telegram alerts with org name, credits, amount, gateway, invoice details"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 291,
@@ -5728,7 +5799,7 @@
       },
       {
         "sha": "b55e290",
-        "message": "SPEC-ORG-PROFILE-EXPANSION-V1 �� Org profile fields, industry taxonomy, brand context UI, backfill"
+        "message": "SPEC-ORG-PROFILE-EXPANSION-V1 — Org profile fields, industry taxonomy, brand context UI, backfill"
       },
       {
         "sha": "7fa225d",
@@ -5857,7 +5928,7 @@
       },
       {
         "sha": "852ab40",
-        "message": "release: shastra feature/alex-work ��� main (v2.159.2) (#15)"
+        "message": "release: shastra feature/alex-work → main (v2.159.2) (#15)"
       },
       {
         "sha": "2642361",
