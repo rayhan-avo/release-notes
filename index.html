@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>17 Juli 2026 pukul 01.01 WIB
+    Diperbarui otomatis<br>18 Juli 2026 pukul 01.00 WIB
   </div>
 </header>
 
@@ -309,6 +309,172 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-301')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">16.03.09</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">gtm</span>Fire purchase_complete dataLayer push on successful paymen…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/301" target="_blank" onclick="event.stopPropagation()">#301</a>
+            <span class="expand-chevron" id="chev-avq-astra-301">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-301">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…t return
+
+Wire existing trackPurchaseComplete event in BillingPage:
+- PaymentSuccessModal: fire on invoice load (covers Duitku, Airwallex top-up, Airwallex subscription)
+- isGenericTopupSuccess branch: fire for Stripe top-ups (amount: 0)
+
+Signup tracking already covered by existing trackSignupComplete in RegisterCtaPage and OnboardingPage.
+
+Version bump: 1.54.3 → 1.54.4</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-71')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">15.59.35</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Add Neon Monitor admin page</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/71" target="_blank" onclick="event.stopPropagation()">#71</a>
+            <span class="expand-chevron" id="chev-avq-shastra-71">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-71">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Dashboard for monitoring Neon database usage, compute hours, storage, per-branch breakdown, and top queries via pg_stat_statements.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-298')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">13.16.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">admin</span>Disable hidden /admin/* area behind reversible flag; res…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/298" target="_blank" onclick="event.stopPropagation()">#298</a>
+            <span class="expand-chevron" id="chev-avq-astra-298">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-298">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…tore voucher code
+
+Gate all hidden admin URLs (/admin, /admin/orgs, /admin/users, /admin/vouchers, /admin/branding, /admin/billing) behind a single ADMIN_ROUTES_ENABLED flag (currently false). While disabled every /admin/* URL redirects to /. Page code is untouched — flip the flag to true to restore the whole surface.
+
+Also restore the voucher admin page, create modal, redemptions drawer, and Sutra voucher client/hooks removed in #294 (minus the registration-settings code that now lives in its own modules). These ship again as dormant code, reachable only when admin routes are re-enabled.
+
+Bump 1.54.2 -&gt; 1.54.3.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-158')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">09.08.50</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/vouchers platform tab release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/158" target="_blank" onclick="event.stopPropagation()">#158</a>
+            <span class="expand-chevron" id="chev-avq-artha-158">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-158">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dcc20e8</span>feat(vouchers): move voucher management into Platform → Vouchers tab</div><div class="commit-line"><span class="commit-sha">b072f5f</span>feat(vouchers): show redeemer email + org name in redemptions drawer</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-296')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">09.08.14</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">♻️ Refactor</span></td>
+          <td class="td-title"><span class="scope">vouchers</span>Remove voucher UI (moved to Artha)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/296" target="_blank" onclick="event.stopPropagation()">#296</a>
+            <span class="expand-chevron" id="chev-avq-astra-296">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-296">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Delete the /admin/vouchers page, create modal, redemptions drawer, and the Sutra voucher client + hooks. Voucher management now lives in Artha's Platform → Vouchers tab. The registration-settings code that co-lived in the voucher files is preserved in dedicated modules (useAdminRegistrationSettings + admin-registration-settings).</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-214')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">09.07.16</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">vouchers</span>Return user email + org name in redemptions</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/214" target="_blank" onclick="event.stopPropagation()">#214</a>
+            <span class="expand-chevron" id="chev-avq-sutra-214">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-214">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">The admin voucher redemptions query now LEFT JOINs &quot;user&quot; and &quot;organization&quot; so each redemption carries user_email, user_name, and organization_name (null when the user/org was since deleted). Lets Artha's redemptions list show who redeemed instead of raw UUIDs.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-295')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">08.59.48</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Fix/voucher email dedup release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/295" target="_blank" onclick="event.stopPropagation()">#295</a>
+            <span class="expand-chevron" id="chev-avq-astra-295">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-295">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">8a10883</span>feat(onboarding): validate voucher against domain while typing</div><div class="commit-line"><span class="commit-sha">0ea9157</span>fix(onboarding): skip with a code entered + reset step fields on nav</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-213')">
+          <td class="td-date">
+            <div>17 Juli 2026</div>
+            <div class="td-time">08.59.06</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">voucher</span>Block cross-org re-redemption per (person, domain)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/213" target="_blank" onclick="event.stopPropagation()">#213</a>
+            <span class="expand-chevron" id="chev-avq-sutra-213">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-213">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Exploit #1: a user could re-redeem the same event voucher indefinitely by creating multiple orgs, because redemption dedup was keyed only on (voucher_id, organization_id) and orgs are free to create.
+
+Add cross-org dedup on (normalized email-root + normalized domain): the same person can no longer re-redeem a voucher for the SAME domain across orgs, while one redemption per DISTINCT domain stays allowed (legit multidomain customers). Email-root collapses plus-subaddressing (rayhan+1@ == rayhan@).
+
+- migration 093: nullable normalized_domain on sutra_voucher_redemptions + best-effort backfill from each org's primary domain + lookup index. No UNIQUE constraint (tuple is legitimately non-unique); service-layer SELECT guard with a small accepted race window.
+- voucher.repo: hasRedeemedByEmailAndDomain, threaded through validate/atomicRedeem, domain stored on insert.
+- registration service/route: supply email + domain; validate-voucher accepts optional domain for typing-time UX.
+
+E2 burner-domain path intentionally out of scope.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-155')">
           <td class="td-date">
             <div>16 Juli 2026</div>

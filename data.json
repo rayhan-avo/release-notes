@@ -1,5 +1,181 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 301,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/301",
+    "title": "Fire purchase_complete dataLayer push on successful paymen…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "gtm",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T09:03:09Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "16.03.09",
+    "body": "…t return\r\n\r\nWire existing trackPurchaseComplete event in BillingPage:\r\n- PaymentSuccessModal: fire on invoice load (covers Duitku, Airwallex top-up, Airwallex subscription)\r\n- isGenericTopupSuccess branch: fire for Stripe top-ups (amount: 0)\r\n\r\nSignup tracking already covered by existing trackSignupComplete in RegisterCtaPage and OnboardingPage.\r\n\r\nVersion bump: 1.54.3 → 1.54.4",
+    "commits": [
+      {
+        "sha": "073b404",
+        "message": "feat(gtm): fire purchase_complete dataLayer push on successful payment return"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 71,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/71",
+    "title": "Add Neon Monitor admin page",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T08:59:35Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "15.59.35",
+    "body": "Dashboard for monitoring Neon database usage, compute hours, storage, per-branch breakdown, and top queries via pg_stat_statements.",
+    "commits": [
+      {
+        "sha": "ef93d1a",
+        "message": "Add Neon Monitor admin page"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 298,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/298",
+    "title": "Disable hidden /admin/* area behind reversible flag; res…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "admin",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T06:16:16Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "13.16.16",
+    "body": "…tore voucher code\r\n\r\nGate all hidden admin URLs (/admin, /admin/orgs, /admin/users, /admin/vouchers, /admin/branding, /admin/billing) behind a single ADMIN_ROUTES_ENABLED flag (currently false). While disabled every /admin/* URL redirects to /. Page code is untouched — flip the flag to true to restore the whole surface.\r\n\r\nAlso restore the voucher admin page, create modal, redemptions drawer, and Sutra voucher client/hooks removed in #294 (minus the registration-settings code that now lives in its own modules). These ship again as dormant code, reachable only when admin routes are re-enabled.\r\n\r\nBump 1.54.2 -> 1.54.3.",
+    "commits": [
+      {
+        "sha": "8650706",
+        "message": "feat(admin): disable hidden /admin/* area behind reversible flag; restore voucher code"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 158,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/158",
+    "title": "Feat/vouchers platform tab release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T02:08:50Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "09.08.50",
+    "body": "",
+    "commits": [
+      {
+        "sha": "dcc20e8",
+        "message": "feat(vouchers): move voucher management into Platform → Vouchers tab"
+      },
+      {
+        "sha": "b072f5f",
+        "message": "feat(vouchers): show redeemer email + org name in redemptions drawer"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 296,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/296",
+    "title": "Remove voucher UI (moved to Artha)",
+    "type": "refactor",
+    "typeLabel": "♻️ Refactor",
+    "scope": "vouchers",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T02:08:14Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "09.08.14",
+    "body": "Delete the /admin/vouchers page, create modal, redemptions drawer, and the Sutra voucher client + hooks. Voucher management now lives in Artha's Platform → Vouchers tab. The registration-settings code that co-lived in the voucher files is preserved in dedicated modules (useAdminRegistrationSettings + admin-registration-settings).",
+    "commits": [
+      {
+        "sha": "52289fe",
+        "message": "refactor(vouchers): remove voucher UI (moved to Artha)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 214,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/214",
+    "title": "Return user email + org name in redemptions",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "vouchers",
+    "author": "thefdisk",
+    "mergedAt": "2026-07-17T02:07:16Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "09.07.16",
+    "body": "The admin voucher redemptions query now LEFT JOINs \"user\" and \"organization\" so each redemption carries user_email, user_name, and organization_name (null when the user/org was since deleted). Lets Artha's redemptions list show who redeemed instead of raw UUIDs.",
+    "commits": [
+      {
+        "sha": "f7edf75",
+        "message": "feat(vouchers): return user email + org name in redemptions"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 295,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/295",
+    "title": "Fix/voucher email dedup release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-17T01:59:48Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "08.59.48",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8a10883",
+        "message": "feat(onboarding): validate voucher against domain while typing"
+      },
+      {
+        "sha": "0ea9157",
+        "message": "fix(onboarding): skip with a code entered + reset step fields on nav"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 213,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/213",
+    "title": "Block cross-org re-redemption per (person, domain)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "voucher",
+    "author": "thefdisk",
+    "mergedAt": "2026-07-17T01:59:06Z",
+    "mergedAtDate": "17 Juli 2026",
+    "mergedAtTime": "08.59.06",
+    "body": "Exploit #1: a user could re-redeem the same event voucher indefinitely by creating multiple orgs, because redemption dedup was keyed only on (voucher_id, organization_id) and orgs are free to create.\r\n\r\nAdd cross-org dedup on (normalized email-root + normalized domain): the same person can no longer re-redeem a voucher for the SAME domain across orgs, while one redemption per DISTINCT domain stays allowed (legit multidomain customers). Email-root collapses plus-subaddressing (rayhan+1@ == rayhan@).\r\n\r\n- migration 093: nullable normalized_domain on sutra_voucher_redemptions + best-effort backfill from each org's primary domain + lookup index. No UNIQUE constraint (tuple is legitimately non-unique); service-layer SELECT guard with a small accepted race window.\r\n- voucher.repo: hasRedeemedByEmailAndDomain, threaded through validate/atomicRedeem, domain stored on insert.\r\n- registration service/route: supply email + domain; validate-voucher accepts optional domain for typing-time UX.\r\n\r\nE2 burner-domain path intentionally out of scope.",
+    "commits": [
+      {
+        "sha": "77ebea5",
+        "message": "fix(voucher): block cross-org re-redemption per (person, domain)"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 155,
