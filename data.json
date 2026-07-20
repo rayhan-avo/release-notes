@@ -1,5 +1,51 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 167,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/167",
+    "title": "Link + two-way status sync with help-center tickets",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "feedback",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-20T05:11:59Z",
+    "mergedAtDate": "20 Juli 2026",
+    "mergedAtTime": "12.11.59",
+    "body": "- /feedback shows the linked support ticket + a Create ticket fallback when unsynced.\r\n- Status actions (Acknowledge/In Progress/Resolve/Won't Fix) two-way synced with the ticket.\r\n- Proxy route POST /sutra/feedback/:id/sync-ticket for the manual fallback.",
+    "commits": [
+      {
+        "sha": "73ea356",
+        "message": "feat(feedback): link + two-way status sync with help-center tickets"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 224,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/224",
+    "title": "Feat/feedback ticket sync release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "thefdisk",
+    "mergedAt": "2026-07-20T05:03:35Z",
+    "mergedAtDate": "20 Juli 2026",
+    "mergedAtTime": "12.03.35",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a71d81f",
+        "message": "feat(feedback): two-way sync Astra feedback with help-center tickets (#220)"
+      },
+      {
+        "sha": "04b1ec0",
+        "message": "fix(feedback): raise help-center ingest timeout 10s -> 30s"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 301,
@@ -6221,7 +6267,7 @@
       },
       {
         "sha": "320fd22",
-        "message": "release: sutra feature/alex-work → main (v0.28.1) (#14)"
+        "message": "release: sutra feature/alex-work ��� main (v0.28.1) (#14)"
       },
       {
         "sha": "c7e7eee",
