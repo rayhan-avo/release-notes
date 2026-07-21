@@ -1,5 +1,135 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 230,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/230",
+    "title": "Feat/avo lite parity release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-21T10:43:10Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "17.43.10",
+    "body": "",
+    "commits": [
+      {
+        "sha": "bd5b5c7",
+        "message": "fix(darshana): make the table-rename migration idempotent (0.56.1)"
+      },
+      {
+        "sha": "1d8d0d9",
+        "message": "feat(darshana): adopt settings.updated cache-invalidation consumer (0.57.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 171,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/171",
+    "title": "Dedicated SUTRA_DARSHANA_URL for the Lite monitoring …",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-21T06:12:09Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "13.12.09",
+    "body": "…proxy (1.50.1)\r\n\r\nAVO Lite mirrors the astra/sutra pattern and can be white-labelled, so its backend may be a DIFFERENT Sutra than the primary client one — a single Artha should be able to monitor several AVO Lite deployments. The Lite proxy hard-coded SUTRA_URL (the shared client Sutra), which forces a 1:1 binding and, if AVO Lite lives on its own Sutra, points the /lite tab at the wrong backend (empty data).\r\n\r\nStep one: the proxy now resolves its base from SUTRA_DARSHANA_URL, falling back to SUTRA_URL then localhost so existing single-instance setups keep working until the dedicated env is set. A per-instance resolver (like routes/sutra.ts's getSutraUrlFromRequest) can replace the single env later for full 1:N white-label.\r\n\r\nSet SUTRA_DARSHANA_URL in Artha production to the Sutra that actually hosts AVO Lite.",
+    "commits": [
+      {
+        "sha": "2d3acb8",
+        "message": "feat(darshana): dedicated SUTRA_DARSHANA_URL for the Lite monitoring proxy (1.50.1)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 169,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/169",
+    "title": "AVO Lite monitoring tab onto release (1.50.0)",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-21T05:16:32Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "12.16.32",
+    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
+    "commits": [
+      {
+        "sha": "8a1ef4e",
+        "message": "feat(darshana): AVO Lite monitoring tab onto release (1.50.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 168,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/168",
+    "title": "AVO Lite monitoring tab onto release (1.50.0)",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-21T04:56:47Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "11.56.47",
+    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
+    "commits": [
+      {
+        "sha": "8a1ef4e",
+        "message": "feat(darshana): AVO Lite monitoring tab onto release (1.50.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 73,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/73",
+    "title": "AVO Lite config page onto release (2.177.0)",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-21T04:45:50Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "11.45.50",
+    "body": "Isolates the AVO Lite engineer config surface — tunes Karsa's darshana.* settings (price, limits, suggest model, VAT, payment fees) via the standard settings API. Shastra owns no DB, so no migration.\r\n\r\n- src/pages/configure/AvoLiteConfigPage.tsx (brought from main)\r\n- src/lib/router.tsx: import + /configure/avo-lite route\r\n- src/components/layout/Sidebar.tsx: 'AVO Lite' Configure nav item (Rocket icon)\r\n\r\nThe darshana.* settings it edits are seeded by Karsa migrations 503/511/512/514/515 (this AVO Lite release set). Verified: vite build green; all page deps resolve on release.",
+    "commits": [
+      {
+        "sha": "0b70dc7",
+        "message": "feat(darshana): AVO Lite config page onto release (2.177.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 228,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/228",
+    "title": "Bring AVO Lite to release without the OpenAPI/Swagger…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-21T04:40:31Z",
+    "mergedAtDate": "21 Juli 2026",
+    "mergedAtTime": "11.40.31",
+    "body": "… docs layer (0.56.0)\r\n\r\nIsolates the AVO Lite (org-less one-shot product) BE onto the release branch, which does not carry main's schema-first OpenAPI refactor. Docs stay staging-only by design, so nothing here mounts /docs or pulls @fastify/swagger / @scalar.\r\n\r\nWhat the Lite routes actually needed from that refactor was only the Zod runtime validator — separable from the docs UI. So:\r\n\r\n- New `src/plugins/lite-routes.ts` registers all /api/darshana/* routes inside one ENCAPSULATED context that sets the Zod validator compiler locally. Release's 73 existing non-Zod routes never see it — setting the compiler globally would break their classic validation.\r\n- `src/lib/openapi.ts` comes over as-is: it only imports zod and exports tag/schema helpers the route `schema` blocks reference. Inert metadata without a docs UI.\r\n- Only new dependency: fastify-type-provider-zod. NOT @fastify/swagger / @scalar.\r\n\r\nShared-file splices (Lite hunks only, onto release's versions):\r\n- env: DARSHANA_URL, DARSHANA_GOOGLE_CLIENT_ID/_SECRET, DARSHANA_ENABLE_PAYMENT\r\n- allowed-origins: Lite FE origins (DARSHANA_URL + dev localhost:5177)\r\n- plugins/auth: validateLiteSession decorator (2nd Better-Auth instance)\r\n- karsa-proxy: getAvoLiteConfig, getLiteReport, getLiteJobsDone, getLiteRunCost\r\n- infra drift shims for release's older versions: NotificationEventKey += 'lite_run_paid'; ava-client gains an optional `headers` passthrough; pdf.service gains `singlePage`/`pageWidthPx` (a renderer predating them falls back to normal A4 — cosmetic, not broken)\r\n\r\nMigrations renumbered to append cleanly after release's highest (099), avoiding the 093/094 collisions with release's own migrations:\r\n  093_avolite_namespace  -> 100\r\n  094_avolite_auth       -> 101\r\n  095_darshana_rename    -> 102\r\n  096_darshana_user_phone-> 103\r\n  097_notification_add_lite_run_paid    -> 104\r\n  098_notification_update_lite_run_paid -> 105\r\n  100_darshana_analyze_log              -> 106\r\nAll additive. The only one touching an existing release table is 104 (widens the\r\nsutra_notification_templates event_key CHECK) — verified a strict superset of\r\nrelease's current constraint, so no existing row can violate it.\r\n\r\nVerified: build green; app boots; injected /api/darshana/auth/get-session -> 200, /config -> 401, /runs -> 401 (validateLiteSession gates correctly). Docs are NOT mounted on this branch by design.",
+    "commits": [
+      {
+        "sha": "0d58f8c",
+        "message": "feat(darshana): bring AVO Lite to release without the OpenAPI/Swagger docs layer (0.56.0)"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 167,

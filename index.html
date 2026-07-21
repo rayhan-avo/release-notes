@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>21 Juli 2026 pukul 01.51 WIB
+    Diperbarui otomatis<br>22 Juli 2026 pukul 01.13 WIB
   </div>
 </header>
 
@@ -309,6 +309,181 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-230')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">17.43.10</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lite parity release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/230" target="_blank" onclick="event.stopPropagation()">#230</a>
+            <span class="expand-chevron" id="chev-avq-sutra-230">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-230">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bd5b5c7</span>fix(darshana): make the table-rename migration idempotent (0.56.1)</div><div class="commit-line"><span class="commit-sha">1d8d0d9</span>feat(darshana): adopt settings.updated cache-invalidation consumer (0.57.0)</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-171')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">13.12.09</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">darshana</span>Dedicated SUTRA_DARSHANA_URL for the Lite monitoring …</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/171" target="_blank" onclick="event.stopPropagation()">#171</a>
+            <span class="expand-chevron" id="chev-avq-artha-171">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-171">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…proxy (1.50.1)
+
+AVO Lite mirrors the astra/sutra pattern and can be white-labelled, so its backend may be a DIFFERENT Sutra than the primary client one — a single Artha should be able to monitor several AVO Lite deployments. The Lite proxy hard-coded SUTRA_URL (the shared client Sutra), which forces a 1:1 binding and, if AVO Lite lives on its own Sutra, points the /lite tab at the wrong backend (empty data).
+
+Step one: the proxy now resolves its base from SUTRA_DARSHANA_URL, falling back to SUTRA_URL then localhost so existing single-instance setups keep working until the dedicated env is set. A per-instance resolver (like routes/sutra.ts's getSutraUrlFromRequest) can replace the single env later for full 1:N white-label.
+
+Set SUTRA_DARSHANA_URL in Artha production to the Sutra that actually hosts AVO Lite.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-169')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">12.16.32</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">darshana</span>AVO Lite monitoring tab onto release (1.50.0)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/169" target="_blank" onclick="event.stopPropagation()">#169</a>
+            <span class="expand-chevron" id="chev-avq-artha-169">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-169">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).
+
+- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints
+- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)
+- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)
+
+Wiring spliced onto release:
+- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)
+- src/lib/router.tsx: /lite route (lazy)
+- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)
+
+Also fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.
+
+Verified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-168')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">11.56.47</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">darshana</span>AVO Lite monitoring tab onto release (1.50.0)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/168" target="_blank" onclick="event.stopPropagation()">#168</a>
+            <span class="expand-chevron" id="chev-avq-artha-168">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-168">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).
+
+- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints
+- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)
+- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)
+
+Wiring spliced onto release:
+- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)
+- src/lib/router.tsx: /lite route (lazy)
+- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)
+
+Also fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.
+
+Verified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-73')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">11.45.50</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">darshana</span>AVO Lite config page onto release (2.177.0)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/73" target="_blank" onclick="event.stopPropagation()">#73</a>
+            <span class="expand-chevron" id="chev-avq-shastra-73">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-73">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Isolates the AVO Lite engineer config surface — tunes Karsa's darshana.* settings (price, limits, suggest model, VAT, payment fees) via the standard settings API. Shastra owns no DB, so no migration.
+
+- src/pages/configure/AvoLiteConfigPage.tsx (brought from main)
+- src/lib/router.tsx: import + /configure/avo-lite route
+- src/components/layout/Sidebar.tsx: 'AVO Lite' Configure nav item (Rocket icon)
+
+The darshana.* settings it edits are seeded by Karsa migrations 503/511/512/514/515 (this AVO Lite release set). Verified: vite build green; all page deps resolve on release.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-228')">
+          <td class="td-date">
+            <div>21 Juli 2026</div>
+            <div class="td-time">11.40.31</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">darshana</span>Bring AVO Lite to release without the OpenAPI/Swagger…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/228" target="_blank" onclick="event.stopPropagation()">#228</a>
+            <span class="expand-chevron" id="chev-avq-sutra-228">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-228">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">… docs layer (0.56.0)
+
+Isolates the AVO Lite (org-less one-shot product) BE onto the release branch, which does not carry main's schema-first OpenAPI refactor. Docs stay staging-only by design, so nothing here mounts /docs or pulls @fastify/swagger / @scalar.
+
+What the Lite routes actually needed from that refactor was only the Zod runtime validator — separable from the docs UI. So:
+
+- New `src/plugins/lite-routes.ts` registers all /api/darshana/* routes inside one ENCAPSULATED context that sets the Zod validator compiler locally. Release's 73 existing non-Zod routes never see it — setting the compiler globally would break their classic validation.
+- `src/lib/openapi.ts` comes over as-is: it only imports zod and exports tag/schema helpers the route `schema` blocks reference. Inert metadata without a docs UI.
+- Only new dependency: fastify-type-provider-zod. NOT @fastify/swagger / @scalar.
+
+Shared-file splices (Lite hunks only, onto release's versions):
+- env: DARSHANA_URL, DARSHANA_GOOGLE_CLIENT_ID/_SECRET, DARSHANA_ENABLE_PAYMENT
+- allowed-origins: Lite FE origins (DARSHANA_URL + dev localhost:5177)
+- plugins/auth: validateLiteSession decorator (2nd Better-Auth instance)
+- karsa-proxy: getAvoLiteConfig, getLiteReport, getLiteJobsDone, getLiteRunCost
+- infra drift shims for release's older versions: NotificationEventKey += 'lite_run_paid'; ava-client gains an optional `headers` passthrough; pdf.service gains `singlePage`/`pageWidthPx` (a renderer predating them falls back to normal A4 — cosmetic, not broken)
+
+Migrations renumbered to append cleanly after release's highest (099), avoiding the 093/094 collisions with release's own migrations:
+  093_avolite_namespace  -&gt; 100
+  094_avolite_auth       -&gt; 101
+  095_darshana_rename    -&gt; 102
+  096_darshana_user_phone-&gt; 103
+  097_notification_add_lite_run_paid    -&gt; 104
+  098_notification_update_lite_run_paid -&gt; 105
+  100_darshana_analyze_log              -&gt; 106
+All additive. The only one touching an existing release table is 104 (widens the
+sutra_notification_templates event_key CHECK) — verified a strict superset of
+release's current constraint, so no existing row can violate it.
+
+Verified: build green; app boots; injected /api/darshana/auth/get-session -&gt; 200, /config -&gt; 401, /runs -&gt; 401 (validateLiteSession gates correctly). Docs are NOT mounted on this branch by design.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-artha-167')">
           <td class="td-date">
             <div>20 Juli 2026</div>
