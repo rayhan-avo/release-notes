@@ -2,6 +2,27 @@
   {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
+    "prNumber": 235,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/235",
+    "title": "Reset the daily analyze allowance on successful payme…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "darshana",
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-22T07:43:02Z",
+    "mergedAtDate": "22 Juli 2026",
+    "mergedAtTime": "14.43.02",
+    "body": "…nt (0.58.0)\r\n\r\nThe free-analyze limit is counted from `sutra_darshana_analyze_log`. A successful payment stamps `paid_at`, so `countAnalyzesToday` now counts only analyzes done AFTER the user's latest payment today (window = max of local midnight and today's latest paid_at). Paying therefore hands back the full daily allowance — exactly what the limit message already promises. No schema change; the analyze log is never deleted (non-destructive).",
+    "commits": [
+      {
+        "sha": "07541d8",
+        "message": "feat(darshana): reset the daily analyze allowance on successful payment (0.58.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
     "prNumber": 230,
     "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/230",
     "title": "Feat/avo lite parity release",
@@ -6280,7 +6301,7 @@
       },
       {
         "sha": "852ab40",
-        "message": "release: shastra feature/alex-work → main (v2.159.2) (#15)"
+        "message": "release: shastra feature/alex-work ��� main (v2.159.2) (#15)"
       },
       {
         "sha": "2642361",
@@ -6397,7 +6418,7 @@
       },
       {
         "sha": "320fd22",
-        "message": "release: sutra feature/alex-work ��� main (v0.28.1) (#14)"
+        "message": "release: sutra feature/alex-work → main (v0.28.1) (#14)"
       },
       {
         "sha": "c7e7eee",
