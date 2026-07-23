@@ -1,5 +1,38 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 174,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/174",
+    "title": "Feat/focus lab findings release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-23T07:12:37Z",
+    "mergedAtDate": "23 Juli 2026",
+    "mergedAtTime": "14.12.37",
+    "body": "",
+    "commits": [
+      {
+        "sha": "adbf918",
+        "message": "Focus Lab: content step — brief, draft, export, real claim gate (1.53.0) (#159)"
+      },
+      {
+        "sha": "2842331",
+        "message": "feat(focus-lab): async brief/draft UI + references, search, filters, exports"
+      },
+      {
+        "sha": "e5e459e",
+        "message": "feat(focus-lab): async-step gating (F1) + stuck-job retry UI (F2)"
+      },
+      {
+        "sha": "ca1ea87",
+        "message": "chore(focus-lab): release line at 1.54.0 + CHANGELOG for async UI/#4-9/F1/F2"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 235,
@@ -6301,7 +6334,7 @@
       },
       {
         "sha": "852ab40",
-        "message": "release: shastra feature/alex-work ��� main (v2.159.2) (#15)"
+        "message": "release: shastra feature/alex-work → main (v2.159.2) (#15)"
       },
       {
         "sha": "2642361",
