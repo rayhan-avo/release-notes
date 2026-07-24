@@ -1,5 +1,125 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 246,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/246",
+    "title": "Error retry airwallex webhook",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-24T09:27:10Z",
+    "mergedAtDate": "24 Juli 2026",
+    "mergedAtTime": "16.27.10",
+    "body": "",
+    "commits": [
+      {
+        "sha": "f3676a6",
+        "message": "fix: airwallex retries loop"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 305,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/305",
+    "title": "Feat/save promoter",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-24T07:46:06Z",
+    "mergedAtDate": "24 Juli 2026",
+    "mergedAtTime": "14.46.06",
+    "body": "",
+    "commits": [
+      {
+        "sha": "d56d4d9",
+        "message": "feat: add save promoter"
+      },
+      {
+        "sha": "2944e93",
+        "message": "fix(referral): resolve promoter after org exists, retry-safe guard"
+      },
+      {
+        "sha": "2f1001b",
+        "message": "feat(referral): retry FP resolve on home load for signup-only leads"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 244,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/244",
+    "title": "Feat/save promoter",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-24T07:44:44Z",
+    "mergedAtDate": "24 Juli 2026",
+    "mergedAtTime": "14.44.44",
+    "body": "",
+    "commits": [
+      {
+        "sha": "132b08c",
+        "message": "feat: add save promoter"
+      },
+      {
+        "sha": "b8901f8",
+        "message": "fix(referral): refresh promoter state on paid conversion; fix entry_source"
+      },
+      {
+        "sha": "c29b22c",
+        "message": "fix(referral): match converted customers in FP lookup (drop filters[type]=lead)"
+      },
+      {
+        "sha": "8ac763e",
+        "message": "fix(referral): exact email match only in FP lookup (drop list[0] fallback)"
+      },
+      {
+        "sha": "90980ab",
+        "message": "docs(referral): design spec for storing sale value + commission"
+      },
+      {
+        "sha": "c116e3c",
+        "message": "feat(referral): store sale value + commission on sutra_promoter_referrals"
+      },
+      {
+        "sha": "5f0754a",
+        "message": "feat(referral): add backfill:commissions script for existing rows"
+      },
+      {
+        "sha": "692eaff",
+        "message": "docs(referral): durable status/reference for promoter attribution work"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 242,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/242",
+    "title": "Double credits",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "mfmakarim",
+    "mergedAt": "2026-07-24T07:13:25Z",
+    "mergedAtDate": "24 Juli 2026",
+    "mergedAtTime": "14.13.25",
+    "body": "",
+    "commits": [
+      {
+        "sha": "58677ae",
+        "message": "fix: double credits"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 174,
