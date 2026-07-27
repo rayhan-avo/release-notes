@@ -2,6 +2,243 @@
   {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
+    "prNumber": 252,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/252",
+    "title": "Remove orphan pixel-outbox-drainer that breaks build",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-07-27T11:01:24Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "18.01.24",
+    "body": "The file imports pixel-sync-outbox.repo and drishti-webhook.service which only exist on main (from the Drishti brief). It was merged to release without its dependencies, causing TS2307 build failure.\r\n\r\nThe drainer is not started in app.ts so removing it has zero runtime impact. It will come back properly when the full Drishti feature is promoted to release.",
+    "commits": [
+      {
+        "sha": "baaf582",
+        "message": "fix: remove orphan pixel-outbox-drainer that breaks build"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 251,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/251",
+    "title": "Adj/reduce cuh polling intervals",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-07-27T10:51:28Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "17.51.28",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ce912a9",
+        "message": "adj: reduce polling intervals to cut Neon CUh"
+      },
+      {
+        "sha": "f4de447",
+        "message": "adj: reduce pixel-outbox-drainer interval 15s → 5min"
+      },
+      {
+        "sha": "600013b",
+        "message": "adj: add composite indexes for CUh optimization (migration 107)"
+      },
+      {
+        "sha": "ece36e6",
+        "message": "adj: cache SSE domain access per org to reduce DB queries"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 78,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/78",
+    "title": "Month-aware cost alert config + reset button",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-27T10:22:40Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "17.22.40",
+    "body": "- Parse last_notified with month field (auto-reset on month change)\r\n- Display stored month with Calendar icon\r\n- Show stale indicator when stored month != current WIB month\r\n- Add Reset Thresholds button (stages change for Review & Publish)\r\n- Update description to reflect monthly cost scope",
+    "commits": [
+      {
+        "sha": "fb3d7c7",
+        "message": "feat: month-aware cost alert config + reset button"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 77,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/77",
+    "title": "Add By Feature tab grouping cost per product",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "ledger",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-27T09:59:41Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "16.59.41",
+    "body": "New /ledger 'By Feature' tab shows LLM/API cost grouped by originating feature (Focus Lab / Avo Lite / Astra) via Karsa's GET /api/ledger/by-source, with per-feature stat cards, engine breakdown, and share bars. Unattributed rows shown as Untagged.",
+    "commits": [
+      {
+        "sha": "22f93d3",
+        "message": "feat(ledger): add By Feature tab grouping cost per product"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 177,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/177",
+    "title": "Stamp x-source (focus_lab) on Ava client calls",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "ledger",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-27T09:59:05Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "16.59.05",
+    "body": "The Ava client forwards x-source (default focus_lab, per-call overridable) so Ava's ledger attributes Focus Lab / prospect-intel LLM cost to the feature.",
+    "commits": [
+      {
+        "sha": "88f214f",
+        "message": "feat(ledger): stamp x-source (focus_lab) on Ava client calls"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 250,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/250",
+    "title": "Stamp x-source on Ava calls for per-feature cost attrib…",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "ledger",
+    "author": "thefdisk",
+    "mergedAt": "2026-07-27T09:52:33Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "16.52.33",
+    "body": "…ution\r\n\r\nLite Discovery sends x-source: avo_lite; the Astra client proxy (org-briefing trigger)\r\nsends x-source: astra. Ava's ledger uses this to attribute LLM cost per feature.",
+    "commits": [
+      {
+        "sha": "30f2b33",
+        "message": "feat(ledger): stamp x-source on Ava calls for per-feature cost attribution"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 178,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/178",
+    "title": "Feat/avo lite ledger release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-27T09:19:22Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "16.19.22",
+    "body": "",
+    "commits": [
+      {
+        "sha": "88f17dc",
+        "message": "feat(lite): real COGS totals, filters, sorting and per-stage breakdown (1.55.0)"
+      },
+      {
+        "sha": "672f332",
+        "message": "fix(lite): stop the ledger refetch loop that left the table empty (1.55.1)"
+      },
+      {
+        "sha": "bcc593c",
+        "message": "chore: restore tracked .vite/deps files removed by an over-broad add"
+      },
+      {
+        "sha": "0be852e",
+        "message": "fix(lite): ledger lists newest-first, matching the Runs tab (1.55.2)"
+      },
+      {
+        "sha": "2913d08",
+        "message": "feat(lite): cost per LLM provider column + summary row (1.55.3)"
+      },
+      {
+        "sha": "8391ad8",
+        "message": "feat(lite): friendly stage names in the breakdown (1.55.4)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 249,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/249",
+    "title": "Feat/avo lite ledger release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-27T09:18:24Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "16.18.24",
+    "body": "",
+    "commits": [
+      {
+        "sha": "4c018d3",
+        "message": "feat(lite): merge Ava spend into COGS, add filters/sorting/summary (0.59.0)"
+      },
+      {
+        "sha": "0f3993d",
+        "message": "fix(lite): ledger date sort ordered by weekday name (0.59.1)"
+      },
+      {
+        "sha": "6d1dd15",
+        "message": "Merge remote-tracking branch 'origin/release' into feat/avo-lite-ledger-release"
+      },
+      {
+        "sha": "4036576",
+        "message": "feat(lite): cost per LLM provider, Karsa + Ava merged (0.59.2)"
+      },
+      {
+        "sha": "bb42cb0",
+        "message": "fix(lite): send correlationId to Ava discovery so probes attribute (0.59.3)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 76,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/76",
+    "title": "Surface MiniMax + Qwen in Provider Health (2.178.0)",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "providers",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-27T07:59:24Z",
+    "mergedAtDate": "27 Juli 2026",
+    "mergedAtTime": "14.59.24",
+    "body": "Cherry-picked from feat/add-minimax-qwen-mimo onto the release line (no other main-only commits included).\r\n\r\nAdd 'minimax' and 'qwen' to the LLM allowlist in /configure/providers Provider Health so they render in the LLM section instead of the API-providers group.\r\n\r\nConflict resolution on release: version 2.177.0 -> 2.178.0; allowlist kept release's membership (openai/anthropic/google/deepseek/perplexity) + minimax/qwen only (moonshot/openrouter not present on this line); CHANGELOG entry added above release's [2.176.0] without dragging main-only entries.",
+    "commits": [
+      {
+        "sha": "b92d4e2",
+        "message": "feat(providers): surface MiniMax + Qwen in Provider Health (2.178.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
     "prNumber": 246,
     "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/246",
     "title": "Error retry airwallex webhook",

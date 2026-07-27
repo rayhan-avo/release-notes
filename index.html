@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>27 Juli 2026 pukul 00.58 WIB
+    Diperbarui otomatis<br>28 Juli 2026 pukul 01.21 WIB
   </div>
 </header>
 
@@ -309,6 +309,181 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-252')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">18.01.24</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Remove orphan pixel-outbox-drainer that breaks build</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/252" target="_blank" onclick="event.stopPropagation()">#252</a>
+            <span class="expand-chevron" id="chev-avq-sutra-252">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-252">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">The file imports pixel-sync-outbox.repo and drishti-webhook.service which only exist on main (from the Drishti brief). It was merged to release without its dependencies, causing TS2307 build failure.
+
+The drainer is not started in app.ts so removing it has zero runtime impact. It will come back properly when the full Drishti feature is promoted to release.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-251')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">17.51.28</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Adj/reduce cuh polling intervals</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/251" target="_blank" onclick="event.stopPropagation()">#251</a>
+            <span class="expand-chevron" id="chev-avq-sutra-251">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-251">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">ce912a9</span>adj: reduce polling intervals to cut Neon CUh</div><div class="commit-line"><span class="commit-sha">f4de447</span>adj: reduce pixel-outbox-drainer interval 15s → 5min</div><div class="commit-line"><span class="commit-sha">600013b</span>adj: add composite indexes for CUh optimization (migration 107)</div><div class="commit-line"><span class="commit-sha">ece36e6</span>adj: cache SSE domain access per org to reduce DB queries</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-78')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">17.22.40</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Month-aware cost alert config + reset button</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/78" target="_blank" onclick="event.stopPropagation()">#78</a>
+            <span class="expand-chevron" id="chev-avq-shastra-78">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-78">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- Parse last_notified with month field (auto-reset on month change)
+- Display stored month with Calendar icon
+- Show stale indicator when stored month != current WIB month
+- Add Reset Thresholds button (stages change for Review &amp; Publish)
+- Update description to reflect monthly cost scope</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-77')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">16.59.41</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">ledger</span>Add By Feature tab grouping cost per product</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/77" target="_blank" onclick="event.stopPropagation()">#77</a>
+            <span class="expand-chevron" id="chev-avq-shastra-77">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-77">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">New /ledger 'By Feature' tab shows LLM/API cost grouped by originating feature (Focus Lab / Avo Lite / Astra) via Karsa's GET /api/ledger/by-source, with per-feature stat cards, engine breakdown, and share bars. Unattributed rows shown as Untagged.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-177')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">16.59.05</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">ledger</span>Stamp x-source (focus_lab) on Ava client calls</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/177" target="_blank" onclick="event.stopPropagation()">#177</a>
+            <span class="expand-chevron" id="chev-avq-artha-177">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-177">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">The Ava client forwards x-source (default focus_lab, per-call overridable) so Ava's ledger attributes Focus Lab / prospect-intel LLM cost to the feature.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-250')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">16.52.33</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">ledger</span>Stamp x-source on Ava calls for per-feature cost attrib…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/250" target="_blank" onclick="event.stopPropagation()">#250</a>
+            <span class="expand-chevron" id="chev-avq-sutra-250">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-250">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…ution
+
+Lite Discovery sends x-source: avo_lite; the Astra client proxy (org-briefing trigger)
+sends x-source: astra. Ava's ledger uses this to attribute LLM cost per feature.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-178')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">16.19.22</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lite ledger release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/178" target="_blank" onclick="event.stopPropagation()">#178</a>
+            <span class="expand-chevron" id="chev-avq-artha-178">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-178">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">88f17dc</span>feat(lite): real COGS totals, filters, sorting and per-stage breakdown (1.55.0)</div><div class="commit-line"><span class="commit-sha">672f332</span>fix(lite): stop the ledger refetch loop that left the table empty (1.55.1)</div><div class="commit-line"><span class="commit-sha">bcc593c</span>chore: restore tracked .vite/deps files removed by an over-broad add</div><div class="commit-line"><span class="commit-sha">0be852e</span>fix(lite): ledger lists newest-first, matching the Runs tab (1.55.2)</div><div class="commit-line"><span class="commit-sha">2913d08</span>feat(lite): cost per LLM provider column + summary row (1.55.3)</div><div class="commit-line"><span class="commit-sha">8391ad8</span>feat(lite): friendly stage names in the breakdown (1.55.4)</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-249')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">16.18.24</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lite ledger release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/249" target="_blank" onclick="event.stopPropagation()">#249</a>
+            <span class="expand-chevron" id="chev-avq-sutra-249">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-249">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">4c018d3</span>feat(lite): merge Ava spend into COGS, add filters/sorting/summary (0.59.0)</div><div class="commit-line"><span class="commit-sha">0f3993d</span>fix(lite): ledger date sort ordered by weekday name (0.59.1)</div><div class="commit-line"><span class="commit-sha">6d1dd15</span>Merge remote-tracking branch 'origin/release' into feat/avo-lite-ledger-release</div><div class="commit-line"><span class="commit-sha">4036576</span>feat(lite): cost per LLM provider, Karsa + Ava merged (0.59.2)</div><div class="commit-line"><span class="commit-sha">bb42cb0</span>fix(lite): send correlationId to Ava discovery so probes attribute (0.59.3)</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-76')">
+          <td class="td-date">
+            <div>27 Juli 2026</div>
+            <div class="td-time">14.59.24</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">providers</span>Surface MiniMax + Qwen in Provider Health (2.178.0)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/76" target="_blank" onclick="event.stopPropagation()">#76</a>
+            <span class="expand-chevron" id="chev-avq-shastra-76">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-76">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Cherry-picked from feat/add-minimax-qwen-mimo onto the release line (no other main-only commits included).
+
+Add 'minimax' and 'qwen' to the LLM allowlist in /configure/providers Provider Health so they render in the LLM section instead of the API-providers group.
+
+Conflict resolution on release: version 2.177.0 -&gt; 2.178.0; allowlist kept release's membership (openai/anthropic/google/deepseek/perplexity) + minimax/qwen only (moonshot/openrouter not present on this line); CHANGELOG entry added above release's [2.176.0] without dragging main-only entries.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-sutra-246')">
           <td class="td-date">
             <div>24 Juli 2026</div>
