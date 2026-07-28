@@ -2,6 +2,114 @@
   {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
+    "prNumber": 255,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/255",
+    "title": "Feat/avo lite v2 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-07-28T06:45:37Z",
+    "mergedAtDate": "28 Juli 2026",
+    "mergedAtTime": "13.45.37",
+    "body": "",
+    "commits": [
+      {
+        "sha": "f2688e6",
+        "message": "feat(darshana): stream Analyze (suggest) progress over SSE — v0.59.0"
+      },
+      {
+        "sha": "a2eba62",
+        "message": "feat(darshana): relay real per-probe progress + dev analyze-limit bypass (T3)"
+      },
+      {
+        "sha": "a7a5687",
+        "message": "fix(darshana): run-stream TDZ + leak on completed-run reconnect — v0.72.1"
+      },
+      {
+        "sha": "0267089",
+        "message": "feat(lite): rename Topic to Focus and Question to Prompt in user-facing copy"
+      },
+      {
+        "sha": "40fb956",
+        "message": "style(lite): capitalize Prompt in user-facing copy"
+      },
+      {
+        "sha": "754c4f9",
+        "message": "fix(darshana): run probe-mode Analyze as a polled job, not a 95s request"
+      },
+      {
+        "sha": "b9f77d9",
+        "message": "Merge remote-tracking branch 'origin/release' into feat/avo-lite-v2-release"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 180,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/180",
+    "title": "Per-type admin transaction templates",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "notifications",
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-28T06:37:36Z",
+    "mergedAtDate": "28 Juli 2026",
+    "mergedAtTime": "13.37.36",
+    "body": "Registers six per-type admin transaction events (new subscription, renewal, top-up, upgrade, downgrade, cancellation) in place of the single admin_transaction entry — each with its own label + variable hints in Partners → Notifications — and locks all six to Admin-only recipients. Mirrors the Sutra split. OPS-only.\r\n\r\n\r\n(cherry picked from commit 5104739d0908a1924063109350aa5fe083ca4915)",
+    "commits": [
+      {
+        "sha": "983a42a",
+        "message": "feat(notifications): per-type admin transaction templates"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 254,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/254",
+    "title": "Split admin_transaction into 6 per-type admin receipts",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "notif",
+    "author": "thefdisk",
+    "mergedAt": "2026-07-28T06:34:20Z",
+    "mergedAtDate": "28 Juli 2026",
+    "mergedAtTime": "13.34.20",
+    "body": "Replaces the unified admin_transaction email with six admin-only per-type templates (new subscription / renewal / top-up / upgrade / downgrade / cancel), each with its own subject + body since the content differs. Migration 109 deletes the old template + key, rebuilds the event_key CHECK, seeds the six. All 10 enqueue sites fire the specific event; credit renders \"N credits\", currency is dynamic, missing fields render \"-\".\r\n\r\nAlso surfaces the real payment method on top-up receipts: Airwallex normalizeEvent now carries latest_payment_attempt.payment_method.type, threaded through the webhook into the settle/markPaid receipt, falling back to the gateway name — never blank. Renewal receipts resolve the method best-effort from the org's default saved method.\r\n\r\n\r\n(cherry picked from commit 3270e3868e73d058605db45b9c0764903d95b043)",
+    "commits": [
+      {
+        "sha": "2160cdd",
+        "message": "feat(notif): split admin_transaction into 6 per-type admin receipts"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 307,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/307",
+    "title": "Update gtm-events.ts - tambah trackCreditsAdded",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-28T02:50:03Z",
+    "mergedAtDate": "28 Juli 2026",
+    "mergedAtTime": "09.50.03",
+    "body": "trackCreditsAdded",
+    "commits": [
+      {
+        "sha": "b742361",
+        "message": "Update gtm-events.ts"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
     "prNumber": 252,
     "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/252",
     "title": "Remove orphan pixel-outbox-drainer that breaks build",

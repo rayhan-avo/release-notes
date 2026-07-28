@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>28 Juli 2026 pukul 01.21 WIB
+    Diperbarui otomatis<br>29 Juli 2026 pukul 01.09 WIB
   </div>
 </header>
 
@@ -309,6 +309,86 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-255')">
+          <td class="td-date">
+            <div>28 Juli 2026</div>
+            <div class="td-time">13.45.37</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lite v2 release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/255" target="_blank" onclick="event.stopPropagation()">#255</a>
+            <span class="expand-chevron" id="chev-avq-sutra-255">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-255">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">f2688e6</span>feat(darshana): stream Analyze (suggest) progress over SSE — v0.59.0</div><div class="commit-line"><span class="commit-sha">a2eba62</span>feat(darshana): relay real per-probe progress + dev analyze-limit bypass (T3)</div><div class="commit-line"><span class="commit-sha">a7a5687</span>fix(darshana): run-stream TDZ + leak on completed-run reconnect — v0.72.1</div><div class="commit-line"><span class="commit-sha">0267089</span>feat(lite): rename Topic to Focus and Question to Prompt in user-facing copy</div><div class="commit-line"><span class="commit-sha">40fb956</span>style(lite): capitalize Prompt in user-facing copy</div><div class="commit-line"><span class="commit-sha">754c4f9</span>fix(darshana): run probe-mode Analyze as a polled job, not a 95s request</div><div class="commit-line"><span class="commit-sha">b9f77d9</span>Merge remote-tracking branch 'origin/release' into feat/avo-lite-v2-release</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-180')">
+          <td class="td-date">
+            <div>28 Juli 2026</div>
+            <div class="td-time">13.37.36</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">notifications</span>Per-type admin transaction templates</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/180" target="_blank" onclick="event.stopPropagation()">#180</a>
+            <span class="expand-chevron" id="chev-avq-artha-180">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-180">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Registers six per-type admin transaction events (new subscription, renewal, top-up, upgrade, downgrade, cancellation) in place of the single admin_transaction entry — each with its own label + variable hints in Partners → Notifications — and locks all six to Admin-only recipients. Mirrors the Sutra split. OPS-only.
+
+
+(cherry picked from commit 5104739d0908a1924063109350aa5fe083ca4915)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-254')">
+          <td class="td-date">
+            <div>28 Juli 2026</div>
+            <div class="td-time">13.34.20</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">notif</span>Split admin_transaction into 6 per-type admin receipts</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/254" target="_blank" onclick="event.stopPropagation()">#254</a>
+            <span class="expand-chevron" id="chev-avq-sutra-254">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-254">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Replaces the unified admin_transaction email with six admin-only per-type templates (new subscription / renewal / top-up / upgrade / downgrade / cancel), each with its own subject + body since the content differs. Migration 109 deletes the old template + key, rebuilds the event_key CHECK, seeds the six. All 10 enqueue sites fire the specific event; credit renders &quot;N credits&quot;, currency is dynamic, missing fields render &quot;-&quot;.
+
+Also surfaces the real payment method on top-up receipts: Airwallex normalizeEvent now carries latest_payment_attempt.payment_method.type, threaded through the webhook into the settle/markPaid receipt, falling back to the gateway name — never blank. Renewal receipts resolve the method best-effort from the org's default saved method.
+
+
+(cherry picked from commit 3270e3868e73d058605db45b9c0764903d95b043)</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-307')">
+          <td class="td-date">
+            <div>28 Juli 2026</div>
+            <div class="td-time">09.50.03</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Update gtm-events.ts - tambah trackCreditsAdded</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/307" target="_blank" onclick="event.stopPropagation()">#307</a>
+            <span class="expand-chevron" id="chev-avq-astra-307">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-307">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">trackCreditsAdded</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-sutra-252')">
           <td class="td-date">
             <div>27 Juli 2026</div>
