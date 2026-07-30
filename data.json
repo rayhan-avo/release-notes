@@ -2,6 +2,27 @@
   {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
+    "prNumber": 260,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/260",
+    "title": "Update fix add manual CTX prompt",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "rayhan-avo",
+    "mergedAt": "2026-07-30T08:24:15Z",
+    "mergedAtDate": "30 Juli 2026",
+    "mergedAtTime": "15.24.15",
+    "body": "Adjustment to add custom Contextual prompts",
+    "commits": [
+      {
+        "sha": "2bd4ea1",
+        "message": "Update fix add manual CTX prompt"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
     "prNumber": 255,
     "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/255",
     "title": "Feat/avo lite v2 release",
