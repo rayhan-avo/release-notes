@@ -1,5 +1,30 @@
 [
   {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 87,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/87",
+    "title": "Feat/from release/neon monitor branch daily",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-07-31T02:25:59Z",
+    "mergedAtDate": "31 Juli 2026",
+    "mergedAtTime": "09.25.59",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a788f12",
+        "message": "feat: neon monitor — branch filter + daily cost improvements"
+      },
+      {
+        "sha": "85076c8",
+        "message": "fix: always show Sync Latest / Backfill button in Neon Monitor"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 260,
