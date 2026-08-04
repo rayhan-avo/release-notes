@@ -2,6 +2,73 @@
   {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
+    "prNumber": 92,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/92",
+    "title": "Feat/dynamic engine registry release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-04T04:32:11Z",
+    "mergedAtDate": "4 Agustus 2026",
+    "mergedAtTime": "11.32.11",
+    "body": "",
+    "commits": [
+      {
+        "sha": "3ad97ce",
+        "message": "feat(configure): AI Engines and VS Platforms read one engine registry (2.180.0)"
+      },
+      {
+        "sha": "6c9e47d",
+        "message": "fix(vs-config): enabling a newly registered engine had no effect (2.180.1)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 319,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/319",
+    "title": "Engine roster comes from the API, not a local catalog…",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "vs-wizard",
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-04T04:29:56Z",
+    "mergedAtDate": "4 Agustus 2026",
+    "mergedAtTime": "11.29.56",
+    "body": "… (1.55.0)\r\n\r\nWizardPlatformStep held a PROVIDER_CATALOG constant listing every provider and model by hand. The wizard intersected the API's enabled platforms with that constant and silently dropped anything it did not recognise, so an engine registered in Karsa later — Kimi (Moonshot), MiniMax, Qwen — never appeared here no matter how it was configured in Shastra.\r\n\r\n- PROVIDER_CATALOG is deleted. The roster is the platform list from the API, which derives it from Karsa's adapter registry (Sutra 0.76.0, Karsa 2.151.0).\r\n- Label and colour come from the API entry, falling back to the existing --color-plat-* tokens for engines that have one. buildSlot, the default-slot matcher and MeasurementSummary no longer consult a local provider table.\r\n- Engines with no API key are filtered out of the picker: a client must not be able to add an engine to a paid measurement when it cannot answer.\r\n- The model sent to Karsa is model_id, resolved server-side from the operator's vs.platform.{key}.model choice, instead of the first entry of a hardcoded model array. MeasurementSummary.resolveModel no longer invents a model from it.\r\n- Pre-selected engines are unchanged: DEFAULT_PLATFORM_NAMES is a default SELECTION, not a roster, so a newly registered engine is not auto-added — every slot multiplies probe count and cost.\r\n- VsPlatformConfig gains label/color/kind/usable.\r\n\r\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\r\n(cherry picked from commit ec0dd00f3e7b6326634c3a29cafba402319274b2)\r\n\r\nCherry-picked onto the release line: released here as 1.55.0, not the 1.67.0 of the main line. Code is identical; only package.json and the CHANGELOG heading were re-versioned.",
+    "commits": [
+      {
+        "sha": "9b56d8a",
+        "message": "fix(vs-wizard): engine roster comes from the API, not a local catalog (1.55.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 265,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/265",
+    "title": "Platform roster from Karsa's engine catalog (0.62.0)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "client-vs",
+    "author": "thefdisk",
+    "mergedAt": "2026-08-04T04:26:03Z",
+    "mergedAtDate": "4 Agustus 2026",
+    "mergedAtTime": "11.26.03",
+    "body": "GET /api/client/domains/:id/vs/platforms built its response by looping a hardcoded KNOWN_PLATFORMS array of seven keys, plus two hardcoded platform-to-provider maps. An engine registered in Karsa after that list was written — Kimi (Moonshot), MiniMax, Qwen — could be enabled in Shastra and still never reach the Astra wizard, because it was dropped here.\r\n\r\n- The roster now comes from Karsa's GET /api/platforms/catalog, which derives it from the adapter registry. Both hardcoded maps are gone: a platform's provider is the catalog's providerId.\r\n- Response entries gained label, color, kind and usable, so the client does not need its own provider/model table to render an engine it has never seen.\r\n- usable is false when the engine has no API key. A client must not be able to add an engine to a paid measurement when it cannot answer.\r\n- Fallback when the catalog is unreachable: the roster is derived from the vs.platform.{key}.* settings rows already fetched — deliberately not a hardcoded list, since a stale list is what caused this bug.\r\n\r\nCo-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>\r\n(cherry picked from commit 061a7db77bc8f9440a992f0b22f1ea5357d83591)\r\n\r\nCherry-picked onto the release line: released here as 0.62.0, not the 0.76.0 of the main line. Code is identical; only package.json and the CHANGELOG heading were re-versioned.",
+    "commits": [
+      {
+        "sha": "b454031",
+        "message": "fix(client-vs): platform roster from Karsa's engine catalog (0.62.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
     "prNumber": 87,
     "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/87",
     "title": "Feat/from release/neon monitor branch daily",
@@ -5815,7 +5882,7 @@
       },
       {
         "sha": "3fbacb6",
-        "message": "fix(prospect): stepper hover tooltip looked translucent — v1.39.4"
+        "message": "fix(prospect): stepper hover tooltip looked translucent ��� v1.39.4"
       },
       {
         "sha": "7dcaae5",
@@ -6101,27 +6168,6 @@
       {
         "sha": "5455da5",
         "message": "fix: parse orgId from tenantId directly in SSE relay — remove Ava HTTP lookup"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 38,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/38",
-    "title": "Fix organization isolation",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": "partner",
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-06T08:07:53Z",
-    "mergedAtDate": "6 Mei 2026",
-    "mergedAtTime": "15.07.53",
-    "body": "",
-    "commits": [
-      {
-        "sha": "c506342",
-        "message": "fix(partner): fix organization isolation"
       }
     ]
   }
