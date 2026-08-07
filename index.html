@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>6 Agustus 2026 pukul 01.16 WIB
+    Diperbarui otomatis<br>8 Agustus 2026 pukul 00.43 WIB
   </div>
 </header>
 
@@ -309,6 +309,24 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-94')">
+          <td class="td-date">
+            <div>7 Agustus 2026</div>
+            <div class="td-time">13.45.13</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Handle null domain in Ledger "By Domain" view</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/94" target="_blank" onclick="event.stopPropagation()">#94</a>
+            <span class="expand-chevron" id="chev-avq-shastra-94">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-94">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Karsa's getDomainCosts now uses LEFT JOIN (audit fix E4), which returns rows without a domain_id. LedgerDomains crashed on null domain passed to DomainLogo. Now shows &quot;Unattributed&quot; label with fallback icon for system/discovery calls that have no domain attached.</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-shastra-92')">
           <td class="td-date">
             <div>4 Agustus 2026</div>
@@ -891,7 +909,7 @@ Verified: vite build green; my splice files typecheck clean. The other tsc -b er
         </tr>
         <tr class="detail-row hidden" id="detail-avq-artha-168">
           <td colspan="5" class="detail-cell">
-            <div class="detail-body">Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).
+            <div class="detail-body">Isolates the AVO Lite ops monitoring surface ��� read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).
 
 - api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints
 - src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)
