@@ -6138,58 +6138,5 @@
         "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
       }
     ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 39,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/39",
-    "title": "Release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-05-11T09:59:45Z",
-    "mergedAtDate": "11 Mei 2026",
-    "mergedAtTime": "16.59.45",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1994e7e",
-        "message": "feat: own-domain map filter — domain-access repo + org-context service (v0.41.2)"
-      },
-      {
-        "sha": "053d519",
-        "message": "chore: org-context service tweak (v0.41.3)"
-      },
-      {
-        "sha": "86225db",
-        "message": "chore: karsa-dkl-writer service tweak (v0.41.4)"
-      },
-      {
-        "sha": "854361a",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
-      },
-      {
-        "sha": "706c71c",
-        "message": "feat: brief workbench proxies — suggestion + draft hints (v0.42.0)"
-      },
-      {
-        "sha": "47578ad",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
-      },
-      {
-        "sha": "fe57796",
-        "message": "feat: client vaidya-credentials route + proxy service updates (v0.42.1)"
-      },
-      {
-        "sha": "fee2c3e",
-        "message": "feat: registration system + voucher system + billing audit fixes + v-fix-11 vaidya token (v0.43.1)"
-      },
-      {
-        "sha": "5455da5",
-        "message": "fix: parse orgId from tenantId directly in SSE relay — remove Ava HTTP lookup"
-      }
-    ]
   }
 ]
