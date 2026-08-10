@@ -6113,30 +6113,5 @@
         "message": "add regist new user"
       }
     ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 41,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/41",
-    "title": "Release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-12T10:21:17Z",
-    "mergedAtDate": "12 Mei 2026",
-    "mergedAtTime": "17.21.17",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1f56b76",
-        "message": "feat: voucher unique redemption migration + registration/trigger service polish (v0.43.4)"
-      },
-      {
-        "sha": "5488286",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
-      }
-    ]
   }
 ]
