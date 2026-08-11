@@ -6067,51 +6067,5 @@
         "message": "fix: filter deleted org on select org page and switch account panel (#80)"
       }
     ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 79,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/79",
-    "title": "Add regist new user",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-13T06:15:15Z",
-    "mergedAtDate": "13 Mei 2026",
-    "mergedAtTime": "13.15.15",
-    "body": "",
-    "commits": [
-      {
-        "sha": "839747a",
-        "message": "add regist new user"
-      },
-      {
-        "sha": "9973158",
-        "message": "hide register"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 78,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/78",
-    "title": "Add regist new user",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-13T05:40:50Z",
-    "mergedAtDate": "13 Mei 2026",
-    "mergedAtTime": "12.40.50",
-    "body": "",
-    "commits": [
-      {
-        "sha": "839747a",
-        "message": "add regist new user"
-      }
-    ]
   }
 ]
