@@ -1,5 +1,47 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 331,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/331",
+    "title": "Fix invitation",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-12T08:12:49Z",
+    "mergedAtDate": "12 Agustus 2026",
+    "mergedAtTime": "15.12.49",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2435876",
+        "message": "Fix invitation"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 274,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/274",
+    "title": "Fix invitation",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "rayhan-avo",
+    "mergedAt": "2026-08-12T08:11:32Z",
+    "mergedAtDate": "12 Agustus 2026",
+    "mergedAtTime": "15.11.32",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a946a38",
+        "message": "Fix invitation"
+      }
+    ]
+  },
+  {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
     "prNumber": 94,
