@@ -1,5 +1,26 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 193,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/193",
+    "title": "Adjust view Artha",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-13T06:41:26Z",
+    "mergedAtDate": "13 Agustus 2026",
+    "mergedAtTime": "13.41.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "30e38ff",
+        "message": "Adjust view Artha"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 331,
@@ -6061,52 +6082,6 @@
       {
         "sha": "8f00571",
         "message": "feat: add button build pb (#84)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 83,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/83",
-    "title": "[RELEASE] Fix: unclickable focus card",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-15T10:27:20Z",
-    "mergedAtDate": "15 Mei 2026",
-    "mergedAtTime": "17.27.20",
-    "body": "",
-    "commits": [
-      {
-        "sha": "451213e",
-        "message": "fix: filter deleted org on select org page and switch account panel (#80)"
-      },
-      {
-        "sha": "ab9ae72",
-        "message": "fix: pass focus id to dashboard, table view state (#82)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 81,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/81",
-    "title": "[RELEASE] fix: filter deleted org on select org page and switch account panel",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-15T09:28:59Z",
-    "mergedAtDate": "15 Mei 2026",
-    "mergedAtTime": "16.28.59",
-    "body": "…#80)",
-    "commits": [
-      {
-        "sha": "451213e",
-        "message": "fix: filter deleted org on select org page and switch account panel (#80)"
       }
     ]
   }
