@@ -3572,7 +3572,7 @@
     "mergedAt": "2026-06-18T01:55:20Z",
     "mergedAtDate": "18 Juni 2026",
     "mergedAtTime": "08.55.20",
-    "body": "…views",
+    "body": "���views",
     "commits": [
       {
         "sha": "05034ca",
@@ -6016,72 +6016,6 @@
       {
         "sha": "826c614",
         "message": "fix: calculate completed probes (#45)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 90,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/90",
-    "title": "Fix/conflict release 51826",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-18T09:24:25Z",
-    "mergedAtDate": "18 Mei 2026",
-    "mergedAtTime": "16.24.25",
-    "body": "",
-    "commits": [
-      {
-        "sha": "451213e",
-        "message": "fix: filter deleted org on select org page and switch account panel (#80)"
-      },
-      {
-        "sha": "ab9ae72",
-        "message": "fix: pass focus id to dashboard, table view state (#82)"
-      },
-      {
-        "sha": "8f00571",
-        "message": "feat: add button build pb (#84)"
-      },
-      {
-        "sha": "cf60c96",
-        "message": "fix: sync loading build prompt (#86)"
-      },
-      {
-        "sha": "540b448",
-        "message": "fix lang onboard (#88)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 85,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/85",
-    "title": "[RELEASE] Add button build prompt on focus card",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-18T06:30:55Z",
-    "mergedAtDate": "18 Mei 2026",
-    "mergedAtTime": "13.30.55",
-    "body": "",
-    "commits": [
-      {
-        "sha": "451213e",
-        "message": "fix: filter deleted org on select org page and switch account panel (#80)"
-      },
-      {
-        "sha": "ab9ae72",
-        "message": "fix: pass focus id to dashboard, table view state (#82)"
-      },
-      {
-        "sha": "8f00571",
-        "message": "feat: add button build pb (#84)"
       }
     ]
   }
