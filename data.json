@@ -3572,7 +3572,7 @@
     "mergedAt": "2026-06-18T01:55:20Z",
     "mergedAtDate": "18 Juni 2026",
     "mergedAtTime": "08.55.20",
-    "body": "���views",
+    "body": "…views",
     "commits": [
       {
         "sha": "05034ca",
@@ -5979,43 +5979,6 @@
       {
         "sha": "4fadac0",
         "message": "chore(prospect): drop stepper hover tooltips + persistent hint — v1.39.7"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 46,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/46",
-    "title": "[RELEASE] Fix credit deduction",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-19T06:48:53Z",
-    "mergedAtDate": "19 Mei 2026",
-    "mergedAtTime": "13.48.53",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1f56b76",
-        "message": "feat: voucher unique redemption migration + registration/trigger service polish (v0.43.4)"
-      },
-      {
-        "sha": "5488286",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/alex-work"
-      },
-      {
-        "sha": "5f021bc",
-        "message": "feat(prospect): add prosepect and forecast"
-      },
-      {
-        "sha": "1cac654",
-        "message": "Revert \"Merge pull request #43 from adsvisory/legacy-port\""
-      },
-      {
-        "sha": "826c614",
-        "message": "fix: calculate completed probes (#45)"
       }
     ]
   }
