@@ -1,5 +1,156 @@
 [
   {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 100,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/100",
+    "title": "Feat/avo lite v3 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-19T02:26:44Z",
+    "mergedAtDate": "19 Agustus 2026",
+    "mergedAtTime": "09.26.44",
+    "body": "",
+    "commits": [
+      {
+        "sha": "8fe2a50",
+        "message": "feat(configure): expose the AVO Lite setup-form AI assist settings"
+      },
+      {
+        "sha": "ab1aebb",
+        "message": "feat(configure): expose the AVO Lite report-detail flag"
+      },
+      {
+        "sha": "286a3bf",
+        "message": "feat(configure): expose the AVO Lite content-brief budget"
+      },
+      {
+        "sha": "580463c",
+        "message": "feat(configure): fVS ceiling control for AVO Lite content briefs [2.191.0]"
+      },
+      {
+        "sha": "4b99dcb",
+        "message": "feat(configure): OPS controls for AVO Lite maintain briefs [2.192.0]"
+      },
+      {
+        "sha": "f9879ec",
+        "message": "feat(avo-lite): kontrol Articles per focus di halaman config"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 194,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/194",
+    "title": "Label estimated costs instead of 'no price on file'",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": "lite-ledger",
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-19T02:25:21Z",
+    "mergedAtDate": "19 Agustus 2026",
+    "mergedAtTime": "09.25.21",
+    "body": "Karsa stopped recording $0 for unpriced models — it now falls back to a conservative price and tags the row. So the badge's meaning changed: these rows are no longer missing a cost, they carry an estimated one. Same warning, accurate words, plus the call count so the size of the estimate is visible.\r\n\r\nThe distinction matters for this page specifically: it is where COGS is read against revenue, and an estimate silently presented as measured cost is how a margin number stops being trustworthy.",
+    "commits": [
+      {
+        "sha": "4f64c64",
+        "message": "feat(lite-ledger): label estimated costs instead of 'no price on file'"
+      },
+      {
+        "sha": "d6ca3b3",
+        "message": "merge: bring v3-release up to date with release branch"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 283,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/283",
+    "title": "Feat/avo lite v3 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-08-19T02:23:13Z",
+    "mergedAtDate": "19 Agustus 2026",
+    "mergedAtTime": "09.23.13",
+    "body": "",
+    "commits": [
+      {
+        "sha": "5df8c33",
+        "message": "feat(lite): proxy the setup-form AI assist to Karsa [0.63.0]"
+      },
+      {
+        "sha": "17d0aa0",
+        "message": "feat(lite): serve the report detail, and stop the PDF inventing citations [0.64.0]"
+      },
+      {
+        "sha": "eca3e92",
+        "message": "feat(lite): forward the v3 fix-card fields [0.65.0]"
+      },
+      {
+        "sha": "41fa599",
+        "message": "feat(lite): orchestrate content briefs, once per run [0.81.0]"
+      },
+      {
+        "sha": "e29c8ed",
+        "message": "fix(lite): carry competitor Source into the PDF too [0.81.1]"
+      },
+      {
+        "sha": "30c0ebd",
+        "message": "fix(lite): align the max_competitors fallbacks with the seeded default [0.81.2]"
+      },
+      {
+        "sha": "44832a0",
+        "message": "feat(lite): hand back a stored analysis without its job id [0.82.0]"
+      },
+      {
+        "sha": "368979a",
+        "message": "fix(lite): retry report finalization on the stream, and say when it fails [0.82.1]"
+      },
+      {
+        "sha": "4a6a9aa",
+        "message": "feat(lite): apply the brief fVS ceiling before Ava is called [0.83.0]"
+      },
+      {
+        "sha": "bae130d",
+        "message": "feat(lite): orchestrate maintain briefs alongside fix briefs [0.84.0]"
+      },
+      {
+        "sha": "8da8358",
+        "message": "fix(lite): split briefs off the detail request, and stop paying twice [0.85.0]"
+      },
+      {
+        "sha": "27cc39a",
+        "message": "feat(lite): teruskan articles-per-focus, dan timeout brief yang mengikuti bebannya"
+      },
+      {
+        "sha": "3b926c2",
+        "message": "fix(lite): jangan ulangi call brief berbayar, dan jangan simpan kegagalan sebagai keputusan"
+      },
+      {
+        "sha": "9084504",
+        "message": "feat(lite): homepage context, refine-suggest, Ava cost stamp, market pass"
+      },
+      {
+        "sha": "8fa8394",
+        "message": "fix: TS build errors in Ava cost stamp (null safety + jobIds type)"
+      },
+      {
+        "sha": "271c78e",
+        "message": "feat(lite): persist run progress for SSE reconnect resume"
+      },
+      {
+        "sha": "61ce0bf",
+        "message": "feat(lite): expose user-provided brandName in run status response"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 193,
