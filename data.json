@@ -5889,55 +5889,5 @@
         "message": "fixbugs register"
       }
     ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 100,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/100",
-    "title": "Adj/field password visible",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-25T10:10:52Z",
-    "mergedAtDate": "25 Mei 2026",
-    "mergedAtTime": "17.10.52",
-    "body": "- Adjust toggle hide/sho\r\n- Label MY DOMAIN semua bahasa",
-    "commits": [
-      {
-        "sha": "37616e8",
-        "message": "Add hide/view in password field"
-      },
-      {
-        "sha": "8b4f1b5",
-        "message": "Edit label navbar"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 97,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/97",
-    "title": "Feat/trigger vs release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-25T05:08:31Z",
-    "mergedAtDate": "25 Mei 2026",
-    "mergedAtTime": "12.08.31",
-    "body": "",
-    "commits": [
-      {
-        "sha": "4be6676",
-        "message": "Adjustment Visibility v2"
-      },
-      {
-        "sha": "c3a75d8",
-        "message": "Update toggle Focuses"
-      }
-    ]
   }
 ]
