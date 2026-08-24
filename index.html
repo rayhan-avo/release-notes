@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>24 Agustus 2026 pukul 00.15 WIB
+    Diperbarui otomatis<br>25 Agustus 2026 pukul 00.26 WIB
   </div>
 </header>
 
@@ -309,6 +309,30 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-106')">
+          <td class="td-date">
+            <div>24 Agustus 2026</div>
+            <div class="td-time">17.09.59</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Add Reconciliation tab to Ledger page</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/106" target="_blank" onclick="event.stopPropagation()">#106</a>
+            <span class="expand-chevron" id="chev-avq-shastra-106">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-106">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- New LedgerReconciliation component: provider billing cards + ledger summary table
+- Provider billing from Anthropic/OpenAI admin APIs (Poll Providers button)
+- Ledger table with expandable rows showing unpriced/failsafe-priced calls
+- Period selector: This Month, Last Month, 3 Months, 6 Months
+- TanStack Query hook for GET /api/ledger/reconciliation
+
+Addresses audit findings G1, G2, G3 from LLM Ledger Gap Audit (Jul 2026).</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-shastra-100')">
           <td class="td-date">
             <div>19 Agustus 2026</div>
@@ -4161,78 +4185,6 @@ Hint-first ordering preserved, so blocked/failed states still show their backend
         <tr class="detail-row hidden" id="detail-avq-sutra-56">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">5a3bb32</span>add bugfix draft generation from brief</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-105')">
-          <td class="td-date">
-            <div>26 Mei 2026</div>
-            <div class="td-time">11.02.24</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/authority as error state</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/105" target="_blank" onclick="event.stopPropagation()">#105</a>
-            <span class="expand-chevron" id="chev-avq-astra-105">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-105">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">30b2f53</span>fix(authority): surface AS failure + crawl-block feedback on AuthorityPage</div><div class="commit-line"><span class="commit-sha">c30f1b6</span>fix(authority): render DomainHealthRibbon for AS blocked/failed state</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-53')">
-          <td class="td-date">
-            <div>26 Mei 2026</div>
-            <div class="td-time">10.28.25</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/loadtest rate limit override release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/53" target="_blank" onclick="event.stopPropagation()">#53</a>
-            <span class="expand-chevron" id="chev-avq-sutra-53">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-53">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">fd7144e</span>feat(auth): support AUTH_RATE_LIMIT_MAX env override for load testing</div><div class="commit-line"><span class="commit-sha">8125f24</span>feat(auth): support AUTH_RATE_LIMIT_MAX env override for load testing</div><div class="commit-line"><span class="commit-sha">e683544</span>feat(auth): add customRules to bypass Better Auth per-endpoint rate limits</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-104')">
-          <td class="td-date">
-            <div>26 Mei 2026</div>
-            <div class="td-time">09.53.48</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fixbugs david</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/104" target="_blank" onclick="event.stopPropagation()">#104</a>
-            <span class="expand-chevron" id="chev-avq-astra-104">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-104">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">01d4278</span>fixbugs register</div><div class="commit-line"><span class="commit-sha">a9082e3</span>fix button join organization</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-52')">
-          <td class="td-date">
-            <div>26 Mei 2026</div>
-            <div class="td-time">09.52.33</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fixbugs register</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/52" target="_blank" onclick="event.stopPropagation()">#52</a>
-            <span class="expand-chevron" id="chev-avq-sutra-52">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-52">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">eda398f</span>fixbugs register</div></div>
           </td>
         </tr></tbody>
         </table>

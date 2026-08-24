@@ -2,6 +2,27 @@
   {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
+    "prNumber": 106,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/106",
+    "title": "Add Reconciliation tab to Ledger page",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-24T10:09:59Z",
+    "mergedAtDate": "24 Agustus 2026",
+    "mergedAtTime": "17.09.59",
+    "body": "- New LedgerReconciliation component: provider billing cards + ledger summary table\r\n- Provider billing from Anthropic/OpenAI admin APIs (Poll Providers button)\r\n- Ledger table with expandable rows showing unpriced/failsafe-priced calls\r\n- Period selector: This Month, Last Month, 3 Months, 6 Months\r\n- TanStack Query hook for GET /api/ledger/reconciliation\r\n\r\nAddresses audit findings G1, G2, G3 from LLM Ledger Gap Audit (Jul 2026).",
+    "commits": [
+      {
+        "sha": "860eb41",
+        "message": "feat: add Reconciliation tab to Ledger page"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
     "prNumber": 100,
     "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/100",
     "title": "Feat/avo lite v3 release",
@@ -5787,106 +5808,6 @@
       {
         "sha": "5a3bb32",
         "message": "add bugfix draft generation from brief"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 105,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/105",
-    "title": "Fix/authority as error state",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-26T04:02:24Z",
-    "mergedAtDate": "26 Mei 2026",
-    "mergedAtTime": "11.02.24",
-    "body": "",
-    "commits": [
-      {
-        "sha": "30b2f53",
-        "message": "fix(authority): surface AS failure + crawl-block feedback on AuthorityPage"
-      },
-      {
-        "sha": "c30f1b6",
-        "message": "fix(authority): render DomainHealthRibbon for AS blocked/failed state"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 53,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/53",
-    "title": "Feat/loadtest rate limit override release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "ikhsan-sr",
-    "mergedAt": "2026-05-26T03:28:25Z",
-    "mergedAtDate": "26 Mei 2026",
-    "mergedAtTime": "10.28.25",
-    "body": "",
-    "commits": [
-      {
-        "sha": "fd7144e",
-        "message": "feat(auth): support AUTH_RATE_LIMIT_MAX env override for load testing"
-      },
-      {
-        "sha": "8125f24",
-        "message": "feat(auth): support AUTH_RATE_LIMIT_MAX env override for load testing"
-      },
-      {
-        "sha": "e683544",
-        "message": "feat(auth): add customRules to bypass Better Auth per-endpoint rate limits"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 104,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/104",
-    "title": "Fixbugs david",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-05-26T02:53:48Z",
-    "mergedAtDate": "26 Mei 2026",
-    "mergedAtTime": "09.53.48",
-    "body": "",
-    "commits": [
-      {
-        "sha": "01d4278",
-        "message": "fixbugs register"
-      },
-      {
-        "sha": "a9082e3",
-        "message": "fix button join organization"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 52,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/52",
-    "title": "Fixbugs register",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-05-26T02:52:33Z",
-    "mergedAtDate": "26 Mei 2026",
-    "mergedAtTime": "09.52.33",
-    "body": "",
-    "commits": [
-      {
-        "sha": "eda398f",
-        "message": "fixbugs register"
       }
     ]
   }
