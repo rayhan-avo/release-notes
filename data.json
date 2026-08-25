@@ -1,5 +1,742 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 198,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/198",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-25T08:07:40Z",
+    "mergedAtDate": "25 Agustus 2026",
+    "mergedAtTime": "15.07.40",
+    "body": "",
+    "commits": [
+      {
+        "sha": "360299e",
+        "message": "feat(prospect-suite): layout v2, markdown drafts, dev login link, AVO brand mark (1.57.4)"
+      },
+      {
+        "sha": "f931d54",
+        "message": "feat(tiers): port the social_check module key onto the release line (1.57.5)"
+      },
+      {
+        "sha": "d5bfce2",
+        "message": "feat(content-studio): port the Content Studio onto the release line (1.59.0)"
+      },
+      {
+        "sha": "dd4706b",
+        "message": "wip: AriView + CLAUDE.md (checkpoint, unreleased)"
+      },
+      {
+        "sha": "9d77e8b",
+        "message": "feat(tiers): add the fixes module key to Module Access (1.61.3)"
+      },
+      {
+        "sha": "7166ee1",
+        "message": "chore(tiers): remove the Social Check module key (1.61.4)"
+      },
+      {
+        "sha": "26147fb",
+        "message": "feat(billing): Focus discovery + Prompt Book pricing fields (1.61.1) (#191)"
+      },
+      {
+        "sha": "fbefea4",
+        "message": "chore(release-line): version and changelog for the alex-work batch (1.60.0)"
+      },
+      {
+        "sha": "ef9778b",
+        "message": "Merge release-for-v2 into feature/alex-work-layout-v2-release (1.60.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 107,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/107",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-25T08:06:57Z",
+    "mergedAtDate": "25 Agustus 2026",
+    "mergedAtTime": "15.06.57",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6e0efab",
+        "message": "feat(domains): port staging #86 onto the release line (2.180.0)"
+      },
+      {
+        "sha": "be250d7",
+        "message": "feat(inspect): Focus Spec panel onto the release line"
+      },
+      {
+        "sha": "4ba05a5",
+        "message": "feat: port PR #90 onto the release line — Empty Data Rule, GAP retirement, site thumbnail (2.182.1)"
+      },
+      {
+        "sha": "074d694",
+        "message": "feat(configure): port the sAS/sVS console and Brand Matching onto the release line (2.186.0)"
+      },
+      {
+        "sha": "db28802",
+        "message": "feat(configure): port the sAS/sVS console upgrades and the config rail onto the release line (2.187.1)"
+      },
+      {
+        "sha": "f7fccdd",
+        "message": "fix(sas,svs): the console can see client data, and says whose it is (2.192.2)"
+      },
+      {
+        "sha": "a1879e0",
+        "message": "fix(sas): provider copy no longer contradicts its own dropdowns (2.192.3)"
+      },
+      {
+        "sha": "e140fce",
+        "message": "fix(sas): provider copy no longer asserts which platforms are on (2.192.4)"
+      },
+      {
+        "sha": "845fc43",
+        "message": "feat: 2.193.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "45d683e",
+        "message": "feat(configure): Source Classification tab on VS Pipeline config (2.194.0)"
+      },
+      {
+        "sha": "37a5b8a",
+        "message": "docs(configure): the Source Classification tab explains directory and the Citations room (2.194.1)"
+      },
+      {
+        "sha": "fcd2b80",
+        "message": "fix(ui): stop showing invented model data as if it were config (2.194.2)"
+      },
+      {
+        "sha": "0a5aa04",
+        "message": "chore(configure): remove the sAS Engine config page"
+      },
+      {
+        "sha": "6919d12",
+        "message": "fix(build): untrack the node_modules symlink before it reaches a deploy branch"
+      },
+      {
+        "sha": "4e12cf6",
+        "message": "chore(sas): remove the last of the sAS console (2.194.3)"
+      },
+      {
+        "sha": "fbafb4f",
+        "message": "fix(focus): show why a keyword volume is missing (2.194.4)"
+      },
+      {
+        "sha": "7bf64fe",
+        "message": "chore(sas): remove the leftovers the retirement missed (2.194.3)"
+      },
+      {
+        "sha": "1aff19b",
+        "message": "chore(sas): drop the sas_datapoints slot from the config workspace (2.194.6)"
+      },
+      {
+        "sha": "9636be1",
+        "message": "Merge release-for-v2 into feature/alex-work-layout-v2-release (2.188.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 340,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/340",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-25T08:05:49Z",
+    "mergedAtDate": "25 Agustus 2026",
+    "mergedAtTime": "15.05.49",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ff5384e",
+        "message": "Workspace V2 for release: V4 default + mobile + Profile + Content parity + Prompt Book"
+      },
+      {
+        "sha": "266bd68",
+        "message": "feat(workspace): port PR #309 (v1.58.2 → v1.66.1) onto the release line"
+      },
+      {
+        "sha": "eac1ff8",
+        "message": "feat(workspace): port v1.66.2 → v2.2.0 onto the release line"
+      },
+      {
+        "sha": "61d3903",
+        "message": "feat(workspace): port v2.2.0 → v2.19.1 onto the release line"
+      },
+      {
+        "sha": "fb39a6f",
+        "message": "feat(content): adopt feat/brief-page-redesign onto the release line (2.21.0)"
+      },
+      {
+        "sha": "4d7be1a",
+        "message": "feat(compare): adopt feat/compare-v2-page onto the release line (2.22.0)"
+      },
+      {
+        "sha": "f4f907c",
+        "message": "feat(workspace): port v2.20.0 → v2.29.2 onto the release line"
+      },
+      {
+        "sha": "8de59ad",
+        "message": "Merge origin/release into the release line — take up #319's engine roster"
+      },
+      {
+        "sha": "1052977",
+        "message": "feat(workspace): port v2.29.3 → v2.37.0 onto the release line"
+      },
+      {
+        "sha": "37eec42",
+        "message": "Integration: alex-work → main (190 commits, at 2.41.0) (#329)"
+      },
+      {
+        "sha": "f803448",
+        "message": "Fix invitation (#330)"
+      },
+      {
+        "sha": "d3df76d",
+        "message": "fix(workspace,billing): nine items from the 2026-08-11 QA pass (2.37.1) (#332)"
+      },
+      {
+        "sha": "4147a7e",
+        "message": "Fix/dev feedback 2026 08 11 (#333)"
+      },
+      {
+        "sha": "3433312",
+        "message": "fix(workspace): seven items from the 2026-08-13 QA pass (2.41.2) (#334)"
+      },
+      {
+        "sha": "97841f5",
+        "message": "Fix/dev feedback 2026 08 13 (#335)"
+      },
+      {
+        "sha": "8375fe2",
+        "message": "feat(workspace): gate the Fixes room behind a per-tier module flag (2.42.1) (#336)"
+      },
+      {
+        "sha": "43c11a3",
+        "message": "Integration: alex-work → main (at 2.48.0) (#337)"
+      },
+      {
+        "sha": "a2090a8",
+        "message": "Integration: alex-work → main (at 2.48.0) (#338)"
+      },
+      {
+        "sha": "f2c3577",
+        "message": "docs(changelog): record the lineage jump from v2.37.0 to 2.48.0"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 261,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/261",
+    "title": "[Release] AVO V2 Production",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-08-25T08:02:28Z",
+    "mergedAtDate": "25 Agustus 2026",
+    "mergedAtTime": "15.02.28",
+    "body": "….62.0)\r\n\r\nRelease-line port of avq-sutra#257's content-opportunity work, backing the Archive group that avq-astra's feature/alex-work-layout-v2-release now ships.\r\n\r\n- POST /api/client/content/opportunities/:id/restore — un-archive\r\n- POST /api/client/content/opportunities/:id/delete — soft delete upstream; the row survives as a tombstone so the miner doesn't re-detect the topic, and a paid brief stays auditable. Archive-first, surfacing Ava's 409 not_archived unchanged.\r\n\r\nAll three lifecycle proxies (dismiss, restore, delete) forward orgId to Ava so the write is confined to the caller's org upstream too — Ava previously matched on opportunity id alone.\r\n\r\nWritten in this branch's route idiom (explicit uuidSchema guard, handler-as-second-arg) instead of the staging branch's schema-block form: the idParams and upstreamErrors helpers that form depends on do not exist on the release line. Same endpoints, same service calls, same error handling. The service layer cherry-picked clean.\r\n\r\nVersion 0.55.0 -> 0.62.0 (release line is at 0.61.0; staging's numbering would have been a regression here).\r\n\r\nDeliberately NOT ported from the same PR branch: the focus archive / soft-delete / operator-restore commit (staging 0.56.0). Astra's release line archives focuses through the existing PATCH status route, not those new endpoints, and Karsa's release line has no focus soft-delete support at all (no deleted_at on focuses), so the focus /delete proxy would fail at runtime in production. Flagged for Alex rather than shipped.\r\n\r\nRequires avq-ava >= migration 082 (the release-line Ava port).\r\n\r\ntsc --noEmit clean.",
+    "commits": [
+      {
+        "sha": "1ad1a34",
+        "message": "fix(billing): release VS credit hold on vs.failed (0.77.1)"
+      },
+      {
+        "sha": "f911fb2",
+        "message": "fix(billing): stale VS hold sweeper backstop (0.77.1)"
+      },
+      {
+        "sha": "4bf7a42",
+        "message": "fix(insights): forward user language to Ava insight card reads (0.77.1)"
+      },
+      {
+        "sha": "f31994d",
+        "message": "chore: 0.77.1 — version bump + CHANGELOG"
+      },
+      {
+        "sha": "d4cf4b4",
+        "message": "fix(billing): memoize Airwallex active-plans catalog (0.77.2)"
+      },
+      {
+        "sha": "d8dca4d",
+        "message": "feat(shares): sutra_report_shares table + repository"
+      },
+      {
+        "sha": "a33d6e6",
+        "message": "feat(shares): report share service — mint, revoke, public resolve"
+      },
+      {
+        "sha": "20d751d",
+        "message": "feat(shares): client management + public read routes"
+      },
+      {
+        "sha": "2a68124",
+        "message": "chore: 0.78.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "cf473ff",
+        "message": "feat(billing): per-domain credit usage attribution (0.78.0)"
+      },
+      {
+        "sha": "8218656",
+        "message": "chore(billing): renumber per-domain migration 110 -> 111"
+      },
+      {
+        "sha": "274b1f4",
+        "message": "fix(backfill): anchor AS reference parse so an org id cannot be read as a domain (0.78.1)"
+      },
+      {
+        "sha": "ca01a43",
+        "message": "feat(shares): expose the org's own white-label host on /api/client/account (0.78.1)"
+      },
+      {
+        "sha": "04d9ca8",
+        "message": "wip: analytics proxy + vs-config + allowed-origins (checkpoint, unreleased)"
+      },
+      {
+        "sha": "555ca82",
+        "message": "chore(billing): drop expiry remnants from the credit surface (0.77.3)"
+      },
+      {
+        "sha": "40837e7",
+        "message": "chore(release): 0.79.0 — resolve version collision with feat/report-share-links"
+      },
+      {
+        "sha": "a0587e4",
+        "message": "fix(security): keep the plaintext share token out of the logs"
+      },
+      {
+        "sha": "ea59a11",
+        "message": "fix(shares): per-route rate limits on the authenticated share routes"
+      },
+      {
+        "sha": "ec8cd41",
+        "message": "chore: 0.78.2 — see CHANGELOG entry"
+      },
+      {
+        "sha": "1376272",
+        "message": "fix(db): take CONCURRENTLY index out of the boot path (0.79.1)"
+      },
+      {
+        "sha": "3b72c7c",
+        "message": "feat(client): brand-profile + competitor-suggestion proxies (BP-2, BP-6) (0.78.0)"
+      },
+      {
+        "sha": "11ed4a2",
+        "message": "chore: gitignore graphify-out (tool-generated knowledge graph)"
+      },
+      {
+        "sha": "b995bf8",
+        "message": "feat(social): Social Check client surface behind social_check flag (0.78.0)"
+      },
+      {
+        "sha": "84adee6",
+        "message": "fix(vs): missing vs.platform.{key}.enabled row means disabled (0.77.1)"
+      },
+      {
+        "sha": "5f05b28",
+        "message": "feat(compare-history): per-user comparison history table + client endpoints (0.80.0)"
+      },
+      {
+        "sha": "5e08393",
+        "message": "chore: remove dead pixel-analytics proxy and one-shot Drishti backfill script (0.53.6)"
+      },
+      {
+        "sha": "55ad242",
+        "message": "feat(platform): domain gating kill switch, shipped off (0.54.0)"
+      },
+      {
+        "sha": "9e4d602",
+        "message": "feat(social): sAS endpoints proxy the real engine instead of engine_not_ready stubs (0.82.0)"
+      },
+      {
+        "sha": "8439cf3",
+        "message": "feat(connections): per-domain Google Search Console / Analytics grants (0.83.0)"
+      },
+      {
+        "sha": "f2fbf20",
+        "message": "chore(release): Sutra 1.83.0 — major version milestone"
+      },
+      {
+        "sha": "ec7a4bb",
+        "message": "feat: 1.84.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "3fb2de7",
+        "message": "feat(billing,gating): unify module gating + price Focus/Prompt Book (0.87.0)"
+      },
+      {
+        "sha": "57df7d3",
+        "message": "fix(billing): let Focus discovery and Prompt Book be priced at 0"
+      },
+      {
+        "sha": "ada42fd",
+        "message": "fix(billing): never retry a paid run; round credits at the source (0.87.1)"
+      },
+      {
+        "sha": "ec4f1b2",
+        "message": "fix(connections): OAuth callback must bypass the client auth hook (0.83.1)"
+      },
+      {
+        "sha": "cf82225",
+        "message": "fix(social): account-score proxy passes its owning domain (1.85.0)"
+      },
+      {
+        "sha": "e85b934",
+        "message": "fix(connections): paginate GA4 account summaries; canonical GSC host (1.85.1)"
+      },
+      {
+        "sha": "4435e14",
+        "message": "feat(gating): ship the Fixes room hidden per tier (0.87.2)"
+      },
+      {
+        "sha": "6d88aba",
+        "message": "fix(release): restore the 1.x major line — 0.87.2 → 1.87.2"
+      },
+      {
+        "sha": "009d5e3",
+        "message": "feat(content): pass prompt evidence to Ava, and add an uncharged preflight (1.88.0)"
+      },
+      {
+        "sha": "f149e33",
+        "message": "feat(content): keyword suggestion + volume for the brief wizard (1.89.0)"
+      },
+      {
+        "sha": "1e20607",
+        "message": "feat(vs): cited sources for a domain reach the client (1.90.0)"
+      },
+      {
+        "sha": "10fec75",
+        "message": "fix(client): forward the org's tracked competitors to Karsa's source classifier (1.90.1)"
+      },
+      {
+        "sha": "7f29a09",
+        "message": "fix(vs): the citations cold-state payload was missing half its keys (1.90.1)"
+      },
+      {
+        "sha": "4b36f8a",
+        "message": "chore(social): drop the sAS pass-through, move the registry behind `visibility`"
+      },
+      {
+        "sha": "a402511",
+        "message": "feat(competitors): a dismissed suggestion stays dismissed"
+      },
+      {
+        "sha": "ff599a0",
+        "message": "feat(profile): pass the merged brand identity through to the client"
+      },
+      {
+        "sha": "805ce29",
+        "message": "docs(briefs): archive the Discovery redistribution brief"
+      },
+      {
+        "sha": "ef1c178",
+        "message": "feat(focus): forward observed evidence into Karsa's spec derivation"
+      },
+      {
+        "sha": "47bbac7",
+        "message": "fix(discovery): stop selling runs against the category 'other'"
+      },
+      {
+        "sha": "aeb2e8b",
+        "message": "docs(briefs): record the 'other' category defect"
+      },
+      {
+        "sha": "f9d1f5c",
+        "message": "fix(citations): a missing Karsa route must not render as \"no evidence\" (1.90.2)"
+      },
+      {
+        "sha": "addd7a7",
+        "message": "fix(client): forward tracked competitors on citations, and key the cache by them (1.90.3)"
+      },
+      {
+        "sha": "5db529a",
+        "message": "feat(social): pass through the cited-publisher candidates from Karsa"
+      },
+      {
+        "sha": "c95b538",
+        "message": "fix(discovery): the 'other' sentinel is often the correct answer"
+      },
+      {
+        "sha": "de1f6f9",
+        "message": "chore(social): retire the social_check module key (1.91.1)"
+      },
+      {
+        "sha": "f4e3fed",
+        "message": "fix(build): restore missing files and imports after cherry-pick batch"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 289,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/289",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-08-25T08:02:26Z",
+    "mergedAtDate": "25 Agustus 2026",
+    "mergedAtTime": "15.02.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "1ad1a34",
+        "message": "fix(billing): release VS credit hold on vs.failed (0.77.1)"
+      },
+      {
+        "sha": "f911fb2",
+        "message": "fix(billing): stale VS hold sweeper backstop (0.77.1)"
+      },
+      {
+        "sha": "4bf7a42",
+        "message": "fix(insights): forward user language to Ava insight card reads (0.77.1)"
+      },
+      {
+        "sha": "f31994d",
+        "message": "chore: 0.77.1 — version bump + CHANGELOG"
+      },
+      {
+        "sha": "d4cf4b4",
+        "message": "fix(billing): memoize Airwallex active-plans catalog (0.77.2)"
+      },
+      {
+        "sha": "d8dca4d",
+        "message": "feat(shares): sutra_report_shares table + repository"
+      },
+      {
+        "sha": "a33d6e6",
+        "message": "feat(shares): report share service — mint, revoke, public resolve"
+      },
+      {
+        "sha": "20d751d",
+        "message": "feat(shares): client management + public read routes"
+      },
+      {
+        "sha": "2a68124",
+        "message": "chore: 0.78.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "cf473ff",
+        "message": "feat(billing): per-domain credit usage attribution (0.78.0)"
+      },
+      {
+        "sha": "8218656",
+        "message": "chore(billing): renumber per-domain migration 110 -> 111"
+      },
+      {
+        "sha": "274b1f4",
+        "message": "fix(backfill): anchor AS reference parse so an org id cannot be read as a domain (0.78.1)"
+      },
+      {
+        "sha": "ca01a43",
+        "message": "feat(shares): expose the org's own white-label host on /api/client/account (0.78.1)"
+      },
+      {
+        "sha": "04d9ca8",
+        "message": "wip: analytics proxy + vs-config + allowed-origins (checkpoint, unreleased)"
+      },
+      {
+        "sha": "555ca82",
+        "message": "chore(billing): drop expiry remnants from the credit surface (0.77.3)"
+      },
+      {
+        "sha": "40837e7",
+        "message": "chore(release): 0.79.0 — resolve version collision with feat/report-share-links"
+      },
+      {
+        "sha": "a0587e4",
+        "message": "fix(security): keep the plaintext share token out of the logs"
+      },
+      {
+        "sha": "ea59a11",
+        "message": "fix(shares): per-route rate limits on the authenticated share routes"
+      },
+      {
+        "sha": "ec8cd41",
+        "message": "chore: 0.78.2 — see CHANGELOG entry"
+      },
+      {
+        "sha": "1376272",
+        "message": "fix(db): take CONCURRENTLY index out of the boot path (0.79.1)"
+      },
+      {
+        "sha": "3b72c7c",
+        "message": "feat(client): brand-profile + competitor-suggestion proxies (BP-2, BP-6) (0.78.0)"
+      },
+      {
+        "sha": "11ed4a2",
+        "message": "chore: gitignore graphify-out (tool-generated knowledge graph)"
+      },
+      {
+        "sha": "b995bf8",
+        "message": "feat(social): Social Check client surface behind social_check flag (0.78.0)"
+      },
+      {
+        "sha": "84adee6",
+        "message": "fix(vs): missing vs.platform.{key}.enabled row means disabled (0.77.1)"
+      },
+      {
+        "sha": "5f05b28",
+        "message": "feat(compare-history): per-user comparison history table + client endpoints (0.80.0)"
+      },
+      {
+        "sha": "5e08393",
+        "message": "chore: remove dead pixel-analytics proxy and one-shot Drishti backfill script (0.53.6)"
+      },
+      {
+        "sha": "55ad242",
+        "message": "feat(platform): domain gating kill switch, shipped off (0.54.0)"
+      },
+      {
+        "sha": "9e4d602",
+        "message": "feat(social): sAS endpoints proxy the real engine instead of engine_not_ready stubs (0.82.0)"
+      },
+      {
+        "sha": "8439cf3",
+        "message": "feat(connections): per-domain Google Search Console / Analytics grants (0.83.0)"
+      },
+      {
+        "sha": "f2fbf20",
+        "message": "chore(release): Sutra 1.83.0 — major version milestone"
+      },
+      {
+        "sha": "ec7a4bb",
+        "message": "feat: 1.84.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "3fb2de7",
+        "message": "feat(billing,gating): unify module gating + price Focus/Prompt Book (0.87.0)"
+      },
+      {
+        "sha": "57df7d3",
+        "message": "fix(billing): let Focus discovery and Prompt Book be priced at 0"
+      },
+      {
+        "sha": "ada42fd",
+        "message": "fix(billing): never retry a paid run; round credits at the source (0.87.1)"
+      },
+      {
+        "sha": "ec4f1b2",
+        "message": "fix(connections): OAuth callback must bypass the client auth hook (0.83.1)"
+      },
+      {
+        "sha": "cf82225",
+        "message": "fix(social): account-score proxy passes its owning domain (1.85.0)"
+      },
+      {
+        "sha": "e85b934",
+        "message": "fix(connections): paginate GA4 account summaries; canonical GSC host (1.85.1)"
+      },
+      {
+        "sha": "4435e14",
+        "message": "feat(gating): ship the Fixes room hidden per tier (0.87.2)"
+      },
+      {
+        "sha": "6d88aba",
+        "message": "fix(release): restore the 1.x major line — 0.87.2 → 1.87.2"
+      },
+      {
+        "sha": "009d5e3",
+        "message": "feat(content): pass prompt evidence to Ava, and add an uncharged preflight (1.88.0)"
+      },
+      {
+        "sha": "f149e33",
+        "message": "feat(content): keyword suggestion + volume for the brief wizard (1.89.0)"
+      },
+      {
+        "sha": "1e20607",
+        "message": "feat(vs): cited sources for a domain reach the client (1.90.0)"
+      },
+      {
+        "sha": "10fec75",
+        "message": "fix(client): forward the org's tracked competitors to Karsa's source classifier (1.90.1)"
+      },
+      {
+        "sha": "7f29a09",
+        "message": "fix(vs): the citations cold-state payload was missing half its keys (1.90.1)"
+      },
+      {
+        "sha": "4b36f8a",
+        "message": "chore(social): drop the sAS pass-through, move the registry behind `visibility`"
+      },
+      {
+        "sha": "a402511",
+        "message": "feat(competitors): a dismissed suggestion stays dismissed"
+      },
+      {
+        "sha": "ff599a0",
+        "message": "feat(profile): pass the merged brand identity through to the client"
+      },
+      {
+        "sha": "805ce29",
+        "message": "docs(briefs): archive the Discovery redistribution brief"
+      },
+      {
+        "sha": "ef1c178",
+        "message": "feat(focus): forward observed evidence into Karsa's spec derivation"
+      },
+      {
+        "sha": "47bbac7",
+        "message": "fix(discovery): stop selling runs against the category 'other'"
+      },
+      {
+        "sha": "aeb2e8b",
+        "message": "docs(briefs): record the 'other' category defect"
+      },
+      {
+        "sha": "f9d1f5c",
+        "message": "fix(citations): a missing Karsa route must not render as \"no evidence\" (1.90.2)"
+      },
+      {
+        "sha": "addd7a7",
+        "message": "fix(client): forward tracked competitors on citations, and key the cache by them (1.90.3)"
+      },
+      {
+        "sha": "5db529a",
+        "message": "feat(social): pass through the cited-publisher candidates from Karsa"
+      },
+      {
+        "sha": "c95b538",
+        "message": "fix(discovery): the 'other' sentinel is often the correct answer"
+      },
+      {
+        "sha": "de1f6f9",
+        "message": "chore(social): retire the social_check module key (1.91.1)"
+      },
+      {
+        "sha": "f4e3fed",
+        "message": "fix(build): restore missing files and imports after cherry-pick batch"
+      },
+      {
+        "sha": "9ea79e7",
+        "message": "fix(settings): z.record(z.unknown()) breaks Fastify serialization"
+      },
+      {
+        "sha": "be8ef2f",
+        "message": "add fixing error after merge"
+      }
+    ]
+  },
+  {
     "repo": "Shastra",
     "repoSlug": "avq-shastra",
     "prNumber": 106,
