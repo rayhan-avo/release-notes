@@ -1,5 +1,100 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 347,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/347",
+    "title": "Fix/UI ux rayhan",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-28T10:16:51Z",
+    "mergedAtDate": "28 Agustus 2026",
+    "mergedAtTime": "17.16.51",
+    "body": "",
+    "commits": [
+      {
+        "sha": "548a972",
+        "message": "Full opcaity for dropdown background"
+      },
+      {
+        "sha": "c6fc1b2",
+        "message": "Adjust Halaman Overview"
+      },
+      {
+        "sha": "ab39038",
+        "message": "Bahasa dinamis utk DP"
+      },
+      {
+        "sha": "d023232",
+        "message": "Tambahan adjustment Site Health Page"
+      },
+      {
+        "sha": "2f594f7",
+        "message": "Adjust Halaman Competitors"
+      },
+      {
+        "sha": "e3a8ea8",
+        "message": "Halaman Citations"
+      },
+      {
+        "sha": "1aba7a6",
+        "message": "Fix Vercel error"
+      },
+      {
+        "sha": "428c7b9",
+        "message": "fix error vercel"
+      },
+      {
+        "sha": "18a2b84",
+        "message": "fix: lowercase llms.txt in DP name to pass vocabulary guardrail"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 344,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/344",
+    "title": "Fix Manual Content UX",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-28T04:20:26Z",
+    "mergedAtDate": "28 Agustus 2026",
+    "mergedAtTime": "11.20.26",
+    "body": "",
+    "commits": [
+      {
+        "sha": "2ab59f7",
+        "message": "Fix Manual Content UX"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 293,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/293",
+    "title": "Sutra - Fix Manual Brief",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "rayhan-avo",
+    "mergedAt": "2026-08-28T03:00:24Z",
+    "mergedAtDate": "28 Agustus 2026",
+    "mergedAtTime": "10.00.24",
+    "body": "",
+    "commits": [
+      {
+        "sha": "b4e6ec8",
+        "message": "Sutra - Fix Manual Brief"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 198,
@@ -1608,7 +1703,7 @@
     "repoSlug": "avq-sutra",
     "prNumber": 235,
     "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/235",
-    "title": "Reset the daily analyze allowance on successful payme���",
+    "title": "Reset the daily analyze allowance on successful payme…",
     "type": "feat",
     "typeLabel": "✨ Fitur Baru",
     "scope": "darshana",
