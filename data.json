@@ -2,6 +2,337 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 349,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/349",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-31T02:28:56Z",
+    "mergedAtDate": "31 Agustus 2026",
+    "mergedAtTime": "09.28.56",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ff5384e",
+        "message": "Workspace V2 for release: V4 default + mobile + Profile + Content parity + Prompt Book"
+      },
+      {
+        "sha": "266bd68",
+        "message": "feat(workspace): port PR #309 (v1.58.2 → v1.66.1) onto the release line"
+      },
+      {
+        "sha": "eac1ff8",
+        "message": "feat(workspace): port v1.66.2 → v2.2.0 onto the release line"
+      },
+      {
+        "sha": "61d3903",
+        "message": "feat(workspace): port v2.2.0 → v2.19.1 onto the release line"
+      },
+      {
+        "sha": "fb39a6f",
+        "message": "feat(content): adopt feat/brief-page-redesign onto the release line (2.21.0)"
+      },
+      {
+        "sha": "4d7be1a",
+        "message": "feat(compare): adopt feat/compare-v2-page onto the release line (2.22.0)"
+      },
+      {
+        "sha": "f4f907c",
+        "message": "feat(workspace): port v2.20.0 → v2.29.2 onto the release line"
+      },
+      {
+        "sha": "8de59ad",
+        "message": "Merge origin/release into the release line — take up #319's engine roster"
+      },
+      {
+        "sha": "1052977",
+        "message": "feat(workspace): port v2.29.3 → v2.37.0 onto the release line"
+      },
+      {
+        "sha": "37eec42",
+        "message": "Integration: alex-work → main (190 commits, at 2.41.0) (#329)"
+      },
+      {
+        "sha": "f803448",
+        "message": "Fix invitation (#330)"
+      },
+      {
+        "sha": "d3df76d",
+        "message": "fix(workspace,billing): nine items from the 2026-08-11 QA pass (2.37.1) (#332)"
+      },
+      {
+        "sha": "4147a7e",
+        "message": "Fix/dev feedback 2026 08 11 (#333)"
+      },
+      {
+        "sha": "3433312",
+        "message": "fix(workspace): seven items from the 2026-08-13 QA pass (2.41.2) (#334)"
+      },
+      {
+        "sha": "97841f5",
+        "message": "Fix/dev feedback 2026 08 13 (#335)"
+      },
+      {
+        "sha": "8375fe2",
+        "message": "feat(workspace): gate the Fixes room behind a per-tier module flag (2.42.1) (#336)"
+      },
+      {
+        "sha": "43c11a3",
+        "message": "Integration: alex-work → main (at 2.48.0) (#337)"
+      },
+      {
+        "sha": "a2090a8",
+        "message": "Integration: alex-work → main (at 2.48.0) (#338)"
+      },
+      {
+        "sha": "f2c3577",
+        "message": "docs(changelog): record the lineage jump from v2.37.0 to 2.48.0"
+      },
+      {
+        "sha": "3bcbe09",
+        "message": "feat(profile): Brand Discovery has no page; Competitors and Citations get their sections"
+      },
+      {
+        "sha": "5498f55",
+        "message": "feat(profile): one identity card, two sources — and say when a run failed"
+      },
+      {
+        "sha": "6f21a72",
+        "message": "fix(discovery): do not offer a run the profile cannot answer"
+      },
+      {
+        "sha": "5bdd30b",
+        "message": "test(profile): a conformance check for the Brand profile against its mockup"
+      },
+      {
+        "sha": "64029f9",
+        "message": "fix(workspace): the four open items from the 21 Aug feedback triage (2.48.1)"
+      },
+      {
+        "sha": "277684b",
+        "message": "fix(i18n): <html lang> follows the language actually rendered (2.48.2)"
+      },
+      {
+        "sha": "1641dbf",
+        "message": "fix(build): union CompetitorsRoom conflict — DiscoveredRivals kept, Sources-card removal kept"
+      },
+      {
+        "sha": "01d9878",
+        "message": "chore(social): drop the Social Check translations left in social.json (2.49.2)"
+      },
+      {
+        "sha": "2a53096",
+        "message": "chore(social): drop the open_social_check CTA label (2.49.3)"
+      },
+      {
+        "sha": "714635c",
+        "message": "chore(changelog): drop an orphan merge marker"
+      },
+      {
+        "sha": "ebf3a3e",
+        "message": "chore(changelog): drop the counterpart merge markers"
+      },
+      {
+        "sha": "e695b17",
+        "message": "fix(social): a failed account list says so instead of looking empty (2.50.1)"
+      },
+      {
+        "sha": "600b430",
+        "message": "fix(auth): a failed session check is not a logout (2.50.4)"
+      },
+      {
+        "sha": "923bda3",
+        "message": "feat(profile): group the industry picker by sector (2.50.8)"
+      },
+      {
+        "sha": "9685d79",
+        "message": "feat(profile): one-time re-ask for industries picked against the old list (2.50.9)"
+      },
+      {
+        "sha": "7cd8c44",
+        "message": "fix(compare): say what the comparison actually needs (2.50.10)"
+      },
+      {
+        "sha": "2a8f113",
+        "message": "fix(i18n): translate the missing singular plural forms (2.50.11)"
+      },
+      {
+        "sha": "7c41ad9",
+        "message": "fix(workspace): first-run test findings — compare roles, signal labels, weights (2.51.0)"
+      },
+      {
+        "sha": "ef62e04",
+        "message": "feat(profile): offer a free re-read when a run's findings never landed (2.52.0)"
+      },
+      {
+        "sha": "210a28e",
+        "message": "fix(content): the bench promised a trigger no detector implements (2.51.1)"
+      },
+      {
+        "sha": "17825cc",
+        "message": "chore(release): renumber the content-bench copy fix to 2.52.1"
+      },
+      {
+        "sha": "963e02e",
+        "message": "fix(compare,analytics): finish two fixes that retesting proved incomplete (2.52.2)"
+      },
+      {
+        "sha": "9f11e25",
+        "message": "feat(i18n): ship Simplified Chinese, fix four English-only strings (2.53.0)"
+      },
+      {
+        "sha": "fb680c6",
+        "message": "fix(build): satisfy the vocabulary and i18n-fallback guardrails (2.53.1)"
+      },
+      {
+        "sha": "d915b77",
+        "message": "fix(a11y): make the add-domain row a real button (2.53.2)"
+      },
+      {
+        "sha": "03c9759",
+        "message": "fix(citations): stop ranking the same sources twice (2.53.3)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 111,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/111",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-08-31T02:28:20Z",
+    "mergedAtDate": "31 Agustus 2026",
+    "mergedAtTime": "09.28.20",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6e0efab",
+        "message": "feat(domains): port staging #86 onto the release line (2.180.0)"
+      },
+      {
+        "sha": "be250d7",
+        "message": "feat(inspect): Focus Spec panel onto the release line"
+      },
+      {
+        "sha": "4ba05a5",
+        "message": "feat: port PR #90 onto the release line — Empty Data Rule, GAP retirement, site thumbnail (2.182.1)"
+      },
+      {
+        "sha": "074d694",
+        "message": "feat(configure): port the sAS/sVS console and Brand Matching onto the release line (2.186.0)"
+      },
+      {
+        "sha": "db28802",
+        "message": "feat(configure): port the sAS/sVS console upgrades and the config rail onto the release line (2.187.1)"
+      },
+      {
+        "sha": "f7fccdd",
+        "message": "fix(sas,svs): the console can see client data, and says whose it is (2.192.2)"
+      },
+      {
+        "sha": "a1879e0",
+        "message": "fix(sas): provider copy no longer contradicts its own dropdowns (2.192.3)"
+      },
+      {
+        "sha": "e140fce",
+        "message": "fix(sas): provider copy no longer asserts which platforms are on (2.192.4)"
+      },
+      {
+        "sha": "845fc43",
+        "message": "feat: 2.193.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "45d683e",
+        "message": "feat(configure): Source Classification tab on VS Pipeline config (2.194.0)"
+      },
+      {
+        "sha": "37a5b8a",
+        "message": "docs(configure): the Source Classification tab explains directory and the Citations room (2.194.1)"
+      },
+      {
+        "sha": "fcd2b80",
+        "message": "fix(ui): stop showing invented model data as if it were config (2.194.2)"
+      },
+      {
+        "sha": "0a5aa04",
+        "message": "chore(configure): remove the sAS Engine config page"
+      },
+      {
+        "sha": "6919d12",
+        "message": "fix(build): untrack the node_modules symlink before it reaches a deploy branch"
+      },
+      {
+        "sha": "4e12cf6",
+        "message": "chore(sas): remove the last of the sAS console (2.194.3)"
+      },
+      {
+        "sha": "fbafb4f",
+        "message": "fix(focus): show why a keyword volume is missing (2.194.4)"
+      },
+      {
+        "sha": "7bf64fe",
+        "message": "chore(sas): remove the leftovers the retirement missed (2.194.3)"
+      },
+      {
+        "sha": "1aff19b",
+        "message": "chore(sas): drop the sas_datapoints slot from the config workspace (2.194.6)"
+      },
+      {
+        "sha": "9636be1",
+        "message": "Merge release-for-v2 into feature/alex-work-layout-v2-release (2.188.0)"
+      },
+      {
+        "sha": "8a8f508",
+        "message": "fix(domains): stop the wizard writing industry_category (2.194.5)"
+      },
+      {
+        "sha": "567eb43",
+        "message": "feat(domains): group the industry picker by sector (2.194.6)"
+      },
+      {
+        "sha": "2bebbc4",
+        "message": "feat(configure): /configure/industries, so the taxonomy stops going stale (2.195.0)"
+      },
+      {
+        "sha": "c998ac0",
+        "message": "chore: update session memory log"
+      },
+      {
+        "sha": "4aeea49",
+        "message": "chore(release): the industry taxonomy work onto the release line (2.189.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 295,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/295",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-08-31T02:03:49Z",
+    "mergedAtDate": "31 Agustus 2026",
+    "mergedAtTime": "09.03.49",
+    "body": "",
+    "commits": [
+      {
+        "sha": "039c726",
+        "message": "cherry-pick: PR #290 changes (feature/alex-work → main) onto release"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 347,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/347",
     "title": "Fix/UI ux rayhan",
@@ -6288,64 +6619,6 @@
       {
         "sha": "c48a762",
         "message": "Hide LLM Model"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 125,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/125",
-    "title": "Fixbugs david",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-02T10:08:16Z",
-    "mergedAtDate": "2 Juni 2026",
-    "mergedAtTime": "17.08.16",
-    "body": "",
-    "commits": [
-      {
-        "sha": "01d4278",
-        "message": "fixbugs register"
-      },
-      {
-        "sha": "a9082e3",
-        "message": "fix button join organization"
-      },
-      {
-        "sha": "51b86ab",
-        "message": "fix onboarding flow for AS"
-      },
-      {
-        "sha": "4275e27",
-        "message": "Fix onboarding → authority navigation and multi-org domain selection"
-      },
-      {
-        "sha": "f4d390b",
-        "message": "add fixbug for auth sing in organization"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 63,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/63",
-    "title": "Fixbugs david",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-06-02T10:06:15Z",
-    "mergedAtDate": "2 Juni 2026",
-    "mergedAtTime": "17.06.15",
-    "body": "",
-    "commits": [
-      {
-        "sha": "ba79075",
-        "message": "fix login auth session"
       }
     ]
   }
