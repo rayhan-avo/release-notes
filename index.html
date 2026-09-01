@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>1 September 2026 pukul 04.43 WIB
+    Diperbarui otomatis<br>2 September 2026 pukul 02.44 WIB
   </div>
 </header>
 
@@ -296,6 +296,100 @@
 
 <div class="content">
   
+      <div class="month-group">
+        <h2 class="month-header">September 2026</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Produk</th>
+              <th>Tipe</th>
+              <th>Perubahan</th>
+              <th>PR</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-351')">
+          <td class="td-date">
+            <div>1 September 2026</div>
+            <div class="td-time">16.02.43</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">focus</span>Classic layout can delete a focus again (2.53.5)</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/351" target="_blank" onclick="event.stopPropagation()">#351</a>
+            <span class="expand-chevron" id="chev-avq-astra-351">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-351">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Karsa's focus delete is archive-first — POST /focuses/:id/delete answers 409 `not_archived` unless the row is already archived. The workspace satisfies that by construction, since Delete only exists inside the archive group. The classic layout (Visibility V1-V3) puts Delete on an active focus and has no archive UI at all, so every delete there failed with a generic &quot;Failed to delete focus&quot;.
+
+useDeleteFocusLegacy archives on the user's behalf and then deletes, reaching the same end state the workspace reaches in two user actions. The workspace flow is untouched: useDeleteFocus and useFocusLifecycle still require an explicit archive first.
+
+Deliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots — measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.
+
+Optimism moves to the `active` query key, which is what the classic lists render from, and rolls back only when the archive step itself failed: once the focus is archived it really has left the list, so restoring the row would show a focus the server no longer measures. A delete that fails after a successful archive now says so rather than claiming the delete failed outright.
+
+Also corrects the Prompt Book delete dialog, which promised it would &quot;permanently delete all prompts, build history, and measurement data&quot; over a soft delete that keeps all three, and was the last hardcoded-English dialog in that card. Translated across all six UI locales.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-297')">
+          <td class="td-date">
+            <div>1 September 2026</div>
+            <div class="td-time">15.57.49</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">focuses</span>Port archive + soft delete + OPS restore to the release…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/297" target="_blank" onclick="event.stopPropagation()">#297</a>
+            <span class="expand-chevron" id="chev-avq-sutra-297">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-297">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">… line (1.92.3)
+
+Cherry-pick of 0f53634 from main, which never reached this line. Without it POST /api/client/domains/:id/focuses/:focusId/delete does not exist here, so every focus delete from Astra answers 404 — the workspace archive-then-delete flow and the classic layout alike.
+
+Carries the archive-first delete route, the first-class archive route, and the OPS restore routes in src/routes/ops/focuses.ts. Karsa's 409 is reshaped into `not_archived` rather than left to surface as a 500: an undeclared status trips Fastify response serialization.
+
+Conflicts resolved:
+- src/routes/client/focuses.ts — both sides additive and unrelated (this line's discoveryDataSchema, the commit's openapi/schemas imports). Both kept.
+- package.json — this line is ahead of main's numbering (1.92.2 vs 0.56.0), so the release version wins and takes a PATCH bump.
+- CHANGELOG.md — the incoming side targets main's 0.x structure. This line's content is preserved and a 1.92.3 entry describes the port.
+
+Requires Karsa's soft-delete work (migration 380 + POST /api/focuses/:id/delete) on the same line. Deploying this ahead of Karsa turns a Sutra 404 into a Karsa 404.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-shastra-114')">
+          <td class="td-date">
+            <div>1 September 2026</div>
+            <div class="td-time">15.47.49</div>
+          </td>
+          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">job-inspector</span>Stop false-positive errors on VS probe progress l…</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/114" target="_blank" onclick="event.stopPropagation()">#114</a>
+            <span class="expand-chevron" id="chev-avq-shastra-114">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-shastra-114">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">…ines
+
+The inferLevelFromMessage() classifier was marking every VS probe progress line (e.g. &quot;OK 25 FAIL 0 SKIP 0&quot;) as warn/error because it matched keywords &quot;SKIP&quot; and &quot;FAIL&quot; without checking their counts.
+
+Two fixes:
+1. Early-return parser for &quot;OK N FAIL N SKIP N&quot; format — reads actual counts instead of keyword-matching (also prevents &quot;OK 2 FAIL 0&quot; being read as &quot;2 fail&quot; due to adjacent number from OK count).
+2. Added hasNoSkipPhrase guard so &quot;SKIP 0&quot; / &quot;0 skip&quot; doesn't trigger warn.</div>
+          </td>
+        </tr></tbody>
+        </table>
+      </div>
       <div class="month-group">
         <h2 class="month-header">Agustus 2026</h2>
         <table>
@@ -3845,330 +3939,6 @@ Hint-first ordering preserved, so blocked/failed states still show their backend
         <tr class="detail-row hidden" id="detail-avq-sutra-92">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">75d74b7</span>feat(white-label): add per-partner gtm_container_id</div><div class="commit-line"><span class="commit-sha">32a84a3</span>chore: bump version 0.43.4 -&gt; 0.44.0 (per-partner GTM white-label field)</div><div class="commit-line"><span class="commit-sha">b338820</span>refactor(gtm): move GTM from per-org white-label to per-partner</div><div class="commit-line"><span class="commit-sha">196a190</span>feat(partner): add ga4_measurement_id alongside gtm</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-74')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">02.34.12</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/stripe release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/74" target="_blank" onclick="event.stopPropagation()">#74</a>
-            <span class="expand-chevron" id="chev-avq-artha-74">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-74">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">94a2541</span>feat: tier select ui</div><div class="commit-line"><span class="commit-sha">819b174</span>feat: add tier assign</div><div class="commit-line"><span class="commit-sha">0544109</span>feat: preferred gateway ui</div><div class="commit-line"><span class="commit-sha">1aae9e5</span>fix: assign and cancel with expiration date</div><div class="commit-line"><span class="commit-sha">378ea7f</span>fix: handle update tier when already canceled</div><div class="commit-line"><span class="commit-sha">ac2fad3</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">11c07b5</span>feat: tier config</div><div class="commit-line"><span class="commit-sha">a3b5fa9</span>fix: config ppn</div><div class="commit-line"><span class="commit-sha">92ac449</span>fix: partner id</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-85')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">02.01.52</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Exclude tier non direct</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/85" target="_blank" onclick="event.stopPropagation()">#85</a>
-            <span class="expand-chevron" id="chev-avq-sutra-85">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-85">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">0949183</span>fix: exclude tier non direct</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-84')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">01.42.37</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🔧 Internal</span></td>
-          <td class="td-title">Internal update</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/84" target="_blank" onclick="event.stopPropagation()">#84</a>
-            <span class="expand-chevron" id="chev-avq-sutra-84">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-84">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">6a0403c</span>fix: system tier</div><div class="commit-line"><span class="commit-sha">35d3384</span>fix: get plan</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-140')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">01.27.23</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/stripe release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/140" target="_blank" onclick="event.stopPropagation()">#140</a>
-            <span class="expand-chevron" id="chev-avq-astra-140">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-140">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c14c0a2</span>feat: tier gating ui</div><div class="commit-line"><span class="commit-sha">c76c787</span>fix: tier info</div><div class="commit-line"><span class="commit-sha">8ee0d6e</span>feat: domain limit check</div><div class="commit-line"><span class="commit-sha">47c828f</span>fix: build error</div><div class="commit-line"><span class="commit-sha">3bf1095</span>feat: add plan selection and checkout UI in Astra billing portal</div><div class="commit-line"><span class="commit-sha">9466686</span>fix: resolve plan tab bugs, fetch pricing dynamically from stripe, prevent duplicate subscribe clicks</div><div class="commit-line"><span class="commit-sha">91ea7b3</span>fix: surface query errors in plans tab</div><div class="commit-line"><span class="commit-sha">7fc7a15</span>clean: remove temporary scripts</div><div class="commit-line"><span class="commit-sha">20e13a9</span>fix: stripe subscribe</div><div class="commit-line"><span class="commit-sha">7414e6c</span>fix: cancel subs</div><div class="commit-line"><span class="commit-sha">b14a7f1</span>feat: tier gating on unactive plan</div><div class="commit-line"><span class="commit-sha">816205d</span>fix: properly inform inactive subscription</div><div class="commit-line"><span class="commit-sha">d01f91d</span>fix: check canceled plan</div><div class="commit-line"><span class="commit-sha">d8bed21</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">304811f</span>fix: hide buy credits temporary</div><div class="commit-line"><span class="commit-sha">905b6dc</span>fix: add condition prefered domain</div><div class="commit-line"><span class="commit-sha">76d9913</span>fix: invoice info</div><div class="commit-line"><span class="commit-sha">e3a8259</span>fix: list plan</div><div class="commit-line"><span class="commit-sha">c0bf5c7</span>fix: remove cache</div><div class="commit-line"><span class="commit-sha">042a7ce</span>fix: add force nocache</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-83')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">00.50.40</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Cache get plans</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/83" target="_blank" onclick="event.stopPropagation()">#83</a>
-            <span class="expand-chevron" id="chev-avq-sutra-83">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-83">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">04f79b6</span>fix: cache get plans</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-139')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">00.37.53</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">🔧 Internal</span></td>
-          <td class="td-title">Internal update</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/139" target="_blank" onclick="event.stopPropagation()">#139</a>
-            <span class="expand-chevron" id="chev-avq-astra-139">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-139">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c14c0a2</span>feat: tier gating ui</div><div class="commit-line"><span class="commit-sha">c76c787</span>fix: tier info</div><div class="commit-line"><span class="commit-sha">8ee0d6e</span>feat: domain limit check</div><div class="commit-line"><span class="commit-sha">47c828f</span>fix: build error</div><div class="commit-line"><span class="commit-sha">3bf1095</span>feat: add plan selection and checkout UI in Astra billing portal</div><div class="commit-line"><span class="commit-sha">9466686</span>fix: resolve plan tab bugs, fetch pricing dynamically from stripe, prevent duplicate subscribe clicks</div><div class="commit-line"><span class="commit-sha">91ea7b3</span>fix: surface query errors in plans tab</div><div class="commit-line"><span class="commit-sha">7fc7a15</span>clean: remove temporary scripts</div><div class="commit-line"><span class="commit-sha">20e13a9</span>fix: stripe subscribe</div><div class="commit-line"><span class="commit-sha">7414e6c</span>fix: cancel subs</div><div class="commit-line"><span class="commit-sha">b14a7f1</span>feat: tier gating on unactive plan</div><div class="commit-line"><span class="commit-sha">816205d</span>fix: properly inform inactive subscription</div><div class="commit-line"><span class="commit-sha">d01f91d</span>fix: check canceled plan</div><div class="commit-line"><span class="commit-sha">d8bed21</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">304811f</span>fix: hide buy credits temporary</div><div class="commit-line"><span class="commit-sha">905b6dc</span>fix: add condition prefered domain</div><div class="commit-line"><span class="commit-sha">76d9913</span>fix: invoice info</div><div class="commit-line"><span class="commit-sha">e3a8259</span>fix: list plan</div><div class="commit-line"><span class="commit-sha">c0bf5c7</span>fix: remove cache</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-81')">
-          <td class="td-date">
-            <div>4 Juni 2026</div>
-            <div class="td-time">00.19.40</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Get plan</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/81" target="_blank" onclick="event.stopPropagation()">#81</a>
-            <span class="expand-chevron" id="chev-avq-sutra-81">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-81">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">038fb1c</span>fix: get plan</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-138')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">23.52.37</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/stripe release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/138" target="_blank" onclick="event.stopPropagation()">#138</a>
-            <span class="expand-chevron" id="chev-avq-astra-138">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-138">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c14c0a2</span>feat: tier gating ui</div><div class="commit-line"><span class="commit-sha">c76c787</span>fix: tier info</div><div class="commit-line"><span class="commit-sha">8ee0d6e</span>feat: domain limit check</div><div class="commit-line"><span class="commit-sha">47c828f</span>fix: build error</div><div class="commit-line"><span class="commit-sha">3bf1095</span>feat: add plan selection and checkout UI in Astra billing portal</div><div class="commit-line"><span class="commit-sha">9466686</span>fix: resolve plan tab bugs, fetch pricing dynamically from stripe, prevent duplicate subscribe clicks</div><div class="commit-line"><span class="commit-sha">91ea7b3</span>fix: surface query errors in plans tab</div><div class="commit-line"><span class="commit-sha">7fc7a15</span>clean: remove temporary scripts</div><div class="commit-line"><span class="commit-sha">20e13a9</span>fix: stripe subscribe</div><div class="commit-line"><span class="commit-sha">7414e6c</span>fix: cancel subs</div><div class="commit-line"><span class="commit-sha">b14a7f1</span>feat: tier gating on unactive plan</div><div class="commit-line"><span class="commit-sha">816205d</span>fix: properly inform inactive subscription</div><div class="commit-line"><span class="commit-sha">d01f91d</span>fix: check canceled plan</div><div class="commit-line"><span class="commit-sha">d8bed21</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">304811f</span>fix: hide buy credits temporary</div><div class="commit-line"><span class="commit-sha">905b6dc</span>fix: add condition prefered domain</div><div class="commit-line"><span class="commit-sha">76d9913</span>fix: invoice info</div><div class="commit-line"><span class="commit-sha">e3a8259</span>fix: list plan</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-80')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">23.49.19</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Get plan list</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/80" target="_blank" onclick="event.stopPropagation()">#80</a>
-            <span class="expand-chevron" id="chev-avq-sutra-80">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-80">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">2f02a29</span>fix: get plan list</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-79')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">23.43.29</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Make stripe gateway always get from tier config</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/79" target="_blank" onclick="event.stopPropagation()">#79</a>
-            <span class="expand-chevron" id="chev-avq-sutra-79">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-79">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">3dd30b3</span>fix: make stripe gateway always get from tier config</div><div class="commit-line"><span class="commit-sha">5597826</span>fix: duitku sandbox check</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-77')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">22.25.35</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🔧 Internal</span></td>
-          <td class="td-title">Internal update</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/77" target="_blank" onclick="event.stopPropagation()">#77</a>
-            <span class="expand-chevron" id="chev-avq-sutra-77">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-77">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">4189c98</span>fix: get plans</div><div class="commit-line"><span class="commit-sha">b3c9e71</span>fix: use payment method</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-75')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">21.46.17</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Get tier info</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/75" target="_blank" onclick="event.stopPropagation()">#75</a>
-            <span class="expand-chevron" id="chev-avq-sutra-75">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-75">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">db429ed</span>fix: get tier info</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-74')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">21.24.30</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Tier limit</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/74" target="_blank" onclick="event.stopPropagation()">#74</a>
-            <span class="expand-chevron" id="chev-avq-sutra-74">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-74">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">f36db20</span>fix: tier limit</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-72')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">21.16.33</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Check partner id</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/72" target="_blank" onclick="event.stopPropagation()">#72</a>
-            <span class="expand-chevron" id="chev-avq-sutra-72">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-72">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">a723f96</span>fix: check partner id</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-137')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">20.44.27</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Release Feat Payment Gateway</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/137" target="_blank" onclick="event.stopPropagation()">#137</a>
-            <span class="expand-chevron" id="chev-avq-astra-137">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-137">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c14c0a2</span>feat: tier gating ui</div><div class="commit-line"><span class="commit-sha">c76c787</span>fix: tier info</div><div class="commit-line"><span class="commit-sha">8ee0d6e</span>feat: domain limit check</div><div class="commit-line"><span class="commit-sha">47c828f</span>fix: build error</div><div class="commit-line"><span class="commit-sha">3bf1095</span>feat: add plan selection and checkout UI in Astra billing portal</div><div class="commit-line"><span class="commit-sha">9466686</span>fix: resolve plan tab bugs, fetch pricing dynamically from stripe, prevent duplicate subscribe clicks</div><div class="commit-line"><span class="commit-sha">91ea7b3</span>fix: surface query errors in plans tab</div><div class="commit-line"><span class="commit-sha">7fc7a15</span>clean: remove temporary scripts</div><div class="commit-line"><span class="commit-sha">20e13a9</span>fix: stripe subscribe</div><div class="commit-line"><span class="commit-sha">7414e6c</span>fix: cancel subs</div><div class="commit-line"><span class="commit-sha">b14a7f1</span>feat: tier gating on unactive plan</div><div class="commit-line"><span class="commit-sha">816205d</span>fix: properly inform inactive subscription</div><div class="commit-line"><span class="commit-sha">d01f91d</span>fix: check canceled plan</div><div class="commit-line"><span class="commit-sha">d8bed21</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">304811f</span>fix: hide buy credits temporary</div><div class="commit-line"><span class="commit-sha">905b6dc</span>fix: add condition prefered domain</div><div class="commit-line"><span class="commit-sha">76d9913</span>fix: invoice info</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-73')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">20.44.12</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Release Tier Config & Payment</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/73" target="_blank" onclick="event.stopPropagation()">#73</a>
-            <span class="expand-chevron" id="chev-avq-artha-73">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-73">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">94a2541</span>feat: tier select ui</div><div class="commit-line"><span class="commit-sha">819b174</span>feat: add tier assign</div><div class="commit-line"><span class="commit-sha">0544109</span>feat: preferred gateway ui</div><div class="commit-line"><span class="commit-sha">1aae9e5</span>fix: assign and cancel with expiration date</div><div class="commit-line"><span class="commit-sha">378ea7f</span>fix: handle update tier when already canceled</div><div class="commit-line"><span class="commit-sha">ac2fad3</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">11c07b5</span>feat: tier config</div><div class="commit-line"><span class="commit-sha">a3b5fa9</span>fix: config ppn</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-70')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">20.40.58</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Release Feat Payment</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/70" target="_blank" onclick="event.stopPropagation()">#70</a>
-            <span class="expand-chevron" id="chev-avq-sutra-70">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-70">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">ae0bca9</span>feat: wire stripe subcription</div><div class="commit-line"><span class="commit-sha">ad22864</span>feat: add getActivePlans endpoint to retrieve Stripe products dynamically</div><div class="commit-line"><span class="commit-sha">3351934</span>fix: register clientSubscriptionRoutes in app.ts router</div><div class="commit-line"><span class="commit-sha">a669ff9</span>clean: remove temporary scripts</div><div class="commit-line"><span class="commit-sha">7996264</span>feat: filter out non_direct products from Astra self-service plans list</div><div class="commit-line"><span class="commit-sha">0b85f34</span>fix: stripe callback</div><div class="commit-line"><span class="commit-sha">23dadb5</span>fix: subcribe callback</div><div class="commit-line"><span class="commit-sha">23deff5</span>fix: cancel subs</div><div class="commit-line"><span class="commit-sha">edbf91d</span>fix: assign and cancel with expiration date</div><div class="commit-line"><span class="commit-sha">189d350</span>fix: handle update tier when already canceled</div><div class="commit-line"><span class="commit-sha">dbd41cb</span>feat: tier gating on unactive plan</div><div class="commit-line"><span class="commit-sha">defcef0</span>fix: added inactive tier to easier tier check</div><div class="commit-line"><span class="commit-sha">457fd6c</span>fix: check subs expired</div><div class="commit-line"><span class="commit-sha">e2ca09a</span>feat: duitku config</div><div class="commit-line"><span class="commit-sha">fafe1ca</span>fix: duitku callback</div><div class="commit-line"><span class="commit-sha">fdfeb07</span>fix: credit addition on subscribed</div><div class="commit-line"><span class="commit-sha">0f9b3ea</span>fix: tax ppn</div><div class="commit-line"><span class="commit-sha">3bdc749</span>fix: send email</div><div class="commit-line"><span class="commit-sha">bc38b24</span>fix: revert skip email verif</div><div class="commit-line"><span class="commit-sha">4cbece6</span>fix: onboarding activate account</div><div class="commit-line"><span class="commit-sha">aad38f6</span>fix: add info preferred domain</div><div class="commit-line"><span class="commit-sha">bbcc26c</span>fix: cancel from demo</div><div class="commit-line"><span class="commit-sha">4b51baf</span>fix: invoice info</div><div class="commit-line"><span class="commit-sha">6a01021</span>fix: hide unit price</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-132')">
-          <td class="td-date">
-            <div>3 Juni 2026</div>
-            <div class="td-time">10.46.13</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Hide LLM Model</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/132" target="_blank" onclick="event.stopPropagation()">#132</a>
-            <span class="expand-chevron" id="chev-avq-astra-132">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-132">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">Hide LLM model after focus discovery finished</div>
           </td>
         </tr></tbody>
         </table>
