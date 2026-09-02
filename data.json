@@ -3638,7 +3638,7 @@
     "repoSlug": "avq-shastra",
     "prNumber": 57,
     "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/57",
-    "title": "Add per-tenant concurrency controls to AS/VS/PB pipe…",
+    "title": "Add per-tenant concurrency controls to AS/VS/PB pipe��",
     "type": "feat",
     "typeLabel": "✨ Fitur Baru",
     "scope": "configure",
@@ -5737,121 +5737,6 @@
       {
         "sha": "7ac8fd3",
         "message": "feat(settings): configurable recommended tier for proposal generator"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 144,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/144",
-    "title": "Feat/partner gtm",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-04T14:29:30Z",
-    "mergedAtDate": "4 Juni 2026",
-    "mergedAtTime": "21.29.30",
-    "body": "",
-    "commits": [
-      {
-        "sha": "9829b62",
-        "message": "feat(gtm): inject per-partner Google Tag Manager, consent-gated"
-      },
-      {
-        "sha": "e5b5bc6",
-        "message": "feat(gtm): user/org identity + business & conversion events"
-      },
-      {
-        "sha": "beaa0c3",
-        "message": "fix(gtm): buffer pre-init events + withhold PII until consent"
-      },
-      {
-        "sha": "6423eda",
-        "message": "fix(gtm): full Ava card coverage, accurate login/conversion events, tests"
-      },
-      {
-        "sha": "33aaea4",
-        "message": "chore: pin packageManager (pnpm) added by install"
-      },
-      {
-        "sha": "563ec09",
-        "message": "chore: remove vitest test setup per request"
-      },
-      {
-        "sha": "7034dc2",
-        "message": "feat(analytics): support GA4 (gtag.js) alongside GTM"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 79,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/79",
-    "title": "Feat/partner gtm",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-04T14:25:56Z",
-    "mergedAtDate": "4 Juni 2026",
-    "mergedAtTime": "21.25.56",
-    "body": "",
-    "commits": [
-      {
-        "sha": "6d7d33c",
-        "message": "feat(accounts): add Branding & Tracking tab with GTM container ID"
-      },
-      {
-        "sha": "62c586e",
-        "message": "fix(accounts): validate logo/favicon URLs in Branding tab"
-      },
-      {
-        "sha": "697cd5f",
-        "message": "chore: bump version 1.39.7 -> 1.40.0 + changelog (Branding & Tracking tab)"
-      },
-      {
-        "sha": "89ae6dd",
-        "message": "refactor(gtm): manage per-partner GTM in Infrastructure card"
-      },
-      {
-        "sha": "9c37a0a",
-        "message": "feat(partner): GA4 Measurement ID field in Infrastructure card"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 92,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/92",
-    "title": "Feat/partner gtm",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "ikhsan-sr",
-    "mergedAt": "2026-06-04T14:21:31Z",
-    "mergedAtDate": "4 Juni 2026",
-    "mergedAtTime": "21.21.31",
-    "body": "",
-    "commits": [
-      {
-        "sha": "75d74b7",
-        "message": "feat(white-label): add per-partner gtm_container_id"
-      },
-      {
-        "sha": "32a84a3",
-        "message": "chore: bump version 0.43.4 -> 0.44.0 (per-partner GTM white-label field)"
-      },
-      {
-        "sha": "b338820",
-        "message": "refactor(gtm): move GTM from per-org white-label to per-partner"
-      },
-      {
-        "sha": "196a190",
-        "message": "feat(partner): add ga4_measurement_id alongside gtm"
       }
     ]
   }
