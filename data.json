@@ -2,6 +2,80 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 373,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/373",
+    "title": "Fix/UI astra rayhan 080926",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-08T06:59:58Z",
+    "mergedAtDate": "8 September 2026",
+    "mergedAtTime": "13.59.58",
+    "body": "",
+    "commits": [
+      {
+        "sha": "36fb181",
+        "message": "Adjust UI/UX Astra"
+      },
+      {
+        "sha": "534a395",
+        "message": "Fix copy write"
+      },
+      {
+        "sha": "7ea1eb0",
+        "message": "Adjust label CTA"
+      },
+      {
+        "sha": "6e2ce00",
+        "message": "Refine Label"
+      },
+      {
+        "sha": "050542e",
+        "message": "fix: sync cold_start_body inline fallback with en locale"
+      },
+      {
+        "sha": "3eb00b5",
+        "message": "Merge remote-tracking branch 'origin/release' into fix/ui-astra-rayhan-080926"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 372,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/372",
+    "title": "Fix/UI astra rayhan 080926",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-08T06:51:21Z",
+    "mergedAtDate": "8 September 2026",
+    "mergedAtTime": "13.51.21",
+    "body": "",
+    "commits": [
+      {
+        "sha": "36fb181",
+        "message": "Adjust UI/UX Astra"
+      },
+      {
+        "sha": "534a395",
+        "message": "Fix copy write"
+      },
+      {
+        "sha": "7ea1eb0",
+        "message": "Adjust label CTA"
+      },
+      {
+        "sha": "6e2ce00",
+        "message": "Refine Label"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 367,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/367",
     "title": "Release for v2",
@@ -6636,192 +6710,6 @@
       {
         "sha": "01c8f94",
         "message": "Merge origin/release into fix/avp-assessments-updated-at"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 34,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/34",
-    "title": "Add Thinking Tokens input to routing config page",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-10T10:05:46Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "17.05.46",
-    "body": "- Add thinking_budget field to RoutingEntry type and update mutation\r\n- Show Thinking Tokens input (enabled only when Gemini in chain)\r\n- Display Think= badge in collapsed view",
-    "commits": [
-      {
-        "sha": "171b6ac",
-        "message": "feat: add Thinking Tokens input to routing config page"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 97,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/97",
-    "title": "Add thinkingTokens field to LLMCallResult",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-06-10T09:45:45Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "16.45.45",
-    "body": "- Extract thoughtsTokenCount from Gemini responses\r\n- OpenAI/DeepSeek reasoning_tokens not logged (subset)\r\n- Anthropic always 0",
-    "commits": [
-      {
-        "sha": "0bf3e3f",
-        "message": "feat: add thinkingTokens field to LLMCallResult"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 150,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/150",
-    "title": "Internal update",
-    "type": "internal",
-    "typeLabel": "🔧 Internal",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-10T07:17:34Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "14.17.34",
-    "body": "- https://avos.cx/tasks/view/2394\r\n- https://avos.cx/tasks/view/2354\r\n- https://avos.cx/tasks/view/2321",
-    "commits": [
-      {
-        "sha": "abdf0fc",
-        "message": "fix: update text price"
-      },
-      {
-        "sha": "0a58c19",
-        "message": "fix: payment method options"
-      },
-      {
-        "sha": "a6d6864",
-        "message": "fix: expired alert"
-      },
-      {
-        "sha": "b161675",
-        "message": "fix: confirm downgrade"
-      },
-      {
-        "sha": "8a7d1d7",
-        "message": "fix: translation"
-      },
-      {
-        "sha": "ff7431a",
-        "message": "fix: position modal choose payment"
-      },
-      {
-        "sha": "8974f30",
-        "message": "fix: translation choose payment"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 85,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/85",
-    "title": "Internal update",
-    "type": "internal",
-    "typeLabel": "🔧 Internal",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-10T07:17:19Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "14.17.19",
-    "body": "- https://avos.cx/tasks/view/2394\r\n- https://avos.cx/tasks/view/2354\r\n- https://avos.cx/tasks/view/2321",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "a2f26dd",
-        "message": "fix: tier isolate"
-      },
-      {
-        "sha": "6bc8f9a",
-        "message": "fix: isolate tier partner"
-      },
-      {
-        "sha": "26c1888",
-        "message": "fix: payment method config"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 96,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/96",
-    "title": "Internal update",
-    "type": "internal",
-    "typeLabel": "🔧 Internal",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-10T07:15:15Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "14.15.15",
-    "body": "- https://avos.cx/tasks/view/2394\r\n- https://avos.cx/tasks/view/2354\r\n- https://avos.cx/tasks/view/2321",
-    "commits": [
-      {
-        "sha": "c7cf93e",
-        "message": "fix: isolate partner tier"
-      },
-      {
-        "sha": "f26e4e0",
-        "message": "fix: filter partner id get plans"
-      },
-      {
-        "sha": "16ce766",
-        "message": "fix: take out partner filter"
-      },
-      {
-        "sha": "c623ed1",
-        "message": "fix: checkout partner"
-      },
-      {
-        "sha": "60eb464",
-        "message": "fix: payment method config"
-      },
-      {
-        "sha": "3335ef0",
-        "message": "fix: get plans"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 147,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/147",
-    "title": "Adj/astra cosmetic release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-10T04:59:52Z",
-    "mergedAtDate": "10 Juni 2026",
-    "mergedAtTime": "11.59.52",
-    "body": "- Hide button Regenerate Halaman Insight\r\n- Tambah informasi terkait trigger insight\r\n- Hide button cancel saat Run AS & VS",
-    "commits": [
-      {
-        "sha": "c48a762",
-        "message": "Hide LLM Model"
-      },
-      {
-        "sha": "bfdf9a2",
-        "message": "Adjust Cosmetic"
       }
     ]
   }
