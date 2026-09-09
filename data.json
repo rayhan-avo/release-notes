@@ -2,6 +2,48 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 376,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/376",
+    "title": "Add Mentioned Competitor(s) section to prompt detail (v3 + v4)",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-09T04:06:07Z",
+    "mergedAtDate": "9 September 2026",
+    "mergedAtTime": "11.06.07",
+    "body": "Show LLM-validated competitor brand names extracted from AI answer text in the prompt detail UI. Available in both views:\r\n- Workspace v4: PromptDrawer section (gold accent, below \"Who else showed up\")\r\n- Classic v3: PromptCardV3 inline section (below tab bar, visible in all tabs)\r\n\r\nData source: extracted_competitors[] from Karsa probe-responses endpoint (DKL-validated names matched per-probe, not raw regex). Only renders when competitors are present — zero visual change otherwise.",
+    "commits": [
+      {
+        "sha": "4cfdd70",
+        "message": "fix: add Mentioned Competitor(s) section to prompt detail (v3 + v4)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 375,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/375",
+    "title": "Clean up redundant UI elements across wizard, prompt book, and b…",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-09T04:02:37Z",
+    "mergedAtDate": "9 September 2026",
+    "mergedAtTime": "11.02.37",
+    "body": "…rief pages\r\n\r\n- Remove superscript prompt count from Prompt Book header (redundant with filter pills)\r\n- Replace native title tooltip with styled glass tooltip on probe info icon\r\n- Remove cost/time estimates from wizard platform step stats bar\r\n- Remove \"N platforms\" and \"N probes\" from wizard footer\r\n- Replace CreditGate with simple \"Current balance\" display in review step\r\n- Remove duplicate brief title from ContentContextStrip top bar\r\n- Add probes_hint and current_balance i18n keys for all 5 locales",
+    "commits": [
+      {
+        "sha": "f760d49",
+        "message": "fix: clean up redundant UI elements across wizard, prompt book, and brief pages"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 373,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/373",
     "title": "Fix/UI astra rayhan 080926",
@@ -6557,159 +6599,6 @@
       {
         "sha": "b70ef4e",
         "message": "feat(domain): explain why + effect on AS measurement partial ribbon"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 102,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/102",
-    "title": "Skip verification email during self-registration",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "davidsurosegoro",
-    "mergedAt": "2026-06-11T09:51:50Z",
-    "mergedAtDate": "11 Juni 2026",
-    "mergedAtTime": "16.51.50",
-    "body": "Self-registration was sending 2 emails (verify + magic link). Now only sends the magic link. Scoped to self-registration only — admin and provisioning flows still send verification emails.",
-    "commits": [
-      {
-        "sha": "4546bfd",
-        "message": "fix: skip verification email during self-registration"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 156,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/156",
-    "title": "Fix/invoice details",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-11T04:14:49Z",
-    "mergedAtDate": "11 Juni 2026",
-    "mergedAtTime": "11.14.49",
-    "body": "https://avos.cx/tasks/view/2411",
-    "commits": [
-      {
-        "sha": "b473881",
-        "message": "fix: add service charge info"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 100,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/100",
-    "title": "Add service charge",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-11T04:13:16Z",
-    "mergedAtDate": "11 Juni 2026",
-    "mergedAtTime": "11.13.16",
-    "body": "https://avos.cx/tasks/view/2411",
-    "commits": [
-      {
-        "sha": "870150a",
-        "message": "fix: add service charge"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 154,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/154",
-    "title": "Fix/payment method",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-11T03:03:30Z",
-    "mergedAtDate": "11 Juni 2026",
-    "mergedAtTime": "10.03.30",
-    "body": "https://avos.cx/tasks/view/2410",
-    "commits": [
-      {
-        "sha": "37e49c4",
-        "message": "fix: wording payment method"
-      },
-      {
-        "sha": "3ba0f0b",
-        "message": "fix: modal payment width"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 90,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/90",
-    "title": "Fix/avp assessments updated at",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-11T02:15:01Z",
-    "mergedAtDate": "11 Juni 2026",
-    "mergedAtTime": "09.15.01",
-    "body": "",
-    "commits": [
-      {
-        "sha": "7c4123c",
-        "message": "fix(prospects): remove non-existent updated_at write on artha_avp_assessments"
-      },
-      {
-        "sha": "6e6db75",
-        "message": "fix(pdf): config-driven build numbers + proposal PDF contrast/price"
-      },
-      {
-        "sha": "ecdf90b",
-        "message": "fix(naming): show configurable tier name in lists, IDP header, build PDF"
-      },
-      {
-        "sha": "df6b046",
-        "message": "feat(proposal): pull VS in Sync Score; competitor strengths fallback in PDF"
-      },
-      {
-        "sha": "f187bdd",
-        "message": "fix(pdf): read SUTRA_URL/KARSA_URL lazily — local PDF export 401"
-      },
-      {
-        "sha": "e9db9b9",
-        "message": "fix(prospects): VS sync read camelCase vsScore from Karsa aggregate"
-      },
-      {
-        "sha": "381e0c1",
-        "message": "style(proposal-pdf): convert report to light theme (match other PDFs)"
-      },
-      {
-        "sha": "9147a64",
-        "message": "style(proposal-pdf): always show AS Score competitor table (drop strengths fallback)"
-      },
-      {
-        "sha": "d69f542",
-        "message": "feat(proposal): fetch competitor AS from Karsa for Competitive Landscape"
-      },
-      {
-        "sha": "f939225",
-        "message": "feat(competitors): capture strengths + opportunity/threat on add"
-      },
-      {
-        "sha": "fde4bce",
-        "message": "fix(proposal): competitor AS lookup used wrong Karsa search param"
-      },
-      {
-        "sha": "01c8f94",
-        "message": "Merge origin/release into fix/avp-assessments-updated-at"
       }
     ]
   }
