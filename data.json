@@ -1,5 +1,51 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 308,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/308",
+    "title": "Allow updating voucher credits_granted and max_redemptions via P…",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-09-10T08:18:23Z",
+    "mergedAtDate": "10 September 2026",
+    "mergedAtTime": "15.18.23",
+    "body": "…ATCH\r\n\r\nExtend UpdateVoucherSchema and repository update() to accept credits_granted and max_redemptions fields, enabling OPS to edit vouchers from Artha without direct DB access.",
+    "commits": [
+      {
+        "sha": "57cebe3",
+        "message": "fix: allow updating voucher credits_granted and max_redemptions via PATCH"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 205,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/205",
+    "title": "Fix/ops UI improvements from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-10T08:17:09Z",
+    "mergedAtDate": "10 September 2026",
+    "mergedAtTime": "15.17.09",
+    "body": "",
+    "commits": [
+      {
+        "sha": "37e7bb7",
+        "message": "fix: OPS UI improvements — tier search, wallet deduct, config layout, voucher edit"
+      },
+      {
+        "sha": "88b3556",
+        "message": "fix: pricing configuration full-width 2-col grid layout"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 376,
@@ -5005,7 +5051,7 @@
     "repoSlug": "avq-astra",
     "prNumber": 235,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/235",
-    "title": "Prevent XSS in Ava loader, activity log, and markdown …",
+    "title": "Prevent XSS in Ava loader, activity log, and markdown ���",
     "type": "fix",
     "typeLabel": "🐛 Perbaikan",
     "scope": "security",
@@ -6532,73 +6578,6 @@
       {
         "sha": "34fac17",
         "message": "fix: add handle tax"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 104,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/104",
-    "title": "Feat/payment success",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-12T06:02:07Z",
-    "mergedAtDate": "12 Juni 2026",
-    "mergedAtTime": "13.02.07",
-    "body": "https://avos.cx/tasks/view/2412",
-    "commits": [
-      {
-        "sha": "616c2c4",
-        "message": "feat: get invoice by number"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 163,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/163",
-    "title": "Feat/payment success",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-12T06:01:35Z",
-    "mergedAtDate": "12 Juni 2026",
-    "mergedAtTime": "13.01.35",
-    "body": "https://avos.cx/tasks/view/2412",
-    "commits": [
-      {
-        "sha": "b473881",
-        "message": "fix: add service charge info"
-      },
-      {
-        "sha": "f2367bd",
-        "message": "feat: modal payment success"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 162,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/162",
-    "title": "Explain why + effect on AS measurement partial ribbon",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": "domain",
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-12T04:14:24Z",
-    "mergedAtDate": "12 Juni 2026",
-    "mergedAtTime": "11.14.24",
-    "body": "The degraded (\"AS measurement partial\") health ribbon showed only a title with no explanation, since the success path nulls last_failure_hint. Clients had no way to know why the measurement was partial or what it means.\r\n\r\n- DomainHealthRibbon: when no backend hint is present, fall back to a localized run_state.{state}.body explaining the cause and the effect.\r\n- Add run_state.degraded.body to all 5 locales (en/id/ja/ko/zh-TW): \"This site blocks automated crawlers, so the score was measured through a limited fallback. The score is still valid, but its accuracy may be slightly reduced.\"\r\n\r\nHint-first ordering preserved, so blocked/failed states still show their backend-supplied hints unchanged.",
-    "commits": [
-      {
-        "sha": "b70ef4e",
-        "message": "feat(domain): explain why + effect on AS measurement partial ribbon"
       }
     ]
   }
