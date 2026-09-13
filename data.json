@@ -607,7 +607,7 @@
       },
       {
         "sha": "ea8b08c",
-        "message": "fix(reports): reports tell the truth about the formulas the engine runs (2.203.0–2.205.0)"
+        "message": "fix(reports): reports tell the truth about the formulas the engine runs (2.203.0���2.205.0)"
       },
       {
         "sha": "105db88",
@@ -6463,121 +6463,6 @@
       {
         "sha": "8145876",
         "message": "feat(providers): add inline pricing edit + \"Get from Ledger\" button on model table"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 168,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/168",
-    "title": "Fix/buy credits",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-15T09:27:32Z",
-    "mergedAtDate": "15 Juni 2026",
-    "mergedAtTime": "16.27.32",
-    "body": "- payment airwallex\r\n- enable topup credits",
-    "commits": [
-      {
-        "sha": "4decb27",
-        "message": "feat: airwallex list plan"
-      },
-      {
-        "sha": "7bfb3a3",
-        "message": "fix: trigger webhook on redirect"
-      },
-      {
-        "sha": "a76fdb2",
-        "message": "fix: trigger modal expired"
-      },
-      {
-        "sha": "e2c4f0e",
-        "message": "fix: handle buy credits"
-      },
-      {
-        "sha": "1bd5b2b",
-        "message": "fix: payment method"
-      },
-      {
-        "sha": "a3ed387",
-        "message": "fix: add check active subs for buy credits"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 93,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/93",
-    "title": "Fix/buy credits",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-15T09:25:52Z",
-    "mergedAtDate": "15 Juni 2026",
-    "mergedAtTime": "16.25.52",
-    "body": "- payment airwallex\r\n- enable topup credits",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "f830afe",
-        "message": "feat: config airwallex"
-      },
-      {
-        "sha": "cdd33b2",
-        "message": "fix: config avo credit"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 107,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/107",
-    "title": "Fix/buy credits",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-15T09:24:16Z",
-    "mergedAtDate": "15 Juni 2026",
-    "mergedAtTime": "16.24.16",
-    "body": "- payment airwallex\r\n- enable topup credits",
-    "commits": [
-      {
-        "sha": "344fb97",
-        "message": "feat: airwallex gateway"
-      },
-      {
-        "sha": "272a8ef",
-        "message": "fix: payment webhook handle"
-      },
-      {
-        "sha": "378a607",
-        "message": "fix: get plans, subscribe"
-      },
-      {
-        "sha": "b1e445e",
-        "message": "fix: cancel subs with remaining period"
-      },
-      {
-        "sha": "60944cb",
-        "message": "fix: handle buy credits"
-      },
-      {
-        "sha": "198289d",
-        "message": "fix: config avo credit"
-      },
-      {
-        "sha": "34fac17",
-        "message": "fix: add handle tax"
       }
     ]
   }
