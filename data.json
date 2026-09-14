@@ -607,7 +607,7 @@
       },
       {
         "sha": "ea8b08c",
-        "message": "fix(reports): reports tell the truth about the formulas the engine runs (2.203.0���2.205.0)"
+        "message": "fix(reports): reports tell the truth about the formulas the engine runs (2.203.0–2.205.0)"
       },
       {
         "sha": "105db88",
