@@ -1,5 +1,352 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 384,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/384",
+    "title": "Fix/focus lang picker from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-16T06:35:00Z",
+    "mergedAtDate": "16 September 2026",
+    "mergedAtTime": "13.35.00",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ebae7f9",
+        "message": "fix: add language picker next to Generate again in AddFocusDrawer"
+      },
+      {
+        "sha": "a4f7680",
+        "message": "feat: brand profile step 2 — summary, industry reasoning, custom tokens, editable description"
+      },
+      {
+        "sha": "9042679",
+        "message": "feat: add industryReasoning field to ProfileSuggestion interface"
+      },
+      {
+        "sha": "8487a46",
+        "message": "fix: cap Step 2 modal height and pin action buttons at bottom"
+      },
+      {
+        "sha": "c113f00",
+        "message": "fix: add breathing room around Step 2 action row"
+      },
+      {
+        "sha": "7039ded",
+        "message": "fix: Step 2 modal outer spacing and button visibility"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 382,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/382",
+    "title": "Release for v2",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-16T02:04:19Z",
+    "mergedAtDate": "16 September 2026",
+    "mergedAtTime": "09.04.19",
+    "body": "",
+    "commits": [
+      {
+        "sha": "ff5384e",
+        "message": "Workspace V2 for release: V4 default + mobile + Profile + Content parity + Prompt Book"
+      },
+      {
+        "sha": "266bd68",
+        "message": "feat(workspace): port PR #309 (v1.58.2 → v1.66.1) onto the release line"
+      },
+      {
+        "sha": "eac1ff8",
+        "message": "feat(workspace): port v1.66.2 → v2.2.0 onto the release line"
+      },
+      {
+        "sha": "61d3903",
+        "message": "feat(workspace): port v2.2.0 → v2.19.1 onto the release line"
+      },
+      {
+        "sha": "fb39a6f",
+        "message": "feat(content): adopt feat/brief-page-redesign onto the release line (2.21.0)"
+      },
+      {
+        "sha": "4d7be1a",
+        "message": "feat(compare): adopt feat/compare-v2-page onto the release line (2.22.0)"
+      },
+      {
+        "sha": "f4f907c",
+        "message": "feat(workspace): port v2.20.0 → v2.29.2 onto the release line"
+      },
+      {
+        "sha": "8de59ad",
+        "message": "Merge origin/release into the release line — take up #319's engine roster"
+      },
+      {
+        "sha": "1052977",
+        "message": "feat(workspace): port v2.29.3 → v2.37.0 onto the release line"
+      },
+      {
+        "sha": "37eec42",
+        "message": "Integration: alex-work → main (190 commits, at 2.41.0) (#329)"
+      },
+      {
+        "sha": "f803448",
+        "message": "Fix invitation (#330)"
+      },
+      {
+        "sha": "d3df76d",
+        "message": "fix(workspace,billing): nine items from the 2026-08-11 QA pass (2.37.1) (#332)"
+      },
+      {
+        "sha": "4147a7e",
+        "message": "Fix/dev feedback 2026 08 11 (#333)"
+      },
+      {
+        "sha": "3433312",
+        "message": "fix(workspace): seven items from the 2026-08-13 QA pass (2.41.2) (#334)"
+      },
+      {
+        "sha": "97841f5",
+        "message": "Fix/dev feedback 2026 08 13 (#335)"
+      },
+      {
+        "sha": "8375fe2",
+        "message": "feat(workspace): gate the Fixes room behind a per-tier module flag (2.42.1) (#336)"
+      },
+      {
+        "sha": "43c11a3",
+        "message": "Integration: alex-work → main (at 2.48.0) (#337)"
+      },
+      {
+        "sha": "a2090a8",
+        "message": "Integration: alex-work → main (at 2.48.0) (#338)"
+      },
+      {
+        "sha": "f2c3577",
+        "message": "docs(changelog): record the lineage jump from v2.37.0 to 2.48.0"
+      },
+      {
+        "sha": "3bcbe09",
+        "message": "feat(profile): Brand Discovery has no page; Competitors and Citations get their sections"
+      },
+      {
+        "sha": "5498f55",
+        "message": "feat(profile): one identity card, two sources — and say when a run failed"
+      },
+      {
+        "sha": "6f21a72",
+        "message": "fix(discovery): do not offer a run the profile cannot answer"
+      },
+      {
+        "sha": "5bdd30b",
+        "message": "test(profile): a conformance check for the Brand profile against its mockup"
+      },
+      {
+        "sha": "64029f9",
+        "message": "fix(workspace): the four open items from the 21 Aug feedback triage (2.48.1)"
+      },
+      {
+        "sha": "277684b",
+        "message": "fix(i18n): <html lang> follows the language actually rendered (2.48.2)"
+      },
+      {
+        "sha": "1641dbf",
+        "message": "fix(build): union CompetitorsRoom conflict — DiscoveredRivals kept, Sources-card removal kept"
+      },
+      {
+        "sha": "01d9878",
+        "message": "chore(social): drop the Social Check translations left in social.json (2.49.2)"
+      },
+      {
+        "sha": "2a53096",
+        "message": "chore(social): drop the open_social_check CTA label (2.49.3)"
+      },
+      {
+        "sha": "714635c",
+        "message": "chore(changelog): drop an orphan merge marker"
+      },
+      {
+        "sha": "ebf3a3e",
+        "message": "chore(changelog): drop the counterpart merge markers"
+      },
+      {
+        "sha": "e695b17",
+        "message": "fix(social): a failed account list says so instead of looking empty (2.50.1)"
+      },
+      {
+        "sha": "600b430",
+        "message": "fix(auth): a failed session check is not a logout (2.50.4)"
+      },
+      {
+        "sha": "923bda3",
+        "message": "feat(profile): group the industry picker by sector (2.50.8)"
+      },
+      {
+        "sha": "9685d79",
+        "message": "feat(profile): one-time re-ask for industries picked against the old list (2.50.9)"
+      },
+      {
+        "sha": "7cd8c44",
+        "message": "fix(compare): say what the comparison actually needs (2.50.10)"
+      },
+      {
+        "sha": "2a8f113",
+        "message": "fix(i18n): translate the missing singular plural forms (2.50.11)"
+      },
+      {
+        "sha": "7c41ad9",
+        "message": "fix(workspace): first-run test findings — compare roles, signal labels, weights (2.51.0)"
+      },
+      {
+        "sha": "ef62e04",
+        "message": "feat(profile): offer a free re-read when a run's findings never landed (2.52.0)"
+      },
+      {
+        "sha": "210a28e",
+        "message": "fix(content): the bench promised a trigger no detector implements (2.51.1)"
+      },
+      {
+        "sha": "17825cc",
+        "message": "chore(release): renumber the content-bench copy fix to 2.52.1"
+      },
+      {
+        "sha": "963e02e",
+        "message": "fix(compare,analytics): finish two fixes that retesting proved incomplete (2.52.2)"
+      },
+      {
+        "sha": "9f11e25",
+        "message": "feat(i18n): ship Simplified Chinese, fix four English-only strings (2.53.0)"
+      },
+      {
+        "sha": "fb680c6",
+        "message": "fix(build): satisfy the vocabulary and i18n-fallback guardrails (2.53.1)"
+      },
+      {
+        "sha": "d915b77",
+        "message": "fix(a11y): make the add-domain row a real button (2.53.2)"
+      },
+      {
+        "sha": "03c9759",
+        "message": "fix(citations): stop ranking the same sources twice (2.53.3)"
+      },
+      {
+        "sha": "9fd31b8",
+        "message": "fix(profile): 'other' rendered as agreement in the observed-industry block (2.53.4)"
+      },
+      {
+        "sha": "f3937c9",
+        "message": "fix(focus): the Add Focus flow, end to end (2.53.9)"
+      },
+      {
+        "sha": "cf25e62",
+        "message": "feat(analytics): Tone tab, and the tone threshold leaves the bundle (2.54.0)"
+      },
+      {
+        "sha": "d16aca4",
+        "message": "feat(analytics): Domain Movers tab (2.55.0)"
+      },
+      {
+        "sha": "03d6ccd",
+        "message": "fix(movers): say why there is nothing to compare (2.55.1)"
+      },
+      {
+        "sha": "60568c8",
+        "message": "fix(movers): comparability follow-through across citation surfaces (2.55.1)"
+      },
+      {
+        "sha": "d71c053",
+        "message": "refactor(movers): drop the top-sources chart for a sentence (2.58.0)"
+      },
+      {
+        "sha": "f2a6b45",
+        "message": "fix(movers): name the attribution, page the list, trust the totals (2.59.0)"
+      },
+      {
+        "sha": "33b9244",
+        "message": "fix(movers): stop rendering unattributable posts as a publisher (2.59.1)"
+      },
+      {
+        "sha": "0150bc5",
+        "message": "feat(movers): move unattributable pools below the ranking (2.59.2)"
+      },
+      {
+        "sha": "8830f85",
+        "message": "fix(movers): chips said 472, the list showed 24 (2.59.3)"
+      },
+      {
+        "sha": "4ca8917",
+        "message": "feat(tone): show competitors beside your own tone (2.60.0)"
+      },
+      {
+        "sha": "52af7d0",
+        "message": "chore(changelog): match staging's 2.54.0-2.60.0 section exactly"
+      },
+      {
+        "sha": "feafc68",
+        "message": "feat(vocab): AS surface becomes \"AI Readiness\", the run an \"AI Readiness Check\" (2.60.1)"
+      },
+      {
+        "sha": "1ef8426",
+        "message": "feat(analytics): Owned & earned media tab (2.61.0)"
+      },
+      {
+        "sha": "a5cb625",
+        "message": "feat(vocab): the exported PDF follows the AI Readiness rename (2.61.1)"
+      },
+      {
+        "sha": "3fa7b3f",
+        "message": "fix(ui,i18n): status footer health, phone signal names, pillar vocabulary translations (2.61.2)"
+      },
+      {
+        "sha": "18b097a",
+        "message": "fix(media): earned confidence stops claiming LIKELY, one earned sum (2.64.0)"
+      },
+      {
+        "sha": "e5a537f",
+        "message": "fix(auth): session recovery stops signing out its own users; identity-scoped org lists (2.64.1–2.64.4)"
+      },
+      {
+        "sha": "11c25f8",
+        "message": "chore(changelog): drop #360's entries, match staging for the rest"
+      },
+      {
+        "sha": "5f0c17f",
+        "message": "Feature/alex work layout v2 release (#379)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 310,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/310",
+    "title": "PR for production",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-09-16T01:51:35Z",
+    "mergedAtDate": "16 September 2026",
+    "mergedAtTime": "08.51.35",
+    "body": "",
+    "commits": [
+      {
+        "sha": "b890452",
+        "message": "fix(net): report-image and SSE deadlines cover the DNS preflight (1.97.1)"
+      },
+      {
+        "sha": "e600c26",
+        "message": "chore(vs): remove sVS and the social account registry (1.98.0)"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 308,
@@ -3468,7 +3815,7 @@
     "mergedAt": "2026-07-21T05:16:32Z",
     "mergedAtDate": "21 Juli 2026",
     "mergedAtTime": "12.16.32",
-    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
+    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx �� the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
     "commits": [
       {
         "sha": "8a1ef4e",
@@ -6172,151 +6519,6 @@
       {
         "sha": "363786f",
         "message": "feat: add mining throttle section to Ava insights config page"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 105,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/105",
-    "title": "Feat/asg artha release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-18T07:59:53Z",
-    "mergedAtDate": "18 Juni 2026",
-    "mergedAtTime": "14.59.53",
-    "body": "",
-    "commits": [
-      {
-        "sha": "f836da2",
-        "message": "ASg New Feature"
-      },
-      {
-        "sha": "ab58373",
-        "message": "Fix Export"
-      },
-      {
-        "sha": "4581556",
-        "message": "Adjust ASg"
-      },
-      {
-        "sha": "d34f4bb",
-        "message": "Merge remote-tracking branch 'origin/main' into feat/asg-artha-main-v2"
-      },
-      {
-        "sha": "7b2a5d2",
-        "message": "Feat/asg artha main v2 (#103)"
-      },
-      {
-        "sha": "3232046",
-        "message": "feat(asg): export via browser print only (no QR, logo + screenshot render)"
-      },
-      {
-        "sha": "094bf3e",
-        "message": "Merge remote-tracking branch 'origin/main' into feat/asg-artha-main-v2"
-      },
-      {
-        "sha": "844ca63",
-        "message": "Merge remote-tracking branch 'origin/release' into feat/asg-artha-release"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 43,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/43",
-    "title": "Feat/llm routing per model overrides",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-18T07:28:36Z",
-    "mergedAtDate": "18 Juni 2026",
-    "mergedAtTime": "14.28.36",
-    "body": "",
-    "commits": [
-      {
-        "sha": "357396f",
-        "message": "feat: per-model overrides, chain reorder & test button for LLM routing (v2.173.0)"
-      },
-      {
-        "sha": "44f295d",
-        "message": "feat: add/rename/test models on Providers page (v2.174.0)"
-      },
-      {
-        "sha": "00bcaea",
-        "message": "Merge origin/release into feat/llm-routing-per-model-overrides"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 176,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/176",
-    "title": "Check for module active for user drawer, and domain management …",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-18T01:55:20Z",
-    "mergedAtDate": "18 Juni 2026",
-    "mergedAtTime": "08.55.20",
-    "body": "…views",
-    "commits": [
-      {
-        "sha": "05034ca",
-        "message": "feat: check for module active for user drawer, and domain management views"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 102,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/102",
-    "title": "Fix/tier starter",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-18T01:54:56Z",
-    "mergedAtDate": "18 Juni 2026",
-    "mergedAtTime": "08.54.56",
-    "body": "",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "58b1543",
-        "message": "feat: adjust TiersTab component for module toggle"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 109,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/109",
-    "title": "Implement module check",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-18T01:52:57Z",
-    "mergedAtDate": "18 Juni 2026",
-    "mergedAtTime": "08.52.57",
-    "body": "",
-    "commits": [
-      {
-        "sha": "ecb239f",
-        "message": "feat: implement module check"
       }
     ]
   }
