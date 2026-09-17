@@ -3815,7 +3815,7 @@
     "mergedAt": "2026-07-21T05:16:32Z",
     "mergedAtDate": "21 Juli 2026",
     "mergedAtTime": "12.16.32",
-    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx �� the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
+    "body": "Isolates the AVO Lite ops monitoring surface — read-only, reads from Sutra's /api/admin/lite/*. No Artha DB migration (Artha owns no Lite data).\r\n\r\n- api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints\r\n- src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)\r\n- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)\r\n\r\nWiring spliced onto release:\r\n- api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)\r\n- src/lib/router.tsx: /lite route (lazy)\r\n- src/components/layout/AdminShell.tsx: 'AVO Lite' nav item (Feather icon)\r\n\r\nAlso fixed two long-standing type errors in LitePage (StatusBadge now accepts string | null, matching the API's nullable status) — they errored on main too.\r\n\r\nVerified: vite build green; my splice files typecheck clean. The other tsc -b errors are pre-existing release baseline (unused vars, NeonQueryPromise casts in partner/translation/voucher repos) and do not block the FE build.",
     "commits": [
       {
         "sha": "8a1ef4e",
@@ -6498,27 +6498,6 @@
       {
         "sha": "926472d",
         "message": "fix: cek overdraft"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 45,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/45",
-    "title": "Add mining throttle section to Ava insights config page",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-19T06:32:15Z",
-    "mergedAtDate": "19 Juni 2026",
-    "mergedAtTime": "13.32.15",
-    "body": "Adds a \"Mining throttle\" bucket to the Ava Account Insights config page in Shastra, rendering the cooldown_hours setting from AVA's registry.",
-    "commits": [
-      {
-        "sha": "363786f",
-        "message": "feat: add mining throttle section to Ava insights config page"
       }
     ]
   }

@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>17 September 2026 pukul 02.50 WIB
+    Diperbarui otomatis<br>18 September 2026 pukul 02.58 WIB
   </div>
 </header>
 
@@ -1755,7 +1755,7 @@ Set SUTRA_DARSHANA_URL in Artha production to the Sutra that actually hosts AVO 
 
 - api/routes/lite.ts — Hono proxy to Sutra admin lite endpoints
 - src/lib/api/artha/lite.ts — TanStack Query read hooks (overview/users/runs/ ledger/payments)
-- src/pages/LitePage.tsx �� the monitoring page (Overview/Users/Payments/Runs/Ledger)
+- src/pages/LitePage.tsx — the monitoring page (Overview/Users/Payments/Runs/Ledger)
 
 Wiring spliced onto release:
 - api/[[...route]].ts: import lite, add 'darshana' to the authMiddleware list, app.route('/darshana', lite)
@@ -3749,24 +3749,6 @@ PipelineMonitor moved from a left in-flow panel to the right: unpinned overlay d
         <tr class="detail-row hidden" id="detail-avq-sutra-112">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">ddceb7c</span>feat: implement atomic credit reservation ledger for vs probes to ensure billing concurrency safety</div><div class="commit-line"><span class="commit-sha">926472d</span>fix: cek overdraft</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-shastra-45')">
-          <td class="td-date">
-            <div>19 Juni 2026</div>
-            <div class="td-time">13.32.15</div>
-          </td>
-          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
-          <td><span class="type-badge">✨ Fitur Baru</span></td>
-          <td class="td-title">Add mining throttle section to Ava insights config page</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/45" target="_blank" onclick="event.stopPropagation()">#45</a>
-            <span class="expand-chevron" id="chev-avq-shastra-45">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-shastra-45">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">Adds a &quot;Mining throttle&quot; bucket to the Ava Account Insights config page in Shastra, rendering the cooldown_hours setting from AVA's registry.</div>
           </td>
         </tr></tbody>
         </table>
