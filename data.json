@@ -6433,47 +6433,5 @@
         "message": "Update Industry Brand Context"
       }
     ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 50,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/50",
-    "title": "Replace topbar dropdowns with collapsible left sidebar",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-23T05:02:42Z",
-    "mergedAtDate": "23 Juni 2026",
-    "mergedAtTime": "12.02.42",
-    "body": "Topbar had grown to 4 links + 8 dropdown menus (~59 destinations) in a 54px bar. Replaced with a left Sidebar reorganized into 6 groups (Operate, Analyze, Services, Tools, Configure, Admin) + pinned Docs, with an icon-rail <-> expanded collapse mode persisted to localStorage.\r\n\r\nPipelineMonitor moved from a left in-flow panel to the right: unpinned overlay drawer (auto-closes on navigation) or pinned in-flow column. Topbar slimmed to brand + LiveTicker + monitor toggle + UserMenu.\r\n\r\n- New src/components/layout/Sidebar.tsx\r\n- Removed src/components/layout/TopNav.tsx (superseded)\r\n- PageShell, PipelineMonitor, ui.store updated\r\n- CLAUDE.md nav rule corrected (sidebar is now canonical)\r\n- v2.174.0 -> v2.175.0",
-    "commits": [
-      {
-        "sha": "0db18c7",
-        "message": "feat: replace topbar dropdowns with collapsible left sidebar"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 180,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/180",
-    "title": "Filter prompt add contextual",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-23T02:03:55Z",
-    "mergedAtDate": "23 Juni 2026",
-    "mergedAtTime": "09.03.55",
-    "body": "",
-    "commits": [
-      {
-        "sha": "3110086",
-        "message": "fix: filter prompt add contextual"
-      }
-    ]
   }
 ]
