@@ -1,5 +1,206 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 211,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/211",
+    "title": "Add createPortal to tier edit modal on release branch",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-28T06:51:08Z",
+    "mergedAtDate": "28 September 2026",
+    "mergedAtTime": "13.51.08",
+    "body": "Without createPortal, the modal renders inside a parent with transform which breaks position:fixed. Portal to document.body fixes it.",
+    "commits": [
+      {
+        "sha": "817d027",
+        "message": "fix: add createPortal to tier edit modal on release branch"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 209,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/209",
+    "title": "Tier edit modal scrolls with page — use inner overflow instead",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-28T06:35:52Z",
+    "mergedAtDate": "28 September 2026",
+    "mergedAtTime": "13.35.52",
+    "body": "Move overflow-y-auto from the fixed overlay to the modal inner container with max-h-[90vh], so the modal stays centered and scrolls internally.",
+    "commits": [
+      {
+        "sha": "fd787ff",
+        "message": "fix: tier edit modal scrolls with page — use inner overflow instead"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 208,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/208",
+    "title": "Feat/avo lifetime from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-28T06:14:00Z",
+    "mergedAtDate": "28 September 2026",
+    "mergedAtTime": "13.14.00",
+    "body": "",
+    "commits": [
+      {
+        "sha": "da18b0b",
+        "message": "feat: AVO Lifetime — admin tier edit (user limit + Airwallex product ID)"
+      },
+      {
+        "sha": "f4a2eac",
+        "message": "fix: AVO Lifetime — tier panel reflects Lifetime and is read-only"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 399,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/399",
+    "title": "Feat/avo lifetime from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-28T06:13:57Z",
+    "mergedAtDate": "28 September 2026",
+    "mergedAtTime": "13.13.57",
+    "body": "",
+    "commits": [
+      {
+        "sha": "afb3705",
+        "message": "feat: AVO Lifetime — billing UI, domain parking, plan badge, enforcement"
+      },
+      {
+        "sha": "0d95b9f",
+        "message": "fix: purchase history display reads correct amount_usd field"
+      },
+      {
+        "sha": "e954bb7",
+        "message": "feat: parked domains on Portfolio/Domains page + billing UI fixes"
+      },
+      {
+        "sha": "eecd6da",
+        "message": "feat: Lifetime checkout breakdown modal + team panel fixes"
+      },
+      {
+        "sha": "7a03c52",
+        "message": "fix: resolve lifetime tier codenames in Overview + Pro switch warning"
+      },
+      {
+        "sha": "ee91419",
+        "message": "feat: full i18n for AVO Lifetime across 6 locales"
+      },
+      {
+        "sha": "96c57ab",
+        "message": "fix: i18n fallback drift — use literal em dash instead of \\u2014"
+      },
+      {
+        "sha": "e372e11",
+        "message": "fix: broken JSX structure in LifetimePurchaseHistory on release branch"
+      },
+      {
+        "sha": "0eba19f",
+        "message": "fix: exclude test files from tsc + fix i18n drift on release branch"
+      },
+      {
+        "sha": "cbb0550",
+        "message": "fix: AVO Lifetime — excess domains move to competitors; block promote past slot limit"
+      },
+      {
+        "sha": "cbf3a23",
+        "message": "fix: AVO Lifetime — plan badge section removed for non-owners"
+      },
+      {
+        "sha": "3086f65",
+        "message": "fix: portfolio stale after a failed promote"
+      },
+      {
+        "sha": "c373c53",
+        "message": "feat: outstanding invitations in the team list, with revoke"
+      },
+      {
+        "sha": "1b43650",
+        "message": "refactor: Current Subscription moves to the top of the Plan tab"
+      },
+      {
+        "sha": "cec4ed8",
+        "message": "docs: announce AVO Lifetime in the changelog"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 319,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/319",
+    "title": "Feat/avo lifetime from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-09-28T06:10:21Z",
+    "mergedAtDate": "28 September 2026",
+    "mergedAtTime": "13.10.21",
+    "body": "",
+    "commits": [
+      {
+        "sha": "bd39ce2",
+        "message": "feat: AVO Lifetime — one-time purchase tier with domain/user limits"
+      },
+      {
+        "sha": "0ed3a76",
+        "message": "fix: domain restore removes from competitors[] + merge upstream demote logic"
+      },
+      {
+        "sha": "664957d",
+        "message": "feat: hide Lifetime tiers via Airwallex product metadata (is_hide)"
+      },
+      {
+        "sha": "bea864b",
+        "message": "fix: Lifetime is_hide uses cached products + updateMemberRole uses member ID"
+      },
+      {
+        "sha": "dae2ad4",
+        "message": "fix: wallet deposit description uses tier label instead of codename"
+      },
+      {
+        "sha": "85589a8",
+        "message": "fix: AVO Lifetime — keep Lifetime tier when the replaced Pro subscription is canceled"
+      },
+      {
+        "sha": "b3169a8",
+        "message": "fix: AVO Lifetime — demote excess domains to competitors instead of parking"
+      },
+      {
+        "sha": "d566648",
+        "message": "fix: promote counted the domain it was about to promote"
+      },
+      {
+        "sha": "c5b2b18",
+        "message": "fix: outstanding invitations hold a user slot"
+      },
+      {
+        "sha": "dcc6b0f",
+        "message": "fix: repair the release-line port so the branch builds"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 384,
@@ -5448,331 +5649,6 @@
       {
         "sha": "cf7cfc9",
         "message": "fix: update release note"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 129,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/129",
-    "title": "Fix/pnpm lock",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T13:43:59Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "20.43.59",
-    "body": "",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "72b3815",
-        "message": "fix: pnpm lock autoInstallPeers true"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 231,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/231",
-    "title": "Fix/billing metadata",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T10:59:59Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "17.59.59",
-    "body": "",
-    "commits": [
-      {
-        "sha": "bd983ab",
-        "message": "feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)"
-      },
-      {
-        "sha": "62697a7",
-        "message": "fix: show original price at plan list"
-      },
-      {
-        "sha": "74c2329",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "f943deb",
-        "message": "fix: wrong subtotal"
-      },
-      {
-        "sha": "43e6957",
-        "message": "adjust: add filter is_hide on available plan"
-      },
-      {
-        "sha": "9b3cdc7",
-        "message": "fix: add duration billing if any"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 153,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/153",
-    "title": "Fix/billing metadata",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-30T10:57:43Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "17.57.43",
-    "body": "",
-    "commits": [
-      {
-        "sha": "25fbc11",
-        "message": "fix: add duration billing if any"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 128,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/128",
-    "title": "Fix/billing artha sync",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T10:19:13Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "17.19.13",
-    "body": "",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "f835c00",
-        "message": "feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)"
-      },
-      {
-        "sha": "ec5b314",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "20a0c79",
-        "message": "feat: subscription history, sync artha airwllex"
-      },
-      {
-        "sha": "3f12af4",
-        "message": "fix: add guard switch tier when active plan exists"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 151,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/151",
-    "title": "Fix/billing artha sync",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-30T10:16:23Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "17.16.23",
-    "body": "",
-    "commits": [
-      {
-        "sha": "197c96b",
-        "message": "feat: subscription history, sync artha airwllex"
-      },
-      {
-        "sha": "610e6d3",
-        "message": "fix: add guard switch tier when active plan exists"
-      },
-      {
-        "sha": "80b3a11",
-        "message": "fix(billing): cancel Airwallex subs even when stored id is a checkout id (0.48.1)"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 228,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/228",
-    "title": "Admin fee, reconcile airwallex trx",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T09:58:51Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "16.58.51",
-    "body": "",
-    "commits": [
-      {
-        "sha": "bd983ab",
-        "message": "feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)"
-      },
-      {
-        "sha": "62697a7",
-        "message": "fix: show original price at plan list"
-      },
-      {
-        "sha": "74c2329",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "f943deb",
-        "message": "fix: wrong subtotal"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 127,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/127",
-    "title": "Revert pnpm autoInstallPeers to true",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T09:58:21Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "16.58.21",
-    "body": "",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "f835c00",
-        "message": "feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)"
-      },
-      {
-        "sha": "ec5b314",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "dc8da43",
-        "message": "feat: add subs id and search"
-      },
-      {
-        "sha": "adb29aa",
-        "message": "fix: add awx order id"
-      },
-      {
-        "sha": "2d42d47",
-        "message": "fix: revert pnpm autoInstallPeers to true"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 126,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/126",
-    "title": "Admin fee, reconcile airwallex trx",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-06-30T09:54:43Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "16.54.43",
-    "body": "",
-    "commits": [
-      {
-        "sha": "dc9b12d",
-        "message": "Release Production v04052026 (#31)"
-      },
-      {
-        "sha": "f835c00",
-        "message": "feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)"
-      },
-      {
-        "sha": "ec5b314",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "dc8da43",
-        "message": "feat: add subs id and search"
-      },
-      {
-        "sha": "adb29aa",
-        "message": "fix: add awx order id"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 150,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/150",
-    "title": "Admin fee, reconcile airwallex trx",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "mfmakarim",
-    "mergedAt": "2026-06-30T09:53:38Z",
-    "mergedAtDate": "30 Juni 2026",
-    "mergedAtTime": "16.53.38",
-    "body": "",
-    "commits": [
-      {
-        "sha": "156b067",
-        "message": "feat(billing): Airwallex fee pass-through (Admin Fee) + invoice customer detail (0.45.0)"
-      },
-      {
-        "sha": "5e6f2ca",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "2aff607",
-        "message": "fix: listen payment intent cancelled"
-      },
-      {
-        "sha": "686d567",
-        "message": "fix(airwallex): drive subscription activation from payment_intent + handle cancel"
-      },
-      {
-        "sha": "730953c",
-        "message": "docs: design spec for Airwallex subscription auto-renewal fix"
-      },
-      {
-        "sha": "4b0ae43",
-        "message": "fix: remove billing duration for auto renewal"
-      },
-      {
-        "sha": "43450d5",
-        "message": "feat: add subs id and search"
-      },
-      {
-        "sha": "f3e76ab",
-        "message": "fix: store sub id"
-      },
-      {
-        "sha": "64779d7",
-        "message": "fix: race condition update sub id"
-      },
-      {
-        "sha": "7619bc3",
-        "message": "fix: add reconcile airwallex invoice"
-      },
-      {
-        "sha": "e7e12ac",
-        "message": "fix: add awx order id"
       }
     ]
   }

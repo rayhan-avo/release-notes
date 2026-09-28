@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>28 September 2026 pukul 02.57 WIB
+    Diperbarui otomatis<br>29 September 2026 pukul 05.23 WIB
   </div>
 </header>
 
@@ -309,6 +309,96 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-211')">
+          <td class="td-date">
+            <div>28 September 2026</div>
+            <div class="td-time">13.51.08</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Add createPortal to tier edit modal on release branch</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/211" target="_blank" onclick="event.stopPropagation()">#211</a>
+            <span class="expand-chevron" id="chev-avq-artha-211">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-211">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Without createPortal, the modal renders inside a parent with transform which breaks position:fixed. Portal to document.body fixes it.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-209')">
+          <td class="td-date">
+            <div>28 September 2026</div>
+            <div class="td-time">13.35.52</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Tier edit modal scrolls with page — use inner overflow instead</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/209" target="_blank" onclick="event.stopPropagation()">#209</a>
+            <span class="expand-chevron" id="chev-avq-artha-209">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-209">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">Move overflow-y-auto from the fixed overlay to the modal inner container with max-h-[90vh], so the modal stays centered and scrolls internally.</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-208')">
+          <td class="td-date">
+            <div>28 September 2026</div>
+            <div class="td-time">13.14.00</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lifetime from release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/208" target="_blank" onclick="event.stopPropagation()">#208</a>
+            <span class="expand-chevron" id="chev-avq-artha-208">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-208">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">da18b0b</span>feat: AVO Lifetime — admin tier edit (user limit + Airwallex product ID)</div><div class="commit-line"><span class="commit-sha">f4a2eac</span>fix: AVO Lifetime — tier panel reflects Lifetime and is read-only</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-399')">
+          <td class="td-date">
+            <div>28 September 2026</div>
+            <div class="td-time">13.13.57</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lifetime from release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/399" target="_blank" onclick="event.stopPropagation()">#399</a>
+            <span class="expand-chevron" id="chev-avq-astra-399">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-399">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">afb3705</span>feat: AVO Lifetime — billing UI, domain parking, plan badge, enforcement</div><div class="commit-line"><span class="commit-sha">0d95b9f</span>fix: purchase history display reads correct amount_usd field</div><div class="commit-line"><span class="commit-sha">e954bb7</span>feat: parked domains on Portfolio/Domains page + billing UI fixes</div><div class="commit-line"><span class="commit-sha">eecd6da</span>feat: Lifetime checkout breakdown modal + team panel fixes</div><div class="commit-line"><span class="commit-sha">7a03c52</span>fix: resolve lifetime tier codenames in Overview + Pro switch warning</div><div class="commit-line"><span class="commit-sha">ee91419</span>feat: full i18n for AVO Lifetime across 6 locales</div><div class="commit-line"><span class="commit-sha">96c57ab</span>fix: i18n fallback drift — use literal em dash instead of \u2014</div><div class="commit-line"><span class="commit-sha">e372e11</span>fix: broken JSX structure in LifetimePurchaseHistory on release branch</div><div class="commit-line"><span class="commit-sha">0eba19f</span>fix: exclude test files from tsc + fix i18n drift on release branch</div><div class="commit-line"><span class="commit-sha">cbb0550</span>fix: AVO Lifetime — excess domains move to competitors; block promote past slot limit</div><div class="commit-line"><span class="commit-sha">cbf3a23</span>fix: AVO Lifetime — plan badge section removed for non-owners</div><div class="commit-line"><span class="commit-sha">3086f65</span>fix: portfolio stale after a failed promote</div><div class="commit-line"><span class="commit-sha">c373c53</span>feat: outstanding invitations in the team list, with revoke</div><div class="commit-line"><span class="commit-sha">1b43650</span>refactor: Current Subscription moves to the top of the Plan tab</div><div class="commit-line"><span class="commit-sha">cec4ed8</span>docs: announce AVO Lifetime in the changelog</div></div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-319')">
+          <td class="td-date">
+            <div>28 September 2026</div>
+            <div class="td-time">13.10.21</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">📦 Update</span></td>
+          <td class="td-title">Feat/avo lifetime from release</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/319" target="_blank" onclick="event.stopPropagation()">#319</a>
+            <span class="expand-chevron" id="chev-avq-sutra-319">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-319">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bd39ce2</span>feat: AVO Lifetime — one-time purchase tier with domain/user limits</div><div class="commit-line"><span class="commit-sha">0ed3a76</span>fix: domain restore removes from competitors[] + merge upstream demote logic</div><div class="commit-line"><span class="commit-sha">664957d</span>feat: hide Lifetime tiers via Airwallex product metadata (is_hide)</div><div class="commit-line"><span class="commit-sha">bea864b</span>fix: Lifetime is_hide uses cached products + updateMemberRole uses member ID</div><div class="commit-line"><span class="commit-sha">dae2ad4</span>fix: wallet deposit description uses tier label instead of codename</div><div class="commit-line"><span class="commit-sha">85589a8</span>fix: AVO Lifetime — keep Lifetime tier when the replaced Pro subscription is canceled</div><div class="commit-line"><span class="commit-sha">b3169a8</span>fix: AVO Lifetime — demote excess domains to competitors instead of parking</div><div class="commit-line"><span class="commit-sha">d566648</span>fix: promote counted the domain it was about to promote</div><div class="commit-line"><span class="commit-sha">c5b2b18</span>fix: outstanding invitations hold a user slot</div><div class="commit-line"><span class="commit-sha">dcc6b0f</span>fix: repair the release-line port so the branch builds</div></div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-384')">
           <td class="td-date">
             <div>16 September 2026</div>
@@ -3094,183 +3184,6 @@ tsc --noEmit passes.</div>
         <tr class="detail-row hidden" id="detail-avq-astra-233">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bd983ab</span>feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)</div><div class="commit-line"><span class="commit-sha">62697a7</span>fix: show original price at plan list</div><div class="commit-line"><span class="commit-sha">74c2329</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">f943deb</span>fix: wrong subtotal</div><div class="commit-line"><span class="commit-sha">cf7cfc9</span>fix: update release note</div></div>
-          </td>
-        </tr></tbody>
-        </table>
-      </div>
-      <div class="month-group">
-        <h2 class="month-header">Juni 2026</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Tanggal</th>
-              <th>Produk</th>
-              <th>Tipe</th>
-              <th>Perubahan</th>
-              <th>PR</th>
-            </tr>
-          </thead>
-          <tbody>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-129')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">20.43.59</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/pnpm lock</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/129" target="_blank" onclick="event.stopPropagation()">#129</a>
-            <span class="expand-chevron" id="chev-avq-artha-129">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-129">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">72b3815</span>fix: pnpm lock autoInstallPeers true</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-231')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">17.59.59</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/billing metadata</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/231" target="_blank" onclick="event.stopPropagation()">#231</a>
-            <span class="expand-chevron" id="chev-avq-astra-231">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-231">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bd983ab</span>feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)</div><div class="commit-line"><span class="commit-sha">62697a7</span>fix: show original price at plan list</div><div class="commit-line"><span class="commit-sha">74c2329</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">f943deb</span>fix: wrong subtotal</div><div class="commit-line"><span class="commit-sha">43e6957</span>adjust: add filter is_hide on available plan</div><div class="commit-line"><span class="commit-sha">9b3cdc7</span>fix: add duration billing if any</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-153')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">17.57.43</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/billing metadata</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/153" target="_blank" onclick="event.stopPropagation()">#153</a>
-            <span class="expand-chevron" id="chev-avq-sutra-153">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-153">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">25fbc11</span>fix: add duration billing if any</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-128')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">17.19.13</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/billing artha sync</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/128" target="_blank" onclick="event.stopPropagation()">#128</a>
-            <span class="expand-chevron" id="chev-avq-artha-128">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-128">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">f835c00</span>feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)</div><div class="commit-line"><span class="commit-sha">ec5b314</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">20a0c79</span>feat: subscription history, sync artha airwllex</div><div class="commit-line"><span class="commit-sha">3f12af4</span>fix: add guard switch tier when active plan exists</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-151')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">17.16.23</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/billing artha sync</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/151" target="_blank" onclick="event.stopPropagation()">#151</a>
-            <span class="expand-chevron" id="chev-avq-sutra-151">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-151">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">197c96b</span>feat: subscription history, sync artha airwllex</div><div class="commit-line"><span class="commit-sha">610e6d3</span>fix: add guard switch tier when active plan exists</div><div class="commit-line"><span class="commit-sha">80b3a11</span>fix(billing): cancel Airwallex subs even when stored id is a checkout id (0.48.1)</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-228')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">16.58.51</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">✨ Fitur Baru</span></td>
-          <td class="td-title">Admin fee, reconcile airwallex trx</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/228" target="_blank" onclick="event.stopPropagation()">#228</a>
-            <span class="expand-chevron" id="chev-avq-astra-228">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-228">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bd983ab</span>feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)</div><div class="commit-line"><span class="commit-sha">62697a7</span>fix: show original price at plan list</div><div class="commit-line"><span class="commit-sha">74c2329</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">f943deb</span>fix: wrong subtotal</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-127')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">16.58.21</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Revert pnpm autoInstallPeers to true</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/127" target="_blank" onclick="event.stopPropagation()">#127</a>
-            <span class="expand-chevron" id="chev-avq-artha-127">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-127">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">f835c00</span>feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)</div><div class="commit-line"><span class="commit-sha">ec5b314</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">dc8da43</span>feat: add subs id and search</div><div class="commit-line"><span class="commit-sha">adb29aa</span>fix: add awx order id</div><div class="commit-line"><span class="commit-sha">2d42d47</span>fix: revert pnpm autoInstallPeers to true</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-artha-126')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">16.54.43</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
-          <td><span class="type-badge">✨ Fitur Baru</span></td>
-          <td class="td-title">Admin fee, reconcile airwallex trx</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/126" target="_blank" onclick="event.stopPropagation()">#126</a>
-            <span class="expand-chevron" id="chev-avq-artha-126">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-artha-126">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">dc9b12d</span>Release Production v04052026 (#31)</div><div class="commit-line"><span class="commit-sha">f835c00</span>feat(billing): split Airwallex fee config + functional partner Invoices tab (1.42.0)</div><div class="commit-line"><span class="commit-sha">ec5b314</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">dc8da43</span>feat: add subs id and search</div><div class="commit-line"><span class="commit-sha">adb29aa</span>fix: add awx order id</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-150')">
-          <td class="td-date">
-            <div>30 Juni 2026</div>
-            <div class="td-time">16.53.38</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">✨ Fitur Baru</span></td>
-          <td class="td-title">Admin fee, reconcile airwallex trx</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/150" target="_blank" onclick="event.stopPropagation()">#150</a>
-            <span class="expand-chevron" id="chev-avq-sutra-150">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-150">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">156b067</span>feat(billing): Airwallex fee pass-through (Admin Fee) + invoice customer detail (0.45.0)</div><div class="commit-line"><span class="commit-sha">5e6f2ca</span>fix: adjust fee calculation</div><div class="commit-line"><span class="commit-sha">2aff607</span>fix: listen payment intent cancelled</div><div class="commit-line"><span class="commit-sha">686d567</span>fix(airwallex): drive subscription activation from payment_intent + handle cancel</div><div class="commit-line"><span class="commit-sha">730953c</span>docs: design spec for Airwallex subscription auto-renewal fix</div><div class="commit-line"><span class="commit-sha">4b0ae43</span>fix: remove billing duration for auto renewal</div><div class="commit-line"><span class="commit-sha">43450d5</span>feat: add subs id and search</div><div class="commit-line"><span class="commit-sha">f3e76ab</span>fix: store sub id</div><div class="commit-line"><span class="commit-sha">64779d7</span>fix: race condition update sub id</div><div class="commit-line"><span class="commit-sha">7619bc3</span>fix: add reconcile airwallex invoice</div><div class="commit-line"><span class="commit-sha">e7e12ac</span>fix: add awx order id</div></div>
           </td>
         </tr></tbody>
         </table>
