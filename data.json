@@ -1,5 +1,553 @@
 [
   {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 322,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/322",
+    "title": "Remove duplicate fetchDomainLogoDataUri local declaration",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": "build",
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-09-29T02:33:57Z",
+    "mergedAtDate": "29 September 2026",
+    "mergedAtTime": "09.33.57",
+    "body": "The function was both imported from report-assets.service.ts (line 19) and declared locally (lines 60-77), causing TS2440. The local copy also referenced an undefined buildBrandfetchUrl. Keep the service import only.",
+    "commits": [
+      {
+        "sha": "7ca7cdf",
+        "message": "fix(build): remove duplicate fetchDomainLogoDataUri local declaration"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 321,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/321",
+    "title": "Feature/alex work layout v2 release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-09-29T02:28:14Z",
+    "mergedAtDate": "29 September 2026",
+    "mergedAtTime": "09.28.14",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6311b86",
+        "message": "feat(billing): Ask AVO chat pricing + durable wallet reservations (1.98.0)"
+      },
+      {
+        "sha": "58d918b",
+        "message": "fix(media): unmeasured media-mix fallback carries earnedUnconfirmed (1.98.1)"
+      },
+      {
+        "sha": "cd3d8ee",
+        "message": "feat(reports): client-uploaded report logo for every org (1.99.0)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 89,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/89",
+    "title": "[Release] AVO V2 Production",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-29T02:26:54Z",
+    "mergedAtDate": "29 September 2026",
+    "mergedAtTime": "09.26.54",
+    "body": "",
+    "commits": [
+      {
+        "sha": "6e0efab",
+        "message": "feat(domains): port staging #86 onto the release line (2.180.0)"
+      },
+      {
+        "sha": "be250d7",
+        "message": "feat(inspect): Focus Spec panel onto the release line"
+      },
+      {
+        "sha": "4ba05a5",
+        "message": "feat: port PR #90 onto the release line — Empty Data Rule, GAP retirement, site thumbnail (2.182.1)"
+      },
+      {
+        "sha": "074d694",
+        "message": "feat(configure): port the sAS/sVS console and Brand Matching onto the release line (2.186.0)"
+      },
+      {
+        "sha": "db28802",
+        "message": "feat(configure): port the sAS/sVS console upgrades and the config rail onto the release line (2.187.1)"
+      },
+      {
+        "sha": "f7fccdd",
+        "message": "fix(sas,svs): the console can see client data, and says whose it is (2.192.2)"
+      },
+      {
+        "sha": "a1879e0",
+        "message": "fix(sas): provider copy no longer contradicts its own dropdowns (2.192.3)"
+      },
+      {
+        "sha": "e140fce",
+        "message": "fix(sas): provider copy no longer asserts which platforms are on (2.192.4)"
+      },
+      {
+        "sha": "845fc43",
+        "message": "feat: 2.193.0 — see CHANGELOG entry"
+      },
+      {
+        "sha": "45d683e",
+        "message": "feat(configure): Source Classification tab on VS Pipeline config (2.194.0)"
+      },
+      {
+        "sha": "37a5b8a",
+        "message": "docs(configure): the Source Classification tab explains directory and the Citations room (2.194.1)"
+      },
+      {
+        "sha": "fcd2b80",
+        "message": "fix(ui): stop showing invented model data as if it were config (2.194.2)"
+      },
+      {
+        "sha": "0a5aa04",
+        "message": "chore(configure): remove the sAS Engine config page"
+      },
+      {
+        "sha": "6919d12",
+        "message": "fix(build): untrack the node_modules symlink before it reaches a deploy branch"
+      },
+      {
+        "sha": "4e12cf6",
+        "message": "chore(sas): remove the last of the sAS console (2.194.3)"
+      },
+      {
+        "sha": "fbafb4f",
+        "message": "fix(focus): show why a keyword volume is missing (2.194.4)"
+      },
+      {
+        "sha": "7bf64fe",
+        "message": "chore(sas): remove the leftovers the retirement missed (2.194.3)"
+      },
+      {
+        "sha": "1aff19b",
+        "message": "chore(sas): drop the sas_datapoints slot from the config workspace (2.194.6)"
+      },
+      {
+        "sha": "9636be1",
+        "message": "Merge release-for-v2 into feature/alex-work-layout-v2-release (2.188.0)"
+      },
+      {
+        "sha": "8a8f508",
+        "message": "fix(domains): stop the wizard writing industry_category (2.194.5)"
+      },
+      {
+        "sha": "567eb43",
+        "message": "feat(domains): group the industry picker by sector (2.194.6)"
+      },
+      {
+        "sha": "2bebbc4",
+        "message": "feat(configure): /configure/industries, so the taxonomy stops going stale (2.195.0)"
+      },
+      {
+        "sha": "c998ac0",
+        "message": "chore: update session memory log"
+      },
+      {
+        "sha": "4aeea49",
+        "message": "chore(release): the industry taxonomy work onto the release line (2.189.0)"
+      },
+      {
+        "sha": "b3005d1",
+        "message": "feat(pb): Variation tab + book fidelity readout (2.196.0)"
+      },
+      {
+        "sha": "e7b18f9",
+        "message": "fix(pb): book fidelity says when a script cannot be judged (2.196.1)"
+      },
+      {
+        "sha": "5f72f36",
+        "message": "chore: update session memory log"
+      },
+      {
+        "sha": "1525efe",
+        "message": "chore(release): the PB Variation tab and fidelity readout onto the release line (2.190.0)"
+      },
+      {
+        "sha": "cd5438a",
+        "message": "feat(runs): every run surface says the run survives the page (2.196.2)"
+      },
+      {
+        "sha": "a278b3b",
+        "message": "chore(release): the run-persistence note onto the release line (2.190.1)"
+      },
+      {
+        "sha": "73fe1ba",
+        "message": "feat(configure): VS Engine Config → Tone (2.197.0)"
+      },
+      {
+        "sha": "e22078b",
+        "message": "feat(configure): VS Engine Config → Domain Movers (2.198.0)"
+      },
+      {
+        "sha": "956c477",
+        "message": "feat(configure): document and expose the movers comparability guard (2.198.1)"
+      },
+      {
+        "sha": "14a3f0f",
+        "message": "chore: update session memory log"
+      },
+      {
+        "sha": "3cecf81",
+        "message": "feat(configure): Domain Movers config follows the focus-scoped rebuild (2.199.0)"
+      },
+      {
+        "sha": "e8aedab",
+        "message": "feat(configure): Publishers tab on sVS Trace — edit the registry the surfaces read (2.200.0)"
+      },
+      {
+        "sha": "25f495f",
+        "message": "chore(release): three VS/sVS config tabs onto the release line (2.191.0)"
+      },
+      {
+        "sha": "bbc7d67",
+        "message": "feat(configure): VS Engine Config → Owned & Earned"
+      },
+      {
+        "sha": "ea8b08c",
+        "message": "fix(reports): reports tell the truth about the formulas the engine runs (2.203.0–2.205.0)"
+      },
+      {
+        "sha": "105db88",
+        "message": "fix(docs): VS methodology page drops the same formula falsehoods the reports lost (2.205.1)"
+      },
+      {
+        "sha": "df9cbf8",
+        "message": "feat(configure): Contextual intent tier editable, intent weights freed from a fixed sum (2.205.2)"
+      },
+      {
+        "sha": "e3be72f",
+        "message": "chore(release): report truth, the media tab and intent config onto the release line (2.192.0)"
+      },
+      {
+        "sha": "6133e7b",
+        "message": "merge: bring up to date with origin/release"
+      },
+      {
+        "sha": "6dcabd9",
+        "message": "chore(configure): remove the sVS Trace console (2.206.0)"
+      },
+      {
+        "sha": "3cf0198",
+        "message": "chore: update session memory log"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 308,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/308",
+    "title": "[Release] AVO V2 Production",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-29T02:26:51Z",
+    "mergedAtDate": "29 September 2026",
+    "mergedAtTime": "09.26.51",
+    "body": "…ity + Prompt Book\r\n\r\nPorts the feature from PR #306 (feature/alex-work -> main) onto the release line so it can merge to origin/release. Contents mirror the PR: V4 workspace as the default interface with classic fallback, /w/:domainId rooms (overview, focus, fixes, content, competitors, analytics, site report), workspace shell + primitives + drawers, mobile burger nav, Profile settings page, Content parity, Prompt Book drawer, and the 86-finding UX audit sweep.\r\n\r\nRebased onto origin/release rather than merged, so the diff to release is the workspace feature only — not the 133 main-only commits. Support files that the feature relies on but that predate the release fork were brought over verbatim (MobileBottomNav, navItems, useIsMobile, safe-error, drishti-client). Eight conflicts against the release baseline resolved (App interface/access seeding, AppLayout nav extraction, AnnouncementsBell responsive dropdown, settings.json in all 5 locales). Partner-area main-only pages were not referenced and are not included.\r\n\r\nBuild green: tsc --noEmit + banned-strings guardrail + vite build.",
+    "commits": [
+      {
+        "sha": "ff5384e",
+        "message": "Workspace V2 for release: V4 default + mobile + Profile + Content parity + Prompt Book"
+      },
+      {
+        "sha": "266bd68",
+        "message": "feat(workspace): port PR #309 (v1.58.2 → v1.66.1) onto the release line"
+      },
+      {
+        "sha": "eac1ff8",
+        "message": "feat(workspace): port v1.66.2 → v2.2.0 onto the release line"
+      },
+      {
+        "sha": "61d3903",
+        "message": "feat(workspace): port v2.2.0 → v2.19.1 onto the release line"
+      },
+      {
+        "sha": "fb39a6f",
+        "message": "feat(content): adopt feat/brief-page-redesign onto the release line (2.21.0)"
+      },
+      {
+        "sha": "4d7be1a",
+        "message": "feat(compare): adopt feat/compare-v2-page onto the release line (2.22.0)"
+      },
+      {
+        "sha": "f4f907c",
+        "message": "feat(workspace): port v2.20.0 → v2.29.2 onto the release line"
+      },
+      {
+        "sha": "8de59ad",
+        "message": "Merge origin/release into the release line — take up #319's engine roster"
+      },
+      {
+        "sha": "1052977",
+        "message": "feat(workspace): port v2.29.3 → v2.37.0 onto the release line"
+      },
+      {
+        "sha": "37eec42",
+        "message": "Integration: alex-work → main (190 commits, at 2.41.0) (#329)"
+      },
+      {
+        "sha": "f803448",
+        "message": "Fix invitation (#330)"
+      },
+      {
+        "sha": "d3df76d",
+        "message": "fix(workspace,billing): nine items from the 2026-08-11 QA pass (2.37.1) (#332)"
+      },
+      {
+        "sha": "4147a7e",
+        "message": "Fix/dev feedback 2026 08 11 (#333)"
+      },
+      {
+        "sha": "3433312",
+        "message": "fix(workspace): seven items from the 2026-08-13 QA pass (2.41.2) (#334)"
+      },
+      {
+        "sha": "97841f5",
+        "message": "Fix/dev feedback 2026 08 13 (#335)"
+      },
+      {
+        "sha": "8375fe2",
+        "message": "feat(workspace): gate the Fixes room behind a per-tier module flag (2.42.1) (#336)"
+      },
+      {
+        "sha": "43c11a3",
+        "message": "Integration: alex-work → main (at 2.48.0) (#337)"
+      },
+      {
+        "sha": "a2090a8",
+        "message": "Integration: alex-work → main (at 2.48.0) (#338)"
+      },
+      {
+        "sha": "f2c3577",
+        "message": "docs(changelog): record the lineage jump from v2.37.0 to 2.48.0"
+      },
+      {
+        "sha": "3bcbe09",
+        "message": "feat(profile): Brand Discovery has no page; Competitors and Citations get their sections"
+      },
+      {
+        "sha": "5498f55",
+        "message": "feat(profile): one identity card, two sources — and say when a run failed"
+      },
+      {
+        "sha": "6f21a72",
+        "message": "fix(discovery): do not offer a run the profile cannot answer"
+      },
+      {
+        "sha": "5bdd30b",
+        "message": "test(profile): a conformance check for the Brand profile against its mockup"
+      },
+      {
+        "sha": "64029f9",
+        "message": "fix(workspace): the four open items from the 21 Aug feedback triage (2.48.1)"
+      },
+      {
+        "sha": "277684b",
+        "message": "fix(i18n): <html lang> follows the language actually rendered (2.48.2)"
+      },
+      {
+        "sha": "1641dbf",
+        "message": "fix(build): union CompetitorsRoom conflict — DiscoveredRivals kept, Sources-card removal kept"
+      },
+      {
+        "sha": "01d9878",
+        "message": "chore(social): drop the Social Check translations left in social.json (2.49.2)"
+      },
+      {
+        "sha": "2a53096",
+        "message": "chore(social): drop the open_social_check CTA label (2.49.3)"
+      },
+      {
+        "sha": "714635c",
+        "message": "chore(changelog): drop an orphan merge marker"
+      },
+      {
+        "sha": "ebf3a3e",
+        "message": "chore(changelog): drop the counterpart merge markers"
+      },
+      {
+        "sha": "e695b17",
+        "message": "fix(social): a failed account list says so instead of looking empty (2.50.1)"
+      },
+      {
+        "sha": "600b430",
+        "message": "fix(auth): a failed session check is not a logout (2.50.4)"
+      },
+      {
+        "sha": "923bda3",
+        "message": "feat(profile): group the industry picker by sector (2.50.8)"
+      },
+      {
+        "sha": "9685d79",
+        "message": "feat(profile): one-time re-ask for industries picked against the old list (2.50.9)"
+      },
+      {
+        "sha": "7cd8c44",
+        "message": "fix(compare): say what the comparison actually needs (2.50.10)"
+      },
+      {
+        "sha": "2a8f113",
+        "message": "fix(i18n): translate the missing singular plural forms (2.50.11)"
+      },
+      {
+        "sha": "7c41ad9",
+        "message": "fix(workspace): first-run test findings — compare roles, signal labels, weights (2.51.0)"
+      },
+      {
+        "sha": "ef62e04",
+        "message": "feat(profile): offer a free re-read when a run's findings never landed (2.52.0)"
+      },
+      {
+        "sha": "210a28e",
+        "message": "fix(content): the bench promised a trigger no detector implements (2.51.1)"
+      },
+      {
+        "sha": "17825cc",
+        "message": "chore(release): renumber the content-bench copy fix to 2.52.1"
+      },
+      {
+        "sha": "963e02e",
+        "message": "fix(compare,analytics): finish two fixes that retesting proved incomplete (2.52.2)"
+      },
+      {
+        "sha": "9f11e25",
+        "message": "feat(i18n): ship Simplified Chinese, fix four English-only strings (2.53.0)"
+      },
+      {
+        "sha": "fb680c6",
+        "message": "fix(build): satisfy the vocabulary and i18n-fallback guardrails (2.53.1)"
+      },
+      {
+        "sha": "d915b77",
+        "message": "fix(a11y): make the add-domain row a real button (2.53.2)"
+      },
+      {
+        "sha": "03c9759",
+        "message": "fix(citations): stop ranking the same sources twice (2.53.3)"
+      },
+      {
+        "sha": "9fd31b8",
+        "message": "fix(profile): 'other' rendered as agreement in the observed-industry block (2.53.4)"
+      },
+      {
+        "sha": "f3937c9",
+        "message": "fix(focus): the Add Focus flow, end to end (2.53.9)"
+      },
+      {
+        "sha": "cf25e62",
+        "message": "feat(analytics): Tone tab, and the tone threshold leaves the bundle (2.54.0)"
+      },
+      {
+        "sha": "d16aca4",
+        "message": "feat(analytics): Domain Movers tab (2.55.0)"
+      },
+      {
+        "sha": "03d6ccd",
+        "message": "fix(movers): say why there is nothing to compare (2.55.1)"
+      },
+      {
+        "sha": "60568c8",
+        "message": "fix(movers): comparability follow-through across citation surfaces (2.55.1)"
+      },
+      {
+        "sha": "d71c053",
+        "message": "refactor(movers): drop the top-sources chart for a sentence (2.58.0)"
+      },
+      {
+        "sha": "f2a6b45",
+        "message": "fix(movers): name the attribution, page the list, trust the totals (2.59.0)"
+      },
+      {
+        "sha": "33b9244",
+        "message": "fix(movers): stop rendering unattributable posts as a publisher (2.59.1)"
+      },
+      {
+        "sha": "0150bc5",
+        "message": "feat(movers): move unattributable pools below the ranking (2.59.2)"
+      },
+      {
+        "sha": "8830f85",
+        "message": "fix(movers): chips said 472, the list showed 24 (2.59.3)"
+      },
+      {
+        "sha": "4ca8917",
+        "message": "feat(tone): show competitors beside your own tone (2.60.0)"
+      },
+      {
+        "sha": "52af7d0",
+        "message": "chore(changelog): match staging's 2.54.0-2.60.0 section exactly"
+      },
+      {
+        "sha": "feafc68",
+        "message": "feat(vocab): AS surface becomes \"AI Readiness\", the run an \"AI Readiness Check\" (2.60.1)"
+      },
+      {
+        "sha": "1ef8426",
+        "message": "feat(analytics): Owned & earned media tab (2.61.0)"
+      },
+      {
+        "sha": "a5cb625",
+        "message": "feat(vocab): the exported PDF follows the AI Readiness rename (2.61.1)"
+      },
+      {
+        "sha": "3fa7b3f",
+        "message": "fix(ui,i18n): status footer health, phone signal names, pillar vocabulary translations (2.61.2)"
+      },
+      {
+        "sha": "18b097a",
+        "message": "fix(media): earned confidence stops claiming LIKELY, one earned sum (2.64.0)"
+      },
+      {
+        "sha": "e5a537f",
+        "message": "fix(auth): session recovery stops signing out its own users; identity-scoped org lists (2.64.1–2.64.4)"
+      },
+      {
+        "sha": "11c25f8",
+        "message": "chore(changelog): drop #360's entries, match staging for the rest"
+      },
+      {
+        "sha": "0925513",
+        "message": "test(auth): cover the session probe's late success answer (2.64.5)"
+      },
+      {
+        "sha": "802bf7e",
+        "message": "chore(vs): remove sVS and social citation attribution (2.65.0)"
+      },
+      {
+        "sha": "5ad5be7",
+        "message": "docs(briefs): archive the Ask AVO implementation brief"
+      },
+      {
+        "sha": "704bd33",
+        "message": "feat(settings): custom report logo in Organisation settings (2.66.0)"
+      },
+      {
+        "sha": "ac17082",
+        "message": "fix(settings): report-logo preview reads as paper in light theme (2.66.1)"
+      },
+      {
+        "sha": "cdfbb8a",
+        "message": "fix(reports): bigger header mark, footer credit drops the web address (2.66.2)"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 211,
@@ -5474,181 +6022,6 @@
       {
         "sha": "b73f30c",
         "message": "fix(timeout): align Astra HTTP timeouts with Sutra/Ava budget (FE-only)"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 57,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/57",
-    "title": "Add per-tenant concurrency controls to AS/VS/PB pipe…",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": "configure",
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T10:43:48Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "17.43.48",
-    "body": "…line tabs\r\n\r\nAdd ConfigNumberInput for concurrency_per_tenant to ASPipelineTab, VSPipelineTab, and PBPipelineTab so the new Karsa per-tenant limits are editable from Shastra configure pages.",
-    "commits": [
-      {
-        "sha": "e44ee1f",
-        "message": "feat(configure): add per-tenant concurrency controls to AS/VS/PB pipeline tabs"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 56,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/56",
-    "title": "Feat/ping llm",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T09:53:31Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "16.53.31",
-    "body": "",
-    "commits": [
-      {
-        "sha": "140b919",
-        "message": "feat(routing): \"Test all LLMs now\" health check button + inline report (v2.176.0)"
-      },
-      {
-        "sha": "ab37359",
-        "message": "fix(routing): show LLM health-check ping cost at 6-decimal precision"
-      },
-      {
-        "sha": "52d68d0",
-        "message": "feat(routing): show LLM health-check timestamp in WIB"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 240,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/240",
-    "title": "Add sticky label for Mobile View",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T09:46:43Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "16.46.43",
-    "body": "Menampilkan informasi utk buka di laptop/tablet/browser apabila sedang buka di mobile browser",
-    "commits": [
-      {
-        "sha": "f8b5cb2",
-        "message": "Add sticky label for Mobile View"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 238,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/238",
-    "title": "Add CTA in Login & Register Page",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T08:29:06Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "15.29.06",
-    "body": "Tambah CTA agar bisa switch dari login ke register page dengan mudah",
-    "commits": [
-      {
-        "sha": "eddf6a3",
-        "message": "Add CTA in Login & Register Page"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 155,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/155",
-    "title": "Close C1 free-credit mint + M1 lost AS refund (v0.45.2)",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": "billing",
-    "author": "ikhsan-sr",
-    "mergedAt": "2026-07-01T07:45:01Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "14.45.01",
-    "body": "C1 (critical): a client could mint credits for free by sending payment_gateway:\"manual\" to POST /api/client/billing/purchase. Gateway validation exempted 'manual', and the manual fallback branch auto-marked the invoice paid — depositing credits with no payment.\r\n- Reject a client-selected 'manual' gateway (it bypassed the enabled-gateways check).\r\n- The manual / no-gateway path now creates a PENDING invoice settled offline by ops (admin mark-paid), mirroring bank_transfer. Credits are deposited only once an invoice is actually paid.\r\n\r\nM1: AS-scan refunds used referenceId=karsa_domain_id, shared across every scan of a domain. wallet_transactions has a unique index on (wallet_type, organization_id, reference_id) and atomicRefund treats a 23505 as \"already refunded\", so the 2nd+ failed scan on a domain charged the org but issued no refund. Deduct and refund now use a unique per-attempt reference so each failed scan is refunded exactly once.\r\n\r\nNo schema changes. Typecheck clean.",
-    "commits": [
-      {
-        "sha": "9ed7d78",
-        "message": "fix(billing): close C1 free-credit mint + M1 lost AS refund (v0.45.2)"
-      },
-      {
-        "sha": "e6119d2",
-        "message": "Merge remote-tracking branch 'origin/release' into hotfix/billing-c1-m1"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 235,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/235",
-    "title": "Prevent XSS in Ava loader, activity log, and markdown …",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": "security",
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T04:49:49Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "11.49.49",
-    "body": "…links\r\n\r\nThree confirmed XSS sinks in the client portal, all rendering untrusted data as raw HTML without escaping:\r\n\r\n- H1 (stored XSS): pickMessage() interpolated `vars` into developer-authored HTML templates with an unescaped replaceAll. vars.focus is the client's own focus statement, rendered via dangerouslySetInnerHTML in the VS/AS loaders — a focus statement containing markup executed for anyone in the org viewing the run. Now HTML-escapes every interpolated value before substitution.\r\n\r\n- H2 (DOM XSS): AvaPartnerDetail rendered activity-log `entry.m` (server metadata + SSE stream) via dangerouslySetInnerHTML. The `level` is already derived client-side, so the message needs no HTML — render it as text.\r\n\r\n- M1: MarkdownRenderer copied markdown link URLs into href with no protocol allowlist, so a `[x](javascript:...)` link in LLM-generated draft content was clickable. Now allowlists http/https/mailto/tel/relative/anchor, else `#`.\r\n\r\ntsc --noEmit passes.",
-    "commits": [
-      {
-        "sha": "069d58c",
-        "message": "fix(security): prevent XSS in Ava loader, activity log, and markdown links"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 233,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/233",
-    "title": "Update release note v1.46.0",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-01T03:49:27Z",
-    "mergedAtDate": "1 Juli 2026",
-    "mergedAtTime": "10.49.27",
-    "body": "",
-    "commits": [
-      {
-        "sha": "bd983ab",
-        "message": "feat(billing): Airwallex Admin Fee breakdown on checkout (1.45.0)"
-      },
-      {
-        "sha": "62697a7",
-        "message": "fix: show original price at plan list"
-      },
-      {
-        "sha": "74c2329",
-        "message": "fix: adjust fee calculation"
-      },
-      {
-        "sha": "f943deb",
-        "message": "fix: wrong subtotal"
-      },
-      {
-        "sha": "cf7cfc9",
-        "message": "fix: update release note"
       }
     ]
   }
