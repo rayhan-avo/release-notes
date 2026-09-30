@@ -1,5 +1,26 @@
 [
   {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 402,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/402",
+    "title": "Add prompt×platform matrix section to progress export report",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-09-30T08:30:05Z",
+    "mergedAtDate": "30 September 2026",
+    "mergedAtTime": "15.30.05",
+    "body": "- Add CrossMatrixGrid + IntentTierBreakdown to progress PDF export\r\n- Fix prompt text truncation in CrossMatrixGrid UI (wrap instead of ellipsis)\r\n- Extend AnalyticsRoomVM with probe analytics data (crossMatrix, intentTierBreakdown)\r\n- New report section renders after measurement log (last page)\r\n- Matrix shows top 20 prompts by avg mention rate across platforms\r\n- Intent tier cards show navigational/category/advisory breakdown\r\n- i18n: added matrix/intent keys for all 6 locales (en, id, ja, zh-TW, ko, zh)",
+    "commits": [
+      {
+        "sha": "b21ea9e",
+        "message": "feat: add prompt×platform matrix section to progress export report"
+      }
+    ]
+  },
+  {
     "repo": "Sutra",
     "repoSlug": "avq-sutra",
     "prNumber": 322,

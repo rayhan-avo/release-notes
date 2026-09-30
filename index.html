@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>30 September 2026 pukul 04.12 WIB
+    Diperbarui otomatis<br>1 Oktober 2026 pukul 04.11 WIB
   </div>
 </header>
 
@@ -309,6 +309,30 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-402')">
+          <td class="td-date">
+            <div>30 September 2026</div>
+            <div class="td-time">15.30.05</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Add prompt×platform matrix section to progress export report</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/402" target="_blank" onclick="event.stopPropagation()">#402</a>
+            <span class="expand-chevron" id="chev-avq-astra-402">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-402">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- Add CrossMatrixGrid + IntentTierBreakdown to progress PDF export
+- Fix prompt text truncation in CrossMatrixGrid UI (wrap instead of ellipsis)
+- Extend AnalyticsRoomVM with probe analytics data (crossMatrix, intentTierBreakdown)
+- New report section renders after measurement log (last page)
+- Matrix shows top 20 prompts by avg mention rate across platforms
+- Intent tier cards show navigational/category/advisory breakdown
+- i18n: added matrix/intent keys for all 6 locales (en, id, ja, zh-TW, ko, zh)</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-sutra-322')">
           <td class="td-date">
             <div>29 September 2026</div>
