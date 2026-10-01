@@ -2425,7 +2425,7 @@
     "mergedAt": "2026-09-01T09:02:43Z",
     "mergedAtDate": "1 September 2026",
     "mergedAtTime": "16.02.43",
-    "body": "Karsa's focus delete is archive-first — POST /focuses/:id/delete answers 409 `not_archived` unless the row is already archived. The workspace satisfies that by construction, since Delete only exists inside the archive group. The classic layout (Visibility V1-V3) puts Delete on an active focus and has no archive UI at all, so every delete there failed with a generic \"Failed to delete focus\".\r\n\r\nuseDeleteFocusLegacy archives on the user's behalf and then deletes, reaching the same end state the workspace reaches in two user actions. The workspace flow is untouched: useDeleteFocus and useFocusLifecycle still require an explicit archive first.\r\n\r\nDeliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots — measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.\r\n\r\nOptimism moves to the `active` query key, which is what the classic lists render from, and rolls back only when the archive step itself failed: once the focus is archived it really has left the list, so restoring the row would show a focus the server no longer measures. A delete that fails after a successful archive now says so rather than claiming the delete failed outright.\r\n\r\nAlso corrects the Prompt Book delete dialog, which promised it would \"permanently delete all prompts, build history, and measurement data\" over a soft delete that keeps all three, and was the last hardcoded-English dialog in that card. Translated across all six UI locales.",
+    "body": "Karsa's focus delete is archive-first �� POST /focuses/:id/delete answers 409 `not_archived` unless the row is already archived. The workspace satisfies that by construction, since Delete only exists inside the archive group. The classic layout (Visibility V1-V3) puts Delete on an active focus and has no archive UI at all, so every delete there failed with a generic \"Failed to delete focus\".\r\n\r\nuseDeleteFocusLegacy archives on the user's behalf and then deletes, reaching the same end state the workspace reaches in two user actions. The workspace flow is untouched: useDeleteFocus and useFocusLifecycle still require an explicit archive first.\r\n\r\nDeliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots — measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.\r\n\r\nOptimism moves to the `active` query key, which is what the classic lists render from, and rolls back only when the archive step itself failed: once the focus is archived it really has left the list, so restoring the row would show a focus the server no longer measures. A delete that fails after a successful archive now says so rather than claiming the delete failed outright.\r\n\r\nAlso corrects the Prompt Book delete dialog, which promised it would \"permanently delete all prompts, build history, and measurement data\" over a soft delete that keeps all three, and was the last hardcoded-English dialog in that card. Translated across all six UI locales.",
     "commits": [
       {
         "sha": "3d514b4",
@@ -6022,27 +6022,6 @@
       {
         "sha": "cd638ed",
         "message": "fix: support skip_voucher flag to bypass voucher requirement and skip AS"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 245,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/245",
-    "title": "Align Astra HTTP timeouts with Sutra/Ava budget (FE-only)",
-    "type": "fix",
-    "typeLabel": "🐛 Perbaikan",
-    "scope": "timeout",
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-03T09:51:53Z",
-    "mergedAtDate": "3 Juli 2026",
-    "mergedAtTime": "16.51.53",
-    "body": "Astra aborted every request at the 30s axios default, but several hops behind Sutra have a worst-case budget longer than 30s. On slow paths Astra gave up first (ECONNABORTED, no response.status), every classifier missed it, and users saw a generic \"failed\" toast while the backend was still working — and retrying hooks re-fired the abort, duplicating expensive LLM work. This is a frontend-only change; no backend repo is touched.\r\n\r\n- api-error: add isAbortError / isProcessingError + a `kind` field so client aborts and Sutra 504 gateway_timeouts are classified as \"still preparing\", not \"failed\".\r\n- sutra-client: interceptor gives aborts and 504s a calm message; export AVA_READ_TIMEOUT_MS (55s) and AVA_LLM_TIMEOUT_MS (130s).\r\n- query-client: retryUnlessAbort() — never auto-retry a client abort (duplicate-spend fix) or an in-flight 504; reused as the global default.\r\n- Per-endpoint 55s timeout on slow Ava-backed reads (domains/:id/ava, ava/summary, org-dashboard, domain-brief, market-outlook, movements, account-insights, position, portfolio-health, market-pulse) so Astra no longer aborts before Sutra's ~49.5s avaFetch finishes.\r\n- translate-persist POST: 130s override (Sutra already waits 120s, Ava 180s).\r\n\r\nKnown limit (BE follow-up): caption + content-translation GETs are capped at 15s inside Sutra (avaV2Fetch); on a cold cache they 504 regardless of Astra. They are now classified honestly; the real fix is async-ify or a longer avaV2Fetch budget on the backend.",
-    "commits": [
-      {
-        "sha": "b73f30c",
-        "message": "fix(timeout): align Astra HTTP timeouts with Sutra/Ava budget (FE-only)"
       }
     ]
   }
