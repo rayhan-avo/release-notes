@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>4 Oktober 2026 pukul 02.39 WIB
+    Diperbarui otomatis<br>5 Oktober 2026 pukul 02.53 WIB
   </div>
 </header>
 
@@ -3062,60 +3062,6 @@ No schema change, no new env vars (reuses AVA_URL + AVA_SERVICE_KEY).</div>
             <div class="detail-body">The detail panel rendered files from the feedback list query, but Sutra's list endpoint never joins sutra_feedback_files — only the per-item detail endpoint (GET /api/admin/feedback/:id) does, and that endpoint returns them under `files`, not `screenshots`. Wire up the existing useFeedbackDetail hook and read the correct field, using each file's real mime_type instead of assuming image/jpeg so PDFs render as downloads instead of broken images.
 
 Also widen FeedbackCategory to include ux/data/other so items submitted from Astra's new feedback categories show a real label instead of a blank one.</div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-247')">
-          <td class="td-date">
-            <div>6 Juli 2026</div>
-            <div class="td-time">11.16.54</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Add permanent Home getting-started page with 4-step checklist</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/247" target="_blank" onclick="event.stopPropagation()">#247</a>
-            <span class="expand-chevron" id="chev-avq-astra-247">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-247">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">Users landed straight on Insights after login with no guided path to their first Authority Score, Focus setup, Visibility Score, and Insights. Home now gates progress on real domain/wallet state and surfaces a credit-shortfall warning (linking to plan upgrade) only after an insufficient-credit CTA click.</div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-246')">
-          <td class="td-date">
-            <div>6 Juli 2026</div>
-            <div class="td-time">11.05.38</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Fix/skip onboarding release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/246" target="_blank" onclick="event.stopPropagation()">#246</a>
-            <span class="expand-chevron" id="chev-avq-astra-246">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-246">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">bcf495b</span>fix: add skip button on onboarding step 3 (voucher)</div><div class="commit-line"><span class="commit-sha">f541acc</span>fix: redirect to homepage instead of authority, skip AS on activate</div><div class="commit-line"><span class="commit-sha">7815e77</span>fix: remove duplicate handleSkip, reuse handleComplete for both buttons</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-160')">
-          <td class="td-date">
-            <div>6 Juli 2026</div>
-            <div class="td-time">11.04.38</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Support skip_voucher flag to bypass voucher requirement and skip AS</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/160" target="_blank" onclick="event.stopPropagation()">#160</a>
-            <span class="expand-chevron" id="chev-avq-sutra-160">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-160">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">When skip_voucher=true, bypass the require_voucher check and skip the complimentary AS trigger during registration. Domain is still seeded so it appears in the dashboard.</div>
           </td>
         </tr></tbody>
         </table>
