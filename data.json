@@ -2,6 +2,48 @@
   {
     "repo": "Astra",
     "repoSlug": "avq-astra",
+    "prNumber": 404,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/404",
+    "title": "Rebrand Avonetiq → AVO AI across all client-facing surfaces",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-07T08:03:18Z",
+    "mergedAtDate": "7 Oktober 2026",
+    "mergedAtTime": "15.03.18",
+    "body": "- Register page: eyebrow, title, button text updated (6 locales)\r\n- Brand name: VITE_DEFAULT_BRAND + config.ts fallback → AVO AI\r\n- i18n: 12 keys × 6 locales (onboarding, settings, domain, auth, account_insights)\r\n- Src fallback strings: HeadlineStatBar, ColdStartView, ProfileTab\r\n- Legal/admin/company references intentionally unchanged",
+    "commits": [
+      {
+        "sha": "019ed7a",
+        "message": "fix: rebrand Avonetiq → AVO AI across all client-facing surfaces"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 324,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/324",
+    "title": "Redesign auth email templates with branded layout",
+    "type": "fix",
+    "typeLabel": "🐛 Perbaikan",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-10-07T08:01:46Z",
+    "mergedAtDate": "7 Oktober 2026",
+    "mergedAtTime": "15.01.46",
+    "body": "- New email-layout.ts: branded shell (gray bg, white card, teal CTA, footer)\r\n- Password reset, verification, invitation, magic link: all use new layout\r\n- All 4 emails now greet user by name (magic link + invitation query DB)\r\n- Subject lines updated: AVO → AVO AI\r\n- try/catch + logging on every sendEmail call\r\n- Preview script: scripts/preview-auth-emails.ts",
+    "commits": [
+      {
+        "sha": "d5cb864",
+        "message": "fix: redesign auth email templates with branded layout"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
     "prNumber": 402,
     "prUrl": "https://github.com/Avonetiq/avq-astra/pull/402",
     "title": "Add prompt×platform matrix section to progress export report",
@@ -5544,27 +5586,6 @@
       {
         "sha": "982f42e",
         "message": "fix: script to cancel duplicate subs"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 277,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/277",
-    "title": "Adj: route new Google OAuth users to onboarding instead of dead-end",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-09T07:31:01Z",
-    "mergedAtDate": "9 Juli 2026",
-    "mergedAtTime": "14.31.01",
-    "body": "When a new user signs in via Google OAuth, they have zero organizations. Previously they were shown a \"No organizations found\" dead-end screen. Now they are redirected to /onboarding where they can create their first org. The onboarding name field is pre-filled from the Google profile.",
-    "commits": [
-      {
-        "sha": "f419c8b",
-        "message": "adj: route new Google OAuth users to onboarding instead of dead-end"
       }
     ]
   }

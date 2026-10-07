@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>7 Oktober 2026 pukul 04.25 WIB
+    Diperbarui otomatis<br>8 Oktober 2026 pukul 04.43 WIB
   </div>
 </header>
 
@@ -296,6 +296,66 @@
 
 <div class="content">
   
+      <div class="month-group">
+        <h2 class="month-header">Oktober 2026</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Produk</th>
+              <th>Tipe</th>
+              <th>Perubahan</th>
+              <th>PR</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-404')">
+          <td class="td-date">
+            <div>7 Oktober 2026</div>
+            <div class="td-time">15.03.18</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Rebrand Avonetiq → AVO AI across all client-facing surfaces</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/404" target="_blank" onclick="event.stopPropagation()">#404</a>
+            <span class="expand-chevron" id="chev-avq-astra-404">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-404">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- Register page: eyebrow, title, button text updated (6 locales)
+- Brand name: VITE_DEFAULT_BRAND + config.ts fallback → AVO AI
+- i18n: 12 keys × 6 locales (onboarding, settings, domain, auth, account_insights)
+- Src fallback strings: HeadlineStatBar, ColdStartView, ProfileTab
+- Legal/admin/company references intentionally unchanged</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-324')">
+          <td class="td-date">
+            <div>7 Oktober 2026</div>
+            <div class="td-time">15.01.46</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title">Redesign auth email templates with branded layout</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/324" target="_blank" onclick="event.stopPropagation()">#324</a>
+            <span class="expand-chevron" id="chev-avq-sutra-324">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-324">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">- New email-layout.ts: branded shell (gray bg, white card, teal CTA, footer)
+- Password reset, verification, invitation, magic link: all use new layout
+- All 4 emails now greet user by name (magic link + invitation query DB)
+- Subject lines updated: AVO → AVO AI
+- try/catch + logging on every sendEmail call
+- Preview script: scripts/preview-auth-emails.ts</div>
+          </td>
+        </tr></tbody>
+        </table>
+      </div>
       <div class="month-group">
         <h2 class="month-header">September 2026</h2>
         <table>
@@ -2757,24 +2817,6 @@ Cast the column to text (user_id::text = $1) in the read/compare/delete paths so
         <tr class="detail-row hidden" id="detail-avq-sutra-184">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">c0a070a</span>fix: handle update subscription awx</div><div class="commit-line"><span class="commit-sha">6b2ad67</span>feat: email notification</div><div class="commit-line"><span class="commit-sha">9ef0d93</span>feat: adjust template style</div><div class="commit-line"><span class="commit-sha">81eda70</span>feat: email notification spec</div><div class="commit-line"><span class="commit-sha">8bc9dee</span>feat: subscription refund flow</div><div class="commit-line"><span class="commit-sha">e680529</span>fix: email template inline style</div><div class="commit-line"><span class="commit-sha">79d05d1</span>feat: topup notification</div><div class="commit-line"><span class="commit-sha">a34bd5f</span>fix: update payment reminder content</div><div class="commit-line"><span class="commit-sha">bf590f7</span>fix: claw back credits on submit refund</div><div class="commit-line"><span class="commit-sha">cd35da9</span>fix: prevent duplicate email</div><div class="commit-line"><span class="commit-sha">909bc26</span>fix: email content missing</div><div class="commit-line"><span class="commit-sha">70d6f05</span>fix: downgrade flow api</div><div class="commit-line"><span class="commit-sha">2e27a43</span>fix: billing duration</div><div class="commit-line"><span class="commit-sha">fc2e330</span>fix: find active plan by org</div><div class="commit-line"><span class="commit-sha">3f020ef</span>fix: subquery get org</div><div class="commit-line"><span class="commit-sha">8f38b74</span>fix: wrong parse webhook renew</div><div class="commit-line"><span class="commit-sha">26b72ce</span>fix: add script simulate renew</div><div class="commit-line"><span class="commit-sha">982f42e</span>fix: script to cancel duplicate subs</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-277')">
-          <td class="td-date">
-            <div>9 Juli 2026</div>
-            <div class="td-time">14.31.01</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Adj: route new Google OAuth users to onboarding instead of dead-end</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/277" target="_blank" onclick="event.stopPropagation()">#277</a>
-            <span class="expand-chevron" id="chev-avq-astra-277">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-277">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">When a new user signs in via Google OAuth, they have zero organizations. Previously they were shown a &quot;No organizations found&quot; dead-end screen. Now they are redirected to /onboarding where they can create their first org. The onboarding name field is pre-filled from the Google profile.</div>
           </td>
         </tr></tbody>
         </table>
