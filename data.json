@@ -1,5 +1,101 @@
 [
   {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 214,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/214",
+    "title": "Fix/neon to railway from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-13T11:30:43Z",
+    "mergedAtDate": "13 Oktober 2026",
+    "mergedAtTime": "18.30.43",
+    "body": "",
+    "commits": [
+      {
+        "sha": "88fdda8",
+        "message": "fix: migrate DB driver from Neon serverless to postgres.js (Railway)"
+      },
+      {
+        "sha": "c1a31e8",
+        "message": "fix: JSONB double-encoding, org count mismatch, cohort sidebar URLs"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 409,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/409",
+    "title": "Update title web",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-13T04:12:28Z",
+    "mergedAtDate": "13 Oktober 2026",
+    "mergedAtTime": "11.12.28",
+    "body": "Update title web",
+    "commits": [
+      {
+        "sha": "de9c468",
+        "message": "Update title web"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 407,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/407",
+    "title": "Feat/avo lifetime from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-13T04:03:38Z",
+    "mergedAtDate": "13 Oktober 2026",
+    "mergedAtTime": "11.03.38",
+    "body": "",
+    "commits": [
+      {
+        "sha": "524be6d",
+        "message": "feat: Lifetime↔Pro switch-back UI with restore flow"
+      },
+      {
+        "sha": "a75197a",
+        "message": "feat: purchase-only tier transitions UI"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 327,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/327",
+    "title": "Feat/avo lifetime from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-10-13T04:02:56Z",
+    "mergedAtDate": "13 Oktober 2026",
+    "mergedAtTime": "11.02.56",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a85a816",
+        "message": "feat: Lifetime↔Pro switch-back with auto-restore domains"
+      },
+      {
+        "sha": "513d155",
+        "message": "feat: remove free tier switch, purchase-only transitions"
+      }
+    ]
+  },
+  {
     "repo": "Astra",
     "repoSlug": "avq-astra",
     "prNumber": 404,
@@ -4988,118 +5084,6 @@
       {
         "sha": "d3006b2",
         "message": "adj: enrich Telegram alerts with org name, credits, amount, gateway, invoice details"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 291,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/291",
-    "title": "Add Password tab in Settings (reset-style overwrite)",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-15T09:40:26Z",
-    "mergedAtDate": "15 Juli 2026",
-    "mergedAtTime": "16.40.26",
-    "body": "Port of the password feature from feat/create-password onto release. Adds a \"Password\" tab with a New + Confirm form (each with show/hide) that always overwrites the password from the trusted session via Sutra's set-password endpoint — no current password required, so magic-link/social users (who have no known password) can set one.\r\n\r\n- New PasswordPanel + useSetPassword hook; tab wired into SettingsPage.\r\n- i18n: password_* keys appended to settings.json for en/id/ja/zh-TW/ko (only the keys this feature uses; no unrelated main changes pulled in).",
-    "commits": [
-      {
-        "sha": "79f92f8",
-        "message": "feat: add Password tab in Settings (reset-style overwrite)"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 208,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/208",
-    "title": "Add set-password (reset-style overwrite) for passwordless accounts",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": null,
-    "author": "thefdisk",
-    "mergedAt": "2026-07-15T09:33:32Z",
-    "mergedAtDate": "15 Juli 2026",
-    "mergedAtTime": "16.33.32",
-    "body": "Port of the password feature from feat/create-password onto release, adapted to release's route style (no OpenAPI/withTypeProvider). Excludes unrelated main changes.\r\n\r\n- POST /api/client/account/set-password overwrites the credential hash in place (or links one when none exists) from the trusted session, no current password; revokes other sessions afterward. Fixes magic-link users whose throwaway password they never know.\r\n- Allow set-password for expired orgs so they can set a password then refund.",
-    "commits": [
-      {
-        "sha": "49e970e",
-        "message": "feat: add set-password (reset-style overwrite) for passwordless accounts"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 289,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/289",
-    "title": "Feat/v3 tour",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-15T06:54:32Z",
-    "mergedAtDate": "15 Juli 2026",
-    "mergedAtTime": "13.54.32",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1bf2b9b",
-        "message": "feat: visibility v3 page tour"
-      },
-      {
-        "sha": "453e13a",
-        "message": "feat: focus details product tour"
-      },
-      {
-        "sha": "d210508",
-        "message": "feat: v3 tour translation"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 152,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/152",
-    "title": "Feat/release note notify",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-15T06:46:07Z",
-    "mergedAtDate": "15 Juli 2026",
-    "mergedAtTime": "13.46.07",
-    "body": "",
-    "commits": [
-      {
-        "sha": "1a23824",
-        "message": "feat: release-note publish notifications via email + Telegram (v1.44.0)"
-      },
-      {
-        "sha": "be918ce",
-        "message": "fix: portal link always points at /whats-new (no per-note slug)"
-      },
-      {
-        "sha": "860f509",
-        "message": "fix: gate auto-notify on RELEASE_NOTIFY_ENABLED only (drop hard production check)"
-      },
-      {
-        "sha": "e3bf17b",
-        "message": "fix: make publish notification best-effort — never 500 the publish"
-      },
-      {
-        "sha": "6de7fb9",
-        "message": "fix: formatDate handles Date objects — notifications actually send for real notes"
-      },
-      {
-        "sha": "a019db5",
-        "message": "Merge remote-tracking branch 'origin/release' into feat/release-note-notify"
       }
     ]
   }
