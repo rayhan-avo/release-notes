@@ -4224,7 +4224,7 @@
     "mergedAt": "2026-07-28T06:37:36Z",
     "mergedAtDate": "28 Juli 2026",
     "mergedAtTime": "13.37.36",
-    "body": "Registers six per-type admin transaction events (new subscription, renewal, top-up, upgrade, downgrade, cancellation) in place of the single admin_transaction entry — each with its own label + variable hints in Partners �� Notifications — and locks all six to Admin-only recipients. Mirrors the Sutra split. OPS-only.\r\n\r\n\r\n(cherry picked from commit 5104739d0908a1924063109350aa5fe083ca4915)",
+    "body": "Registers six per-type admin transaction events (new subscription, renewal, top-up, upgrade, downgrade, cancellation) in place of the single admin_transaction entry — each with its own label + variable hints in Partners → Notifications — and locks all six to Admin-only recipients. Mirrors the Sutra split. OPS-only.\r\n\r\n\r\n(cherry picked from commit 5104739d0908a1924063109350aa5fe083ca4915)",
     "commits": [
       {
         "sha": "983a42a",
@@ -4628,39 +4628,6 @@
       {
         "sha": "58677ae",
         "message": "fix: double credits"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 174,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/174",
-    "title": "Feat/focus lab findings release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-23T07:12:37Z",
-    "mergedAtDate": "23 Juli 2026",
-    "mergedAtTime": "14.12.37",
-    "body": "",
-    "commits": [
-      {
-        "sha": "adbf918",
-        "message": "Focus Lab: content step — brief, draft, export, real claim gate (1.53.0) (#159)"
-      },
-      {
-        "sha": "2842331",
-        "message": "feat(focus-lab): async brief/draft UI + references, search, filters, exports"
-      },
-      {
-        "sha": "e5e459e",
-        "message": "feat(focus-lab): async-step gating (F1) + stuck-job retry UI (F2)"
-      },
-      {
-        "sha": "ca1ea87",
-        "message": "chore(focus-lab): release line at 1.54.0 + CHANGELOG for async UI/#4-9/F1/F2"
       }
     ]
   }
