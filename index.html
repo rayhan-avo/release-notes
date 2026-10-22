@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>22 Oktober 2026 pukul 03.25 WIB
+    Diperbarui otomatis<br>23 Oktober 2026 pukul 03.22 WIB
   </div>
 </header>
 
@@ -309,6 +309,29 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-413')">
+          <td class="td-date">
+            <div>22 Oktober 2026</div>
+            <div class="td-time">13.19.19</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title">Professional service-unavailable page for backend outages</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/413" target="_blank" onclick="event.stopPropagation()">#413</a>
+            <span class="expand-chevron" id="chev-avq-astra-413">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-413">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">When Sutra is down (Railway 502), users saw a ~30s loader followed by a bare &quot;We could not check your session&quot; screen, and the login form showed the proxy's raw error text.
+
+- ServiceUnavailablePage replaces AuthUnreachable in ProtectedRoute: brand logo, clear outage copy, auto-reconnect with backoff (10/20/30/60s) that reloads once the session route answers, plus &quot;Try again now&quot;, &quot;Sign in again&quot; and help-center link (hidden for white-label tenants)
+- Shared StatusScreen layout; ErrorBoundary crash screen moved onto it (drops inline styles and hardcoded hex)
+- LoginPage maps 5xx/network failures to a friendly message
+- New strings in en, id, ja, ko, zh-TW, zh</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-411')">
           <td class="td-date">
             <div>19 Oktober 2026</div>
@@ -1116,7 +1139,7 @@ Also corrects the Prompt Book delete dialog, which promised it would &quot;perma
           </td>
           <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title"><span class="scope">focuses</span>Port archive + soft delete + OPS restore to the release…</td>
+          <td class="td-title"><span class="scope">focuses</span>Port archive + soft delete + OPS restore to the release���</td>
           <td class="td-pr">
             <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/297" target="_blank" onclick="event.stopPropagation()">#297</a>
             <span class="expand-chevron" id="chev-avq-sutra-297">▾</span>
@@ -1926,78 +1949,6 @@ sends x-source: astra. Ava's ledger uses this to attribute LLM cost per feature.
 Add 'minimax' and 'qwen' to the LLM allowlist in /configure/providers Provider Health so they render in the LLM section instead of the API-providers group.
 
 Conflict resolution on release: version 2.177.0 -&gt; 2.178.0; allowlist kept release's membership (openai/anthropic/google/deepseek/perplexity) + minimax/qwen only (moonshot/openrouter not present on this line); CHANGELOG entry added above release's [2.176.0] without dragging main-only entries.</div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-246')">
-          <td class="td-date">
-            <div>24 Juli 2026</div>
-            <div class="td-time">16.27.10</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Error retry airwallex webhook</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/246" target="_blank" onclick="event.stopPropagation()">#246</a>
-            <span class="expand-chevron" id="chev-avq-sutra-246">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-246">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">f3676a6</span>fix: airwallex retries loop</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-305')">
-          <td class="td-date">
-            <div>24 Juli 2026</div>
-            <div class="td-time">14.46.06</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/save promoter</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/305" target="_blank" onclick="event.stopPropagation()">#305</a>
-            <span class="expand-chevron" id="chev-avq-astra-305">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-305">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">d56d4d9</span>feat: add save promoter</div><div class="commit-line"><span class="commit-sha">2944e93</span>fix(referral): resolve promoter after org exists, retry-safe guard</div><div class="commit-line"><span class="commit-sha">2f1001b</span>feat(referral): retry FP resolve on home load for signup-only leads</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-244')">
-          <td class="td-date">
-            <div>24 Juli 2026</div>
-            <div class="td-time">14.44.44</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/save promoter</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/244" target="_blank" onclick="event.stopPropagation()">#244</a>
-            <span class="expand-chevron" id="chev-avq-sutra-244">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-244">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">132b08c</span>feat: add save promoter</div><div class="commit-line"><span class="commit-sha">b8901f8</span>fix(referral): refresh promoter state on paid conversion; fix entry_source</div><div class="commit-line"><span class="commit-sha">c29b22c</span>fix(referral): match converted customers in FP lookup (drop filters[type]=lead)</div><div class="commit-line"><span class="commit-sha">8ac763e</span>fix(referral): exact email match only in FP lookup (drop list[0] fallback)</div><div class="commit-line"><span class="commit-sha">90980ab</span>docs(referral): design spec for storing sale value + commission</div><div class="commit-line"><span class="commit-sha">c116e3c</span>feat(referral): store sale value + commission on sutra_promoter_referrals</div><div class="commit-line"><span class="commit-sha">5f0754a</span>feat(referral): add backfill:commissions script for existing rows</div><div class="commit-line"><span class="commit-sha">692eaff</span>docs(referral): durable status/reference for promoter attribution work</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-242')">
-          <td class="td-date">
-            <div>24 Juli 2026</div>
-            <div class="td-time">14.13.25</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Double credits</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/242" target="_blank" onclick="event.stopPropagation()">#242</a>
-            <span class="expand-chevron" id="chev-avq-sutra-242">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-242">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">58677ae</span>fix: double credits</div></div>
           </td>
         </tr></tbody>
         </table>
