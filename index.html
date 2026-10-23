@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>23 Oktober 2026 pukul 03.22 WIB
+    Diperbarui otomatis<br>24 Oktober 2026 pukul 03.10 WIB
   </div>
 </header>
 
@@ -309,6 +309,158 @@
             </tr>
           </thead>
           <tbody>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-220')">
+          <td class="td-date">
+            <div>23 Oktober 2026</div>
+            <div class="td-time">14.34.52</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">🐛 Perbaikan</span></td>
+          <td class="td-title"><span class="scope">announcements</span>Fan out status banner to every sutra instance (v1.63.1) [release]</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/220" target="_blank" onclick="event.stopPropagation()">#220</a>
+            <span class="expand-chevron" id="chev-avq-artha-220">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-220">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+**Fix:** the Astra status banner did not appear for partners that run their own Sutra (e.g. **app.getavo.ai** kept returning `{&quot;enabled&quot;:false}` while Artha showed &quot;live&quot;).
+
+**Cause:** the banner card wrote straight to the default Sutra (`VITE_SUTRA_URL` = sutra.avos.cx). Every partner Sutra has its own database, so the setting never reached them.
+
+**Change (Artha only, no Sutra/Astra change, no DB change):**
+- New Artha API `GET` / `PUT /api/sutra/status-banner`. It fans out to **every** Sutra instance via `resolveAllSutraTargets()` (default + each active partner's own), with a 10s timeout per instance so one slow partner can't block the rest.
+- The card now uses that proxy and lists each instance with its state (on / off / error). A save that misses an instance names it, so it can be retried.
+- Live = any instance shows it; turning it off clears all of them.
+- `proxyToSutra` gets an optional `timeoutMs` (existing callers unchanged).
+- Version 1.63.1 + CHANGELOG.
+
+## Test plan
+- [x] `vitest run api/routes/sutra.status-banner.test.ts`: 3/3 pass
+  - PUT hits all instances with the same body
+  - an unreachable instance is reported as error without blocking the others
+  - GET shows per-instance drift
+  - invalid body is rejected before any Sutra call
+- [x] `vite build` green; no type errors in `api/routes/sutra.ts`
+- [ ] After deploy: Artha → Platform → Announcements shows all Sutra instances. Click **Save wording** once: every chip turns `on`, and `curl https://app.getavo.ai/api/client/status-banner` returns `enabled: true`
+</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-astra-417')">
+          <td class="td-date">
+            <div>23 Oktober 2026</div>
+            <div class="td-time">14.14.53</div>
+          </td>
+          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">layout</span>Add sticky status banner above every page (v2.67.0) [release]</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/417" target="_blank" onclick="event.stopPropagation()">#417</a>
+            <span class="expand-chevron" id="chev-avq-astra-417">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-astra-417">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+Sticky **orange status banner** (outage / maintenance running text) above every page: classic interface, new workspace (v4), and public pages such as `/login`. On/off and wording come from Sutra and are managed in Artha. Nothing is hardcoded in Astra.
+
+- `StatusBanner` mounted once in `App.tsx` above `&lt;Routes&gt;`; polls public `GET /api/client/status-banner` every 60s. Picks wording by UI language (exact → base → `en`) and switches live when the language changes.
+- Always AVO orange: `bg-status-warning` + theme-fixed `text-paper-ink` (4.6:1, same in light theme).
+- **No overlap with nav/sidebar/buttons:** the bar sets `--avq-status-banner-h` (via `:root:has([data-status-banner])`) and top-pinned chrome now offsets by it through new `top-banner` / `top-banner-&lt;n&gt;` utilities: classic header + sticky subheader, workspace sidebar (`h-shell` subtracts it too), mobile top bar, `MobileViewBanner`, help / AS-troubleshoot drawers, mobile announcements dropdown, docs TOC, toasts. With the banner off every offset resolves to its previous value.
+- z-index `--z-status-banner` (45): above nav (40), below all z-50+ modals/sheets/drawers (they cover it while open).
+- Own error boundary: if the banner ever crashes it renders nothing instead of taking the app down.
+- Text scrolls continuously, pauses on hover, static under `prefers-reduced-motion`.
+- Version 2.67.0 + CHANGELOG (with Astra POV release note).
+
+## Merge order
+Merge after the avq-sutra PR (`feat/status-banner-release`). Safe if deployed earlier: the endpoint 404s → no banner.
+
+## Test plan
+- [x] `tsc --noEmit` 0 errors, banned-strings + i18n-fallback checks clean, `vite build` green
+- [x] Browser (mocked endpoint), desktop 1366px + mobile 390px:
+  - classic header sticks at 32px under the bar while scrolling
+  - v4 sidebar starts at 32px, height = viewport − bar
+  - v4 mobile top bar at 32px
+  - bar renders on `/login`
+- [x] Dark and light theme: orange `rgb(217,119,6)` with dark text
+- [x] Banner off → no element, `--avq-status-banner-h: 0px`, header back at top 0
+- [x] Switching UI language to Bahasa Indonesia switches the wording immediately
+</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-artha-219')">
+          <td class="td-date">
+            <div>23 Oktober 2026</div>
+            <div class="td-time">14.14.50</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4F8EF720;color:#4F8EF7;border-color:#4F8EF740">Artha</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">announcements</span>Add astra status banner control (v1.63.0) [release]</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-artha/pull/219" target="_blank" onclick="event.stopPropagation()">#219</a>
+            <span class="expand-chevron" id="chev-avq-artha-219">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-artha-219">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+Platform → **Announcements** tab now opens with an **Astra status banner** card that controls the sticky orange running text shown at the top of every Astra page.
+
+- On/Off toggle: saves immediately.
+- Wording per Astra UI locale (English, Indonesian, 日本語, 繁體中文, 한국어). English is required; empty locales fall back to English.
+- Preview in the same orange as Astra (`status-warning`). There is no colour option.
+- When nothing has been saved yet, the form starts from an outage draft in all five locales, so ops can just flip the toggle.
+- Talks to Sutra `GET/PUT /api/admin/status-banner`. **No database change.**
+- Version 1.63.0 + CHANGELOG.
+
+## Merge order
+Needs the avq-sutra PR (`feat/status-banner-release`) deployed first, otherwise the card cannot load or save.
+
+## Test plan
+- [x] `vite build` green; no new tsc errors (pre-existing error count unchanged)
+- [ ] Platform → Announcements: toggle on → Astra shows the bar within ~1 min; edit wording → Save wording → Astra updates; toggle off → bar disappears
+</div>
+          </td>
+        </tr>
+        <tr class="data-row" onclick="toggleDetail('avq-sutra-332')">
+          <td class="td-date">
+            <div>23 Oktober 2026</div>
+            <div class="td-time">14.12.26</div>
+          </td>
+          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
+          <td><span class="type-badge">✨ Fitur Baru</span></td>
+          <td class="td-title"><span class="scope">status-banner</span>Add astra status banner endpoints (v1.100.0) [release]</td>
+          <td class="td-pr">
+            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/332" target="_blank" onclick="event.stopPropagation()">#332</a>
+            <span class="expand-chevron" id="chev-avq-sutra-332">▾</span>
+          </td>
+        </tr>
+        <tr class="detail-row hidden" id="detail-avq-sutra-332">
+          <td colspan="5" class="detail-cell">
+            <div class="detail-body">## Summary
+Backend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.
+
+- `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.
+- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
+- Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.
+- **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.
+- Version 1.100.0 + CHANGELOG.
+
+Routes are Zod-only here (the release line has no OpenAPI/swagger layer); the `main` PR has the schema-first version.
+
+## Merge order
+Merge **this Sutra PR first**. Astra handles a missing endpoint gracefully (no banner), and the Artha toggle only works once this is live.
+
+Related: avq-artha + avq-astra PRs on the same branch name `feat/status-banner-release`.
+
+## Test plan
+- [x] `pnpm build` (tsc) green
+- [x] `vitest run src/services/status-banner.service.test.ts`: 5/5 pass (disabled default, enabled payload, disabled hides wording, corrupt row → disabled, DB failure → disabled)
+- [ ] After deploy: `curl &lt;sutra&gt;/api/client/status-banner` → `{&quot;data&quot;:{&quot;enabled&quot;:false}}`
+</div>
+          </td>
+        </tr>
         <tr class="data-row" onclick="toggleDetail('avq-astra-413')">
           <td class="td-date">
             <div>22 Oktober 2026</div>
@@ -1125,7 +1277,7 @@ Requested by simulasi-avo team for what-if scoring scenarios.</div>
 
 useDeleteFocusLegacy archives on the user's behalf and then deletes, reaching the same end state the workspace reaches in two user actions. The workspace flow is untouched: useDeleteFocus and useFocusLifecycle still require an explicit archive first.
 
-Deliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots — measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.
+Deliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots �� measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.
 
 Optimism moves to the `active` query key, which is what the classic lists render from, and rolls back only when the archive step itself failed: once the focus is archived it really has left the list, so restoring the row would show a focus the server no longer measures. A delete that fails after a successful archive now says so rather than claiming the delete failed outright.
 
@@ -1139,7 +1291,7 @@ Also corrects the Prompt Book delete dialog, which promised it would &quot;perma
           </td>
           <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
           <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title"><span class="scope">focuses</span>Port archive + soft delete + OPS restore to the release���</td>
+          <td class="td-title"><span class="scope">focuses</span>Port archive + soft delete + OPS restore to the release…</td>
           <td class="td-pr">
             <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/297" target="_blank" onclick="event.stopPropagation()">#297</a>
             <span class="expand-chevron" id="chev-avq-sutra-297">▾</span>
