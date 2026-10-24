@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>24 Oktober 2026 pukul 03.10 WIB
+    Diperbarui otomatis<br>25 Oktober 2026 pukul 02.12 WIB
   </div>
 </header>
 
@@ -1277,7 +1277,7 @@ Requested by simulasi-avo team for what-if scoring scenarios.</div>
 
 useDeleteFocusLegacy archives on the user's behalf and then deletes, reaching the same end state the workspace reaches in two user actions. The workspace flow is untouched: useDeleteFocus and useFocusLifecycle still require an explicit archive first.
 
-Deliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots �� measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.
+Deliberately not the permissive DELETE verb, even though it is one request: against a Karsa build older than the soft-delete work that verb still runs the old hard cascade, which deletes avq_focus_vs and avq_pb_prompts rows out of completed, frozen snapshots — measurement history that cannot be recomputed, erased with no error. Archive-then-delete 404s against such a build instead.
 
 Optimism moves to the `active` query key, which is what the classic lists render from, and rolls back only when the archive step itself failed: once the focus is archived it really has left the list, so restoring the row would show a focus the server no longer measures. A delete that fails after a successful archive now says so rather than claiming the delete failed outright.
 
