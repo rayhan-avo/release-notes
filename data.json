@@ -2,6 +2,90 @@
   {
     "repo": "Artha",
     "repoSlug": "avq-artha",
+    "prNumber": 223,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/223",
+    "title": "Fix/early access toggle from release",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-26T10:48:32Z",
+    "mergedAtDate": "26 Oktober 2026",
+    "mergedAtTime": "17.48.32",
+    "body": "",
+    "commits": [
+      {
+        "sha": "a0ecaa5",
+        "message": "fix artha toggle on off early access"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 333,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/333",
+    "title": "Add platform.early_access_enabled toggle",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "davidsurosegoro",
+    "mergedAt": "2026-10-26T10:17:29Z",
+    "mergedAtDate": "26 Oktober 2026",
+    "mergedAtTime": "17.17.29",
+    "body": "- Migration 127: seed platform.early_access_enabled in sutra_settings\n- New public endpoint GET /api/client/platform-config for Astra\n- Add key to PLATFORM_KEYS, PLATFORM_DEFAULTS, PatchSchema\n- Add earlyAccessEnabled() to PlatformSettingsService\n- Add /api/client/platform-config to PUBLIC_PREFIXES (no auth)",
+    "commits": [
+      {
+        "sha": "e7cb605",
+        "message": "feat: add platform.early_access_enabled toggle"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 222,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/222",
+    "title": "Add Early Access toggle on Release Notes page",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-26T10:17:03Z",
+    "mergedAtDate": "26 Oktober 2026",
+    "mergedAtTime": "17.17.03",
+    "body": "- Sutra proxy: GET/PATCH /sutra/settings/platform\n- New platform-config hook (TanStack Query)\n- Toggle UI in ReleaseNotesPage header (calls Sutra admin API)",
+    "commits": [
+      {
+        "sha": "e02f588",
+        "message": "feat: add Early Access toggle on Release Notes page"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 418,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/418",
+    "title": "Conditionally render Early Access UI based on platform toggle",
+    "type": "feat",
+    "typeLabel": "✨ Fitur Baru",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-26T10:17:00Z",
+    "mergedAtDate": "26 Oktober 2026",
+    "mergedAtTime": "17.17.00",
+    "body": "- New usePlatformConfig/useEarlyAccessEnabled hooks (Sutra client API)\n- EarlyAccessModal: skip when disabled\n- WorkspaceSidebar: hide both badges (mobile + desktop)\n- AcceptInvitePage: hide early access disclaimer\n- TermsOfUsePage: hide banner, Section 2, S6 para 2, S13 para 1, Section 17\n- PrivacyPolicyPage: hide banner, Section 10",
+    "commits": [
+      {
+        "sha": "a9f0b22",
+        "message": "feat: conditionally render Early Access UI based on platform toggle"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
     "prNumber": 220,
     "prUrl": "https://github.com/Avonetiq/avq-artha/pull/220",
     "title": "Fan out status banner to every sutra instance (v1.63.1) [release]",
@@ -4268,114 +4352,6 @@
       {
         "sha": "2bd4ea1",
         "message": "Update fix add manual CTX prompt"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 255,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/255",
-    "title": "Feat/avo lite v2 release",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "ikhsan-sr",
-    "mergedAt": "2026-07-28T06:45:37Z",
-    "mergedAtDate": "28 Juli 2026",
-    "mergedAtTime": "13.45.37",
-    "body": "",
-    "commits": [
-      {
-        "sha": "f2688e6",
-        "message": "feat(darshana): stream Analyze (suggest) progress over SSE — v0.59.0"
-      },
-      {
-        "sha": "a2eba62",
-        "message": "feat(darshana): relay real per-probe progress + dev analyze-limit bypass (T3)"
-      },
-      {
-        "sha": "a7a5687",
-        "message": "fix(darshana): run-stream TDZ + leak on completed-run reconnect — v0.72.1"
-      },
-      {
-        "sha": "0267089",
-        "message": "feat(lite): rename Topic to Focus and Question to Prompt in user-facing copy"
-      },
-      {
-        "sha": "40fb956",
-        "message": "style(lite): capitalize Prompt in user-facing copy"
-      },
-      {
-        "sha": "754c4f9",
-        "message": "fix(darshana): run probe-mode Analyze as a polled job, not a 95s request"
-      },
-      {
-        "sha": "b9f77d9",
-        "message": "Merge remote-tracking branch 'origin/release' into feat/avo-lite-v2-release"
-      }
-    ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 180,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/180",
-    "title": "Per-type admin transaction templates",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": "notifications",
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-28T06:37:36Z",
-    "mergedAtDate": "28 Juli 2026",
-    "mergedAtTime": "13.37.36",
-    "body": "Registers six per-type admin transaction events (new subscription, renewal, top-up, upgrade, downgrade, cancellation) in place of the single admin_transaction entry — each with its own label + variable hints in Partners → Notifications — and locks all six to Admin-only recipients. Mirrors the Sutra split. OPS-only.\r\n\r\n\r\n(cherry picked from commit 5104739d0908a1924063109350aa5fe083ca4915)",
-    "commits": [
-      {
-        "sha": "983a42a",
-        "message": "feat(notifications): per-type admin transaction templates"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 254,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/254",
-    "title": "Split admin_transaction into 6 per-type admin receipts",
-    "type": "feat",
-    "typeLabel": "✨ Fitur Baru",
-    "scope": "notif",
-    "author": "thefdisk",
-    "mergedAt": "2026-07-28T06:34:20Z",
-    "mergedAtDate": "28 Juli 2026",
-    "mergedAtTime": "13.34.20",
-    "body": "Replaces the unified admin_transaction email with six admin-only per-type templates (new subscription / renewal / top-up / upgrade / downgrade / cancel), each with its own subject + body since the content differs. Migration 109 deletes the old template + key, rebuilds the event_key CHECK, seeds the six. All 10 enqueue sites fire the specific event; credit renders \"N credits\", currency is dynamic, missing fields render \"-\".\r\n\r\nAlso surfaces the real payment method on top-up receipts: Airwallex normalizeEvent now carries latest_payment_attempt.payment_method.type, threaded through the webhook into the settle/markPaid receipt, falling back to the gateway name — never blank. Renewal receipts resolve the method best-effort from the org's default saved method.\r\n\r\n\r\n(cherry picked from commit 3270e3868e73d058605db45b9c0764903d95b043)",
-    "commits": [
-      {
-        "sha": "2160cdd",
-        "message": "feat(notif): split admin_transaction into 6 per-type admin receipts"
-      }
-    ]
-  },
-  {
-    "repo": "Astra",
-    "repoSlug": "avq-astra",
-    "prNumber": 307,
-    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/307",
-    "title": "Update gtm-events.ts - tambah trackCreditsAdded",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-28T02:50:03Z",
-    "mergedAtDate": "28 Juli 2026",
-    "mergedAtTime": "09.50.03",
-    "body": "trackCreditsAdded",
-    "commits": [
-      {
-        "sha": "b742361",
-        "message": "Update gtm-events.ts"
       }
     ]
   }
