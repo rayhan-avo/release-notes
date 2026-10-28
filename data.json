@@ -1,5 +1,147 @@
 [
   {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 125,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/125",
+    "title": "Release: competitor-suggestion settings on VS Engine → Brand Matching (2.206.1)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-28T06:39:13Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "13.39.13",
+    "body": "Cherry-pick of #123 (merged to `main`) onto `release`. Clean pick, no conflicts. Pairs with Karsa 2.195.0 / migration 573 — **merge Karsa first**.\n\n## Change\nNew **Competitor Suggestions** card on VS Engine → Brand Matching:\n- `domain.competitor_suggest.adjudication_enabled` — toggle for the cached LLM judgment.\n- `domain.competitor_suggest.generic_domains` — never-a-competitor host list (pills).\n\n## Verification (on `release`)\n- `tsc -b` clean",
+    "commits": [
+      {
+        "sha": "a9ab853",
+        "message": "feat(configure): competitor-suggestion settings on VS Engine → Brand Matching (2.206.1) (#123)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 421,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/421",
+    "title": "Release: name-only competitor suggestions ask for a domain (v2.67.1)",
+    "type": "update",
+    "typeLabel": "📦 Update",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-28T06:38:59Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "13.38.59",
+    "body": "Cherry-pick of #419 (merged to `main`, verified on staging) onto `release`. Clean pick, no conflicts. Pairs with Karsa 2.195.0 — **merge Karsa first**.\n\n## Change\n- Add-competitor modal: tapping a name-only suggestion clears and focuses the domain input and asks *\"Type the domain for {name}\"* instead of filling it with the brand name (which always failed validation). New key `domain:competitor_type_domain_for` in en/id/ja/zh-TW/ko (+ zh).\n- Competitors room (`DiscoveredRivals`): same round-robin cut as the modal (`diversify` → `lib/utils/competitor-suggestions.ts`); titled \"Suggested competitors\".\n\n## Verification (on `release`)\n- `tsc`, banned-strings, i18n-fallbacks, vitest: pass.\n- `check:locales` reports 61 missing keys on pristine `release` as well — pre-existing; none are keys from this change",
+    "commits": [
+      {
+        "sha": "25a1fa9",
+        "message": "fix(competitors): name-only suggestions ask for a domain; shared diversified cut (v2.67.1) (#419)"
+      }
+    ]
+  },
+  {
+    "repo": "Sutra",
+    "repoSlug": "avq-sutra",
+    "prNumber": 334,
+    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/334",
+    "title": "Add Understand-Anything knowledge graph (.ua)",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "ikhsan-sr",
+    "mergedAt": "2026-10-28T04:40:14Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "11.40.14",
+    "body": "## Ringkasan\nMenambahkan knowledge graph hasil Understand-Anything ke folder `.ua/` agar bisa dipakai di dashboard lintas-repo (avq-atlas).\n\n- Graf: 1117 node, 2065 edge, 8 layer, 15 langkah tour\n- Dibangun dari `origin/release` terbaru\n- File berubah: hanya `.ua/` dan `.gitignore` (tidak ada perubahan kode aplikasi)\n- `.gitignore`: mengabaikan data sementara (`.ua/intermediate/`, `.ua/tmp/`, `.ua/.trash-*/`, `.ua/diff-overlay.json`)\n\n## Catatan\n- Hanya file yang berubah yang dianalisis ulang; layer dan tour di-patch, tidak dibuat ulang.\n- Ringkasan fungsi umumnya generik; nama tabel SQL perkiraan.\n\n## Review\n- Pastikan base PR adalah `release`. `release` adalah branch produksi; cek apakah merge memicu deploy.",
+    "commits": [
+      {
+        "sha": "4a0a363",
+        "message": "chore: gitignore Understand-Anything scratch data (.ua/intermediate, tmp, .trash-*)"
+      },
+      {
+        "sha": "6f73de3",
+        "message": "chore: add Understand-Anything knowledge graph (.ua)"
+      }
+    ]
+  },
+  {
+    "repo": "Shastra",
+    "repoSlug": "avq-shastra",
+    "prNumber": 124,
+    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/124",
+    "title": "Add Understand-Anything knowledge graph (.ua)",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-28T04:37:23Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "11.37.23",
+    "body": "## Ringkasan\nMenambahkan knowledge graph hasil Understand-Anything ke folder `.ua/` agar bisa dipakai di dashboard lintas-repo (avq-atlas).\n\n- Graf: 1697 node, 3639 edge, 10 layer, 15 langkah tour\n- Dibangun dari `origin/release` terbaru\n- File berubah: hanya `.ua/` dan `.gitignore` (tidak ada perubahan kode aplikasi)\n- `.gitignore`: mengabaikan data sementara (`.ua/intermediate/`, `.ua/tmp/`, `.ua/.trash-*/`, `.ua/diff-overlay.json`)\n\n## Catatan\n- Hanya file yang berubah yang dianalisis ulang; layer dan tour di-patch, tidak dibuat ulang.\n- Ringkasan fungsi umumnya generik; nama tabel SQL perkiraan.\n\n## Review\n- Pastikan base PR adalah `release`. `release` adalah branch produksi; cek apakah merge memicu deploy.",
+    "commits": [
+      {
+        "sha": "ba71a19",
+        "message": "chore: gitignore Understand-Anything scratch data (.ua/intermediate, tmp, .trash-*)"
+      },
+      {
+        "sha": "de1bf05",
+        "message": "chore: add Understand-Anything knowledge graph (.ua)"
+      }
+    ]
+  },
+  {
+    "repo": "Astra",
+    "repoSlug": "avq-astra",
+    "prNumber": 420,
+    "prUrl": "https://github.com/Avonetiq/avq-astra/pull/420",
+    "title": "Add Understand-Anything knowledge graph (.ua)",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-28T04:37:19Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "11.37.19",
+    "body": "## Ringkasan\nMenambahkan knowledge graph hasil Understand-Anything ke folder `.ua/` agar bisa dipakai di dashboard lintas-repo (avq-atlas).\n\n- Graf: 2707 node, 6271 edge, 12 layer, 15 langkah tour\n- Dibangun dari `origin/release` terbaru\n- File berubah: hanya `.ua/` dan `.gitignore` (tidak ada perubahan kode aplikasi)\n- `.gitignore`: mengabaikan data sementara (`.ua/intermediate/`, `.ua/tmp/`, `.ua/.trash-*/`, `.ua/diff-overlay.json`)\n\n## Catatan\n- Hanya file yang berubah yang dianalisis ulang; layer dan tour di-patch, tidak dibuat ulang.\n- Ringkasan fungsi umumnya generik; nama tabel SQL perkiraan.\n\n## Review\n- Pastikan base PR adalah `release`. `release` adalah branch produksi; cek apakah merge memicu deploy.",
+    "commits": [
+      {
+        "sha": "bb598be",
+        "message": "chore: gitignore Understand-Anything scratch data (.ua/intermediate, tmp, .trash-*)"
+      },
+      {
+        "sha": "3ae4e57",
+        "message": "chore: add Understand-Anything knowledge graph (.ua)"
+      }
+    ]
+  },
+  {
+    "repo": "Artha",
+    "repoSlug": "avq-artha",
+    "prNumber": 224,
+    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/224",
+    "title": "Add Understand-Anything knowledge graph (.ua)",
+    "type": "chore",
+    "typeLabel": "🔧 Internal",
+    "scope": null,
+    "author": "optimize-avo",
+    "mergedAt": "2026-10-28T04:37:14Z",
+    "mergedAtDate": "28 Oktober 2026",
+    "mergedAtTime": "11.37.14",
+    "body": "## Ringkasan\nMenambahkan knowledge graph hasil Understand-Anything ke folder `.ua/` agar bisa dipakai di dashboard lintas-repo (avq-atlas).\n\n- Graf: 1399 node, 2145 edge, 10 layer, 13 langkah tour\n- Dibangun dari `origin/release` terbaru\n- File berubah: hanya `.ua/` dan `.gitignore` (tidak ada perubahan kode aplikasi)\n- `.gitignore`: mengabaikan data sementara (`.ua/intermediate/`, `.ua/tmp/`, `.ua/.trash-*/`, `.ua/diff-overlay.json`)\n\n## Catatan\n- Hanya file yang berubah yang dianalisis ulang; layer dan tour di-patch, tidak dibuat ulang.\n- Ringkasan fungsi umumnya generik; nama tabel SQL perkiraan.\n\n## Review\n- Pastikan base PR adalah `release`. `release` adalah branch produksi; cek apakah merge memicu deploy.",
+    "commits": [
+      {
+        "sha": "efe56d9",
+        "message": "chore: gitignore Understand-Anything scratch data (.ua/intermediate, tmp, .trash-*)"
+      },
+      {
+        "sha": "c481165",
+        "message": "chore: add Understand-Anything knowledge graph (.ua)"
+      }
+    ]
+  },
+  {
     "repo": "Artha",
     "repoSlug": "avq-artha",
     "prNumber": 223,
@@ -4331,27 +4473,6 @@
       {
         "sha": "85076c8",
         "message": "fix: always show Sync Latest / Backfill button in Neon Monitor"
-      }
-    ]
-  },
-  {
-    "repo": "Sutra",
-    "repoSlug": "avq-sutra",
-    "prNumber": 260,
-    "prUrl": "https://github.com/Avonetiq/avq-sutra/pull/260",
-    "title": "Update fix add manual CTX prompt",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "rayhan-avo",
-    "mergedAt": "2026-07-30T08:24:15Z",
-    "mergedAtDate": "30 Juli 2026",
-    "mergedAtTime": "15.24.15",
-    "body": "Adjustment to add custom Contextual prompts",
-    "commits": [
-      {
-        "sha": "2bd4ea1",
-        "message": "Update fix add manual CTX prompt"
       }
     ]
   }
