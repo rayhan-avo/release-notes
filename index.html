@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>29 Oktober 2026 pukul 04.29 WIB
+    Diperbarui otomatis<br>30 Oktober 2026 pukul 04.30 WIB
   </div>
 </header>
 
@@ -701,7 +701,7 @@ Needs the avq-sutra PR (`feat/status-banner-release`) deployed first, otherwise 
 Backend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.
 
 - `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.
-- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
+- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha �� Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
 - Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.
 - **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.
 - Version 1.100.0 + CHANGELOG.
@@ -2054,39 +2054,6 @@ Co-Authored-By: Claude Opus 5 (1M context) &lt;noreply@anthropic.com&gt;
 (cherry picked from commit 061a7db77bc8f9440a992f0b22f1ea5357d83591)
 
 Cherry-picked onto the release line: released here as 0.62.0, not the 0.76.0 of the main line. Code is identical; only package.json and the CHANGELOG heading were re-versioned.</div>
-          </td>
-        </tr></tbody>
-        </table>
-      </div>
-      <div class="month-group">
-        <h2 class="month-header">Juli 2026</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Tanggal</th>
-              <th>Produk</th>
-              <th>Tipe</th>
-              <th>Perubahan</th>
-              <th>PR</th>
-            </tr>
-          </thead>
-          <tbody>
-        <tr class="data-row" onclick="toggleDetail('avq-shastra-87')">
-          <td class="td-date">
-            <div>31 Juli 2026</div>
-            <div class="td-time">09.25.59</div>
-          </td>
-          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/from release/neon monitor branch daily</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/87" target="_blank" onclick="event.stopPropagation()">#87</a>
-            <span class="expand-chevron" id="chev-avq-shastra-87">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-shastra-87">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">a788f12</span>feat: neon monitor — branch filter + daily cost improvements</div><div class="commit-line"><span class="commit-sha">85076c8</span>fix: always show Sync Latest / Backfill button in Neon Monitor</div></div>
           </td>
         </tr></tbody>
         </table>

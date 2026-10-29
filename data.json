@@ -301,7 +301,7 @@
     "mergedAt": "2026-10-23T07:12:26Z",
     "mergedAtDate": "23 Oktober 2026",
     "mergedAtTime": "14.12.26",
-    "body": "## Summary\nBackend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.\n\n- `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.\n- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.\n- Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.\n- **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.\n- Version 1.100.0 + CHANGELOG.\n\nRoutes are Zod-only here (the release line has no OpenAPI/swagger layer); the `main` PR has the schema-first version.\n\n## Merge order\nMerge **this Sutra PR first**. Astra handles a missing endpoint gracefully (no banner), and the Artha toggle only works once this is live.\n\nRelated: avq-artha + avq-astra PRs on the same branch name `feat/status-banner-release`.\n\n## Test plan\n- [x] `pnpm build` (tsc) green\n- [x] `vitest run src/services/status-banner.service.test.ts`: 5/5 pass (disabled default, enabled payload, disabled hides wording, corrupt row → disabled, DB failure → disabled)\n- [ ] After deploy: `curl <sutra>/api/client/status-banner` → `{\"data\":{\"enabled\":false}}`\n",
+    "body": "## Summary\nBackend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.\n\n- `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.\n- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha �� Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.\n- Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.\n- **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.\n- Version 1.100.0 + CHANGELOG.\n\nRoutes are Zod-only here (the release line has no OpenAPI/swagger layer); the `main` PR has the schema-first version.\n\n## Merge order\nMerge **this Sutra PR first**. Astra handles a missing endpoint gracefully (no banner), and the Artha toggle only works once this is live.\n\nRelated: avq-artha + avq-astra PRs on the same branch name `feat/status-banner-release`.\n\n## Test plan\n- [x] `pnpm build` (tsc) green\n- [x] `vitest run src/services/status-banner.service.test.ts`: 5/5 pass (disabled default, enabled payload, disabled hides wording, corrupt row → disabled, DB failure → disabled)\n- [ ] After deploy: `curl <sutra>/api/client/status-banner` → `{\"data\":{\"enabled\":false}}`\n",
     "commits": [
       {
         "sha": "b3fb27b",
@@ -4448,31 +4448,6 @@
       {
         "sha": "b454031",
         "message": "fix(client-vs): platform roster from Karsa's engine catalog (0.62.0)"
-      }
-    ]
-  },
-  {
-    "repo": "Shastra",
-    "repoSlug": "avq-shastra",
-    "prNumber": 87,
-    "prUrl": "https://github.com/Avonetiq/avq-shastra/pull/87",
-    "title": "Feat/from release/neon monitor branch daily",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-07-31T02:25:59Z",
-    "mergedAtDate": "31 Juli 2026",
-    "mergedAtTime": "09.25.59",
-    "body": "",
-    "commits": [
-      {
-        "sha": "a788f12",
-        "message": "feat: neon monitor — branch filter + daily cost improvements"
-      },
-      {
-        "sha": "85076c8",
-        "message": "fix: always show Sync Latest / Backfill button in Neon Monitor"
       }
     ]
   }
