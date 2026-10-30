@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>30 Oktober 2026 pukul 04.30 WIB
+    Diperbarui otomatis<br>31 Oktober 2026 pukul 04.18 WIB
   </div>
 </header>
 
@@ -701,7 +701,7 @@ Needs the avq-sutra PR (`feat/status-banner-release`) deployed first, otherwise 
 Backend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.
 
 - `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.
-- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha �� Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
+- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
 - Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.
 - **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.
 - Version 1.100.0 + CHANGELOG.
