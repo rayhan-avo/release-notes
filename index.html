@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>2 November 2026 pukul 03.55 WIB
+    Diperbarui otomatis<br>3 November 2026 pukul 06.46 WIB
   </div>
 </header>
 
@@ -701,7 +701,7 @@ Needs the avq-sutra PR (`feat/status-banner-release`) deployed first, otherwise 
 Backend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.
 
 - `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.
-- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha ��� Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
+- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
 - Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.
 - **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.
 - Version 1.100.0 + CHANGELOG.
@@ -1976,84 +1976,6 @@ The distinction matters for this page specifically: it is where COGS is read aga
         <tr class="detail-row hidden" id="detail-avq-shastra-94">
           <td colspan="5" class="detail-cell">
             <div class="detail-body">Karsa's getDomainCosts now uses LEFT JOIN (audit fix E4), which returns rows without a domain_id. LedgerDomains crashed on null domain passed to DomainLogo. Now shows &quot;Unattributed&quot; label with fallback icon for system/discovery calls that have no domain attached.</div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-shastra-92')">
-          <td class="td-date">
-            <div>4 Agustus 2026</div>
-            <div class="td-time">11.32.11</div>
-          </td>
-          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
-          <td><span class="type-badge">📦 Update</span></td>
-          <td class="td-title">Feat/dynamic engine registry release</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/92" target="_blank" onclick="event.stopPropagation()">#92</a>
-            <span class="expand-chevron" id="chev-avq-shastra-92">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-shastra-92">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">3ad97ce</span>feat(configure): AI Engines and VS Platforms read one engine registry (2.180.0)</div><div class="commit-line"><span class="commit-sha">6c9e47d</span>fix(vs-config): enabling a newly registered engine had no effect (2.180.1)</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-astra-319')">
-          <td class="td-date">
-            <div>4 Agustus 2026</div>
-            <div class="td-time">11.29.56</div>
-          </td>
-          <td><span class="repo-badge" style="background:#F7934F20;color:#F7934F;border-color:#F7934F40">Astra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title"><span class="scope">vs-wizard</span>Engine roster comes from the API, not a local catalog…</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-astra/pull/319" target="_blank" onclick="event.stopPropagation()">#319</a>
-            <span class="expand-chevron" id="chev-avq-astra-319">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-astra-319">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">… (1.55.0)
-
-WizardPlatformStep held a PROVIDER_CATALOG constant listing every provider and model by hand. The wizard intersected the API's enabled platforms with that constant and silently dropped anything it did not recognise, so an engine registered in Karsa later — Kimi (Moonshot), MiniMax, Qwen — never appeared here no matter how it was configured in Shastra.
-
-- PROVIDER_CATALOG is deleted. The roster is the platform list from the API, which derives it from Karsa's adapter registry (Sutra 0.76.0, Karsa 2.151.0).
-- Label and colour come from the API entry, falling back to the existing --color-plat-* tokens for engines that have one. buildSlot, the default-slot matcher and MeasurementSummary no longer consult a local provider table.
-- Engines with no API key are filtered out of the picker: a client must not be able to add an engine to a paid measurement when it cannot answer.
-- The model sent to Karsa is model_id, resolved server-side from the operator's vs.platform.{key}.model choice, instead of the first entry of a hardcoded model array. MeasurementSummary.resolveModel no longer invents a model from it.
-- Pre-selected engines are unchanged: DEFAULT_PLATFORM_NAMES is a default SELECTION, not a roster, so a newly registered engine is not auto-added — every slot multiplies probe count and cost.
-- VsPlatformConfig gains label/color/kind/usable.
-
-Co-Authored-By: Claude Opus 5 (1M context) &lt;noreply@anthropic.com&gt;
-(cherry picked from commit ec0dd00f3e7b6326634c3a29cafba402319274b2)
-
-Cherry-picked onto the release line: released here as 1.55.0, not the 1.67.0 of the main line. Code is identical; only package.json and the CHANGELOG heading were re-versioned.</div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-sutra-265')">
-          <td class="td-date">
-            <div>4 Agustus 2026</div>
-            <div class="td-time">11.26.03</div>
-          </td>
-          <td><span class="repo-badge" style="background:#4FF7A020;color:#4FF7A0;border-color:#4FF7A040">Sutra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title"><span class="scope">client-vs</span>Platform roster from Karsa's engine catalog (0.62.0)</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-sutra/pull/265" target="_blank" onclick="event.stopPropagation()">#265</a>
-            <span class="expand-chevron" id="chev-avq-sutra-265">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-sutra-265">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">GET /api/client/domains/:id/vs/platforms built its response by looping a hardcoded KNOWN_PLATFORMS array of seven keys, plus two hardcoded platform-to-provider maps. An engine registered in Karsa after that list was written — Kimi (Moonshot), MiniMax, Qwen — could be enabled in Shastra and still never reach the Astra wizard, because it was dropped here.
-
-- The roster now comes from Karsa's GET /api/platforms/catalog, which derives it from the adapter registry. Both hardcoded maps are gone: a platform's provider is the catalog's providerId.
-- Response entries gained label, color, kind and usable, so the client does not need its own provider/model table to render an engine it has never seen.
-- usable is false when the engine has no API key. A client must not be able to add an engine to a paid measurement when it cannot answer.
-- Fallback when the catalog is unreachable: the roster is derived from the vs.platform.{key}.* settings rows already fetched — deliberately not a hardcoded list, since a stale list is what caused this bug.
-
-Co-Authored-By: Claude Opus 5 (1M context) &lt;noreply@anthropic.com&gt;
-(cherry picked from commit 061a7db77bc8f9440a992f0b22f1ea5357d83591)
-
-Cherry-picked onto the release line: released here as 0.62.0, not the 0.76.0 of the main line. Code is identical; only package.json and the CHANGELOG heading were re-versioned.</div>
           </td>
         </tr></tbody>
         </table>
