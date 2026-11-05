@@ -285,7 +285,7 @@
     <p>// semua perubahan produk adsvisory dalam satu tempat</p>
   </div>
   <div class="header-right">
-    Diperbarui otomatis<br>5 November 2026 pukul 05.20 WIB
+    Diperbarui otomatis<br>6 November 2026 pukul 05.29 WIB
   </div>
 </header>
 
@@ -701,7 +701,7 @@ Needs the avq-sutra PR (`feat/status-banner-release`) deployed first, otherwise 
 Backend for the **Astra status banner**: a sticky orange running-text bar (outage / maintenance notice) shown at the top of every Astra page, toggled and worded from Artha.
 
 - `GET /api/client/status-banner`: **public** (added to client-auth `PUBLIC_PREFIXES`) so the bar also renders on `/login` and while session validation is degraded. Returns `{ enabled: false }` when off, `{ enabled, messages }` when on. Never throws; a read failure hides the banner.
-- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha �� Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
+- `GET` / `PUT /api/admin/status-banner` (OPS JWT): used by Artha → Platform → Announcements. Body `{ enabled, messages: { en (required), id, ja, zh-TW, ko } }`.
 - Stored as a single JSON row in the existing `sutra_settings` table (`announcement.status_banner`), 15s in-process cache.
 - **No migration / no schema change.** The row is created on first save; missing or invalid reads as disabled.
 - Version 1.100.0 + CHANGELOG.
@@ -1958,24 +1958,6 @@ The distinction matters for this page specifically: it is where COGS is read aga
         <tr class="detail-row hidden" id="detail-avq-sutra-274">
           <td colspan="5" class="detail-cell">
             <div class="detail-commits-label">Dari commit messages:</div><div class="commits-list"><div class="commit-line"><span class="commit-sha">a946a38</span>Fix invitation</div></div>
-          </td>
-        </tr>
-        <tr class="data-row" onclick="toggleDetail('avq-shastra-94')">
-          <td class="td-date">
-            <div>7 Agustus 2026</div>
-            <div class="td-time">13.45.13</div>
-          </td>
-          <td><span class="repo-badge" style="background:#7C4FF720;color:#7C4FF7;border-color:#7C4FF740">Shastra</span></td>
-          <td><span class="type-badge">🐛 Perbaikan</span></td>
-          <td class="td-title">Handle null domain in Ledger "By Domain" view</td>
-          <td class="td-pr">
-            <a class="pr-link" href="https://github.com/Avonetiq/avq-shastra/pull/94" target="_blank" onclick="event.stopPropagation()">#94</a>
-            <span class="expand-chevron" id="chev-avq-shastra-94">▾</span>
-          </td>
-        </tr>
-        <tr class="detail-row hidden" id="detail-avq-shastra-94">
-          <td colspan="5" class="detail-cell">
-            <div class="detail-body">Karsa's getDomainCosts now uses LEFT JOIN (audit fix E4), which returns rows without a domain_id. LedgerDomains crashed on null domain passed to DomainLogo. Now shows &quot;Unattributed&quot; label with fallback icon for system/discovery calls that have no domain attached.</div>
           </td>
         </tr></tbody>
         </table>
