@@ -4299,26 +4299,5 @@
         "message": "feat(lite): expose user-provided brandName in run status response"
       }
     ]
-  },
-  {
-    "repo": "Artha",
-    "repoSlug": "avq-artha",
-    "prNumber": 193,
-    "prUrl": "https://github.com/Avonetiq/avq-artha/pull/193",
-    "title": "Adjust view Artha",
-    "type": "update",
-    "typeLabel": "📦 Update",
-    "scope": null,
-    "author": "optimize-avo",
-    "mergedAt": "2026-08-13T06:41:26Z",
-    "mergedAtDate": "13 Agustus 2026",
-    "mergedAtTime": "13.41.26",
-    "body": "",
-    "commits": [
-      {
-        "sha": "30e38ff",
-        "message": "Adjust view Artha"
-      }
-    ]
   }
 ]
